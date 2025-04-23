@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-08",
+  "type": "registry:component",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/badge/badge-08.tsx",
+      "content": "import { Badge } from '@/registry/new-york/ui/badge'\n\nconst BadgeLargeDemo = () => {\n  return <Badge className='px-3 py-1'>Large</Badge>\n}\n\nexport default BadgeLargeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-08.tsx"
+    }
+  ]
+}

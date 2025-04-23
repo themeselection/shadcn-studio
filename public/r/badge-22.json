@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-22",
+  "type": "registry:component",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/badge/badge-22.tsx",
+      "content": "import { Badge } from '@/registry/new-york/ui/badge'\n\nconst BadgeAvatarDemo = () => {\n  return (\n    <Badge variant='outline' className='rounded-full p-1 pe-2'>\n      <img\n        src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\n        alt='Hallie Richards'\n        className='size-6 rounded-full'\n      />\n      Avatar\n    </Badge>\n  )\n}\n\nexport default BadgeAvatarDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-22.tsx"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-03",
+  "type": "registry:component",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/avatar/avatar-03.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'\n\nconst AvatarRoundedDemo = () => {\n  return (\n    <Avatar className='rounded-sm'>\n      <AvatarImage\n        src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\n        alt='Hallie Richards'\n        className='rounded-sm'\n      />\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarRoundedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/avatar/avatar-03.tsx"
+    }
+  ]
+}

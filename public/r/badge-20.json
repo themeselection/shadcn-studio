@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-20",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/badge/badge-20.tsx",
+      "content": "import { BanIcon } from 'lucide-react'\n\nimport { Badge } from '@/registry/new-york/ui/badge'\n\nconst BadgeFailedDemo = () => {\n  return (\n    <Badge\n      variant='outline'\n      className='text-destructive [a&]:hover:bg-destructive/10 [a&]:hover:text-destructive/90 border-destructive'\n    >\n      <BanIcon className='size-3' />\n      Failed\n    </Badge>\n  )\n}\n\nexport default BadgeFailedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-20.tsx"
+    }
+  ]
+}

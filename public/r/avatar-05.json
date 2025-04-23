@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-05",
+  "type": "registry:component",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/avatar/avatar-05.tsx",
+      "content": "import { Avatar, AvatarFallback } from '@/registry/new-york/ui/avatar'\n\nconst AvatarFallbackDemo = () => {\n  return (\n    <Avatar>\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarFallbackDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/avatar/avatar-05.tsx"
+    }
+  ]
+}

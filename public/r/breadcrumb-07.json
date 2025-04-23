@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-07",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "breadcrumb",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/breadcrumb/breadcrumb-07.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { ChevronsRightIcon, FolderIcon, FolderOpenIcon, HomeIcon } from 'lucide-react'\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from '@/registry/new-york/ui/breadcrumb'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from '@/registry/new-york/ui/dropdown-menu'\n\nconst BreadcrumbWithIconDemo = () => {\n  const [open, setOpen] = useState(false)\n\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>\n            <HomeIcon className='size-4' />\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <ChevronsRightIcon />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem className='flex items-center gap-2'>\n          <DropdownMenu open={open} onOpenChange={setOpen}>\n            <DropdownMenuTrigger className='flex cursor-pointer items-center gap-1'>\n              {open ? <FolderOpenIcon className='size-4' /> : <FolderIcon className='size-4' />}\n            </DropdownMenuTrigger>\n            <DropdownMenuContent align='start'>\n              <DropdownMenuItem>Documentation</DropdownMenuItem>\n              <DropdownMenuItem>Themes</DropdownMenuItem>\n              <DropdownMenuItem>GitHub</DropdownMenuItem>\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <ChevronsRightIcon />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbPage>Add Document</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n\nexport default BreadcrumbWithIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/breadcrumb/breadcrumb-07.tsx"
+    }
+  ]
+}

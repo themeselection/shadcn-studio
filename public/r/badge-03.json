@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-03",
+  "type": "registry:component",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/badge/badge-03.tsx",
+      "content": "import { Badge } from '@/registry/new-york/ui/badge'\n\nconst BadgeDestructiveDemo = () => {\n  return <Badge variant='destructive'>Destructive</Badge>\n}\n\nexport default BadgeDestructiveDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-03.tsx"
+    }
+  ]
+}

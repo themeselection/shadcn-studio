@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-19",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/badge/badge-19.tsx",
+      "content": "import { AlertCircleIcon } from 'lucide-react'\n\nimport { Badge } from '@/registry/new-york/ui/badge'\n\nconst BadgePendingDemo = () => {\n  return (\n    <Badge\n      variant='outline'\n      className='border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400 [a&]:hover:bg-amber-600/10 [a&]:hover:text-amber-600/90 dark:[a&]:hover:bg-amber-400/10 dark:[a&]:hover:text-amber-400/90'\n    >\n      <AlertCircleIcon className='size-3' />\n      Pending\n    </Badge>\n  )\n}\n\nexport default BadgePendingDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-19.tsx"
+    }
+  ]
+}
