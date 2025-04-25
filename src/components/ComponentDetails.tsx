@@ -90,6 +90,7 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
                   className='text-muted-foreground hover:text-foreground cursor-pointer opacity-0 transition-none group-focus-within/item:opacity-100 group-hover/item:opacity-100 hover:!bg-transparent disabled:opacity-100'
                 >
                   <Code aria-hidden={true} className='size-4' />
+                  <span className='sr-only'>View code</span>
                 </Button>
               </DialogTrigger>
             </TooltipTrigger>

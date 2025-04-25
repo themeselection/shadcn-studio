@@ -33,17 +33,24 @@ const Footer = () => {
             <div className='flex items-center gap-4'>
               <Link href='https://github.com/themeselection/shadcn-studio' target='_blank' rel='noopener noreferrer'>
                 <Github className='size-6' />
+                <span className='sr-only'>Github</span>
               </Link>
               <Link href='https://discord.com/invite/kBHkY7DekX' target='_blank' rel='noopener noreferrer'>
                 <Discord className='size-6' />
+                <span className='sr-only'>Discord</span>
               </Link>
               <Link href='https://x.com/ajaypatel_aj' target='_blank' rel='noopener noreferrer'>
                 <X className='size-6' />
+                <span className='sr-only'>X</span>
               </Link>
               <Link href='https://www.youtube.com/@themeselection' target='_blank' rel='noopener noreferrer'>
                 <Youtube className='size-6' />
+                <span className='sr-only'>Youtube</span>
               </Link>
             </div>
+            <p className='text-muted-foreground text-sm'>
+              This project is independent and not affiliated with Figma or shadcn/ui.
+            </p>
           </div>
           <div className='col-span-full grid gap-6 min-[450px]:grid-cols-2 sm:grid-cols-3 lg:col-span-3 lg:gap-8'>
             <div className='flex flex-col gap-5'>
@@ -79,7 +86,13 @@ const Footer = () => {
                   <Link href='/#roadmap'>Roadmap</Link>
                 </li>
                 <li>
-                  <Link href='https://github.com/themeselection/shadcn-studio/blob/main/CHANGELOG.md'>Changelog</Link>
+                  <Link
+                    href='https://github.com/themeselection/shadcn-studio/blob/main/CHANGELOG.md'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Changelog
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -109,21 +122,25 @@ const Footer = () => {
       <div className='w-full border-t border-dashed'>
         <div className='mx-auto flex w-full max-w-[1400px] flex-col items-center gap-7.5 border-dashed px-8 py-6 min-[1400px]:border-x min-[1800px]:max-w-[1536px]'>
           <div className='flex flex-col items-center gap-1.5 text-center'>
-            <h3 className='text-lg leading-7.5 font-semibold'>Innovative Offerings</h3>
+            <p className='text-lg leading-7.5 font-semibold'>Innovative Offerings</p>
             <p className='text-muted-foreground leading-7.5'>Discover other Tools & Brands in our Ecosystem</p>
           </div>
           <div className='flex flex-wrap items-center justify-center gap-6 max-md:w-full max-md:flex-col'>
             <Link href='https://themeselection.com' target='_blank' rel='noopener noreferrer'>
               <ThemeSelection className='mb-2.5 text-[1.625rem]' />
+              <span className='sr-only'>ThemeSelection</span>
             </Link>
             <Link href='https://flyonui.com' target='_blank' rel='noopener noreferrer'>
               <FlyonUI className='text-[1.75rem]' />
+              <span className='sr-only'>FlyonUI</span>
             </Link>
             <Link href='https://alltailwindcss.com' target='_blank' rel='noopener noreferrer'>
               <AllTailwindcss className='text-[1.75rem]' />
+              <span className='sr-only'>All TailwindCSS</span>
             </Link>
             <Link href='https://pixinvent.com' target='_blank' rel='noopener noreferrer'>
               <PixInvent className='text-[1.75rem]' />
+              <span className='sr-only'>PixInvent</span>
             </Link>
             <Link
               href='https://themeselection.com/item/category/saas-boilerplate'
@@ -131,6 +148,7 @@ const Footer = () => {
               rel='noopener noreferrer'
             >
               <JetShip className='text-[1.75rem]' />
+              <span className='sr-only'>JetShip</span>
             </Link>
           </div>
         </div>

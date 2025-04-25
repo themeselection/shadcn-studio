@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import type { ComponentProps } from 'react'
+import type { ComponentProps, MouseEvent } from 'react'
 
 // Next Imports
 import Link from 'next/link'
@@ -47,6 +47,7 @@ type CustomSidebarMenuSubItemProps = ComponentProps<'li'> & {
   isUpdated?: boolean
   href?: string
   openInNewTab?: boolean
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void
 }
 
 export const CustomSidebarTrigger = () => {
@@ -99,7 +100,8 @@ const CustomSidebarMenuSubItem = ({
   href,
   openInNewTab,
   isNew,
-  isUpdated
+  isUpdated,
+  onClick
 }: CustomSidebarMenuSubItemProps) => {
   // Hooks
   const { setOpenMobile } = useSidebar()
@@ -126,7 +128,10 @@ const CustomSidebarMenuSubItem = ({
             href={href}
             {...(openInNewTab && { target: '_blank' })}
             rel='noopener noreferrer'
-            onClick={() => setOpenMobile(false)}
+            onClick={e => {
+              onClick?.(e)
+              setOpenMobile(false)
+            }}
           >
             {children}
           </Link>
@@ -218,9 +223,9 @@ const AppSidebar = () => {
               {categories.map(category => (
                 <CustomSidebarMenuSubItem
                   key={category.slug}
-                  {...(!category.isComingSoon && {
-                    href: `/docs/components/${category.slug}`
-                  })}
+                  {...(category.isComingSoon
+                    ? { href: '/', onClick: e => e.preventDefault() }
+                    : { href: `/docs/components/${category.slug}` })}
                 >
                   {category.name}
                   {category.isComingSoon && (

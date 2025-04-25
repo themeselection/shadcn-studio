@@ -26,6 +26,7 @@ const OpenInV0 = ({ sourceUrl, title }: { sourceUrl: string; title?: string }) =
               rel='noopener noreferrer'
             >
               <V0 aria-hidden={true} className='size-4' />
+              <span className='sr-only'>Open in v0</span>
             </Link>
           </Button>
         </TooltipTrigger>

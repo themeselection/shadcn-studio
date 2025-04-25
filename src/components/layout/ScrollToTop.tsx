@@ -46,6 +46,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
     >
       <ArrowUp className='size-4' />
+      <span className='sr-only'>Scroll to top</span>
     </Button>
   )
 }

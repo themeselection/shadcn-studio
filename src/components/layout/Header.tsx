@@ -43,6 +43,8 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
                   <DropdownMenuItem asChild>
                     <Link
                       href='https://github.com/themeselection/shadcn-studio/blob/main/CHANGELOG.md'
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className='cursor-pointer'
                     >
                       Changelog
