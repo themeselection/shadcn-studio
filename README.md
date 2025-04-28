@@ -43,7 +43,7 @@ Supported by [ThemeSelection](https://themeselection.com), with a commitment to 
 
 ## Overview 🌏
 
-**This isn&apos;t a traditional component library or a replacement for Shadcn**. Instead, it&apos;s a unique collection offers customizable variants of components, blocks, and templates. Preview, customize, and copy-paste them into your apps with ease.
+**This isn&apos;t a traditional component library or a replacement for Shadcn**. Instead, it&apos;s a unique collection that offers customizable variants of components, blocks, and templates. Preview, customize, and copy-paste them into your apps with ease.
 
 Building on the solid foundation of the Shadcn registry, we&apos;ve enhanced it with custom-designed components & blocks to give you a head start. This allows you to craft, customize, and ship your projects faster and more efficiently.
 
