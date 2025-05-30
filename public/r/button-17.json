@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-17",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-17.tsx",
+      "content": "import { LoaderCircleIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonLoadingDemo = () => {\n  return (\n    <Button disabled>\n      <LoaderCircleIcon className='animate-spin' />\n      Loading\n    </Button>\n  )\n}\n\nexport default ButtonLoadingDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-17.tsx"
+    }
+  ]
+}

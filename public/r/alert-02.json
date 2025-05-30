@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-02",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-02.tsx",
+      "content": "import { CircleAlert } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/registry/new-york/ui/alert'\nimport { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'\n\nconst AlertWithAvatarDemo = () => {\n  return (\n    <Alert className='flex items-center justify-between'>\n      <Avatar className='rounded-sm'>\n        <AvatarImage\n          src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\n          alt='Hallie Richards'\n          className='rounded-sm'\n        />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <div className='flex-1 flex-col justify-center gap-1'>\n        <AlertTitle className='flex-1'>Sara has replied on the uploaded image.</AlertTitle>\n        <AlertDescription>12 unread messages. Tap to see.</AlertDescription>\n      </div>\n      <CircleAlert />\n    </Alert>\n  )\n}\n\nexport default AlertWithAvatarDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-02.tsx"
+    }
+  ]
+}

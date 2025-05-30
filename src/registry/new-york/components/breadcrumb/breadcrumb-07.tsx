@@ -28,6 +28,7 @@ const BreadcrumbWithIconDemo = () => {
         <BreadcrumbItem>
           <BreadcrumbLink href='#'>
             <HomeIcon className='size-4' />
+            <span className='sr-only'>Home</span>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
@@ -37,6 +38,7 @@ const BreadcrumbWithIconDemo = () => {
           <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger className='flex cursor-pointer items-center gap-1'>
               {open ? <FolderOpenIcon className='size-4' /> : <FolderIcon className='size-4' />}
+              <span className='sr-only'>{open ? 'Open' : 'Close'}</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='start'>
               <DropdownMenuItem>Documentation</DropdownMenuItem>

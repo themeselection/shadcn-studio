@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-01",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-01.tsx",
+      "content": "import { CircleAlert } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/registry/new-york/ui/alert'\n\nconst AlertDemo = () => {\n  return (\n    <Alert>\n      <CircleAlert />\n      <AlertTitle>New message!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-01.tsx"
+    }
+  ]
+}

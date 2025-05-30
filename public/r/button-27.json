@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-27",
+  "type": "registry:component",
+  "registryDependencies": [
+    "avatar",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-27.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonAvatarDemo = () => {\n  return (\n    <Button className='rounded-full ps-2'>\n      <Avatar className='size-6'>\n        <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n        <AvatarFallback className='text-foreground text-xs'>HR</AvatarFallback>\n      </Avatar>\n      @hallierichards\n    </Button>\n  )\n}\n\nexport default ButtonAvatarDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-27.tsx"
+    }
+  ]
+}

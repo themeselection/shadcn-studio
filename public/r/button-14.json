@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-14",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-14.tsx",
+      "content": "import { DownloadIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonDownloadDemo = () => {\n  return (\n    <Button variant='outline' className='border-primary border-dashed shadow-none'>\n      <DownloadIcon />\n      Download\n    </Button>\n  )\n}\n\nexport default ButtonDownloadDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-14.tsx"
+    }
+  ]
+}

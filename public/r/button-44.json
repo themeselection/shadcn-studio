@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-44",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://shadcnstudio.com/r/bounce-button.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-44.tsx",
+      "content": "import { BounceButton } from '@/registry/new-york/ui/bounce-button'\n\nconst ButtonBounceHoverDemo = () => {\n  return <BounceButton>Bounce Button</BounceButton>\n}\n\nexport default ButtonBounceHoverDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-44.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

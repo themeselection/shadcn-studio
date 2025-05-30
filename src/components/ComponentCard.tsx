@@ -19,7 +19,7 @@ const ComponentCard = ({
   return (
     <div
       className={cn(
-        'group/item relative flex min-h-[185px] items-center justify-center group-first:border-t-0',
+        'group/item relative flex min-h-[210px] items-center justify-center px-8 py-12 group-first/grid:border-t-0',
         className
       )}
       data-slot={component.name}

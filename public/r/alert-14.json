@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-14",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-14.tsx",
+      "content": "import { TriangleAlert } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/registry/new-york/ui/alert'\n\nconst AlertDestructiveDemo = () => {\n  return (\n    <Alert variant='destructive'>\n      <TriangleAlert />\n      <AlertTitle>Something went wrong!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertDestructiveDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-14.tsx"
+    }
+  ]
+}

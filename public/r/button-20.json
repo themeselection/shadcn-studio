@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-20",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-20.tsx",
+      "content": "import { CopyIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonCopyDemo = () => {\n  return (\n    <div className='flex h-11.5 items-center overflow-hidden rounded-full border px-1'>\n      <p className='text-muted-foreground max-w-56 truncate overflow-hidden px-2.5 text-sm'>\n        https://shadcnstudio.com/docs/components/button\n      </p>\n      <Button\n        size='icon'\n        className='rounded-full bg-sky-600 text-white hover:bg-sky-600/90 focus-visible:ring-sky-600/20 dark:bg-sky-400/60 dark:focus-visible:ring-sky-400/40'\n      >\n        <CopyIcon />\n        <span className='sr-only'>Copy</span>\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonCopyDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-20.tsx"
+    }
+  ]
+}

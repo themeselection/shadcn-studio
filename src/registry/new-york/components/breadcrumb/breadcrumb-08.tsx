@@ -16,6 +16,7 @@ const BreadcrumbOutlineDemo = () => {
         <BreadcrumbItem>
           <BreadcrumbLink href='#'>
             <HomeIcon className='size-4' />
+            <span className='sr-only'>Home</span>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

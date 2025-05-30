@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-20",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-20.tsx",
+      "content": "import { CircleAlert } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/registry/new-york/ui/alert'\n\nconst AlertOutlineWarningDemo = () => {\n  return (\n    <Alert className='border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400'>\n      <CircleAlert />\n      <AlertTitle>Your password is too weak</AlertTitle>\n      <AlertDescription className='text-amber-600/80 dark:text-amber-400/80'>\n        Try using a mix of uppercase letters, numbers, and symbols for better security.\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertOutlineWarningDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-20.tsx"
+    }
+  ]
+}

@@ -13,7 +13,8 @@ import X from '@/assets/svg/X'
 import Discord from '@/assets/svg/Discord'
 import ThemeSelection from '@/assets/svg/ThemeSelection'
 import FlyonUI from '@/assets/svg/FlyonUI'
-import AllTailwindcss from '@/assets/svg/AllTailwindcss'
+import AllUtilityCSS from '@/assets/svg/AllUtilityCSS'
+import AllShadCN from '@/assets/svg/AllShadCN'
 import PixInvent from '@/assets/svg/PixInvent'
 import JetShip from '@/assets/svg/Jetship'
 
@@ -134,9 +135,13 @@ const Footer = () => {
               <FlyonUI className='text-[1.75rem]' />
               <span className='sr-only'>FlyonUI</span>
             </Link>
-            <Link href='https://alltailwindcss.com' target='_blank' rel='noopener noreferrer'>
-              <AllTailwindcss className='text-[1.75rem]' />
-              <span className='sr-only'>All TailwindCSS</span>
+            <Link href='http://allutilitycss.com' target='_blank' rel='noopener noreferrer'>
+              <AllUtilityCSS className='text-[1.75rem]' />
+              <span className='sr-only'>All UtilityCSS</span>
+            </Link>
+            <Link href='https://allshadcn.com' target='_blank' rel='noopener noreferrer'>
+              <AllShadCN className='text-[1.75rem]' />
+              <span className='sr-only'>All ShadCN</span>
             </Link>
             <Link href='https://pixinvent.com' target='_blank' rel='noopener noreferrer'>
               <PixInvent className='text-[1.75rem]' />

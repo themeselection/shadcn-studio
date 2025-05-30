@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-16",
+  "type": "registry:component",
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-16.tsx",
+      "content": "import { Alert, AlertTitle } from '@/registry/new-york/ui/alert'\n\nconst AlertWithoutIconDemo = () => {\n  return (\n    <Alert>\n      <AlertTitle>New message!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertWithoutIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-16.tsx"
+    }
+  ]
+}

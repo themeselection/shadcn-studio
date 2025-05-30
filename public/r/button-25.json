@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-25",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-25.tsx",
+      "content": "import { BellIcon } from 'lucide-react'\n\nimport { Badge } from '@/registry/new-york/ui/badge'\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonNotificationsBadgeDemo = () => {\n  return (\n    <Button variant='outline' className='relative'>\n      <BellIcon />\n      Notifications\n      <Badge variant='destructive' className='absolute -end-2.5 -top-2.5 h-5 min-w-5 rounded-full px-1 tabular-nums'>\n        8\n      </Badge>\n    </Button>\n  )\n}\n\nexport default ButtonNotificationsBadgeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-25.tsx"
+    }
+  ]
+}

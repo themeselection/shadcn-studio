@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-21",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-21.tsx",
+      "content": "import { CircleAlert } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/registry/new-york/ui/alert'\n\nconst AlertSoftDemo = () => {\n  return (\n    <Alert className='bg-primary/10 border-none'>\n      <CircleAlert />\n      <AlertTitle>File Should be PDF,DOCX,JPG, or PNG.</AlertTitle>\n      <AlertDescription>If the file type is not one of this than we can&apos;t get your files</AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSoftDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-21.tsx"
+    }
+  ]
+}

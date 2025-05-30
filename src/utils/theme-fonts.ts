@@ -10,7 +10,8 @@ const sansSerifFontNames = [
   'Outfit',
   'Plus Jakarta Sans',
   'DM Sans',
-  'Nunito'
+  'Nunito',
+  'Barlow'
 ]
 
 const serifFontNames = [
@@ -20,7 +21,10 @@ const serifFontNames = [
   'Source Serif Pro',
   'Libre Baskerville',
   'Space Grotesk',
-  'PT Serif'
+  'PT Serif',
+  'Nunito',
+  'Merriweather',
+  'Lato'
 ]
 
 const monoFontNames = ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'IBM Plex Mono', 'Roboto Mono', 'Space Mono']

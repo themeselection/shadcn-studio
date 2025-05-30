@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-11",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-11.tsx",
+      "content": "import { UserCheck } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/registry/new-york/ui/alert'\n\nconst AlertIndicatorSuccessDemo = () => {\n  return (\n    <Alert className='rounded-md border-l-6 border-green-600 bg-green-600/10 text-green-600 dark:border-green-400 dark:bg-green-400/10 dark:text-green-400'>\n      <UserCheck />\n      <AlertTitle>Your request to join the team is approved.</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertIndicatorSuccessDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-11.tsx"
+    }
+  ]
+}

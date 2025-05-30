@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-15",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-15.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Button } from '@/registry/new-york/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger\n} from '@/registry/new-york/ui/dropdown-menu'\n\nconst DropdownMenuCheckboxDemo = () => {\n  const [showStatusBar, setShowStatusBar] = useState(true)\n  const [showActivityBar, setShowActivityBar] = useState(false)\n  const [showPanel, setShowPanel] = useState(false)\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>With checkbox</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56'>\n        <DropdownMenuLabel>Appearance</DropdownMenuLabel>\n        <DropdownMenuSeparator />\n        <DropdownMenuCheckboxItem checked={showStatusBar} onCheckedChange={setShowStatusBar}>\n          Status Bar\n        </DropdownMenuCheckboxItem>\n        <DropdownMenuCheckboxItem checked={showActivityBar} onCheckedChange={setShowActivityBar} disabled>\n          API\n        </DropdownMenuCheckboxItem>\n        <DropdownMenuCheckboxItem checked={showPanel} onCheckedChange={setShowPanel}>\n          Invite users\n        </DropdownMenuCheckboxItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuCheckboxDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-15.tsx"
+    }
+  ]
+}

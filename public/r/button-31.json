@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-31",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-31.tsx",
+      "content": "import { BookmarkIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst IconButtonDemo = () => {\n  return (\n    <Button variant='outline' size='icon'>\n      <BookmarkIcon />\n      <span className='sr-only'>Bookmark</span>\n    </Button>\n  )\n}\n\nexport default IconButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-31.tsx"
+    }
+  ]
+}

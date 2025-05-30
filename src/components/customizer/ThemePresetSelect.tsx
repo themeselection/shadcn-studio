@@ -29,6 +29,7 @@ import { useSettings } from '@/hooks/useSettings'
 
 // Util Imports
 import { toast } from '@/utils/toast'
+import { cn } from '@/registry/new-york/lib/utils'
 import { parseCssInput, parseLetterSpacing, parseShadowVariables } from '@/utils/parse-css-input'
 
 type ThemePresetSelectProps = {
@@ -142,7 +143,7 @@ const ThemePresetSelect = ({ presets, currentPreset, onPresetChange }: ThemePres
       </div>
       <Select value={value || ''} onValueChange={onPresetChange}>
         <SelectTrigger className='h-12 w-full cursor-pointer'>
-          <SelectValue placeholder='Chose Theme' />
+          <SelectValue placeholder='Choose Theme' />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
@@ -169,7 +170,12 @@ const ThemePresetSelect = ({ presets, currentPreset, onPresetChange }: ThemePres
                   <div className='flex items-center gap-2'>
                     <span>{name.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())}</span>
                     {badge && (
-                      <Badge variant='outline' className='border-primary bg-primary/10 text-primary border'>
+                      <Badge
+                        variant={badge === 'New' ? 'default' : 'outline'}
+                        className={cn('rounded-full', {
+                          'bg-destructive/10 text-destructive border-destructive': badge === 'Trending'
+                        })}
+                      >
                         {badge}
                       </Badge>
                     )}

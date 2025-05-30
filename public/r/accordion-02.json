@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-02",
+  "type": "registry:component",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/accordion/accordion-02.tsx",
+      "content": "import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/new-york/ui/accordion'\n\nconst items = [\n  {\n    title: 'How do I track my order?',\n    content: `You can track your order by logging into your account and visiting the \"Orders\" section. You'll receive tracking information via email once your order ships. For real-time updates, you can also use the tracking number provided in your shipping confirmation email.`\n  },\n  {\n    title: 'What is your return policy?',\n    content:\n      'We offer a 30-day return policy for most items. Products must be unused and in their original packaging. To initiate a return, please contact our customer service team or use the return portal in your account dashboard.'\n  },\n  {\n    title: 'How can I contact customer support?',\n    content:\n      'Our customer support team is available 24/7. You can reach us via live chat, email at support@example.com, or by phone at 1-800-123-4567. For faster service, please have your order number ready when contacting us.'\n  }\n]\n\nconst AccordionSplitDemo = () => {\n  return (\n    <Accordion type='single' collapsible className='w-full space-y-2' defaultValue='item-1'>\n      {items.map((item, index) => (\n        <AccordionItem\n          key={index}\n          value={`item-${index + 1}`}\n          className='bg-card rounded-md border-b-0 shadow-md data-[state=open]:shadow-lg'\n        >\n          <AccordionTrigger className='px-5 [&>svg]:rotate-90 [&[data-state=open]>svg]:rotate-0'>\n            {item.title}\n          </AccordionTrigger>\n          <AccordionContent className='text-muted-foreground px-5'>{item.content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n\nexport default AccordionSplitDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/accordion/accordion-02.tsx"
+    }
+  ]
+}

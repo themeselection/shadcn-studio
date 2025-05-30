@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-12",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-12.tsx",
+      "content": "import { UserRoundX } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/registry/new-york/ui/alert'\n\nconst AlertIndicatorDestructiveDemo = () => {\n  return (\n    <Alert className='border-destructive bg-destructive/10 text-destructive rounded-none border-0 border-l-6'>\n      <UserRoundX />\n      <AlertTitle>Your request to join the team is denied.</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertIndicatorDestructiveDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-12.tsx"
+    }
+  ]
+}

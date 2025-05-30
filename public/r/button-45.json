@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-45",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://shadcnstudio.com/r/magnetic-button.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-45.tsx",
+      "content": "import { MagneticButton } from '@/registry/new-york/ui/magnetic-button'\n\nconst ButtonMagneticEffectDemo = () => {\n  return <MagneticButton>Magnetic Button</MagneticButton>\n}\n\nexport default ButtonMagneticEffectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-45.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

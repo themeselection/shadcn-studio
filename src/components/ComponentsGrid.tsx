@@ -43,15 +43,15 @@ const ComponentsGrid = ({ children, sm, md, lg, xl, xs = 1 }: GridLayoutProps) =
 
   return (
     <div
-      className='group grid divide-x divide-y divide-dashed'
+      className='group/grid mb-0 grid divide-x divide-y divide-dashed'
       style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
     >
       {Children.map(children, (child, index) => (
         <div
-          className={cn('p-4', {
+          className={cn({
             'border-b-0': index >= length - (length % columns || columns),
             'border-e-0': (index + 1) % columns === 0,
-            'border-e': length % columns !== 0 && index === length - 1
+            'border-e border-dashed': length % columns !== 0 && index === length - 1
           })}
         >
           {child}

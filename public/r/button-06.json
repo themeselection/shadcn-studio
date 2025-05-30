@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-06",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-06.tsx",
+      "content": "import { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonActionsDemo = () => {\n  return (\n    <div className='flex flex-wrap items-center gap-4'>\n      <Button variant='secondary'>Cancel</Button>\n      <Button>Save Changes</Button>\n    </div>\n  )\n}\n\nexport default ButtonActionsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-06.tsx"
+    }
+  ]
+}

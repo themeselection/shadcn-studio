@@ -243,6 +243,85 @@ const ThemeColorPanel = () => {
             <ColorSwatch label='Ring' value={currentTheme?.ring || ''} onChange={value => updateColor('ring', value)} />
           </AccordionContent>
         </AccordionItem>
+
+        {/* Sidebar Colors */}
+        <AccordionItem value='sidebar' className='rounded-lg !border px-4'>
+          <AccordionTrigger className='cursor-pointer py-3 text-base font-medium'>Sidebar Colors</AccordionTrigger>
+          <AccordionContent className='space-y-3 pt-2 pb-4'>
+            <ColorSwatch
+              label='Sidebar'
+              value={currentTheme?.sidebar || ''}
+              onChange={value => updateColor('sidebar', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Foreground'
+              value={currentTheme?.['sidebar-foreground'] || ''}
+              onChange={value => updateColor('sidebar-foreground', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Primary'
+              value={currentTheme?.['sidebar-primary'] || ''}
+              onChange={value => updateColor('sidebar-primary', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Primary Foreground'
+              value={currentTheme?.['sidebar-primary-foreground'] || ''}
+              onChange={value => updateColor('sidebar-primary-foreground', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Accent'
+              value={currentTheme?.['sidebar-accent'] || ''}
+              onChange={value => updateColor('sidebar-accent', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Accent Foreground'
+              value={currentTheme?.['sidebar-accent-foreground'] || ''}
+              onChange={value => updateColor('sidebar-accent-foreground', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Border'
+              value={currentTheme?.['sidebar-border'] || ''}
+              onChange={value => updateColor('sidebar-border', value)}
+            />
+            <ColorSwatch
+              label='Sidebar Ring'
+              value={currentTheme?.['sidebar-ring'] || ''}
+              onChange={value => updateColor('sidebar-ring', value)}
+            />
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* Chart Colors */}
+        <AccordionItem value='chart' className='rounded-lg !border px-4'>
+          <AccordionTrigger className='cursor-pointer py-3 text-base font-medium'>Chart Colors</AccordionTrigger>
+          <AccordionContent className='space-y-3 pt-2 pb-4'>
+            <ColorSwatch
+              label='Chart 1'
+              value={currentTheme?.['chart-1'] || ''}
+              onChange={value => updateColor('chart-1', value)}
+            />
+            <ColorSwatch
+              label='Chart 2'
+              value={currentTheme?.['chart-2'] || ''}
+              onChange={value => updateColor('chart-2', value)}
+            />
+            <ColorSwatch
+              label='Chart 3'
+              value={currentTheme?.['chart-3'] || ''}
+              onChange={value => updateColor('chart-3', value)}
+            />
+            <ColorSwatch
+              label='Chart 4'
+              value={currentTheme?.['chart-4'] || ''}
+              onChange={value => updateColor('chart-4', value)}
+            />
+            <ColorSwatch
+              label='Chart 5'
+              value={currentTheme?.['chart-5'] || ''}
+              onChange={value => updateColor('chart-5', value)}
+            />
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
     </div>
   )

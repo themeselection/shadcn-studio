@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-19",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/alert/alert-19.tsx",
+      "content": "import { CheckCheck } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/registry/new-york/ui/alert'\n\nconst AlertOutlineSuccessDemo = () => {\n  return (\n    <Alert className='border-green-600 text-green-600 dark:border-green-400 dark:text-green-400'>\n      <CheckCheck />\n      <AlertTitle>Account created successfully</AlertTitle>\n      <AlertDescription className='text-green-600/80 dark:text-green-400/80'>\n        You are all set! You can now log in and start exploring your dashboard.\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertOutlineSuccessDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-19.tsx"
+    }
+  ]
+}

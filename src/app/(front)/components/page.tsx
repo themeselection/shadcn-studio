@@ -54,8 +54,11 @@ const Page = () => {
           .map(category => (
             <div key={category.slug} className='group overflow-hidden rounded-xl border'>
               <Link href={`/docs/components/${category.slug}`}>
-                <div className='bg-primary/[0.045] flex h-52 items-center justify-center border-b dark:bg-transparent'>
+                <div className='bg-primary/[0.045] relative flex h-52 items-center justify-center border-b dark:bg-transparent'>
                   <category.svg className='transition-all duration-300 group-hover:scale-110' />
+                  {category.badge && (
+                    <span className='absolute start-4 top-2 font-["Gamja_Flower"] text-xl'>{category.badge}</span>
+                  )}
                 </div>
                 <div className='flex flex-col gap-0.5 p-4 text-center'>
                   <h2 className='text-lg font-medium'>{category.name}</h2>

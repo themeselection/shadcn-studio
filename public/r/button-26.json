@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-26",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-26.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { LoaderCircleIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nimport { cn } from '@/registry/new-york/lib/utils'\n\nconst ButtonPromiseDemo = () => {\n  const [isLoading, setIsLoading] = useState(false)\n  const [status, setStatus] = useState<undefined | string>(undefined)\n\n  const handleClick = async () => {\n    setIsLoading(true)\n    setStatus(undefined)\n\n    try {\n      await new Promise(resolve => setTimeout(resolve, 1000))\n\n      setStatus(Math.random() > 0.5 ? 'Submitted!' : 'Rejected!')\n    } catch (error) {\n      setStatus('Rejected!')\n      console.error(error)\n    } finally {\n      setIsLoading(false)\n    }\n  }\n\n  return (\n    <Button\n      variant='link'\n      onClick={handleClick}\n      disabled={isLoading}\n      className={cn('cursor-pointer hover:no-underline', {\n        'text-green-600 dark:text-green-400': status === 'Submitted!',\n        'text-destructive': status === 'Rejected!'\n      })}\n    >\n      {isLoading ? (\n        <>\n          <LoaderCircleIcon className='animate-spin' />\n          Loading\n        </>\n      ) : status ? (\n        status\n      ) : (\n        'Click me'\n      )}\n    </Button>\n  )\n}\n\nexport default ButtonPromiseDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-26.tsx"
+    }
+  ]
+}

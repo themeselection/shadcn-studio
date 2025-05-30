@@ -51,7 +51,7 @@ const ThemeVariablesDialog = ({ lightTheme, darkTheme, trigger, activeTheme }: T
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className='sm:max-w-[580px]'>
+      <DialogContent className='sm:max-w-[780px]'>
         <DialogHeader>
           <DialogTitle>Theme Variables</DialogTitle>
           <DialogDescription>Copy these CSS variables to use your theme in other projects.</DialogDescription>

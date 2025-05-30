@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-36",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-36.tsx",
+      "content": "import { ShieldAlertIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst IconButtonGradientDemo = () => {\n  return (\n    <Button\n      size='icon'\n      className='from-destructive via-destructive/60 to-destructive focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 bg-transparent bg-gradient-to-r [background-size:200%_auto] text-white hover:bg-transparent hover:bg-[right_center]'\n    >\n      <ShieldAlertIcon />\n      <span className='sr-only'>Security</span>\n    </Button>\n  )\n}\n\nexport default IconButtonGradientDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-36.tsx"
+    }
+  ]
+}

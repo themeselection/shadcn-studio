@@ -1,8 +1,845 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://shadcn-studio-internal.vercel.app",
+  "name": "shadcn-studio",
+  "homepage": "https://shadcnstudio.com/theme-editor",
   "items": [
+    {
+      "name": "bounce-button",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/bounce-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magnetic-button",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/magnetic-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ripple-button",
+      "type": "registry:ui",
+      "dependencies": [
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/ripple-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-button",
+      "type": "registry:ui",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/ui/shimmer-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-01.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-02.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-03",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-03.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-04",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-04.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-04.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-05",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-05.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-05.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-06",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-06.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-06.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-07",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-07.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-07.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-08",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-08.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-08.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-09",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-09.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-09.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-10",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-10.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-10.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-11",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-11.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-11.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-12",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-12.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-12.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-13",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-13.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-13.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-14",
+      "type": "registry:component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-14.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-14.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-15",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion",
+        "collapsible"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-15.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-15.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-16",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion",
+        "collapsible"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/accordion/accordion-16.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/accordion/accordion-16.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-01",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-01.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-02",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-02.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-03",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-03.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-04",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-04.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-04.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-05",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-05.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-05.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-06",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-06.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-06.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-07",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-07.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-07.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-08",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-08.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-08.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-09",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "avatar",
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-09.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-09.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-10",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "button",
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-10.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-10.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-11",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-11.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-11.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-12",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-12.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-12.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-13",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-13.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-13.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-14",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-14.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-14.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-15",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-15.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-15.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-16",
+      "type": "registry:component",
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-16.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-16.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-17",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-17.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-17.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-18",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-18.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-18.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-19",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-19.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-19.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-20",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-20.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-20.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-21",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-21.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-21.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-22",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-22.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-22.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-23",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-23.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-23.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-24",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-24.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-24.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-25",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-25.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-25.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-26",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-26.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-26.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-27",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-27.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-27.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-28",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-28.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-28.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-29",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-29.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-29.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-30",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/alert/alert-30.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/alert/alert-30.tsx"
+        }
+      ]
+    },
     {
       "name": "avatar-01",
       "type": "registry:component",
@@ -150,7 +987,10 @@
           "type": "registry:component",
           "target": "components/shadcn-studio/avatar/avatar-10.tsx"
         }
-      ]
+      ],
+      "meta": {
+        "badge": "Updated"
+      }
     },
     {
       "name": "avatar-11",
@@ -286,7 +1126,10 @@
           "type": "registry:component",
           "target": "components/shadcn-studio/avatar/avatar-19.tsx"
         }
-      ]
+      ],
+      "meta": {
+        "badge": "Updated"
+      }
     },
     {
       "name": "avatar-20",
@@ -721,7 +1564,10 @@
           "type": "registry:component",
           "target": "components/shadcn-studio/breadcrumb/breadcrumb-03.tsx"
         }
-      ]
+      ],
+      "meta": {
+        "badge": "Updated"
+      }
     },
     {
       "name": "breadcrumb-04",
@@ -790,7 +1636,10 @@
           "type": "registry:component",
           "target": "components/shadcn-studio/breadcrumb/breadcrumb-07.tsx"
         }
-      ]
+      ],
+      "meta": {
+        "badge": "Updated"
+      }
     },
     {
       "name": "breadcrumb-08",
@@ -806,6 +1655,1068 @@
           "path": "src/registry/new-york/components/breadcrumb/breadcrumb-08.tsx",
           "type": "registry:component",
           "target": "components/shadcn-studio/breadcrumb/breadcrumb-08.tsx"
+        }
+      ],
+      "meta": {
+        "badge": "Updated"
+      }
+    },
+    {
+      "name": "button-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-01.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-02.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-03",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-03.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-04",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-04.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-04.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-05",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-05.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-05.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-06",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-06.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-06.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-07",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-07.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-07.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-08",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-08.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-08.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-09",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-09.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-09.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-10",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-10.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-10.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-11",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-11.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-11.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-12",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-12.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-12.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-13",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-13.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-13.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-14",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-14.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-14.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-15",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-15.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-15.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-16",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-16.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-16.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-17",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-17.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-17.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-18",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-18.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-18.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-19",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-19.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-19.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-20",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-20.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-20.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-21",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-21.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-21.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-22",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-22.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-22.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-23",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-23.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-23.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-24",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-24.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-24.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-25",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-25.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-25.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-26",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-26.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-26.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-27",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-27.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-27.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-28",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-28.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-28.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-29",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-29.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-29.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-30",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-30.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-30.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-31",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-31.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-31.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-32",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-32.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-32.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-33",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-33.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-33.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-34",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-34.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-34.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-35",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-35.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-35.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-36",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-36.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-36.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-37",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-37.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-37.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-38",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-38.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-38.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-39",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://shadcnstudio.com/r/ripple-button.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-39.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-39.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-40",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-40.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-40.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-41",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-41.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-41.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-42",
+      "type": "registry:component",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-42.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-42.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-43",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://shadcnstudio.com/r/shimmer-button.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-43.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-43.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-44",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://shadcnstudio.com/r/bounce-button.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-44.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-44.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-45",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://shadcnstudio.com/r/magnetic-button.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-45.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-45.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-46",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-46.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-46.tsx"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "--animate-heartbeat": "heartbeat 2s infinite ease-in-out"
+        }
+      },
+      "css": {
+        "@keyframes heartbeat": {
+          "0%": {
+            "box-shadow": "0 0 0 0 var(--destructive)",
+            "transform": "scale(1)"
+          },
+          "50%": {
+            "box-shadow": "0 0 0 7px transparent",
+            "transform": "scale(1.05)"
+          },
+          "100%": {
+            "box-shadow": "0 0 0 0 transparent",
+            "transform": "scale(1)"
+          }
+        }
+      },
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "button-47",
+      "type": "registry:component",
+      "files": [
+        {
+          "path": "src/registry/new-york/components/button/button-47.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/button/button-47.tsx"
+        }
+      ],
+      "meta": {
+        "isAnimated": true
+      }
+    },
+    {
+      "name": "dropdown-menu-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-01.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-02.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-03",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-03.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-04",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-04.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-04.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-05",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "badge",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-05.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-05.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-06",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-06.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-06.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-07",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-07.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-07.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-08",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-08.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-08.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-09",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-09.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-09.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-10",
+      "type": "registry:component",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-10.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-10.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-11",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-11.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-11.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-12",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-12.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-12.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-13",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-13.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-13.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-14",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-14.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-14.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-15",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-15.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-15.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-16",
+      "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-16.tsx",
+          "type": "registry:component",
+          "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-16.tsx"
         }
       ]
     }

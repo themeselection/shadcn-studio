@@ -52,13 +52,10 @@ const AvatarGroupDropdownDemo = () => {
       ))}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Avatar className='has-focus-visible:ring-ring/50 ring-background ring-2'>
-            <AvatarFallback asChild>
-              <button className='cursor-pointer'>
-                <PlusIcon className='size-4' />
-              </button>
-            </AvatarFallback>
-          </Avatar>
+          <button className='bg-muted has-focus-visible:ring-ring/50 ring-background flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full ring-2'>
+            <PlusIcon className='size-4' />
+            <span className='sr-only'>Add</span>
+          </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           {avatars.slice(3).map((avatar, index) => (

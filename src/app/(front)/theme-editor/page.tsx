@@ -9,6 +9,7 @@ import { PlusIcon, Sparkles } from 'lucide-react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 
 // Component Imports
+import { ScrollArea } from '@/registry/new-york/ui/scroll-area'
 import { Accordion, AccordionContent, AccordionItem } from '@/registry/new-york/ui/accordion'
 import { Badge } from '@/registry/new-york/ui/badge'
 import { Card, CardContent, CardHeader } from '@/registry/new-york/ui/card'
@@ -17,6 +18,7 @@ import CardsDemo from '@/components/examples/cards'
 import MailPage from '@/components/examples/mail'
 import DashboardPage from '@/components/examples/dashboard'
 import MusicPage from '@/components/examples/music'
+import V4Page from '@/components/examples/v4'
 
 // Util Imports
 import { cn } from '@/registry/new-york/lib/utils'
@@ -81,6 +83,9 @@ const ThemeEditor = () => {
             <TabsTrigger value='music' className='cursor-pointer'>
               Music
             </TabsTrigger>
+            <TabsTrigger value='v4' className='cursor-pointer'>
+              Components
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value='examples'>
@@ -97,6 +102,12 @@ const ThemeEditor = () => {
 
           <TabsContent value='music'>
             <MusicPage />
+          </TabsContent>
+
+          <TabsContent value='v4' className='rounded-lg border'>
+            <ScrollArea className='h-[800px]'>
+              <V4Page />
+            </ScrollArea>
           </TabsContent>
         </Tabs>
       </section>

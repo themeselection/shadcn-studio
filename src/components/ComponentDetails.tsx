@@ -77,7 +77,7 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
   }, [component.name])
 
   return (
-    <div className='absolute -end-2 -top-2 flex items-center gap-2'>
+    <div className='absolute end-2 top-2 flex items-center gap-2'>
       <OpenInV0 sourceUrl={`${process.env.NEXT_PUBLIC_APP_URL}/r/${component.name}.json`} title={component.name} />
       <Dialog>
         <TooltipProvider delayDuration={0}>

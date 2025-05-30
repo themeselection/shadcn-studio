@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-18",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-18.tsx",
+      "content": "import { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonAnimatedLinkDemo = () => {\n  return (\n    <Button\n      variant='link'\n      className='after:bg-primary relative !no-underline after:absolute after:bottom-2 after:h-px after:w-2/3 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100'\n      asChild\n    >\n      <a href='#'>Contact Us</a>\n    </Button>\n  )\n}\n\nexport default ButtonAnimatedLinkDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-18.tsx"
+    }
+  ]
+}

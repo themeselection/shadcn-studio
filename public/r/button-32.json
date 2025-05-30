@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-32",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-32.tsx",
+      "content": "import { PlusIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\nimport { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/registry/new-york/ui/tooltip'\n\nconst IconButtonTooltipDemo = () => {\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant='outline' size='icon' className='rounded-full'>\n            <PlusIcon />\n            <span className='sr-only'>Add new item</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Add new item</TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  )\n}\n\nexport default IconButtonTooltipDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-32.tsx"
+    }
+  ]
+}
