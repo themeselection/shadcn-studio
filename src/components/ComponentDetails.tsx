@@ -42,7 +42,7 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
 
     const loadCode = async () => {
       try {
-        const response = await fetch(`/r/${component.name}.json`)
+        const response = await fetch(`/r/components/${component.name}.json`)
 
         if (!response.ok) {
           handleEmptyCode()
@@ -78,7 +78,10 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
 
   return (
     <div className='absolute end-2 top-2 flex items-center gap-2'>
-      <OpenInV0 sourceUrl={`${process.env.NEXT_PUBLIC_APP_URL}/r/${component.name}.json`} title={component.name} />
+      <OpenInV0
+        sourceUrl={`${process.env.NEXT_PUBLIC_APP_URL}/r/components/${component.name}.json`}
+        title={component.name}
+      />
       <Dialog>
         <TooltipProvider delayDuration={0}>
           <Tooltip>
@@ -103,7 +106,7 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
             <DialogDescription className='sr-only'>Use the CLI to add components to your project</DialogDescription>
           </DialogHeader>
           <div className='min-w-0 space-y-5'>
-            <ComponentCli name={component.name} toast='Installation command' />
+            <ComponentCli name={`components/${component.name}`} toast='Installation command' />
             <div className='space-y-4'>
               <h2 className='text-left text-lg leading-none font-semibold'>Code</h2>
               <div className='relative'>

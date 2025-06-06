@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-05",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/card/card-05.tsx",
+      "content": "import { Button } from '@/registry/new-york/ui/button'\nimport { Card, CardContent, CardHeader, CardDescription, CardTitle, CardFooter } from '@/registry/new-york/ui/card'\n\nconst CardTopImageDemo = () => {\n  return (\n    <Card className='max-w-md pt-0'>\n      <CardContent className='px-0'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto'\n          alt='Banner'\n          className='aspect-video h-70 rounded-t-xl object-cover'\n        />\n      </CardContent>\n      <CardHeader>\n        <CardTitle>Ethereal Swirl Gradient</CardTitle>\n        <CardDescription>Smooth, flowing gradients blending rich reds and blues in an abstract swirl.</CardDescription>\n      </CardHeader>\n      <CardFooter className='gap-3 max-sm:flex-col max-sm:items-stretch'>\n        <Button>Explore More</Button>\n        <Button variant={'outline'}>Download Now</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n\nexport default CardTopImageDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/card/card-05.tsx"
+    }
+  ]
+}

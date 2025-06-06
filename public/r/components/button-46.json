@@ -1,0 +1,37 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-46",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button/button-46.tsx",
+      "content": "import { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonHeartbeatEffectDemo = () => {\n  return (\n    <Button variant='destructive' className='animate-heartbeat dark:bg-destructive/100 m-9'>\n      Heartbeat Effect\n    </Button>\n  )\n}\n\nexport default ButtonHeartbeatEffectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-46.tsx"
+    }
+  ],
+  "cssVars": {
+    "theme": {
+      "--animate-heartbeat": "heartbeat 2s infinite ease-in-out"
+    }
+  },
+  "css": {
+    "@keyframes heartbeat": {
+      "0%": {
+        "box-shadow": "0 0 0 0 var(--destructive)",
+        "transform": "scale(1)"
+      },
+      "50%": {
+        "box-shadow": "0 0 0 7px transparent",
+        "transform": "scale(1.05)"
+      },
+      "100%": {
+        "box-shadow": "0 0 0 0 transparent",
+        "transform": "scale(1)"
+      }
+    }
+  }
+}

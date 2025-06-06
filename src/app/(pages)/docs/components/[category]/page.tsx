@@ -77,7 +77,7 @@ const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
         {components
           .filter(component => !component?.meta?.isAnimated)
           .map(component => (
-            <ComponentCard key={component.name} component={component}>
+            <ComponentCard key={component.name} component={component} className={component?.meta?.className}>
               <ComponentLoader component={component} category={category.slug} />
               <ComponentDetails component={component} />
               {component?.meta?.badge && (
@@ -94,11 +94,11 @@ const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
               {`Enhance your interface with ${components.filter(component => component?.meta?.isAnimated).length}+ animated ${category.name.toLowerCase()} components, crafted with React, Tailwind CSS, and Motion for smooth, interactive animations.`}
             </p>
           </div>
-          <ComponentsGrid {...category.breakpoints}>
+          <ComponentsGrid {...category.animation?.breakpoints}>
             {components
               .filter(component => component?.meta?.isAnimated)
               .map(component => (
-                <ComponentCard key={component.name} component={component}>
+                <ComponentCard key={component.name} component={component} className={component?.meta?.className}>
                   <ComponentLoader component={component} category={category.slug} />
                   <ComponentDetails component={component} />
                   {component?.meta?.badge && (

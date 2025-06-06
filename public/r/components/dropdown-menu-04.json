@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-04",
+  "type": "registry:component",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-04.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'\nimport { Button } from '@/registry/new-york/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger\n} from '@/registry/new-york/ui/dropdown-menu'\n\nconst listItems = [\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    fallback: 'AD',\n    name: 'Angel Dorwart',\n    mail: 'sbaker@hotmail.com'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-7.png',\n    fallback: 'SR',\n    name: 'Skylar Rosser',\n    mail: 'gbaker@yahoo.com'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-8.png',\n    fallback: 'DB',\n    name: 'Dulce Botosh',\n    mail: 'tlee@gmail.com'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-9.png',\n    fallback: 'AS',\n    name: 'Ahmad Stanton',\n    mail: 'kdavis@hotmail.com'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-10.png',\n    fallback: 'RG',\n    name: 'Randy Gouse',\n    mail: 'ijackson@yahoo.com'\n  }\n]\n\nconst DropdownMenuItemActionDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Menu item with action</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-91'>\n        <DropdownMenuLabel>Contact List</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          {listItems.map((item, index) => (\n            <DropdownMenuItem key={index} className='justify-between'>\n              <Avatar>\n                <AvatarImage src={item.src} alt={item.name} />\n                <AvatarFallback className='text-xs'>{item.fallback}</AvatarFallback>\n              </Avatar>\n              <div className='flex flex-1 flex-col'>\n                <span className='text-popover-foreground'>{item.name}</span>\n                <span className='text-muted-foreground text-xs'>{item.mail}</span>\n              </div>\n              <Button variant='secondary' className='h-7 cursor-pointer rounded-md px-2'>\n                Send\n              </Button>\n            </DropdownMenuItem>\n          ))}\n          <DropdownMenuItem>\n            <Button className='grow'>Add Contact</Button>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuItemActionDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-04.tsx"
+    }
+  ]
+}

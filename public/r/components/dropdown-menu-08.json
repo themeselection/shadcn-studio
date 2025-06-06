@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-08",
+  "type": "registry:component",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/dropdown-menu/dropdown-menu-08.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'\nimport { Button } from '@/registry/new-york/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuPortal,\n  DropdownMenuSeparator,\n  DropdownMenuSub,\n  DropdownMenuSubContent,\n  DropdownMenuSubTrigger,\n  DropdownMenuTrigger\n} from '@/registry/new-york/ui/dropdown-menu'\n\nconst DropdownMenuUserProfileDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>User Profile</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56'>\n        <DropdownMenuLabel className='flex items-center gap-2'>\n          <Avatar>\n            <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png' alt='Phillip George' />\n            <AvatarFallback className='text-xs'>PG</AvatarFallback>\n          </Avatar>\n          <div className='flex flex-1 flex-col'>\n            <span className='text-popover-foreground'>Phillip George</span>\n            <span className='text-muted-foreground text-xs'>phillip@example.com</span>\n          </div>\n        </DropdownMenuLabel>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem>Profile</DropdownMenuItem>\n          <DropdownMenuItem>Billing</DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuSub>\n            <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>\n            <DropdownMenuPortal>\n              <DropdownMenuSubContent>\n                <DropdownMenuItem>Email</DropdownMenuItem>\n                <DropdownMenuItem>Message</DropdownMenuItem>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem>More...</DropdownMenuItem>\n              </DropdownMenuSubContent>\n            </DropdownMenuPortal>\n          </DropdownMenuSub>\n          <DropdownMenuItem>GitHub</DropdownMenuItem>\n          <DropdownMenuItem>Support</DropdownMenuItem>\n          <DropdownMenuItem disabled>API</DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuUserProfileDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-08.tsx"
+    }
+  ]
+}

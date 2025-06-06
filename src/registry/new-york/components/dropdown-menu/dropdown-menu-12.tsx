@@ -1,37 +1,43 @@
+import { CircleHelp, DollarSign, Receipt, Settings, User } from 'lucide-react'
+
 import { Button } from '@/registry/new-york/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuTrigger
 } from '@/registry/new-york/ui/dropdown-menu'
 
-const DropdownMenuAlignEndDemo = () => {
+const DropdownMenuItemIconDemo = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline'>Align End</Button>
+        <Button variant='outline'>Menu item with icon</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='end' className='w-66'>
+      <DropdownMenuContent className='w-56'>
+        <DropdownMenuLabel>User Profile</DropdownMenuLabel>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            New Tab<DropdownMenuShortcut>⌘ + T</DropdownMenuShortcut>
+            <User />
+            Profile
           </DropdownMenuItem>
           <DropdownMenuItem>
-            New Window <DropdownMenuShortcut>⌘ + N</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            New Incognito Window <DropdownMenuShortcut>⌘ + ⇧ + N</DropdownMenuShortcut>
+            <Settings />
+            Settings
           </DropdownMenuItem>
           <DropdownMenuItem>
-            History <DropdownMenuShortcut>⌘ + Y</DropdownMenuShortcut>
+            <Receipt />
+            Billing Plans
           </DropdownMenuItem>
           <DropdownMenuItem>
-            Downloads <DropdownMenuShortcut>⌥ + ⇧ + L</DropdownMenuShortcut>
+            <DollarSign />
+            Pricing
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <CircleHelp />
+            FAQ
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
@@ -39,4 +45,4 @@ const DropdownMenuAlignEndDemo = () => {
   )
 }
 
-export default DropdownMenuAlignEndDemo
+export default DropdownMenuItemIconDemo

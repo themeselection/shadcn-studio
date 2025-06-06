@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-12",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button-group/button-group-12.tsx",
+      "content": "import { BoxIcon, ChartBarBigIcon, SettingsIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonGroupGhostDemo = () => {\n  return (\n    <div className='inline-flex w-fit rounded-md rtl:space-x-reverse'>\n      <Button variant='ghost' className='rounded-none rounded-s-md shadow-none focus-visible:z-10'>\n        <SettingsIcon />\n        Settings\n      </Button>\n      <Button variant='ghost' className='rounded-none shadow-none focus-visible:z-10'>\n        <BoxIcon />\n        Dashboard\n      </Button>\n      <Button variant='ghost' className='rounded-none rounded-e-md shadow-none focus-visible:z-10'>\n        <ChartBarBigIcon />\n        Analytics\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonGroupGhostDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-12.tsx"
+    }
+  ]
+}

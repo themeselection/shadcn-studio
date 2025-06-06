@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-14",
+  "type": "registry:component",
+  "registryDependencies": [
+    "label",
+    "https://shadcnstudio.com/r/components/motion-radio-group.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/radio-group/radio-group-14.tsx",
+      "content": "import { Label } from '@/registry/new-york/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/registry/new-york/ui/motion-radio-group'\n\nconst RadioGroupAnimatedDemo = () => {\n  return (\n    <RadioGroup defaultValue='realtime'>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='realtime' id='notifications-realtime' />\n        <Label htmlFor='notifications-realtime'>Real-time</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='daily' id='notifications-daily' />\n        <Label htmlFor='notifications-daily'>Daily Digest</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='none' id='notifications-none' />\n        <Label htmlFor='notifications-none'>No Notifications</Label>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupAnimatedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/radio-group/radio-group-14.tsx"
+    }
+  ]
+}

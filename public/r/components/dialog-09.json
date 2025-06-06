@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-09",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button",
+    "dialog",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/dialog/dialog-09.tsx",
+      "content": "import { Button } from '@/registry/new-york/ui/button'\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger\n} from '@/registry/new-york/ui/dialog'\nimport { Input } from '@/registry/new-york/ui/input'\nimport { Label } from '@/registry/new-york/ui/label'\n\nconst DialogSubscribeDemo = () => {\n  return (\n    <Dialog>\n      <DialogTrigger asChild>\n        <Button variant='outline'>Subscribe</Button>\n      </DialogTrigger>\n      <DialogContent className='sm:max-w-lg'>\n        <DialogHeader className='text-center'>\n          <DialogTitle className='text-xl'>Subscribe blog for latest updates</DialogTitle>\n          <DialogDescription className='text-base'>\n            Subscribe to our blog to stay updated with the latest posts and news. Simply enter your email address and\n            click &apos;Subscribe&apos; to receive notifications.\n          </DialogDescription>\n        </DialogHeader>\n        <form className='flex gap-4'>\n          <div className='grid grow-1 gap-3'>\n            <Label htmlFor='email'>Email</Label>\n            <Input type='email' id='email' name='email' placeholder='example@gmail.com' required />\n          </div>\n          <Button type='submit' className='self-end'>\n            Subscribe\n          </Button>\n        </form>\n      </DialogContent>\n    </Dialog>\n  )\n}\n\nexport default DialogSubscribeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dialog/dialog-09.tsx"
+    }
+  ]
+}

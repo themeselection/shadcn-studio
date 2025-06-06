@@ -4,8 +4,8 @@
     .shepherd-header {
       background-color: var(--card) !important;
       padding: 1.5rem !important;
-      border-top-left-radius: 10px !important;
-      border-top-right-radius: 10px !important;
+      border-start-start-radius: 10px !important;
+      border-start-end-radius: 10px !important;
       .shepherd-title {
         color: var(--foreground) !important;
         font-weight: 600 !important;
@@ -26,14 +26,14 @@
     .shepherd-footer {
       background-color: var(--card) !important;
       padding: 1.5rem !important;
-      border-bottom-left-radius: 10px !important;
-      border-bottom-right-radius: 10px !important;
+      border-end-start-radius: 10px !important;
+      border-end-end-radius: 10px !important;
       .shepherd-button {
         background: var(--primary) !important;
         color: var(--primary-foreground) !important;
         border-radius: calc(var(--radius) - 4px);
         cursor: pointer;
-        margin-right: 1rem;
+        margin-inline-end: 1rem;
         padding: 0.5rem 1rem;
         transition: all 0.2s ease-in-out;
         font-size: 0.875rem;

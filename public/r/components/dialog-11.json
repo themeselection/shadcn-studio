@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-11",
+  "type": "registry:component",
+  "registryDependencies": [
+    "button",
+    "dialog",
+    "checkbox",
+    "label",
+    "radio-group",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/dialog/dialog-11.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Button } from '@/registry/new-york/ui/button'\nimport { Checkbox } from '@/registry/new-york/ui/checkbox'\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger\n} from '@/registry/new-york/ui/dialog'\nimport { Label } from '@/registry/new-york/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/registry/new-york/ui/radio-group'\nimport { Textarea } from '@/registry/new-york/ui/textarea'\n\nconst DialogRatingDemo = () => {\n  const id = useId()\n\n  const ratings = [\n    { value: '1', label: 'Angry', icon: '😡' },\n    { value: '2', label: 'Sad', icon: '🙁' },\n    { value: '3', label: 'Neutral', icon: '🙂' },\n    { value: '4', label: 'Happy', icon: '😁' },\n    { value: '5', label: 'Laughing', icon: '🤩' }\n  ]\n\n  return (\n    <Dialog>\n      <form>\n        <DialogTrigger asChild>\n          <Button variant='outline'>Rating</Button>\n        </DialogTrigger>\n        <DialogContent className='sm:max-w-md'>\n          <DialogHeader>\n            <DialogTitle className='text-xl'>Help us improve our product for you</DialogTitle>\n          </DialogHeader>\n          <form className='flex flex-col gap-4 pt-4'>\n            <fieldset className='space-y-4'>\n              <legend className='text-foreground text-sm leading-none font-medium'>\n                How would you like to describe your experience with the app today?\n              </legend>\n              <RadioGroup className='flex gap-1.5' defaultValue='5'>\n                {ratings.map(rating => (\n                  <label\n                    key={`${id}-${rating.value}`}\n                    className='border-input relative flex size-9 cursor-pointer flex-col items-center justify-center rounded-full border text-center text-xl shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:border-sky-600 has-focus-visible:ring-[3px] has-focus-visible:ring-sky-600/50 has-data-disabled:cursor-not-allowed has-data-disabled:opacity-50 has-data-[state=checked]:border-sky-600 has-data-[state=checked]:bg-sky-600/10 dark:has-focus-visible:border-sky-400 dark:has-focus-visible:ring-sky-600/50 dark:has-data-[state=checked]:border-sky-400 dark:has-data-[state=checked]:bg-sky-400/10'\n                  >\n                    <RadioGroupItem\n                      id={`${id}-${rating.value}`}\n                      value={rating.value}\n                      className='sr-only after:absolute after:inset-0'\n                    />\n                    {rating.icon}\n                  </label>\n                ))}\n              </RadioGroup>\n            </fieldset>\n            <div className='grid grow-1 gap-3'>\n              <Textarea placeholder='Type your message here.' id='message-2' required />\n              <p className='text-muted-foreground text-sm'>500/500 characters left</p>\n            </div>\n            <div className='flex gap-3'>\n              <Checkbox id='terms' />\n              <Label htmlFor='terms'>I consent to Shadcn Studio contacting me based on my feedback</Label>\n            </div>\n\n            <DialogFooter className='sm:justify-end'>\n              <DialogClose asChild>\n                <Button variant='outline'>Cancel</Button>\n              </DialogClose>\n              <Button type='submit'>Submit</Button>\n            </DialogFooter>\n          </form>\n        </DialogContent>\n      </form>\n    </Dialog>\n  )\n}\n\nexport default DialogRatingDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dialog/dialog-11.tsx"
+    }
+  ]
+}

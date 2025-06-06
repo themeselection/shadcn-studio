@@ -1,7 +1,7 @@
 // React Imports
 import type { SVGAttributes } from 'react'
 
-const JetShipBoilerplates = (props: SVGAttributes<SVGElement>) => {
+const JetShip = (props: SVGAttributes<SVGElement>) => {
   return (
     <svg width='3.24138em' height='1em' viewBox='0 0 94 29' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
       <path
@@ -63,4 +63,4 @@ const JetShipBoilerplates = (props: SVGAttributes<SVGElement>) => {
   )
 }
 
-export default JetShipBoilerplates
+export default JetShip

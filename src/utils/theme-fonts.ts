@@ -11,19 +11,20 @@ const sansSerifFontNames = [
   'Plus Jakarta Sans',
   'DM Sans',
   'Nunito',
-  'Barlow'
+  'Barlow',
+  'Source Code Pro',
+  'Lato'
 ]
 
 const serifFontNames = [
   'Merriweather',
   'Playfair Display',
   'Lora',
-  'Source Serif Pro',
+  'Source Serif 4',
   'Libre Baskerville',
   'Space Grotesk',
   'PT Serif',
   'Nunito',
-  'Merriweather',
   'Lato'
 ]
 
@@ -41,12 +42,13 @@ export const fonts = {
   'DM Sans': 'DM Sans, sans-serif',
   'IBM Plex Sans': 'IBM Plex Sans, sans-serif',
   Nunito: 'Nunito, sans-serif',
+  Lato: 'Lato, sans-serif',
 
   // Serif fonts
   Merriweather: 'Merriweather, serif',
   'Playfair Display': 'Playfair Display, serif',
   Lora: 'Lora, serif',
-  'Source Serif Pro': 'Source Serif Pro, serif',
+  'Source Serif 4': 'Source Serif 4, serif',
   'Libre Baskerville': 'Libre Baskerville, serif',
   'Space Grotesk': 'Space Grotesk, serif',
   'PT Serif': 'PT Serif, serif',

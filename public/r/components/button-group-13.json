@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-13",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://shadcnstudio.com/r/components/ripple-button.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button-group/button-group-13.tsx",
+      "content": "import { ArchiveIcon, InboxIcon, SendHorizonalIcon } from 'lucide-react'\n\nimport { RippleButton } from '@/registry/new-york/ui/ripple-button'\n\nconst ButtonGroupRippleDemo = () => {\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <RippleButton variant='outline' className='rounded-none rounded-s-md shadow-none focus-visible:z-10'>\n        <InboxIcon />\n        Inbox\n      </RippleButton>\n      <RippleButton variant='outline' className='rounded-none shadow-none focus-visible:z-10'>\n        <ArchiveIcon />\n        Archived\n      </RippleButton>\n      <RippleButton variant='outline' className='rounded-none rounded-e-md shadow-none focus-visible:z-10'>\n        <SendHorizonalIcon />\n        Sent\n      </RippleButton>\n    </div>\n  )\n}\n\nexport default ButtonGroupRippleDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-13.tsx"
+    }
+  ]
+}

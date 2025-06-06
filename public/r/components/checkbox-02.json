@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-02",
+  "type": "registry:component",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/checkbox/checkbox-02.tsx",
+      "content": "'use client'\n\nimport { useId, useState, type ComponentProps } from 'react'\n\nimport { CheckIcon, MinusIcon } from 'lucide-react'\n\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\n\nimport { Label } from '@/registry/new-york/ui/label'\n\nconst Checkbox = (props: ComponentProps<typeof CheckboxPrimitive.Root>) => {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot='checkbox'\n      className='peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:text-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive group size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50'\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot='checkbox-indicator'\n        className='flex items-center justify-center text-current transition-none'\n      >\n        <MinusIcon className='hidden size-2.5 group-data-[state=indeterminate]:block' />\n        <CheckIcon className='hidden size-3.5 group-data-[state=checked]:block' />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nconst CheckboxIndeterminateDemo = () => {\n  const [checked, setChecked] = useState<CheckboxPrimitive.CheckedState>('indeterminate')\n\n  const id = useId()\n\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox id={id} checked={checked} onCheckedChange={setChecked} />\n      <Label htmlFor={id}>Indeterminate checkbox</Label>\n    </div>\n  )\n}\n\nexport default CheckboxIndeterminateDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-02.tsx"
+    }
+  ]
+}

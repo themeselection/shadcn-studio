@@ -1,62 +1,42 @@
-import { ChevronDown, ChevronsDown, ChevronUp, ChevronsUp, Equal } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
 
 import { Button } from '@/registry/new-york/ui/button'
 import {
   DropdownMenu,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/registry/new-york/ui/dropdown-menu'
 
-const listItems = [
-  {
-    icon: ChevronsUp,
-    color: 'text-destructive',
-    priority: 'Highest'
-  },
-  {
-    icon: ChevronUp,
-    color: 'text-destructive/60',
-    priority: 'High'
-  },
-  {
-    icon: Equal,
-    color: 'text-amber-600 dark:text-amber-400',
-    priority: 'Medium'
-  },
-  {
-    icon: ChevronDown,
-    color: 'text-green-600/60 dark:text-green-400/60',
-    priority: 'Low'
-  },
-  {
-    icon: ChevronsDown,
-    color: 'text-green-600 dark:text-green-400',
-    priority: 'Lowest'
-  }
-]
+const DropdownMenuCheckboxDemo = () => {
+  const [showStatusBar, setShowStatusBar] = useState(true)
+  const [showActivityBar, setShowActivityBar] = useState(false)
+  const [showPanel, setShowPanel] = useState(false)
 
-const DropdownMenuBorderedMenuDemo = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline'>Bordered Menu</Button>
+        <Button variant='outline'>With checkbox</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='w-56 shadow-none'>
-        <DropdownMenuLabel>Task priority</DropdownMenuLabel>
-        <DropdownMenuGroup>
-          {listItems.map((item, index) => (
-            <DropdownMenuItem key={index}>
-              <item.icon className={item.color} />
-              {item.priority}
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuGroup>
+      <DropdownMenuContent className='w-56'>
+        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuCheckboxItem checked={showStatusBar} onCheckedChange={setShowStatusBar}>
+          Status Bar
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem checked={showActivityBar} onCheckedChange={setShowActivityBar} disabled>
+          API
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem checked={showPanel} onCheckedChange={setShowPanel}>
+          Invite users
+        </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
 
-export default DropdownMenuBorderedMenuDemo
+export default DropdownMenuCheckboxDemo

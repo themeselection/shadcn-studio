@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-15",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react",
+    "motion"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/button-group/button-group-15.tsx",
+      "content": "import * as motion from 'motion/react-client'\n\nimport { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'\n\nimport { Button } from '@/registry/new-york/ui/button'\n\nconst ButtonGroupScaleDemo = () => {\n  return (\n    <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-md shadow-xs'>\n      <Button className='rounded-none rounded-s-md shadow-none transition-none focus-visible:z-10' asChild>\n        <motion.button whileTap={{ scale: 0.9 }}>\n          <ChevronLeftIcon />\n          Previous\n        </motion.button>\n      </Button>\n      <Button className='rounded-none rounded-e-md shadow-none transition-none focus-visible:z-10' asChild>\n        <motion.button whileTap={{ scale: 0.9 }}>\n          Next\n          <ChevronRightIcon />\n        </motion.button>\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonGroupScaleDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-15.tsx"
+    }
+  ]
+}

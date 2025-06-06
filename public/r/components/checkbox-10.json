@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-10",
+  "type": "registry:component",
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/checkbox/checkbox-10.tsx",
+      "content": "import { Checkbox } from '@/registry/new-york/ui/checkbox'\n\nconst CheckboxColorsDemo = () => {\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox\n        className='data-[state=checked]:bg-destructive! data-[state=checked]:border-destructive focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:text-white'\n        aria-label='Color destructive'\n        defaultChecked\n      />\n      <Checkbox\n        className='focus-visible:ring-sky-600/20 data-[state=checked]:border-sky-600 data-[state=checked]:bg-sky-600 dark:text-white dark:focus-visible:ring-sky-400/40 dark:data-[state=checked]:border-sky-400 dark:data-[state=checked]:bg-sky-400'\n        aria-label='Color info'\n        defaultChecked\n      />\n      <Checkbox\n        className='focus-visible:ring-green-600/20 data-[state=checked]:border-green-600 data-[state=checked]:bg-green-600 dark:text-white dark:focus-visible:ring-green-400/40 dark:data-[state=checked]:border-green-400 dark:data-[state=checked]:bg-green-400'\n        aria-label='Color success'\n        defaultChecked\n      />\n    </div>\n  )\n}\n\nexport default CheckboxColorsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-10.tsx"
+    }
+  ]
+}

@@ -1,59 +1,40 @@
-import { User, Settings, Bell, LogOut, CreditCard } from 'lucide-react'
+import { PencilLine, Upload, Trash2 } from 'lucide-react'
 
 import { Button } from '@/registry/new-york/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuSeparator,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuTrigger
 } from '@/registry/new-york/ui/dropdown-menu'
 
-const listItems = [
-  {
-    icon: User,
-    property: 'Profile'
-  },
-  {
-    icon: Settings,
-    property: 'Settings'
-  },
-  {
-    icon: CreditCard,
-    property: 'Billing'
-  },
-  {
-    icon: Bell,
-    property: 'Notifications'
-  },
-  {
-    icon: LogOut,
-    property: 'Sign Out'
-  }
-]
-
-const DropdownMenuUserMenuDemo = () => {
+const DropdownMenuAlignStartDemo = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='secondary' size='icon' className='overflow-hidden rounded-full'>
-          <img src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />
-        </Button>
+        <Button variant='outline'>Align Start</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='w-56'>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuContent align='start' className='w-34'>
         <DropdownMenuGroup>
-          {listItems.map((item, index) => (
-            <DropdownMenuItem key={index}>
-              <item.icon />
-              <span className='text-popover-foreground'>{item.property}</span>
-            </DropdownMenuItem>
-          ))}
+          <DropdownMenuItem>
+            <PencilLine />
+            Edit
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Upload />
+            Share
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem variant='destructive'>
+            <Trash2 />
+            <span>Delete</span>
+          </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
 
-export default DropdownMenuUserMenuDemo
+export default DropdownMenuAlignStartDemo

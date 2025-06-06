@@ -2,9 +2,7 @@
 import type { RegistryItem } from 'shadcn/registry'
 
 // Data Imports
-import registry from '@/../registry.json'
-
-const components = registry.items as unknown as RegistryItem[]
+import { components } from '@/registry/registry-components'
 
 export const getComponentsByNames = (names: string[]): RegistryItem[] => {
   const componentsMap = new Map(components.map(comp => [comp.name, comp]))

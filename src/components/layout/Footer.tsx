@@ -126,7 +126,7 @@ const Footer = () => {
             <p className='text-lg leading-7.5 font-semibold'>Innovative Offerings</p>
             <p className='text-muted-foreground leading-7.5'>Discover other Tools & Brands in our Ecosystem</p>
           </div>
-          <div className='flex flex-wrap items-center justify-center gap-6 max-md:w-full max-md:flex-col'>
+          <div className='flex flex-wrap items-center justify-center gap-6'>
             <Link href='https://themeselection.com' target='_blank' rel='noopener noreferrer'>
               <ThemeSelection className='mb-2.5 text-[1.625rem]' />
               <span className='sr-only'>ThemeSelection</span>

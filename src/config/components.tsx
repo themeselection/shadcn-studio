@@ -8,7 +8,12 @@ import Avatar from '@/assets/svg/Avatar'
 import Badge from '@/assets/svg/Badge'
 import Breadcrumb from '@/assets/svg/Breadcrumb'
 import Button from '@/assets/svg/Button'
+import ButtonGroup from '@/assets/svg/ButtonGroup'
+import Card from '@/assets/svg/Card'
+import Checkbox from '@/assets/svg/Checkbox'
+import Dialog from '@/assets/svg/Dialog'
 import Dropdown from '@/assets/svg/Dropdown'
+import RadioGroup from '@/assets/svg/RadioGroup'
 
 export type ComponentCategory = {
   slug: string
@@ -25,7 +30,32 @@ export type ComponentCategory = {
       }
       svg: ComponentType<SVGProps<SVGSVGElement>>
       badge?: string
-      hasAnimation?: boolean
+      hasAnimation?: never | false
+      animation?: never | undefined
+      isComingSoon?: never | false
+    }
+  | {
+      components: { name: string }[]
+      breakpoints?: {
+        xs?: number
+        sm?: number
+        md?: number
+        lg?: number
+        xl?: number
+      }
+      svg: ComponentType<SVGProps<SVGSVGElement>>
+      badge?: string
+      hasAnimation: true
+      animation?: {
+        badge?: string
+        breakpoints?: {
+          xs?: number
+          sm?: number
+          md?: number
+          lg?: number
+          xl?: number
+        }
+      }
       isComingSoon?: never | false
     }
   | {
@@ -34,6 +64,7 @@ export type ComponentCategory = {
       breakpoints?: never | undefined
       badge?: never | undefined
       hasAnimation?: never | undefined
+      animation?: never | undefined
       isComingSoon: true
     }
 )
@@ -46,7 +77,6 @@ export const categories: ComponentCategory[] = [
     breakpoints: {
       md: 2
     },
-    badge: 'New',
     components: [
       { name: 'accordion-01' },
       { name: 'accordion-02' },
@@ -73,7 +103,6 @@ export const categories: ComponentCategory[] = [
     breakpoints: {
       md: 2
     },
-    badge: 'New',
     components: [
       { name: 'alert-01' },
       { name: 'alert-02' },
@@ -200,8 +229,13 @@ export const categories: ComponentCategory[] = [
       md: 2,
       xl: 3
     },
-    badge: 'New',
     hasAnimation: true,
+    animation: {
+      breakpoints: {
+        md: 2,
+        xl: 3
+      }
+    },
     components: [
       { name: 'button-01' },
       { name: 'button-02' },
@@ -255,17 +289,154 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'button-group',
     name: 'Button Group',
-    isComingSoon: true
+    svg: ButtonGroup,
+    breakpoints: {
+      md: 2
+    },
+    badge: 'New',
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        md: 2
+      }
+    },
+    components: [
+      { name: 'button-group-01' },
+      { name: 'button-group-02' },
+      { name: 'button-group-03' },
+      { name: 'button-group-04' },
+      { name: 'button-group-05' },
+      { name: 'button-group-06' },
+      { name: 'button-group-07' },
+      { name: 'button-group-08' },
+      { name: 'button-group-09' },
+      { name: 'button-group-10' },
+      { name: 'button-group-11' },
+      { name: 'button-group-12' },
+      { name: 'button-group-13' },
+      { name: 'button-group-14' },
+      { name: 'button-group-15' },
+      { name: 'button-group-16' }
+    ]
   },
   {
     slug: 'card',
     name: 'Card',
-    isComingSoon: true
+    svg: Card,
+    breakpoints: {
+      xl: 2
+    },
+    badge: 'New',
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        md: 2
+      }
+    },
+    components: [
+      { name: 'card-01' },
+      { name: 'card-02' },
+      { name: 'card-03' },
+      { name: 'card-04' },
+      { name: 'card-05' },
+      { name: 'card-06' },
+      { name: 'card-07' },
+      { name: 'card-08' },
+      { name: 'card-09' },
+      { name: 'card-10' },
+      { name: 'card-11' },
+      { name: 'card-12' },
+      { name: 'card-13' },
+      { name: 'card-14' },
+      { name: 'card-15' },
+      { name: 'card-16' },
+      { name: 'card-17' }
+    ]
+  },
+  {
+    slug: 'checkbox',
+    name: 'Checkbox',
+    svg: Checkbox,
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    badge: 'New',
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        md: 2,
+        xl: 3
+      }
+    },
+    components: [
+      { name: 'checkbox-01' },
+      { name: 'checkbox-02' },
+      { name: 'checkbox-03' },
+      { name: 'checkbox-04' },
+      { name: 'checkbox-05' },
+      { name: 'checkbox-06' },
+      { name: 'checkbox-07' },
+      { name: 'checkbox-08' },
+      { name: 'checkbox-09' },
+      { name: 'checkbox-10' },
+      { name: 'checkbox-11' },
+      { name: 'checkbox-12' },
+      { name: 'checkbox-13' },
+      { name: 'checkbox-14' },
+      { name: 'checkbox-15' },
+      { name: 'checkbox-16' },
+      { name: 'checkbox-17' },
+      { name: 'checkbox-18' },
+      { name: 'checkbox-19' }
+    ]
   },
   {
     slug: 'dialog',
     name: 'Dialog',
-    isComingSoon: true
+    svg: Dialog,
+    badge: 'New',
+    breakpoints: {
+      md: 3
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        sm: 3
+      }
+    },
+    components: [
+      { name: 'dialog-01' },
+      { name: 'dialog-02' },
+      { name: 'dialog-03' },
+      { name: 'dialog-04' },
+      { name: 'dialog-05' },
+      { name: 'dialog-06' },
+      { name: 'dialog-07' },
+      { name: 'dialog-08' },
+      { name: 'dialog-09' },
+      { name: 'dialog-10' },
+      { name: 'dialog-11' },
+      { name: 'dialog-12' },
+      { name: 'dialog-13' },
+      { name: 'dialog-14' },
+      { name: 'dialog-15' },
+      { name: 'dialog-16' },
+      { name: 'dialog-17' },
+      { name: 'dialog-18' },
+      { name: 'dialog-19' },
+      { name: 'dialog-20' },
+      { name: 'dialog-21' },
+      { name: 'dialog-22' },
+      { name: 'dialog-23' },
+      { name: 'dialog-24' },
+      { name: 'dialog-25' },
+      { name: 'dialog-26' }
+    ]
   },
   {
     slug: 'dropdown-menu',
@@ -275,7 +446,13 @@ export const categories: ComponentCategory[] = [
       sm: 2,
       md: 3
     },
-    badge: 'New',
+    hasAnimation: true,
+    animation: {
+      breakpoints: {
+        sm: 2,
+        md: 3
+      }
+    },
     components: [
       { name: 'dropdown-menu-01' },
       { name: 'dropdown-menu-02' },
@@ -294,6 +471,214 @@ export const categories: ComponentCategory[] = [
       { name: 'dropdown-menu-15' },
       { name: 'dropdown-menu-16' }
     ]
+  },
+  {
+    slug: 'radio-group',
+    name: 'Radio Group',
+    svg: RadioGroup,
+    badge: 'New',
+    breakpoints: {
+      md: 2
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        md: 2
+      }
+    },
+    components: [
+      { name: 'radio-group-01' },
+      { name: 'radio-group-02' },
+      { name: 'radio-group-03' },
+      { name: 'radio-group-04' },
+      { name: 'radio-group-05' },
+      { name: 'radio-group-06' },
+      { name: 'radio-group-07' },
+      { name: 'radio-group-08' },
+      { name: 'radio-group-09' },
+      { name: 'radio-group-10' },
+      { name: 'radio-group-11' },
+      { name: 'radio-group-12' },
+      { name: 'radio-group-13' },
+      { name: 'radio-group-14' },
+      { name: 'radio-group-15' }
+    ]
+  },
+  {
+    slug: 'aspect-ratio',
+    name: 'Aspect Ratio',
+    isComingSoon: true
+  },
+  {
+    slug: 'calendar',
+    name: 'Calendar',
+    isComingSoon: true
+  },
+  {
+    slug: 'carousel',
+    name: 'Carousel',
+    isComingSoon: true
+  },
+  {
+    slug: 'chart',
+    name: 'Chart',
+    isComingSoon: true
+  },
+  {
+    slug: 'collapsible',
+    name: 'Collapsible',
+    isComingSoon: true
+  },
+  {
+    slug: 'combobox',
+    name: 'Combobox',
+    isComingSoon: true
+  },
+  {
+    slug: 'command',
+    name: 'Command',
+    isComingSoon: true
+  },
+  {
+    slug: 'context-menu',
+    name: 'Context Menu',
+    isComingSoon: true
+  },
+  {
+    slug: 'data-table',
+    name: 'Data Table',
+    isComingSoon: true
+  },
+  {
+    slug: 'date-picker',
+    name: 'Date Picker',
+    isComingSoon: true
+  },
+  {
+    slug: 'drawer',
+    name: 'Drawer',
+    isComingSoon: true
+  },
+  {
+    slug: 'form',
+    name: 'Form',
+    isComingSoon: true
+  },
+  {
+    slug: 'hover-card',
+    name: 'Hover Card',
+    isComingSoon: true
+  },
+  {
+    slug: 'input',
+    name: 'Input',
+    isComingSoon: true
+  },
+  {
+    slug: 'input-otp',
+    name: 'Input OTP',
+    isComingSoon: true
+  },
+  {
+    slug: 'label',
+    name: 'Label',
+    isComingSoon: true
+  },
+  {
+    slug: 'menubar',
+    name: 'Menubar',
+    isComingSoon: true
+  },
+  {
+    slug: 'navigation-menu',
+    name: 'Navigation Menu',
+    isComingSoon: true
+  },
+  {
+    slug: 'pagination',
+    name: 'Pagination',
+    isComingSoon: true
+  },
+  {
+    slug: 'popover',
+    name: 'Popover',
+    isComingSoon: true
+  },
+  {
+    slug: 'progress',
+    name: 'Progress',
+    isComingSoon: true
+  },
+  {
+    slug: 'select',
+    name: 'Select',
+    isComingSoon: true
+  },
+  {
+    slug: 'separator',
+    name: 'Separator',
+    isComingSoon: true
+  },
+  {
+    slug: 'sheet',
+    name: 'Sheet',
+    isComingSoon: true
+  },
+  {
+    slug: 'sidebar',
+    name: 'Sidebar',
+    isComingSoon: true
+  },
+  {
+    slug: 'skeleton',
+    name: 'Skeleton',
+    isComingSoon: true
+  },
+  {
+    slug: 'slider',
+    name: 'Slider',
+    isComingSoon: true
+  },
+  {
+    slug: 'sonner',
+    name: 'Sonner',
+    isComingSoon: true
+  },
+  {
+    slug: 'switch',
+    name: 'Switch',
+    isComingSoon: true
+  },
+  {
+    slug: 'table',
+    name: 'Table',
+    isComingSoon: true
+  },
+  {
+    slug: 'tabs',
+    name: 'Tabs',
+    isComingSoon: true
+  },
+  {
+    slug: 'textarea',
+    name: 'Textarea',
+    isComingSoon: true
+  },
+  {
+    slug: 'toggle',
+    name: 'Toggle',
+    isComingSoon: true
+  },
+  {
+    slug: 'toggle-group',
+    name: 'Toggle Group',
+    isComingSoon: true
+  },
+  {
+    slug: 'tooltip',
+    name: 'Tooltip',
+    isComingSoon: true
   }
 ]
 

@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { Children, useEffect, useState, type ReactNode } from 'react'
+import { Children, isValidElement, useEffect, useState, type ReactNode } from 'react'
 
 // Util Imports
 import { cn } from '@/registry/new-york/lib/utils'
@@ -48,11 +48,15 @@ const ComponentsGrid = ({ children, sm, md, lg, xl, xs = 1 }: GridLayoutProps) =
     >
       {Children.map(children, (child, index) => (
         <div
-          className={cn({
-            'border-b-0': index >= length - (length % columns || columns),
-            'border-e-0': (index + 1) % columns === 0,
-            'border-e border-dashed': length % columns !== 0 && index === length - 1
-          })}
+          className={cn(
+            {
+              'border-b-0': index >= length - (length % columns || columns),
+              'border-e-0': (index + 1) % columns === 0,
+              'border-e border-dashed': length % columns !== 0 && index === length - 1
+            },
+            isValidElement<{ className?: string }>(child) &&
+              child.props.className?.split(' ').filter(word => word.includes('col-span-') || word.includes('border-e-'))
+          )}
         >
           {child}
         </div>

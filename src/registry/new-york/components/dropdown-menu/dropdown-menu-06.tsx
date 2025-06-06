@@ -1,4 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+import { AlignJustify, Heading1, Heading2, Pencil, TextSearch } from 'lucide-react'
+
 import { Button } from '@/registry/new-york/ui/button'
 import {
   DropdownMenu,
@@ -11,68 +12,54 @@ import {
 
 const listItems = [
   {
-    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',
-    fallback: 'AD',
-    name: 'Angel Dorwart',
-    mail: 'sbaker@hotmail.com'
+    icon: Heading1,
+    property: 'Heading 1',
+    description: 'big section or hero heading'
   },
   {
-    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-7.png',
-    fallback: 'SR',
-    name: 'Skylar Rosser',
-    mail: 'gbaker@yahoo.com'
+    icon: Heading2,
+    property: 'Heading 2',
+    description: 'Sub section heading'
   },
   {
-    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-8.png',
-    fallback: 'DB',
-    name: 'Dulce Botosh',
-    mail: 'tlee@gmail.com'
+    icon: AlignJustify,
+    property: 'Align justify',
+    description: 'text will fill all area'
   },
   {
-    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-9.png',
-    fallback: 'AS',
-    name: 'Ahmad Stanton',
-    mail: 'kdavis@hotmail.com'
-  },
-  {
-    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-10.png',
-    fallback: 'RG',
-    name: 'Randy Gouse',
-    mail: 'ijackson@yahoo.com'
+    icon: TextSearch,
+    property: 'text search',
+    description: 'find any text'
   }
 ]
 
-const DropdownMenuItemActionDemo = () => {
+const DropdownMenuEditMenuDemo = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline'>Menu item with action</Button>
+        <Button variant='ghost' size='icon' className='rounded-full'>
+          <Pencil />
+          <span className='sr-only'>Edit menu</span>
+        </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='w-91'>
-        <DropdownMenuLabel>Contact List</DropdownMenuLabel>
+      <DropdownMenuContent className='w-56'>
+        <DropdownMenuLabel>Edit text</DropdownMenuLabel>
         <DropdownMenuGroup>
           {listItems.map((item, index) => (
-            <DropdownMenuItem key={index} className='justify-between'>
-              <Avatar>
-                <AvatarImage src={item.src} alt={item.name} />
-                <AvatarFallback className='text-xs'>{item.fallback}</AvatarFallback>
-              </Avatar>
-              <div className='flex flex-1 flex-col'>
-                <span className='text-popover-foreground'>{item.name}</span>
-                <span className='text-muted-foreground text-xs'>{item.mail}</span>
+            <DropdownMenuItem key={index}>
+              <span className='flex items-center justify-center rounded-md border p-2'>
+                <item.icon />
+              </span>
+              <div className='flex flex-col'>
+                <span className='text-popover-foreground'>{item.property}</span>
+                <span className='text-muted-foreground text-xs'>{item.description}</span>
               </div>
-              <Button variant='secondary' className='h-7 cursor-pointer rounded-md px-2'>
-                Send
-              </Button>
             </DropdownMenuItem>
           ))}
-          <DropdownMenuItem>
-            <Button className='grow'>Add Contact</Button>
-          </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
 
-export default DropdownMenuItemActionDemo
+export default DropdownMenuEditMenuDemo

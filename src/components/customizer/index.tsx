@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 // Third-party Imports
 import { Palette, X } from 'lucide-react'
 import Shepherd from 'shepherd.js'
+import { offset } from '@floating-ui/dom'
 import 'shepherd.js/dist/css/shepherd.css'
 
 // Component Imports
@@ -26,7 +27,6 @@ export function ThemeCustomizer() {
       useModalOverlay: true,
       defaultStepOptions: {
         classes: 'shadow-md rounded-lg',
-        scrollTo: true,
         cancelIcon: {
           enabled: true
         }
@@ -41,6 +41,9 @@ export function ThemeCustomizer() {
       attachTo: {
         element: '[data-tour="theme-customizer"]',
         on: 'bottom'
+      },
+      floatingUIOptions: {
+        middleware: [offset(10)]
       },
       buttons: [
         {

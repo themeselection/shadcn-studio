@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-08",
+  "type": "registry:component",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/card/card-08.tsx",
+      "content": "import { Card, CardContent, CardHeader, CardTitle } from '@/registry/new-york/ui/card'\n\nconst CardSoftDemo = () => {\n  return (\n    <Card className='bg-primary/20 max-w-md gap-0'>\n      <CardHeader>\n        <CardTitle>Design Throwdown</CardTitle>\n      </CardHeader>\n      <CardContent>\n        Where passion, pressure, and pixels collide—push your creativity to the edge and show what you are made of.\n      </CardContent>\n    </Card>\n  )\n}\n\nexport default CardSoftDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/card/card-08.tsx"
+    }
+  ]
+}

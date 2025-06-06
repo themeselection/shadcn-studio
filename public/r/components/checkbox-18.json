@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-18",
+  "type": "registry:component",
+  "registryDependencies": [
+    "label",
+    "https://shadcnstudio.com/r/components/motion-checkbox.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/checkbox/checkbox-18.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/registry/new-york/ui/motion-checkbox'\nimport { Label } from '@/registry/new-york/ui/label'\n\nconst CheckboxAnimatedTodoListDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox\n        id={id}\n        defaultChecked\n        className='rounded-full focus-visible:border-blue-500 focus-visible:ring-blue-500/20 data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500! dark:text-white dark:focus-visible:ring-blue-500/40'\n      />\n      <Label\n        htmlFor={id}\n        className='after:bg-primary peer-data-[state=checked]:text-primary relative after:absolute after:start-0 after:top-1/2 after:h-px after:w-full after:origin-bottom after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out peer-data-[state=checked]:after:origin-bottom peer-data-[state=checked]:after:scale-x-100'\n      >\n        Animated todo list item\n      </Label>\n    </div>\n  )\n}\n\nexport default CheckboxAnimatedTodoListDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-18.tsx"
+    }
+  ]
+}

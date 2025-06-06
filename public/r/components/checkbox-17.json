@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-17",
+  "type": "registry:component",
+  "registryDependencies": [
+    "label",
+    "https://shadcnstudio.com/r/components/motion-checkbox.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/checkbox/checkbox-17.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/registry/new-york/ui/motion-checkbox'\nimport { Label } from '@/registry/new-york/ui/label'\n\nconst CheckboxAnimatedDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox id={id} defaultChecked />\n      <Label htmlFor={id}>Animated checkbox</Label>\n    </div>\n  )\n}\n\nexport default CheckboxAnimatedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-17.tsx"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-05",
+  "type": "registry:component",
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/checkbox/checkbox-05.tsx",
+      "content": "import { Checkbox } from '@/registry/new-york/ui/checkbox'\n\nconst CheckboxSizesDemo = () => {\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox defaultChecked aria-label='Size default' />\n      <Checkbox className='size-5' defaultChecked aria-label='Size small' />\n      <Checkbox className='size-6' defaultChecked aria-label='Size large' />\n    </div>\n  )\n}\n\nexport default CheckboxSizesDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-05.tsx"
+    }
+  ]
+}

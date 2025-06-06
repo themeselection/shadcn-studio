@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-button",
+  "type": "registry:ui",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/ui/shimmer-button.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\n\nimport { motion, type HTMLMotionProps } from 'motion/react'\n\nimport { cn } from '@/registry/new-york/lib/utils'\n\ninterface ShimmerButtonProps extends HTMLMotionProps<'button'> {\n  children: React.ReactNode\n}\n\nfunction ShimmerButton({ children, className, ...props }: ShimmerButtonProps) {\n  return (\n    <motion.button\n      className='relative inline-flex overflow-hidden rounded-lg bg-[linear-gradient(120deg,var(--primary)_calc(var(--shimmer-button-x)-25%),var(--primary-foreground)_var(--shimmer-button-x),var(--primary)_calc(var(--shimmer-button-x)+25%))] [--shimmer-button-x:0%]'\n      initial={{\n        scale: 1,\n        '--shimmer-button-x': '-100%'\n      }}\n      animate={{\n        '--shimmer-button-x': '200%'\n      }}\n      transition={{\n        stiffness: 500,\n        damping: 20,\n        type: 'spring',\n        '--shimmer-button-x': {\n          duration: 3,\n          repeat: Infinity,\n          ease: [0.445, 0.05, 0.55, 0.95]\n        }\n      }}\n      whileTap={{\n        scale: 0.95\n      }}\n      whileHover={{\n        scale: 1.05\n      }}\n      {...props}\n    >\n      <span\n        className={cn(\n          'bg-destructive m-0.5 rounded-md px-4 py-2 text-sm font-medium text-white backdrop-blur-sm',\n          className\n        )}\n      >\n        {children}\n      </span>\n    </motion.button>\n  )\n}\n\nexport { ShimmerButton, type ShimmerButtonProps }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

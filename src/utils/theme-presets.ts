@@ -29,6 +29,190 @@ export function getPresetThemeStyles(name: string): ThemeStyles {
 }
 
 export const presets: Record<string, ThemeStyles> = {
+  'vs-code': {
+    light: {
+      background: 'oklch(0.97 0.02 225.66)',
+      foreground: 'oklch(0.15 0.02 269.18)',
+      card: 'oklch(0.98 0.01 228.79)',
+      'card-foreground': 'oklch(0.15 0.02 269.18)',
+      popover: 'oklch(0.98 0.01 238.45)',
+      'popover-foreground': 'oklch(0.15 0.02 269.18)',
+      primary: 'oklch(0.71 0.15 239.07)',
+      'primary-foreground': 'oklch(0.94 0.03 232.39)',
+      secondary: 'oklch(0.91 0.03 229.20)',
+      'secondary-foreground': 'oklch(0.15 0.02 269.18)',
+      muted: 'oklch(0.89 0.02 225.69)',
+      'muted-foreground': 'oklch(0.36 0.03 230.30)',
+      accent: 'oklch(0.88 0.02 235.72)',
+      'accent-foreground': 'oklch(0.34 0.05 229.72)',
+      destructive: 'oklch(0.61 0.24 20.96)',
+      border: 'oklch(0.82 0.02 240.77)',
+      input: 'oklch(0.82 0.02 240.77)',
+      ring: 'oklch(0.55 0.10 235.72)',
+      'chart-1': 'oklch(0.57 0.11 228.97)',
+      'chart-2': 'oklch(0.45 0.10 270.08)',
+      'chart-3': 'oklch(0.65 0.15 159.03)',
+      'chart-4': 'oklch(0.75 0.10 100.01)',
+      'chart-5': 'oklch(0.55 0.15 299.88)',
+      sidebar: 'oklch(0.93 0.01 238.46)',
+      'sidebar-foreground': 'oklch(0.15 0.02 269.18)',
+      'sidebar-primary': 'oklch(0.57 0.11 228.97)',
+      'sidebar-primary-foreground': 'oklch(0.99 0.01 203.97)',
+      'sidebar-accent': 'oklch(0.88 0.02 235.72)',
+      'sidebar-accent-foreground': 'oklch(0.15 0.02 269.18)',
+      'sidebar-border': 'oklch(0.82 0.02 240.77)',
+      'sidebar-ring': 'oklch(0.57 0.11 228.97)',
+      'font-sans':
+        "'Source Code Pro', 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      'font-serif':
+        "'Source Serif 4', 'Geist', 'Geist Fallback', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+      'font-mono':
+        "'Source Code Pro', 'Geist Mono', 'Geist Mono Fallback', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      radius: '0rem',
+
+      'shadow-color': 'oklch(0.49 0.09 235.45)',
+      'shadow-opacity': '0.06',
+      'shadow-blur': '2.5px',
+      'shadow-spread': '0px',
+      'shadow-offset-x': '0px',
+      'shadow-offset-y': '1px'
+    },
+    dark: {
+      background: 'oklch(0.18 0.02 271.27)',
+      foreground: 'oklch(0.90 0.01 238.47)',
+      card: 'oklch(0.22 0.02 271.67)',
+      'card-foreground': 'oklch(0.90 0.01 238.47)',
+      popover: 'oklch(0.22 0.02 271.67)',
+      'popover-foreground': 'oklch(0.90 0.01 238.47)',
+      primary: 'oklch(0.71 0.15 239.07)',
+      'primary-foreground': 'oklch(0.94 0.03 232.39)',
+      secondary: 'oklch(0.28 0.03 270.91)',
+      'secondary-foreground': 'oklch(0.90 0.01 238.47)',
+      muted: 'oklch(0.28 0.03 270.91)',
+      'muted-foreground': 'oklch(0.60 0.03 269.46)',
+      accent: 'oklch(0.28 0.03 270.91)',
+      'accent-foreground': 'oklch(0.90 0.01 238.47)',
+      destructive: 'oklch(0.64 0.25 19.69)',
+      border: 'oklch(0.90 0.01 238.47 / 15%)',
+      input: 'oklch(0.90 0.01 238.47 / 20%)',
+      ring: 'oklch(0.66 0.13 227.15)',
+      'chart-1': 'oklch(0.66 0.13 227.15)',
+      'chart-2': 'oklch(0.60 0.10 269.83)',
+      'chart-3': 'oklch(0.70 0.15 159.83)',
+      'chart-4': 'oklch(0.80 0.10 100.65)',
+      'chart-5': 'oklch(0.60 0.15 300.14)',
+      sidebar: 'oklch(0.22 0.02 271.67)',
+      'sidebar-foreground': 'oklch(0.90 0.01 238.47)',
+      'sidebar-primary': 'oklch(0.66 0.13 227.15)',
+      'sidebar-primary-foreground': 'oklch(0.18 0.02 271.27)',
+      'sidebar-accent': 'oklch(0.28 0.03 270.91)',
+      'sidebar-accent-foreground': 'oklch(0.90 0.01 238.47)',
+      'sidebar-border': 'oklch(0.90 0.01 238.47 / 15%)',
+      'sidebar-ring': 'oklch(0.66 0.13 227.15)',
+
+      'shadow-color': 'oklch(0 0 0)',
+      'shadow-opacity': '0.01',
+      'shadow-blur': '2px',
+      'shadow-spread': '0px',
+      'shadow-offset-x': '0px',
+      'shadow-offset-y': '1px'
+    },
+    meta: {
+      badge: 'New'
+    }
+  },
+  spotify: {
+    light: {
+      background: 'oklch(0.99 0 0)',
+      foreground: 'oklch(0.35 0.02 165.48)',
+      card: 'oklch(1.00 0 0)',
+      'card-foreground': 'oklch(0.35 0.02 165.48)',
+      popover: 'oklch(1.00 0 0)',
+      'popover-foreground': 'oklch(0.35 0.02 165.48)',
+      primary: 'oklch(0.67 0.17 153.85)',
+      'primary-foreground': 'oklch(0.99 0.02 169.99)',
+      secondary: 'oklch(0.90 0.02 238.66)',
+      'secondary-foreground': 'oklch(0.20 0.02 266.02)',
+      muted: 'oklch(0.90 0.02 240.73)',
+      'muted-foreground': 'oklch(0.50 0.03 268.53)',
+      accent: 'oklch(0.90 0.02 240.73)',
+      'accent-foreground': 'oklch(0.35 0.02 165.48)',
+      destructive: 'oklch(0.61 0.24 20.96)',
+      border: 'oklch(0.94 0.01 238.46)',
+      input: 'oklch(0.85 0.02 240.75)',
+      ring: 'oklch(0.67 0.17 153.85)',
+      'chart-1': 'oklch(0.67 0.17 153.85)',
+      'chart-2': 'oklch(0.50 0.10 270.06)',
+      'chart-3': 'oklch(0.72 0.12 201.79)',
+      'chart-4': 'oklch(0.80 0.10 100.65)',
+      'chart-5': 'oklch(0.60 0.15 300.14)',
+      sidebar: 'oklch(0.98 0.01 238.45)',
+      'sidebar-foreground': 'oklch(0.35 0.02 165.48)',
+      'sidebar-primary': 'oklch(0.67 0.17 153.85)',
+      'sidebar-primary-foreground': 'oklch(0.98 0.01 238.45)',
+      'sidebar-accent': 'oklch(0.90 0.02 240.73)',
+      'sidebar-accent-foreground': 'oklch(0.35 0.02 165.48)',
+      'sidebar-border': 'oklch(0.85 0.02 240.75)',
+      'sidebar-ring': 'oklch(0.67 0.17 153.85)',
+
+      'font-sans': 'Lato, sans-serif',
+      'font-serif': 'Merriweather, Geist, Geist Fallback, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+      'font-mono':
+        'Roboto Mono, Geist Mono, Geist Mono Fallback, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+
+      radius: '0.25rem',
+
+      'shadow-color': 'oklch(0.35 0.05 163.50)',
+      'shadow-opacity': '0.04',
+      'shadow-blur': '3px',
+      'shadow-spread': '0px',
+      'shadow-offset-x': '0px',
+      'shadow-offset-y': '1px'
+    },
+    dark: {
+      background: 'oklch(0.15 0.02 269.18)',
+      foreground: 'oklch(0.95 0.01 238.46)',
+      card: 'oklch(0.20 0.02 266.02)',
+      'card-foreground': 'oklch(0.95 0.01 238.46)',
+      popover: 'oklch(0.20 0.02 266.02)',
+      'popover-foreground': 'oklch(0.95 0.01 238.46)',
+      primary: 'oklch(0.67 0.17 153.85)',
+      'primary-foreground': 'oklch(0.15 0.02 269.18)',
+      secondary: 'oklch(0.30 0.03 271.05)',
+      'secondary-foreground': 'oklch(0.95 0.01 238.46)',
+      muted: 'oklch(0.30 0.03 271.05)',
+      'muted-foreground': 'oklch(0.60 0.03 269.46)',
+      accent: 'oklch(0.30 0.03 271.05)',
+      'accent-foreground': 'oklch(0.95 0.01 238.46)',
+      destructive: 'oklch(0.64 0.25 19.69)',
+      border: 'oklch(0.95 0.01 238.46 / 15%)',
+      input: 'oklch(0.95 0.01 238.46 / 20%)',
+      ring: 'oklch(0.67 0.17 153.85)',
+      'chart-1': 'oklch(0.67 0.17 153.85)',
+      'chart-2': 'oklch(0.60 0.10 269.83)',
+      'chart-3': 'oklch(0.72 0.12 201.79)',
+      'chart-4': 'oklch(0.80 0.10 100.65)',
+      'chart-5': 'oklch(0.60 0.15 300.14)',
+      sidebar: 'oklch(0.20 0.02 266.02)',
+      'sidebar-foreground': 'oklch(0.95 0.01 238.46)',
+      'sidebar-primary': 'oklch(0.67 0.17 153.85)',
+      'sidebar-primary-foreground': 'oklch(0.15 0.02 269.18)',
+      'sidebar-accent': 'oklch(0.30 0.03 271.05)',
+      'sidebar-accent-foreground': 'oklch(0.95 0.01 238.46)',
+      'sidebar-border': 'oklch(0.95 0.01 238.46 / 15%)',
+      'sidebar-ring': 'oklch(0.67 0.17 153.85)',
+
+      'shadow-color': 'oklch(0 0 0)',
+      'shadow-opacity': '0.01',
+      'shadow-blur': '2px',
+      'shadow-spread': '0px',
+      'shadow-offset-x': '0px',
+      'shadow-offset-y': '1px'
+    },
+    meta: {
+      badge: 'New'
+    }
+  },
   summer: {
     light: {
       background: 'oklch(0.98 0.01 78.24)',
@@ -112,9 +296,6 @@ export const presets: Record<string, ThemeStyles> = {
       'shadow-spread': '0px',
       'shadow-offset-x': '0px',
       'shadow-offset-y': '1px'
-    },
-    meta: {
-      badge: 'New'
     }
   },
   'material-design': {
@@ -203,9 +384,6 @@ export const presets: Record<string, ThemeStyles> = {
       'shadow-spread': '0px',
       'shadow-offset-x': '0px',
       'shadow-offset-y': '1px'
-    },
-    meta: {
-      badge: 'New'
     }
   },
   marvel: {
@@ -292,9 +470,6 @@ export const presets: Record<string, ThemeStyles> = {
       'shadow-spread': '0px',
       'shadow-offset-x': '0px',
       'shadow-offset-y': '1px'
-    },
-    meta: {
-      badge: 'New'
     }
   },
   valorant: {
@@ -373,9 +548,6 @@ export const presets: Record<string, ThemeStyles> = {
       'sidebar-accent-foreground': 'oklch(0.99 0.00 359.99)',
       'sidebar-border': 'oklch(0.39 0.12 20.37)',
       'sidebar-ring': 'oklch(0.50 0.16 20.89)'
-    },
-    meta: {
-      badge: 'Trending'
     }
   },
   'ghibli-studio': {

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-10",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/registry/new-york/components/avatar/avatar-10.tsx",
+      "content": "import { PlusCircleIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'\n\nconst AvatarPlusDemo = () => {\n  return (\n    <div className='relative w-fit'>\n      <Avatar className='size-10'>\n        <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <button className='focus-visible:ring-ring/50 absolute -end-1 -bottom-1 inline-flex cursor-pointer items-center justify-center rounded-full focus-visible:ring-[3px] focus-visible:outline-none'>\n        <PlusCircleIcon className='text-background size-5 fill-slate-400' />\n        <span className='sr-only'>Add</span>\n      </button>\n    </div>\n  )\n}\n\nexport default AvatarPlusDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/avatar/avatar-10.tsx"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "shadcn-studio",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -13,8 +13,8 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "check-types": "tsc --noEmit",
-    "registry:build": "shadcn build",
-    "registry:theme-generate": "tsx scripts/generate-theme-registry.ts",
+    "registry:theme-generate": "tsx src/scripts/generate-theme-registry.ts",
+    "registry:components-generate": "tsx src/scripts/generate-components-registry.ts",
     "clean": "rm -rf .next *.tsbuildinfo",
     "clean:node_modules": "rm -rf .next node_modules *.tsbuildinfo"
   },

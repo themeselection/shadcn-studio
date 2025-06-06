@@ -36,7 +36,7 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className='text-muted-foreground hover:text-foreground cursor-pointer text-sm font-medium max-sm:hidden'>
-                v1.0.0-alpha.2
+                v1.0.0-alpha.3
               </DropdownMenuTrigger>
               <DropdownMenuContent align='start'>
                 <DropdownMenuGroup>

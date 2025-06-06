@@ -218,6 +218,42 @@ const AppSidebar = () => {
             </SidebarMenuSub>
           </SidebarGroup>
           <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-4', { 'first:pt-8': !isBreakpointReached })}>
+            <SidebarGroupLabel className='px-3 pb-2 text-sm font-semibold lg:px-4'>Animations</SidebarGroupLabel>
+            <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
+              {categories
+                .filter(category => category.hasAnimation)
+                .map(category => (
+                  <CustomSidebarMenuSubItem
+                    key={category.slug}
+                    {...(category.isComingSoon
+                      ? { href: '/', onClick: e => e.preventDefault() }
+                      : {
+                          href: `/docs/components/${category.slug}#animated-variants`
+                        })}
+                  >
+                    {category.name}
+                    {category.isComingSoon && (
+                      <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
+                        Coming Soon
+                      </SidebarMenuBadge>
+                    )}
+                    {category.animation?.badge && (
+                      <SidebarMenuBadge
+                        className={cn({
+                          'bg-primary text-primary-foreground static rounded-full px-2 py-0.5 font-normal':
+                            category.animation.badge === 'New',
+                          'static rounded-full bg-indigo-600/10 px-2 py-0.5 font-normal text-indigo-600 dark:bg-indigo-400/20 dark:text-indigo-400':
+                            category.animation.badge === 'Updated'
+                        })}
+                      >
+                        {category.animation.badge}
+                      </SidebarMenuBadge>
+                    )}
+                  </CustomSidebarMenuSubItem>
+                ))}
+            </SidebarMenuSub>
+          </SidebarGroup>
+          <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-4', { 'first:pt-8': !isBreakpointReached })}>
             <SidebarGroupLabel className='px-3 pb-2 text-sm font-semibold lg:px-4'>Components</SidebarGroupLabel>
             <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
               {categories.map(category => (
@@ -247,42 +283,6 @@ const AppSidebar = () => {
                   )}
                 </CustomSidebarMenuSubItem>
               ))}
-            </SidebarMenuSub>
-          </SidebarGroup>
-          <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-4', { 'first:pt-8': !isBreakpointReached })}>
-            <SidebarGroupLabel className='px-3 pb-2 text-sm font-semibold lg:px-4'>Animations</SidebarGroupLabel>
-            <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
-              {categories
-                .filter(category => category.hasAnimation)
-                .map(category => (
-                  <CustomSidebarMenuSubItem
-                    key={category.slug}
-                    {...(category.isComingSoon
-                      ? { href: '/', onClick: e => e.preventDefault() }
-                      : {
-                          href: `/docs/components/${category.slug}#animated-variants`
-                        })}
-                  >
-                    {category.name}
-                    {category.isComingSoon && (
-                      <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
-                        Coming Soon
-                      </SidebarMenuBadge>
-                    )}
-                    {category.badge && (
-                      <SidebarMenuBadge
-                        className={cn({
-                          'bg-primary text-primary-foreground static rounded-full px-2 py-0.5 font-normal':
-                            category.badge === 'New',
-                          'static rounded-full bg-indigo-600/10 px-2 py-0.5 font-normal text-indigo-600 dark:bg-indigo-400/20 dark:text-indigo-400':
-                            category.badge === 'Updated'
-                        })}
-                      >
-                        {category.badge}
-                      </SidebarMenuBadge>
-                    )}
-                  </CustomSidebarMenuSubItem>
-                ))}
             </SidebarMenuSub>
           </SidebarGroup>
         </SidebarContent>

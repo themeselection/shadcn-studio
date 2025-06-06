@@ -1,48 +1,39 @@
-import { CircleHelp, DollarSign, Receipt, Settings, User } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
 
 import { Button } from '@/registry/new-york/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/registry/new-york/ui/dropdown-menu'
 
-const DropdownMenuItemIconDemo = () => {
+const DropdownMenuRadioGroupDemo = () => {
+  const [position, setPosition] = useState('bottom')
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline'>Menu item with icon</Button>
+        <Button variant='outline'>With radio</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-56'>
-        <DropdownMenuLabel>User Profile</DropdownMenuLabel>
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <User />
-            Profile
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Settings />
-            Settings
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Receipt />
-            Billing Plans
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <DollarSign />
-            Pricing
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <CircleHelp />
-            FAQ
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
+        <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+          <DropdownMenuRadioItem value='top'>Top</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value='bottom'>Bottom</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value='right' disabled>
+            Right
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
 
-export default DropdownMenuItemIconDemo
+export default DropdownMenuRadioGroupDemo
