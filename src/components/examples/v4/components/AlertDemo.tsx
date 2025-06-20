@@ -7,8 +7,8 @@ import {
   ShieldAlertIcon
 } from 'lucide-react'
 
-import { Alert, AlertDescription, AlertTitle } from '@/registry/new-york/ui/alert'
-import { Button } from '@/registry/new-york/ui/button'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { Button } from '@/components/ui/button'
 
 export function AlertDemo() {
   return (

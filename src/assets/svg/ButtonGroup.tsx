@@ -11,13 +11,13 @@ const ButtonGroup = (props: SVGAttributes<SVGElement>) => {
         <path d='M197 72L197 2.98023e-08' stroke='url(#paint3_linear_5357_51843)' strokeOpacity='0.4' />
         <path
           d='M137 19H189C193.418 19 197 22.5817 197 27V45C197 49.4183 193.418 53 189 53H137V19Z'
-          fill='var(--card)'
+          fill='var(--primary)'
         />
-        <rect x='148' y='34' width='38' height='6' rx='3' fill='var(--primary)' />
-        <path d='M17 27C17 22.5817 20.5817 19 25 19H77V53H25C20.5817 53 17 49.4183 17 45V27Z' fill='var(--card)' />
-        <rect x='77' y='19' width='60' height='34' fill='var(--card)' />
-        <rect x='88' y='34' width='38' height='6' rx='3' fill='var(--primary)' />
-        <rect x='28' y='34' width='38' height='6' rx='3' fill='var(--primary)' />
+        <rect x='148' y='34' width='38' height='6' rx='3' fill='var(--primary-foreground)' />
+        <path d='M17 27C17 22.5817 20.5817 19 25 19H77V53H25C20.5817 53 17 49.4183 17 45V27Z' fill='var(--primary)' />
+        <rect x='77' y='19' width='60' height='34' fill='var(--primary)' />
+        <rect x='88' y='34' width='38' height='6' rx='3' fill='var(--primary-foreground)' />
+        <rect x='28' y='34' width='38' height='6' rx='3' fill='var(--primary-foreground)' />
       </g>
       <defs>
         <linearGradient

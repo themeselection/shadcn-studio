@@ -1,8 +1,8 @@
 // Component Imports
-import { Label } from '@/registry/new-york/ui/label'
-import { Switch } from '@/registry/new-york/ui/switch'
-import { Button } from '@/registry/new-york/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york/ui/card'
+import { Label } from '@/components/ui/label'
+import { Switch } from '@/components/ui/switch'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
 export function CardsCookieSettings() {
   return (
@@ -13,7 +13,7 @@ export function CardsCookieSettings() {
       </CardHeader>
       <CardContent className='grid gap-6'>
         <div className='flex items-center justify-between space-x-4'>
-          <Label htmlFor='necessary' className='flex flex-col space-y-1'>
+          <Label htmlFor='necessary' className='flex flex-col items-start space-y-1'>
             <span>Strictly Necessary</span>
             <span className='text-muted-foreground text-xs leading-snug font-normal'>
               These cookies are essential in order to use the website and use its features.
@@ -22,7 +22,7 @@ export function CardsCookieSettings() {
           <Switch id='necessary' defaultChecked aria-label='Necessary' />
         </div>
         <div className='flex items-center justify-between space-x-4'>
-          <Label htmlFor='functional' className='flex flex-col space-y-1'>
+          <Label htmlFor='functional' className='flex flex-col items-start space-y-1'>
             <span>Functional Cookies</span>
             <span className='text-muted-foreground text-xs leading-snug font-normal'>
               These cookies allow the website to provide personalized functionality.
@@ -31,7 +31,7 @@ export function CardsCookieSettings() {
           <Switch id='functional' aria-label='Functional' />
         </div>
         <div className='flex items-center justify-between space-x-4'>
-          <Label htmlFor='performance' className='flex flex-col space-y-1'>
+          <Label htmlFor='performance' className='flex flex-col items-start space-y-1'>
             <span>Performance Cookies</span>
             <span className='text-muted-foreground text-xs leading-snug font-normal'>
               These cookies help to improve the performance of the website.

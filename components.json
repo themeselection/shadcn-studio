@@ -12,10 +12,10 @@
   },
   "aliases": {
     "components": "@/components",
-    "hooks": "@/registry/new-york/hooks",
-    "lib": "@/registry/new-york/lib",
-    "utils": "@/registry/new-york/lib/utils",
-    "ui": "@/registry/new-york/ui"
+    "hooks": "@/hooks",
+    "lib": "@/lib",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui"
   },
   "iconLibrary": "lucide"
 }

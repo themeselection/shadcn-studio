@@ -7,25 +7,17 @@ import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { cn } from '@/registry/new-york/lib/utils'
-import { Button } from '@/registry/new-york/ui/button'
-import { Calendar } from '@/registry/new-york/ui/calendar'
-import { Checkbox } from '@/registry/new-york/ui/checkbox'
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
-} from '@/registry/new-york/ui/form'
-import { Input } from '@/registry/new-york/ui/input'
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york/ui/popover'
-import { RadioGroup, RadioGroupItem } from '@/registry/new-york/ui/radio-group'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york/ui/select'
-import { Switch } from '@/registry/new-york/ui/switch'
-import { Textarea } from '@/registry/new-york/ui/textarea'
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Switch } from '@/components/ui/switch'
+import { Textarea } from '@/components/ui/textarea'
 
 const items = [
   {

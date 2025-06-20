@@ -10,8 +10,8 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@/registry/new-york/ui/dropdown-menu'
-import { Button } from '@/registry/new-york/ui/button'
+} from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
 
 const FrontMenuToggle = () => {
   return (
@@ -25,8 +25,8 @@ const FrontMenuToggle = () => {
       <DropdownMenuContent align='start'>
         <DropdownMenuGroup>
           <DropdownMenuItem asChild>
-            <Link href='/theme-editor' className='cursor-pointer'>
-              Theme Editor
+            <Link href='/theme-generator' className='cursor-pointer'>
+              Theme Generator
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>

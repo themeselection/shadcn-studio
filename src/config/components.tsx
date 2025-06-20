@@ -1,19 +1,34 @@
 // React Imports
-import type { ComponentType, SVGProps } from 'react'
+import type { ComponentType, ReactNode, SVGProps } from 'react'
+
+// Third-party Imports
+import { CircleAlertIcon } from 'lucide-react'
+
+// Component Imports
+import { Alert, AlertDescription } from '@/components/ui/alert'
 
 // SGV Imports
-import Accordion from '@/assets/svg/Accordion'
-import Alert from '@/assets/svg/Alert'
-import Avatar from '@/assets/svg/Avatar'
-import Badge from '@/assets/svg/Badge'
-import Breadcrumb from '@/assets/svg/Breadcrumb'
-import Button from '@/assets/svg/Button'
-import ButtonGroup from '@/assets/svg/ButtonGroup'
-import Card from '@/assets/svg/Card'
-import Checkbox from '@/assets/svg/Checkbox'
-import Dialog from '@/assets/svg/Dialog'
-import Dropdown from '@/assets/svg/Dropdown'
-import RadioGroup from '@/assets/svg/RadioGroup'
+import AccordionSVG from '@/assets/svg/Accordion'
+import AlertSVG from '@/assets/svg/Alert'
+import AvatarSVG from '@/assets/svg/Avatar'
+import BadgeSVG from '@/assets/svg/Badge'
+import BreadcrumbSVG from '@/assets/svg/Breadcrumb'
+import ButtonSVG from '@/assets/svg/Button'
+import ButtonGroupSVG from '@/assets/svg/ButtonGroup'
+import CalendarSVG from '@/assets/svg/Calendar'
+import CardSVG from '@/assets/svg/Card'
+import CheckboxSVG from '@/assets/svg/Checkbox'
+import ComboboxSVG from '@/assets/svg/Combobox'
+import DatepickerSVG from '@/assets/svg/Datepicker'
+import DialogSVG from '@/assets/svg/Dialog'
+import DropdownSVG from '@/assets/svg/Dropdown'
+import FormSVG from '@/assets/svg/Form'
+import InputSVG from '@/assets/svg/Input'
+import InputOTPSVG from '@/assets/svg/InputOTP'
+import RadioGroupSVG from '@/assets/svg/RadioGroup'
+import SelectSVG from '@/assets/svg/Select'
+import SwitchSVG from '@/assets/svg/Switch'
+import TextareaSVG from '@/assets/svg/Textarea'
 
 export type ComponentCategory = {
   slug: string
@@ -30,6 +45,7 @@ export type ComponentCategory = {
       }
       svg: ComponentType<SVGProps<SVGSVGElement>>
       badge?: string
+      note?: ReactNode
       hasAnimation?: never | false
       animation?: never | undefined
       isComingSoon?: never | false
@@ -45,6 +61,7 @@ export type ComponentCategory = {
       }
       svg: ComponentType<SVGProps<SVGSVGElement>>
       badge?: string
+      note?: ReactNode
       hasAnimation: true
       animation?: {
         badge?: string
@@ -63,6 +80,7 @@ export type ComponentCategory = {
       components?: never
       breakpoints?: never | undefined
       badge?: never | undefined
+      note?: never | undefined
       hasAnimation?: never | undefined
       animation?: never | undefined
       isComingSoon: true
@@ -73,7 +91,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'accordion',
     name: 'Accordion',
-    svg: Accordion,
+    svg: AccordionSVG,
     breakpoints: {
       md: 2
     },
@@ -99,7 +117,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'alert',
     name: 'Alert',
-    svg: Alert,
+    svg: AlertSVG,
     breakpoints: {
       md: 2
     },
@@ -139,7 +157,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'avatar',
     name: 'Avatar',
-    svg: Avatar,
+    svg: AvatarSVG,
     breakpoints: {
       sm: 2,
       lg: 3
@@ -171,7 +189,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'badge',
     name: 'Badge',
-    svg: Badge,
+    svg: BadgeSVG,
     breakpoints: {
       sm: 2,
       lg: 3
@@ -206,7 +224,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'breadcrumb',
     name: 'Breadcrumb',
-    svg: Breadcrumb,
+    svg: BreadcrumbSVG,
     breakpoints: {
       md: 2
     },
@@ -224,7 +242,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'button',
     name: 'Button',
-    svg: Button,
+    svg: ButtonSVG,
     breakpoints: {
       md: 2,
       xl: 3
@@ -289,14 +307,12 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'button-group',
     name: 'Button Group',
-    svg: ButtonGroup,
+    svg: ButtonGroupSVG,
     breakpoints: {
       md: 2
     },
-    badge: 'New',
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         md: 2
       }
@@ -321,16 +337,50 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
-    slug: 'card',
-    name: 'Card',
-    svg: Card,
+    slug: 'calendar',
+    name: 'Calendar',
+    svg: CalendarSVG,
+    badge: 'New',
     breakpoints: {
       xl: 2
     },
-    badge: 'New',
+    components: [
+      { name: 'calendar-01' },
+      { name: 'calendar-02' },
+      { name: 'calendar-03' },
+      { name: 'calendar-04' },
+      { name: 'calendar-05' },
+      { name: 'calendar-06' },
+      { name: 'calendar-07' },
+      { name: 'calendar-08' },
+      { name: 'calendar-09' },
+      { name: 'calendar-10' },
+      { name: 'calendar-11' },
+      { name: 'calendar-12' },
+      { name: 'calendar-13' },
+      { name: 'calendar-14' },
+      { name: 'calendar-15' },
+      { name: 'calendar-16' },
+      { name: 'calendar-17' },
+      { name: 'calendar-18' },
+      { name: 'calendar-19' },
+      { name: 'calendar-20' },
+      { name: 'calendar-21' },
+      { name: 'calendar-22' },
+      { name: 'calendar-23' },
+      { name: 'calendar-24' },
+      { name: 'calendar-25' }
+    ]
+  },
+  {
+    slug: 'card',
+    name: 'Card',
+    svg: CardSVG,
+    breakpoints: {
+      xl: 2
+    },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         md: 2
       }
@@ -358,15 +408,13 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'checkbox',
     name: 'Checkbox',
-    svg: Checkbox,
+    svg: CheckboxSVG,
     breakpoints: {
       md: 2,
       xl: 3
     },
-    badge: 'New',
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         md: 2,
         xl: 3
@@ -395,16 +443,73 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'combobox',
+    name: 'Combobox',
+    svg: ComboboxSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        md: 2,
+        xl: 3
+      }
+    },
+    components: [
+      { name: 'combobox-01' },
+      { name: 'combobox-02' },
+      { name: 'combobox-03' },
+      { name: 'combobox-04' },
+      { name: 'combobox-05' },
+      { name: 'combobox-06' },
+      { name: 'combobox-07' },
+      { name: 'combobox-08' },
+      { name: 'combobox-09' },
+      { name: 'combobox-10' },
+      { name: 'combobox-11' },
+      { name: 'combobox-12' },
+      { name: 'combobox-13' },
+      { name: 'combobox-14' }
+    ]
+  },
+  {
+    slug: 'date-picker',
+    name: 'Date and Time Picker',
+    svg: DatepickerSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    components: [
+      { name: 'date-picker-01' },
+      { name: 'date-picker-02' },
+      { name: 'date-picker-03' },
+      { name: 'date-picker-04' },
+      { name: 'date-picker-05' },
+      { name: 'date-picker-06' },
+      { name: 'date-picker-07' },
+      { name: 'date-picker-08' },
+      { name: 'date-picker-09' },
+      { name: 'date-picker-10' },
+      { name: 'date-picker-11' },
+      { name: 'date-picker-12' },
+      { name: 'date-picker-13' }
+    ]
+  },
+  {
     slug: 'dialog',
     name: 'Dialog',
-    svg: Dialog,
-    badge: 'New',
+    svg: DialogSVG,
     breakpoints: {
       md: 3
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         sm: 3
       }
@@ -441,7 +546,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'dropdown-menu',
     name: 'Dropdown Menu',
-    svg: Dropdown,
+    svg: DropdownSVG,
     breakpoints: {
       sm: 2,
       md: 3
@@ -473,16 +578,152 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'form',
+    name: 'Form',
+    svg: FormSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    components: [
+      { name: 'form-01' },
+      { name: 'form-02' },
+      { name: 'form-03' },
+      { name: 'form-04' },
+      { name: 'form-05' },
+      { name: 'form-06' },
+      { name: 'form-07' },
+      { name: 'form-08' },
+      { name: 'form-09' }
+    ],
+    note: (
+      <Alert className='border-none bg-sky-600/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400'>
+        <CircleAlertIcon />
+        <AlertDescription className='text-sky-600/80 dark:text-sky-400/80'>
+          <span>
+            To enable the toast notifications, you need to include the{' '}
+            <code className='bg-muted-foreground/10 rounded px-1 py-0.25 font-mono'>&lt;Toaster /&gt;</code> component
+            in your layout. For detailed instructions, please refer to this{' '}
+            <a
+              href='https://ui.shadcn.com/docs/components/sonner#installation'
+              className='underline hover:text-sky-600 dark:hover:text-sky-400'
+            >
+              documentation
+            </a>
+            .
+          </span>
+        </AlertDescription>
+      </Alert>
+    )
+  },
+  {
+    slug: 'input',
+    name: 'Input',
+    svg: InputSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    components: [
+      { name: 'input-01' },
+      { name: 'input-02' },
+      { name: 'input-03' },
+      { name: 'input-04' },
+      { name: 'input-05' },
+      { name: 'input-06' },
+      { name: 'input-07' },
+      { name: 'input-08' },
+      { name: 'input-09' },
+      { name: 'input-10' },
+      { name: 'input-11' },
+      { name: 'input-12' },
+      { name: 'input-13' },
+      { name: 'input-14' },
+      { name: 'input-15' },
+      { name: 'input-16' },
+      { name: 'input-17' },
+      { name: 'input-18' },
+      { name: 'input-19' },
+      { name: 'input-20' },
+      { name: 'input-21' },
+      { name: 'input-22' },
+      { name: 'input-23' },
+      { name: 'input-24' },
+      { name: 'input-25' },
+      { name: 'input-26' },
+      { name: 'input-27' },
+      { name: 'input-28' },
+      { name: 'input-29' },
+      { name: 'input-30' },
+      { name: 'input-31' },
+      { name: 'input-32' },
+      { name: 'input-33' },
+      { name: 'input-34' },
+      { name: 'input-35' },
+      { name: 'input-36' },
+      { name: 'input-37' },
+      { name: 'input-38' },
+      { name: 'input-39' },
+      { name: 'input-40' },
+      { name: 'input-41' },
+      { name: 'input-42' },
+      { name: 'input-43' },
+      { name: 'input-44' },
+      { name: 'input-45' },
+      { name: 'input-46' },
+      { name: 'input-47' },
+      { name: 'input-48' }
+    ]
+  },
+  {
+    slug: 'input-mask',
+    name: 'Input Mask',
+    svg: InputSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2
+    },
+    components: [
+      { name: 'input-mask-01' },
+      { name: 'input-mask-02' },
+      { name: 'input-mask-03' },
+      { name: 'input-mask-04' },
+      { name: 'input-mask-05' },
+      { name: 'input-mask-06' }
+    ]
+  },
+  {
+    slug: 'input-otp',
+    name: 'Input OTP',
+    svg: InputOTPSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2
+    },
+    components: [
+      { name: 'input-otp-01' },
+      { name: 'input-otp-02' },
+      { name: 'input-otp-03' },
+      { name: 'input-otp-04' },
+      { name: 'input-otp-05' },
+      { name: 'input-otp-06' },
+      { name: 'input-otp-07' },
+      { name: 'input-otp-08' },
+      { name: 'input-otp-09' },
+      { name: 'input-otp-10' }
+    ]
+  },
+  {
     slug: 'radio-group',
     name: 'Radio Group',
-    svg: RadioGroup,
-    badge: 'New',
+    svg: RadioGroupSVG,
     breakpoints: {
       md: 2
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         md: 2
       }
@@ -506,14 +747,135 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
-    slug: 'aspect-ratio',
-    name: 'Aspect Ratio',
-    isComingSoon: true
+    slug: 'select',
+    name: 'Select',
+    svg: SelectSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        md: 2,
+        xl: 3
+      }
+    },
+    components: [
+      { name: 'select-01' },
+      { name: 'select-02' },
+      { name: 'select-03' },
+      { name: 'select-04' },
+      { name: 'select-05' },
+      { name: 'select-06' },
+      { name: 'select-07' },
+      { name: 'select-08' },
+      { name: 'select-09' },
+      { name: 'select-10' },
+      { name: 'select-11' },
+      { name: 'select-12' },
+      { name: 'select-13' },
+      { name: 'select-14' },
+      { name: 'select-15' },
+      { name: 'select-16' },
+      { name: 'select-17' },
+      { name: 'select-18' },
+      { name: 'select-19' },
+      { name: 'select-20' },
+      { name: 'select-21' },
+      { name: 'select-22' },
+      { name: 'select-23' },
+      { name: 'select-24' },
+      { name: 'select-25' },
+      { name: 'select-26' },
+      { name: 'select-27' },
+      { name: 'select-28' },
+      { name: 'select-29' },
+      { name: 'select-30' },
+      { name: 'select-31' },
+      { name: 'select-32' },
+      { name: 'select-33' },
+      { name: 'select-34' },
+      { name: 'select-35' },
+      { name: 'select-36' },
+      { name: 'select-37' },
+      { name: 'select-38' }
+    ]
   },
   {
-    slug: 'calendar',
-    name: 'Calendar',
-    isComingSoon: true
+    slug: 'switch',
+    name: 'Switch',
+    svg: SwitchSVG,
+    badge: 'New',
+    breakpoints: {
+      sm: 2,
+      md: 3
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        sm: 2,
+        md: 3
+      }
+    },
+    components: [
+      { name: 'switch-01' },
+      { name: 'switch-02' },
+      { name: 'switch-03' },
+      { name: 'switch-04' },
+      { name: 'switch-05' },
+      { name: 'switch-06' },
+      { name: 'switch-07' },
+      { name: 'switch-08' },
+      { name: 'switch-09' },
+      { name: 'switch-10' },
+      { name: 'switch-11' },
+      { name: 'switch-12' },
+      { name: 'switch-13' },
+      { name: 'switch-14' },
+      { name: 'switch-15' },
+      { name: 'switch-16' },
+      { name: 'switch-17' },
+      { name: 'switch-18' },
+      { name: 'switch-19' },
+      { name: 'switch-20' }
+    ]
+  },
+  {
+    slug: 'textarea',
+    name: 'Textarea',
+    svg: TextareaSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    components: [
+      { name: 'textarea-01' },
+      { name: 'textarea-02' },
+      { name: 'textarea-03' },
+      { name: 'textarea-04' },
+      { name: 'textarea-05' },
+      { name: 'textarea-06' },
+      { name: 'textarea-07' },
+      { name: 'textarea-08' },
+      { name: 'textarea-09' },
+      { name: 'textarea-10' },
+      { name: 'textarea-11' },
+      { name: 'textarea-12' },
+      { name: 'textarea-13' },
+      { name: 'textarea-14' },
+      { name: 'textarea-15' },
+      { name: 'textarea-16' },
+      { name: 'textarea-17' },
+      { name: 'textarea-18' },
+      { name: 'textarea-19' },
+      { name: 'textarea-20' },
+      { name: 'textarea-21' }
+    ]
   },
   {
     slug: 'carousel',
@@ -528,11 +890,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'collapsible',
     name: 'Collapsible',
-    isComingSoon: true
-  },
-  {
-    slug: 'combobox',
-    name: 'Combobox',
     isComingSoon: true
   },
   {
@@ -551,38 +908,13 @@ export const categories: ComponentCategory[] = [
     isComingSoon: true
   },
   {
-    slug: 'date-picker',
-    name: 'Date Picker',
-    isComingSoon: true
-  },
-  {
     slug: 'drawer',
     name: 'Drawer',
     isComingSoon: true
   },
   {
-    slug: 'form',
-    name: 'Form',
-    isComingSoon: true
-  },
-  {
     slug: 'hover-card',
     name: 'Hover Card',
-    isComingSoon: true
-  },
-  {
-    slug: 'input',
-    name: 'Input',
-    isComingSoon: true
-  },
-  {
-    slug: 'input-otp',
-    name: 'Input OTP',
-    isComingSoon: true
-  },
-  {
-    slug: 'label',
-    name: 'Label',
     isComingSoon: true
   },
   {
@@ -610,11 +942,7 @@ export const categories: ComponentCategory[] = [
     name: 'Progress',
     isComingSoon: true
   },
-  {
-    slug: 'select',
-    name: 'Select',
-    isComingSoon: true
-  },
+
   {
     slug: 'separator',
     name: 'Separator',
@@ -646,11 +974,6 @@ export const categories: ComponentCategory[] = [
     isComingSoon: true
   },
   {
-    slug: 'switch',
-    name: 'Switch',
-    isComingSoon: true
-  },
-  {
     slug: 'table',
     name: 'Table',
     isComingSoon: true
@@ -658,11 +981,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'tabs',
     name: 'Tabs',
-    isComingSoon: true
-  },
-  {
-    slug: 'textarea',
-    name: 'Textarea',
     isComingSoon: true
   },
   {

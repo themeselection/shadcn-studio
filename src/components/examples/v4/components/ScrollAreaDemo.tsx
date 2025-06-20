@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import Image from 'next/image'
 
-import { ScrollArea, ScrollBar } from '@/registry/new-york/ui/scroll-area'
-import { Separator } from '@/registry/new-york/ui/separator'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { Separator } from '@/components/ui/separator'
 
 export function ScrollAreaDemo() {
   return (

@@ -6,7 +6,7 @@ import { categories } from '@/config/components'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
-    '/theme-editor',
+    '/theme-generator',
     '/components',
     '/docs/getting-started/introduction',
     ...categories.filter(category => !category.isComingSoon).map(category => `/docs/components/${category.slug}`)

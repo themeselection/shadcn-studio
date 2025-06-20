@@ -1,19 +1,19 @@
 // React Imports
 import type { ReactNode } from 'react'
 
-// Third-party Imports
-import type { RegistryItem } from 'shadcn/registry'
+// Type Imports
+import type { ComponentProps } from '@/types/components'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 const ComponentCard = ({
   children,
-  component,
+  componentName,
   className
 }: {
   children: ReactNode
-  component: RegistryItem
+  componentName: ComponentProps['name']
   className?: string
 }) => {
   return (
@@ -22,7 +22,7 @@ const ComponentCard = ({
         'group/item relative flex min-h-[210px] items-center justify-center px-8 py-12 group-first/grid:border-t-0',
         className
       )}
-      data-slot={component.name}
+      data-slot={componentName}
     >
       {children}
     </div>

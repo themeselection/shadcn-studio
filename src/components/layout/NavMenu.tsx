@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 const NavMenu = () => {
   // Hooks
@@ -14,12 +14,12 @@ const NavMenu = () => {
   return (
     <div className='flex items-center gap-5 max-lg:hidden'>
       <Link
-        href='/theme-editor'
+        href='/theme-generator'
         className={cn('text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm', {
-          'text-primary hover:text-primary/80 font-medium': pathname.startsWith('/theme-editor')
+          'text-primary hover:text-primary/80 font-medium': pathname.startsWith('/theme-generator')
         })}
       >
-        Theme Editor
+        Theme Generator
       </Link>
       <Link
         href='/docs/getting-started/introduction'

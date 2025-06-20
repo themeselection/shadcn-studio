@@ -11,7 +11,7 @@ import { useMedia } from 'react-use'
 import { Component, Palette, Search, Sparkles } from 'lucide-react'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   CommandDialog,
   CommandEmpty,
@@ -21,7 +21,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut
-} from '@/registry/new-york/ui/command'
+} from '@/components/ui/command'
 
 // Data Imports
 import { searchData } from '@/assets/data/search'
@@ -98,9 +98,9 @@ const CommandMenu = () => {
             ))
           ) : (
             <CommandGroup heading='Suggestions'>
-              <CommandItem onSelect={() => runCommand(() => router.push('/theme-editor'))}>
+              <CommandItem onSelect={() => runCommand(() => router.push('/theme-generator'))}>
                 <Palette />
-                <span>Theme Editor</span>
+                <span>Theme Generator</span>
               </CommandItem>
               <CommandItem onSelect={() => runCommand(() => router.push('/components'))}>
                 <Component />

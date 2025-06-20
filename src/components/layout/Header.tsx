@@ -5,14 +5,14 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@/registry/new-york/ui/dropdown-menu'
+} from '@/components/ui/dropdown-menu'
 import CommandMenu from '@/components/layout/CommandMenu'
 import Logo from '@/components/layout/Logo'
 import ModeToggle from '@/components/layout/ModeToggle'
@@ -36,7 +36,7 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className='text-muted-foreground hover:text-foreground cursor-pointer text-sm font-medium max-sm:hidden'>
-                v1.0.0-alpha.3
+                v1.0.0-beta.1
               </DropdownMenuTrigger>
               <DropdownMenuContent align='start'>
                 <DropdownMenuGroup>

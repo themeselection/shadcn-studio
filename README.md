@@ -2,7 +2,7 @@
   <img alt="shadcn/studio logo" width="800" src="https://cdn.shadcnstudio.com/ss-assets/smm/marketing/shadcn-studio-smm-banner.png">
 </a><br/><br/>
 
-[shadcn/studio](https://shadcnstudio.com) is an open-source shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster. 🚀
+[shadcn/studio](https://shadcnstudio.com) is an open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster. 🚀
 
 <p>
     <a href="https://github.com/themeselection/shadcn-studio/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
@@ -45,7 +45,7 @@ Supported by [ThemeSelection](https://themeselection.com), with a commitment to 
 
 **This isn&apos;t a traditional component library or a replacement for Shadcn**. Instead, it&apos;s a unique collection offers customizable variants of components, blocks, and templates. Preview, customize, and copy-paste them into your apps with ease.
 
-Building on the solid foundation of the Shadcn registry, we&apos;ve enhanced it with custom-designed components & blocks to give you a head start. This allows you to craft, customize, and ship your projects faster and more efficiently.
+Building on the solid foundation of the Shadcn components & blocks, we&apos;ve enhanced it with custom-designed components & blocks to give you a head start. This allows you to craft, customize, and ship your projects faster and more efficiently.
 
 ### Not a standard library, but a distribution of components
 
@@ -59,12 +59,12 @@ While this approach offers flexibility and control, it comes with some limitatio
 
 ## This is where shadcn/studio shines ✨
 
-An open-source Shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster 🚀. It provides a robust toolkit for building stunning, interactive user interfaces with ease.
+An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster 🚀. It provides a robust toolkit for building stunning, interactive user interfaces with ease.
 
 - **Open-source:** Dive into a growing, community-driven collection of copy-and-paste components, blocks, and templates.
 - **Component & Blocks variants:** Access a diverse, collection of customizable shadcn component and block variants to quickly build and style your UI with ease.
 - **Animated variants with Motion:** Add smooth, modern animations to your components, enhancing user experiences with minimal effort.
-- **Powerful theme editor:** Tailor your UI effortlessly with real-time previews, ensuring consistent, branded designs delivered faster.
+- **Powerful theme generator:** Tailor your UI effortlessly with real-time previews, ensuring consistent, branded designs delivered faster.
 
 ## Features ✨
 
@@ -124,15 +124,15 @@ Join the shadcn/studio community to discuss the library, ask questions, and shar
 We are grateful for the contributions of the open-source community, particularly:
 
 - [shadcn/ui](https://ui.shadcn.com/)
-- [tweakcn](https://tweakcn.com/) (Our Theme Editor is heavily inspired by tweakcn)
+- [tweakcn](https://tweakcn.com/) (Our Theme Generator is heavily inspired by tweakcn)
 
-These projects form the backbone of shadcn/studio, allowing us to build a powerful shadcn registry of copy-and-paste components.
+These projects form the backbone of shadcn/studio, allowing us to build a powerful copy-and-paste components.
 
 ## License ©
 
 - Copyright © [ThemeSelection](https://themeselection.com/)
 - Licensed under [MIT](https://github.com/themeselection/shadcn-studio/blob/main/LICENSE.md)
-- shadcn/studio is an open-source shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster.
+- shadcn/studio is an open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.
 
 ## Useful Links 🎁
 

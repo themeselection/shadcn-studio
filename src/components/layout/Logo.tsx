@@ -2,7 +2,7 @@
 import AppLogo from '@/assets/svg/Logo'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 const Logo = ({ className }: { className?: string }) => {
   return (

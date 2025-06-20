@@ -2,7 +2,7 @@
 import { useMemo, useState } from 'react'
 
 // Component Imports
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 type ThemeFontSelectProps = {
   fonts: Record<string, string>

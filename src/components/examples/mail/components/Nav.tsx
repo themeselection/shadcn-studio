@@ -7,11 +7,11 @@ import Link from 'next/link'
 import type { LucideIcon } from 'lucide-react'
 
 // Component Imports
-import { buttonVariants } from '@/registry/new-york/ui/button'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/registry/new-york/ui/tooltip'
+import { buttonVariants } from '@/components/ui/button'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 type NavProps = {
   isCollapsed: boolean

@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react'
 
 // Component Imports
-import { Label } from '@/registry/new-york/ui/label'
-import { Input } from '@/registry/new-york/ui/input'
-import { Slider } from '@/registry/new-york/ui/slider'
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import { Slider } from '@/components/ui/slider'
 
 type SliderWithInputProps = {
   value: number

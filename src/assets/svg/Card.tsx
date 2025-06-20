@@ -17,7 +17,7 @@ const Card = (props: SVGAttributes<SVGElement>) => {
           width='127.859'
           height='7.15294'
           rx='3.57647'
-          fill='var(--muted-foreground)'
+          fill='var(--card-foreground)'
           fillOpacity='0.2'
         />
         <rect
@@ -26,7 +26,7 @@ const Card = (props: SVGAttributes<SVGElement>) => {
           width='137.694'
           height='50.0706'
           rx='6'
-          fill='var(--muted-foreground)'
+          fill='var(--card-foreground)'
           fillOpacity='0.2'
         />
         <path
@@ -67,7 +67,7 @@ const Card = (props: SVGAttributes<SVGElement>) => {
           width='89.4118'
           height='7.15294'
           rx='3.57647'
-          fill='var(--muted-foreground)'
+          fill='var(--card-foreground)'
           fillOpacity='0.2'
         />
       </g>

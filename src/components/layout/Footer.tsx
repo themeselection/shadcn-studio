@@ -28,8 +28,8 @@ const Footer = () => {
               <Logo />
             </Link>
             <p>
-              An open-source shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful
-              theme editor to craft, customize, and ship faster.
+              An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a
+              powerful theme generator to craft, customize, and ship faster.
             </p>
             <div className='flex items-center gap-4'>
               <Link href='https://github.com/themeselection/shadcn-studio' target='_blank' rel='noopener noreferrer'>
@@ -58,7 +58,7 @@ const Footer = () => {
               <div className='text-lg font-semibold'>Products</div>
               <ul className='space-y-3'>
                 <li>
-                  <Link href='/theme-editor'>Shadcn Theme Editor</Link>
+                  <Link href='/theme-generator'>Shadcn Theme Generator</Link>
                 </li>
                 <li>
                   <Link href='/components'>Shadcn Components</Link>

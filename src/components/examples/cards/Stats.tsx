@@ -4,11 +4,11 @@
 import { Bar, BarChart, Line, LineChart } from 'recharts'
 
 // Type Imports
-import type { ChartConfig } from '@/registry/new-york/ui/chart'
+import type { ChartConfig } from '@/components/ui/chart'
 
 // Component Imports
-import { ChartContainer } from '@/registry/new-york/ui/chart'
-import { Card, CardContent, CardHeader, CardTitle } from '@/registry/new-york/ui/card'
+import { ChartContainer } from '@/components/ui/chart'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 const data = [
   {

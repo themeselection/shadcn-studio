@@ -5,10 +5,10 @@ import { useState } from 'react'
 import type { ReactNode } from 'react'
 
 // Component Imports
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 type AccountSwitcherProps = {
   isCollapsed: boolean

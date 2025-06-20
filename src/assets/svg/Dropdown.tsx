@@ -10,10 +10,10 @@ const Dropdown = (props: SVGAttributes<SVGElement>) => {
         <path d='M178 37L1.3113e-06 37' stroke='url(#paint2_linear_5357_51872)' strokeOpacity='0.4' />
         <path d='M178 133L1.3113e-06 133' stroke='url(#paint3_linear_5357_51872)' strokeOpacity='0.4' />
         <rect x='18' y='37' width='143' height='96' rx='8' fill='var(--card)' />
-        <rect x='31' y='50' width='86' height='8' rx='4' fill='var(--muted-foreground)' fillOpacity='0.2' />
+        <rect x='31' y='50' width='86' height='8' rx='4' fill='var(--card-foreground)' fillOpacity='0.2' />
         <rect x='31' y='71' width='118' height='8' rx='4' fill='var(--primary)' />
-        <rect x='31' y='92' width='43' height='8' rx='4' fill='var(--muted-foreground)' fillOpacity='0.2' />
-        <rect x='31' y='113' width='79' height='8' rx='4' fill='var(--muted-foreground)' fillOpacity='0.2' />
+        <rect x='31' y='92' width='43' height='8' rx='4' fill='var(--card-foreground)' fillOpacity='0.2' />
+        <rect x='31' y='113' width='79' height='8' rx='4' fill='var(--card-foreground)' fillOpacity='0.2' />
         <rect x='45' width='90' height='32' rx='8' fill='var(--primary)' />
         <rect x='61' y='12' width='58' height='8' rx='4' fill='var(--primary-foreground)' />
       </g>

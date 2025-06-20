@@ -11,8 +11,8 @@ import 'shepherd.js/dist/css/shepherd.css'
 
 // Component Imports
 import ThemeControlPanel from './ThemeControlPanel'
-import { RainbowButton } from '@/registry/new-york/ui/rainbow-button'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/registry/new-york/ui/sheet'
+import { RainbowButton } from '@/components/ui/rainbow-button'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet'
 
 // Styles Imports
 import './shepherd.css'
@@ -36,7 +36,7 @@ export function ThemeCustomizer() {
     // Add steps to the tour
     tour.addStep({
       id: 'theme-customizer-intro',
-      title: 'shadcn/ui Theme Editor 🤩',
+      title: 'shadcn/ui Theme Generator 🤩',
       text: 'Transform your shadcn components in real time—customize, save, and ship stunning interfaces faster than ever.',
       attachTo: {
         element: '[data-tour="theme-customizer"]',

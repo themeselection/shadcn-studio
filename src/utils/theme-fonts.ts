@@ -5,6 +5,7 @@ const sansSerifFontNames = [
   'Inter',
   'Roboto',
   'Open Sans',
+  'Geist',
   'Poppins',
   'Montserrat',
   'Outfit',
@@ -13,22 +14,36 @@ const sansSerifFontNames = [
   'Nunito',
   'Barlow',
   'Source Code Pro',
-  'Lato'
+  'Lato',
+  'Gabriela',
+  'Delius Swash Caps'
 ]
 
 const serifFontNames = [
   'Merriweather',
   'Playfair Display',
   'Lora',
+  'Geist',
   'Source Serif 4',
   'Libre Baskerville',
   'Space Grotesk',
   'PT Serif',
   'Nunito',
-  'Lato'
+  'Lato',
+  'Gabriela',
+  'Delius Swash Caps'
 ]
 
-const monoFontNames = ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'IBM Plex Mono', 'Roboto Mono', 'Space Mono']
+const monoFontNames = [
+  'JetBrains Mono',
+  'Fira Code',
+  'Source Code Pro',
+  'Geist Mono',
+  'IBM Plex Mono',
+  'Roboto Mono',
+  'Space Mono',
+  'Delius Swash Caps'
+]
 
 export const fonts = {
   // Sans-serif fonts
@@ -43,6 +58,7 @@ export const fonts = {
   'IBM Plex Sans': 'IBM Plex Sans, sans-serif',
   Nunito: 'Nunito, sans-serif',
   Lato: 'Lato, sans-serif',
+  Geist: 'Geist, Geist Fallback, sans-serif',
 
   // Serif fonts
   Merriweather: 'Merriweather, serif',
@@ -52,11 +68,14 @@ export const fonts = {
   'Libre Baskerville': 'Libre Baskerville, serif',
   'Space Grotesk': 'Space Grotesk, serif',
   'PT Serif': 'PT Serif, serif',
+  Gabriela: 'Gabriela, Geist Fallback',
+  'Delius Swash Caps': 'Delius Swash Caps, serif',
 
   // Monospace fonts
   'JetBrains Mono': 'JetBrains Mono, monospace',
   'Fira Code': 'Fira Code, monospace',
   'Source Code Pro': 'Source Code Pro, monospace',
+  'Geist Mono': 'Geist Mono, Geist Mono Fallback, monospace',
   'IBM Plex Mono': 'IBM Plex Mono, monospace',
   'Roboto Mono': 'Roboto Mono, monospace',
   'Space Mono': 'Space Mono, monospace'

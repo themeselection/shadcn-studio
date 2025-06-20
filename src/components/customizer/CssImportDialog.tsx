@@ -12,10 +12,10 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle
-} from '@/registry/new-york/ui/dialog'
-import { Button } from '@/registry/new-york/ui/button'
-import { Textarea } from '@/registry/new-york/ui/textarea'
-import { Alert, AlertDescription } from '@/registry/new-york/ui/alert'
+} from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { Alert, AlertDescription } from '@/components/ui/alert'
 
 type CssImportDialogProps = {
   open: boolean

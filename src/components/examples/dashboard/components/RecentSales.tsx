@@ -1,5 +1,5 @@
 // Component Imports
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export function RecentSales() {
   return (

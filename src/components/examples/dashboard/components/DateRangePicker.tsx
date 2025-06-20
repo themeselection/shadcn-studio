@@ -10,10 +10,10 @@ import { CalendarIcon } from 'lucide-react'
 import type { DateRange } from 'react-day-picker'
 
 // Component Imports
-import { cn } from '@/registry/new-york/lib/utils'
-import { Button } from '@/registry/new-york/ui/button'
-import { Calendar } from '@/registry/new-york/ui/calendar'
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york/ui/popover'
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 export function CalendarDateRangePicker({ className }: HTMLAttributes<HTMLDivElement>) {
   const [date, setDate] = useState<DateRange | undefined>({

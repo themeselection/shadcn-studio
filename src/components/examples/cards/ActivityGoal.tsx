@@ -8,12 +8,12 @@ import { Bar, BarChart } from 'recharts'
 import { Minus, Plus } from 'lucide-react'
 
 // Type Imports
-import type { ChartConfig } from '@/registry/new-york/ui/chart'
+import type { ChartConfig } from '@/components/ui/chart'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { ChartContainer } from '@/registry/new-york/ui/chart'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york/ui/card'
+import { Button } from '@/components/ui/button'
+import { ChartContainer } from '@/components/ui/chart'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
 const data = [
   {

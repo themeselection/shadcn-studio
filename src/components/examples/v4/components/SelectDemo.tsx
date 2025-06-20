@@ -10,7 +10,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue
-} from '@/registry/new-york/ui/select'
+} from '@/components/ui/select'
 
 export function SelectDemo() {
   return (

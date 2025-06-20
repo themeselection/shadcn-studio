@@ -5,10 +5,10 @@ const Checkbox = (props: SVGAttributes<SVGElement>) => {
   return (
     <svg width='108' height='87' viewBox='0 0 108 87' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
       <g clipPath='url(#clip0_5515_6678)'>
-        <rect x='27' y='15' width='56' height='56' rx='8' fill='var(--card)' />
+        <rect x='27' y='15' width='56' height='56' rx='8' fill='var(--primary)' />
         <path
           d='M51.4999 49.2754L45.7372 43.5127L43.2627 45.9872L51.4999 54.2244L68.4872 37.2372L66.0127 34.7627L51.4999 49.2754Z'
-          fill='var(--primary)'
+          fill='var(--primary-foreground)'
         />
         <path d='M110 71L-1.19209e-06 71' stroke='url(#paint0_linear_5515_6678)' strokeOpacity='0.4' />
         <path d='M108 15L-2 15' stroke='url(#paint1_linear_5515_6678)' strokeOpacity='0.4' />

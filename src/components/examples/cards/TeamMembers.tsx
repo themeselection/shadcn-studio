@@ -2,18 +2,11 @@
 import { ChevronDown } from 'lucide-react'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york/ui/popover'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york/ui/card'
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList
-} from '@/registry/new-york/ui/command'
+import { Button } from '@/components/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
 
 export function CardsTeamMembers() {
   return (

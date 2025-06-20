@@ -1,17 +1,15 @@
-'use client'
-
-// React Imports
-import { useEffect, useState } from 'react'
-import type { JSX } from 'react'
+// Next Imports
+import Link from 'next/link'
 
 // Third-party Imports
 import { Code } from 'lucide-react'
-import type { RegistryItem } from 'shadcn/registry'
+import type { BundledLanguage } from 'shiki/bundle/web'
+
+// Type Imports
+import type { ProcessedComponentsData } from '@/types/components'
 
 // Component Imports
-import Link from 'next/link'
-
-import { Button } from '@/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
@@ -19,69 +17,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger
-} from '@/registry/new-york/ui/dialog'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/registry/new-york/ui/tooltip'
+} from '@/components/ui/dialog'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import CopyPrompt from '@/components/CopyPrompt'
 import OpenInV0 from '@/components/OpenInV0'
 import CopyButton from '@/components/CopyButton'
-import ComponentCli from '@/components/ComponentCli'
-import CodeBlock, { highlight } from '@/components/CodeBlock'
+import CodeBlock from '@/components/CodeBlock'
+import CodeBlockMultipleView from './CodeBlockMultipleView'
 
-// Util Imports
-import { convertRegistryPaths } from '@/utils/components'
-
-const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
-  // States
-  const [code, setCode] = useState<string | null>(null)
-  const [highlightedCode, setHighlightedCode] = useState<JSX.Element | null>(null)
-
-  useEffect(() => {
-    const handleEmptyCode = () => {
-      setCode('')
-      setHighlightedCode(null)
-    }
-
-    const loadCode = async () => {
-      try {
-        const response = await fetch(`/r/components/${component.name}.json`)
-
-        if (!response.ok) {
-          handleEmptyCode()
-
-          return
-        }
-
-        const contentType = response.headers.get('content-type')
-
-        if (!contentType || !contentType.includes('application/json')) {
-          handleEmptyCode()
-
-          return
-        }
-
-        const data = await response.json()
-        const codeContent = convertRegistryPaths(data.files[0].content) || ''
-
-        setCode(codeContent)
-
-        // Pre-highlight the code
-        const highlighted = await highlight(codeContent, 'tsx')
-
-        setHighlightedCode(highlighted)
-      } catch (error) {
-        console.error('Failed to load code:', error)
-        handleEmptyCode()
-      }
-    }
-
-    loadCode()
-  }, [component.name])
+const ComponentDetails = ({ componentsData }: { componentsData: ProcessedComponentsData }) => {
+  const { component, tree } = componentsData
 
   return (
     <div className='absolute end-2 top-2 flex items-center gap-2'>
-      <OpenInV0
-        sourceUrl={`${process.env.NEXT_PUBLIC_APP_URL}/r/components/${component.name}.json`}
-        title={component.name}
-      />
+      <CopyPrompt />
+      <OpenInV0 />
       <Dialog>
         <TooltipProvider delayDuration={0}>
           <Tooltip>
@@ -92,7 +42,7 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
                   size='icon'
                   className='text-muted-foreground hover:text-foreground cursor-pointer opacity-0 transition-none group-focus-within/item:opacity-100 group-hover/item:opacity-100 hover:!bg-transparent disabled:opacity-100'
                 >
-                  <Code aria-hidden={true} className='size-4' />
+                  <Code />
                   <span className='sr-only'>View code</span>
                 </Button>
               </DialogTrigger>
@@ -100,17 +50,40 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
             <TooltipContent>View code</TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <DialogContent className='sm:max-w-[650px]'>
+        <DialogContent className='sm:max-w-[900px]'>
           <DialogHeader>
-            <DialogTitle className='text-left'>Installation</DialogTitle>
+            <DialogTitle className='text-left'>CLI Command</DialogTitle>
             <DialogDescription className='sr-only'>Use the CLI to add components to your project</DialogDescription>
           </DialogHeader>
           <div className='min-w-0 space-y-5'>
-            <ComponentCli name={`components/${component.name}`} toast='Installation command' />
+            <div className='overflow-hidden rounded-md border'>
+              <img
+                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-light.png'
+                alt='CLI Light'
+                className='dark:hidden'
+              />
+              <img
+                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-dark.png'
+                alt='CLI Dark'
+                className='hidden dark:block'
+              />
+            </div>
             <div className='space-y-4'>
-              <h2 className='text-left text-lg leading-none font-semibold'>Code</h2>
-              <div className='relative'>
-                {code === '' ? (
+              <h2 className='text-left text-lg leading-none font-semibold'>Manual Code</h2>
+              <div className='overflow-hidden rounded-md border'>
+                {component.files && component.files.length > 0 ? (
+                  component.files.length === 1 ? (
+                    <div className='relative'>
+                      <CodeBlock
+                        code={component.files[0].content || ''}
+                        lang={(component.files[0]?.path?.split('.').pop() || 'tsx') as BundledLanguage}
+                      />
+                      <CopyButton source={component.files[0].content || ''} className='end-1 top-1' toast='Code' />
+                    </div>
+                  ) : (
+                    <CodeBlockMultipleView files={component.files} tree={tree} />
+                  )
+                ) : (
                   <p className='text-muted-foreground text-sm'>
                     No code available. If you think this is an error, please{' '}
                     <Link
@@ -123,11 +96,6 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
                     </Link>
                     .
                   </p>
-                ) : (
-                  <>
-                    <CodeBlock code={code} lang='tsx' preHighlighted={highlightedCode} />
-                    <CopyButton source={code} className='dark end-1 top-1' toast='Code' />
-                  </>
                 )}
               </div>
             </div>
@@ -138,4 +106,4 @@ const ComponentsDetails = ({ component }: { component: RegistryItem }) => {
   )
 }
 
-export default ComponentsDetails
+export default ComponentDetails

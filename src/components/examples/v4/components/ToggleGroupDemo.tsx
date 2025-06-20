@@ -1,6 +1,6 @@
 import { BoldIcon, ItalicIcon, UnderlineIcon } from 'lucide-react'
 
-import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york/ui/toggle-group'
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 
 export function ToggleGroupDemo() {
   return (

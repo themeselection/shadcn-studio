@@ -9,8 +9,8 @@ const Button = (props: SVGAttributes<SVGElement>) => {
         <path d='M153 86L153 -4.17233e-06' stroke='url(#paint1_linear_5357_51831)' strokeOpacity='0.4' />
         <path d='M178 18L1.3113e-06 18' stroke='url(#paint2_linear_5357_51831)' strokeOpacity='0.4' />
         <path d='M178 69L1.3113e-06 69' stroke='url(#paint3_linear_5357_51831)' strokeOpacity='0.4' />
-        <rect x='25' y='18' width='128' height='51' rx='8' fill='var(--card)' />
-        <rect x='49' y='38' width='80' height='10' rx='5' fill='var(--primary)' />
+        <rect x='25' y='18' width='128' height='51' rx='8' fill='var(--primary)' />
+        <rect x='49' y='38' width='80' height='10' rx='5' fill='var(--primary-foreground)' />
       </g>
       <defs>
         <linearGradient

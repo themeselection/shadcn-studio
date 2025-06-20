@@ -1,3 +1,5 @@
+'use client'
+
 // React Imports
 import { Fragment, useLayoutEffect, useState } from 'react'
 import type { JSX } from 'react'
@@ -18,7 +20,10 @@ type Props = {
 export const highlight = async (code: string, lang: BundledLanguage) => {
   const out = await codeToHast(code, {
     lang,
-    theme: 'github-dark'
+    themes: {
+      light: 'github-light',
+      dark: 'github-dark'
+    }
   })
 
   return toJsxRuntime(out, {
@@ -28,16 +33,10 @@ export const highlight = async (code: string, lang: BundledLanguage) => {
   }) as JSX.Element
 }
 
-const CodeBlock = ({ code, lang, initial, preHighlighted }: Props) => {
-  const [content, setContent] = useState(preHighlighted || initial || null)
+const CodeBlock = ({ code, lang, initial }: Props) => {
+  const [content, setContent] = useState(initial || null)
 
   useLayoutEffect(() => {
-    if (preHighlighted) {
-      setContent(preHighlighted)
-
-      return
-    }
-
     let isMounted = true
 
     if (code) {
@@ -45,20 +44,20 @@ const CodeBlock = ({ code, lang, initial, preHighlighted }: Props) => {
         if (isMounted) setContent(result)
       })
     } else {
-      setContent(<pre className='rounded-md bg-zinc-950 p-4'>No code available</pre>)
+      setContent(<pre className='bg-sidebar rounded-md p-4 text-sm'>No code available</pre>)
     }
 
     return () => {
       isMounted = false
     }
-  }, [code, lang, preHighlighted])
+  }, [code, lang])
 
   return content ? (
-    <div className='*:outline-none! [&_code]:font-mono [&_code]:text-[13px] [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:rounded-md [&_pre]:bg-zinc-950! [&_pre]:p-4 [&_pre]:leading-snug dark:[&_pre]:bg-zinc-900!'>
+    <div className='[&_pre]:bg-sidebar! h-full *:outline-none! [&_code]:font-mono [&_code]:text-[13px] [&_pre]:h-full [&_pre]:max-h-[350px] [&_pre]:overflow-auto [&_pre]:p-4 [&_pre]:leading-snug'>
       {content}
     </div>
   ) : (
-    <pre className='rounded-md bg-zinc-950 p-4'>Loading...</pre>
+    <pre className='bg-sidebar rounded-md p-4 text-sm'>Loading...</pre>
   )
 }
 

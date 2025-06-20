@@ -14,11 +14,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger
-} from '@/registry/new-york/ui/dialog'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york/ui/select'
-import ComponentCli from '@/components/ComponentCli'
+} from '@/components/ui/dialog'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import CodeBlock from '@/components/CodeBlock'
-import CopyButton from '../CopyButton'
+import CopyButton from '@/components/CopyButton'
 
 // Config Imports
 import { defaultLightThemeStyles, defaultDarkThemeStyles } from '@/config/theme'
@@ -58,12 +57,25 @@ const ThemeVariablesDialog = ({ lightTheme, darkTheme, trigger, activeTheme }: T
         </DialogHeader>
         <div className='flex min-w-0 flex-col gap-6'>
           {/* Theme Installation Command - Only show for preset themes */}
-          {activeTheme && isPresetTheme && <ComponentCli name={`themes/${activeTheme}`} toast='Installation command' />}
+          {activeTheme && isPresetTheme && (
+            <div className='overflow-hidden rounded-md border'>
+              <img
+                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-light.png'
+                alt='CLI Light'
+                className='dark:hidden'
+              />
+              <img
+                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-dark.png'
+                alt='CLI Dark'
+                className='hidden dark:block'
+              />
+            </div>
+          )}
 
-          <div className='relative rounded-md bg-zinc-950 dark:bg-zinc-900'>
+          <div className='bg-sidebar relative overflow-hidden rounded-md border'>
             <div className='sticky top-0 w-full p-2'>
               <Select value={colorFormat} onValueChange={(value: ColorFormat) => setColorFormat(value)}>
-                <SelectTrigger className='w-fit cursor-pointer gap-1 border-none bg-white outline-hidden focus:border-none focus:ring-transparent'>
+                <SelectTrigger className='focus:border-border bg-card w-fit cursor-pointer gap-1 border outline-hidden focus:ring-transparent focus-visible:border'>
                   <SelectValue placeholder='Format' />
                 </SelectTrigger>
                 <SelectContent>

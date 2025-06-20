@@ -8,12 +8,12 @@ import { formatDistanceToNow } from 'date-fns'
 import type { Mail } from '../Data'
 
 // Component Imports
-import { Badge } from '@/registry/new-york/ui/badge'
-import { ScrollArea } from '@/registry/new-york/ui/scroll-area'
+import { Badge } from '@/components/ui/badge'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { useMail } from '../MailContext'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 type MailListProps = {
   items: Mail[]

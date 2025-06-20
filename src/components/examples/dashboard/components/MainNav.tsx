@@ -7,7 +7,7 @@ import type { HTMLAttributes } from 'react'
 import Link from 'next/link'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 export function MainNav({ className, ...props }: HTMLAttributes<HTMLElement>) {
   return (

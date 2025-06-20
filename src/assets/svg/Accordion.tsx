@@ -14,7 +14,7 @@ const Accordion = (props: SVGAttributes<SVGElement>) => {
         <path
           d='M188 37.5L193 42.5L198 37.5'
           stroke='var(--card-foreground)'
-          strokeOpacity='0.5'
+          strokeOpacity='0.6'
           strokeWidth='1.5'
           strokeLinecap='round'
           strokeLinejoin='round'
@@ -25,7 +25,7 @@ const Accordion = (props: SVGAttributes<SVGElement>) => {
         <path
           d='M188 75.5L193 80.5L198 75.5'
           stroke='var(--card-foreground)'
-          strokeOpacity='0.5'
+          strokeOpacity='0.6'
           strokeWidth='1.5'
           strokeLinecap='round'
           strokeLinejoin='round'
@@ -35,7 +35,7 @@ const Accordion = (props: SVGAttributes<SVGElement>) => {
         <path
           d='M188 113.5L193 118.5L198 113.5'
           stroke='var(--card-foreground)'
-          strokeOpacity='0.5'
+          strokeOpacity='0.6'
           strokeWidth='1.5'
           strokeLinecap='round'
           strokeLinejoin='round'

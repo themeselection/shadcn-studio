@@ -6,7 +6,7 @@ import { PlusIcon } from 'lucide-react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 
 // Component Imports
-import { Accordion, AccordionContent, AccordionItem } from '@/registry/new-york/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem } from '@/components/ui/accordion'
 
 // Data Imports
 import { introFaqs } from '@/assets/data/faqs'
@@ -14,11 +14,11 @@ import { introFaqs } from '@/assets/data/faqs'
 export const metadata: Metadata = {
   title: 'Introduction',
   description:
-    'An open-source Shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster.',
+    'An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.',
   openGraph: {
     title: 'Introduction',
     description:
-      'An open-source Shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster.',
+      'An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.',
     url: 'https://shadcnstudio.com/docs/getting-started/introduction',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Introduction',
     description:
-      'An open-source Shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster.'
+      'An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.'
   },
   alternates: {
     canonical: 'https://shadcnstudio.com/docs/getting-started/introduction'
@@ -47,8 +47,8 @@ const DocsPage = () => {
       <div className='flex flex-col items-start space-y-3'>
         <h1 className='text-2xl font-bold sm:text-3xl'>Introduction</h1>
         <p className='text-muted-foreground'>
-          An open-source Shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful
-          theme editor to craft, customize, and ship faster.
+          An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful
+          theme generator to craft, customize, and ship faster.
         </p>
       </div>
       <div className='flex flex-col items-start space-y-3'>
@@ -61,9 +61,9 @@ const DocsPage = () => {
           Preview, customize, and copy-paste them into your apps with ease.
         </p>
         <p className='text-foreground/80'>
-          Building on the solid foundation of the Shadcn registry, we&apos;ve enhanced it with custom-designed
-          components & blocks to give you a head start. This allows you to craft, customize, and ship your projects
-          faster and more efficiently.
+          Building on the solid foundation of the Shadcn components & blocks, we&apos;ve enhanced it with
+          custom-designed components & blocks to give you a head start. This allows you to craft, customize, and ship
+          your projects faster and more efficiently.
         </p>
       </div>
 
@@ -95,8 +95,8 @@ const DocsPage = () => {
       <div className='flex flex-col items-start space-y-3'>
         <h3 className='text-md font-bold'>This is where shadcn/studio shines ✨</h3>
         <p className='text-foreground/80'>
-          An open-source Shadcn registry of copy-and-paste components, blocks, and templates—paired with a powerful
-          theme editor to craft, customize, and ship faster 🚀. It provides a robust toolkit for building stunning,
+          An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful
+          theme generator to craft, customize, and ship faster 🚀. It provides a robust toolkit for building stunning,
           interactive user interfaces with ease.
         </p>
         <ul className='text-foreground/80 ms-8 list-disc space-y-2 lg:max-w-7/10'>
@@ -113,7 +113,7 @@ const DocsPage = () => {
             animations to your components, enhancing user experiences with minimal effort.
           </li>
           <li>
-            <span className='text-foreground font-semibold'>Powerful theme editor:</span> Tailor your UI effortlessly
+            <span className='text-foreground font-semibold'>Powerful theme generator:</span> Tailor your UI effortlessly
             with real-time previews, ensuring consistent, branded designs delivered faster.
           </li>
         </ul>

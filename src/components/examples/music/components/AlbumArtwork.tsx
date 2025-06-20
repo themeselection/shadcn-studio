@@ -18,10 +18,10 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger
-} from '@/registry/new-york/ui/context-menu'
+} from '@/components/ui/context-menu'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 // Data Imports
 import { playlists } from '../data/Playlists'

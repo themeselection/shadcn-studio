@@ -2,9 +2,9 @@
 import type { Metadata } from 'next'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/registry/new-york/ui/tabs'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { CalendarDateRangePicker } from './components/DateRangePicker'
 import { MainNav } from './components/MainNav'
 import { Overview } from './components/Overview'

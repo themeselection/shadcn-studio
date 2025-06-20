@@ -23,8 +23,8 @@ export const searchData: SearchData[] = [
     data: [
       {
         icon: File,
-        name: 'Theme Editor',
-        href: '/theme-editor'
+        name: 'Theme Generator',
+        href: '/theme-generator'
       },
       {
         icon: File,

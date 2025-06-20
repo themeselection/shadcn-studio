@@ -23,11 +23,11 @@ import {
 import type { Mail } from '../Data'
 
 // Component Imports
-import { Input } from '@/registry/new-york/ui/input'
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/registry/new-york/ui/resizable'
-import { Separator } from '@/registry/new-york/ui/separator'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/registry/new-york/ui/tabs'
-import { TooltipProvider } from '@/registry/new-york/ui/tooltip'
+import { Input } from '@/components/ui/input'
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
+import { Separator } from '@/components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import { AccountSwitcher } from './AccountSwitcher'
 import { MailDisplay } from './MailDisplay'
 import { MailList } from './MailList'
@@ -35,7 +35,7 @@ import { Nav } from './Nav'
 import { useMail, MailProvider } from '../MailContext'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 type MailProps = {
   accounts: {

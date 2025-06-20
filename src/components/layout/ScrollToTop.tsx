@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react'
 import { ArrowUp } from 'lucide-react'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 const ScrollToTop = () => {
   // States

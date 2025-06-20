@@ -7,17 +7,10 @@ import { useState } from 'react'
 import { Check, Plus, Send } from 'lucide-react'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
-import { Card, CardContent, CardFooter, CardHeader } from '@/registry/new-york/ui/card'
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList
-} from '@/registry/new-york/ui/command'
+import { Button } from '@/components/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
 import {
   Dialog,
   DialogContent,
@@ -25,12 +18,12 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle
-} from '@/registry/new-york/ui/dialog'
-import { Input } from '@/registry/new-york/ui/input'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/registry/new-york/ui/tooltip'
+} from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 const users = [
   {

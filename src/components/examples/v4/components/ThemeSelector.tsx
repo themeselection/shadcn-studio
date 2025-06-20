@@ -1,7 +1,7 @@
 'use client'
 
 import { useThemeConfig } from './ActiveTheme'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 export const THEMES = [
   {

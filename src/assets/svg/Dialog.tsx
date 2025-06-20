@@ -12,9 +12,9 @@ const Dialog = (props: SVGAttributes<SVGElement>) => {
         <rect x='25' y='20' width='180' height='110' rx='8' fill='var(--card)' />
         <rect x='39' y='35' width='80' height='10' rx='5' fill='var(--primary)' />
         <rect x='143' y='102' width='50' height='18' rx='4' fill='var(--primary)' />
-        <rect x='86' y='102' width='50' height='18' rx='4' fill='var(--muted-background)' fillOpacity='0.2' />
-        <rect x='39' y='58' width='143' height='8' rx='4' fill='var(--muted-background)' fillOpacity='0.2' />
-        <rect x='39' y='72' width='100' height='8' rx='4' fill='var(--muted-background)' fillOpacity='0.2' />
+        <rect x='86' y='102' width='50' height='18' rx='4' fill='var(--card-foreground)' fillOpacity='0.2' />
+        <rect x='39' y='58' width='143' height='8' rx='4' fill='var(--card-foreground)' fillOpacity='0.2' />
+        <rect x='39' y='72' width='100' height='8' rx='4' fill='var(--card-foreground)' fillOpacity='0.2' />
       </g>
       <defs>
         <linearGradient
@@ -25,10 +25,10 @@ const Dialog = (props: SVGAttributes<SVGElement>) => {
           y2='150'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted-background)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted-background)' />
-          <stop offset='0.75' stopColor='var(--muted-background)' />
-          <stop offset='1' stopColor='var(--muted-background)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint1_linear_5357_51857'
@@ -38,10 +38,10 @@ const Dialog = (props: SVGAttributes<SVGElement>) => {
           y2='150'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted-background)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted-background)' />
-          <stop offset='0.75' stopColor='var(--muted-background)' />
-          <stop offset='1' stopColor='var(--muted-background)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint2_linear_5357_51857'
@@ -51,10 +51,10 @@ const Dialog = (props: SVGAttributes<SVGElement>) => {
           y2='19.5624'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted-background)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted-background)' />
-          <stop offset='0.75' stopColor='var(--muted-background)' />
-          <stop offset='1' stopColor='var(--muted-background)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint3_linear_5357_51857'
@@ -64,10 +64,10 @@ const Dialog = (props: SVGAttributes<SVGElement>) => {
           y2='129.562'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted-background)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted-background)' />
-          <stop offset='0.75' stopColor='var(--muted-background)' />
-          <stop offset='1' stopColor='var(--muted-background)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <clipPath id='clip0_5357_51857'>
           <rect width='230' height='150' fill='white' />

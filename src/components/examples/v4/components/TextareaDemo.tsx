@@ -1,5 +1,5 @@
-import { Label } from '@/registry/new-york/ui/label'
-import { Textarea } from '@/registry/new-york/ui/textarea'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
 
 export function TextareaDemo() {
   return (

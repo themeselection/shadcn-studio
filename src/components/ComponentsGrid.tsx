@@ -4,7 +4,7 @@
 import { Children, isValidElement, useEffect, useState, type ReactNode } from 'react'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 type GridLayoutProps = {
   children: ReactNode

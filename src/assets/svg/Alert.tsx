@@ -32,19 +32,19 @@ const Alert = (props: SVGAttributes<SVGElement>) => {
           strokeLinejoin='round'
         />
         <rect x='83.5' y='31' width='60' height='8' rx='4' fill='var(--primary)' />
-        <rect x='83.5' y='47' width='90' height='6' rx='3' fill='var(--muted-foreground)' fillOpacity='0.2' />
+        <rect x='83.5' y='47' width='90' height='6' rx='3' fill='var(--card-foreground)' fillOpacity='0.2' />
         <path
           d='M203 28L195 36'
-          stroke='var(--muted-foreground)'
-          strokeOpacity='0.5'
+          stroke='var(--card-foreground)'
+          strokeOpacity='0.6'
           strokeWidth='1.5'
           strokeLinecap='round'
           strokeLinejoin='round'
         />
         <path
           d='M195 28L203 36'
-          stroke='var(--muted-foreground)'
-          strokeOpacity='0.5'
+          stroke='var(--card-foreground)'
+          strokeOpacity='0.6'
           strokeWidth='1.5'
           strokeLinecap='round'
           strokeLinejoin='round'
@@ -59,10 +59,10 @@ const Alert = (props: SVGAttributes<SVGElement>) => {
           y2='85'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted)' />
-          <stop offset='0.75' stopColor='var(--muted)' />
-          <stop offset='1' stopColor='var(--muted)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint1_linear_5357_51729'
@@ -72,10 +72,10 @@ const Alert = (props: SVGAttributes<SVGElement>) => {
           y2='85'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted)' />
-          <stop offset='0.75' stopColor='var(--muted)' />
-          <stop offset='1' stopColor='var(--muted)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint2_linear_5357_51729'
@@ -85,10 +85,10 @@ const Alert = (props: SVGAttributes<SVGElement>) => {
           y2='17.5737'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted)' />
-          <stop offset='0.75' stopColor='var(--muted)' />
-          <stop offset='1' stopColor='var(--muted)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint3_linear_5357_51729'
@@ -98,10 +98,10 @@ const Alert = (props: SVGAttributes<SVGElement>) => {
           y2='65.5737'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--muted)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--muted)' />
-          <stop offset='0.75' stopColor='var(--muted)' />
-          <stop offset='1' stopColor='var(--muted)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <clipPath id='clip0_5357_51729'>
           <rect width='250' height='85' fill='white' />

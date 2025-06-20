@@ -12,8 +12,8 @@ import { Component, Figma, File, Flame, LayoutPanelTop, Menu, PaintbrushVertical
 import { useMedia } from 'react-use'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { ScrollArea } from '@/registry/new-york/ui/scroll-area'
+import { Button } from '@/components/ui/button'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import {
   Sidebar,
   SidebarContent,
@@ -28,11 +28,11 @@ import {
   SidebarMenuButton,
   SidebarMenu,
   useSidebar
-} from '@/registry/new-york/ui/sidebar'
+} from '@/components/ui/sidebar'
 import Logo from '@/components/layout/Logo'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 // Config Imports
 import { categories } from '@/config/components'
@@ -175,9 +175,9 @@ const AppSidebar = () => {
         <SidebarContent>
           <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-5', { 'first:pt-8': !isBreakpointReached })}>
             <SidebarMenu className='gap-2.5'>
-              <CustomSidebarMenuItem href='/theme-editor'>
+              <CustomSidebarMenuItem href='/theme-generator'>
                 <PaintbrushVertical className='!size-5' />
-                Theme Editor
+                Theme Generator
                 <SidebarMenuBadge className='bg-destructive/10 text-destructive static gap-0.5 rounded-full px-2 py-0.5 font-normal'>
                   <Flame className='size-4' /> Hot
                 </SidebarMenuBadge>

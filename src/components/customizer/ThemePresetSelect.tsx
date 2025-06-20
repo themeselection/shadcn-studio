@@ -8,7 +8,7 @@ import { Dices, FileCode } from 'lucide-react'
 import type { ThemePreset, ThemeStyleProps } from '@/types/theme'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Select,
   SelectContent,
@@ -17,8 +17,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue
-} from '@/registry/new-york/ui/select'
-import { Badge } from '@/registry/new-york/ui/badge'
+} from '@/components/ui/select'
+import { Badge } from '@/components/ui/badge'
 import CssImportDialog from './CssImportDialog'
 
 // Config Imports
@@ -29,7 +29,7 @@ import { useSettings } from '@/hooks/useSettings'
 
 // Util Imports
 import { toast } from '@/utils/toast'
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 import { parseCssInput, parseLetterSpacing, parseShadowVariables } from '@/utils/parse-css-input'
 
 type ThemePresetSelectProps = {

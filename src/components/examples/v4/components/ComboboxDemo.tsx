@@ -4,9 +4,9 @@ import * as React from 'react'
 
 import { CheckIcon, ChevronDownIcon, ChevronsUpDown, PlusCircleIcon } from 'lucide-react'
 
-import { cn } from '@/registry/new-york/lib/utils'
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
-import { Button } from '@/registry/new-york/ui/button'
+import { cn } from '@/lib/utils'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
 import {
   Command,
   CommandEmpty,
@@ -15,8 +15,8 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator
-} from '@/registry/new-york/ui/command'
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york/ui/popover'
+} from '@/components/ui/command'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 const frameworks = [
   {

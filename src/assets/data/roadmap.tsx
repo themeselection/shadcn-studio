@@ -4,7 +4,7 @@ import { Component, Figma, FileCode2, Import, Repeat2, SwatchBook } from 'lucide
 export const roadmap = [
   {
     icon: SwatchBook,
-    title: 'Shadcn Theme Editor',
+    title: 'Shadcn Theme Generator',
     description: 'Design and manage full themes with presets to style your entire application effortlessly.',
     status: 'In Progress'
   },

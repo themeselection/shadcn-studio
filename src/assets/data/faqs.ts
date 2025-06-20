@@ -6,7 +6,7 @@ export const faqs = [
   {
     question: 'Is shadcn/studio open source?',
     answer:
-      'Yes, shadcn/studio offers a free, open-source shadcn registry of copy-and-paste core components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster.'
+      'Yes, shadcn/studio offers a free, open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.'
   },
   {
     question: 'What is the license for shadcn/studio?',
@@ -42,7 +42,7 @@ export const introFaqs = [
   {
     question: 'Is this an alternative to shadcn/ui?',
     answer:
-      'No, shadcn/studio enhances shadcn/ui with pre-customized components blocks, a theme editor, and animated variants, making UI design easier and faster.'
+      'No, shadcn/studio enhances shadcn/ui with pre-customized components blocks, a theme generator, and animated variants, making UI design easier and faster.'
   },
   {
     question: 'How can I use the customized components in my project?',
@@ -56,7 +56,7 @@ export const introFaqs = [
   {
     question: 'Is shadcn/studio open source?',
     answer:
-      'Yes, shadcn/studio offers a free, open-source shadcn registry of copy-and-paste core components, blocks, and templates—paired with a powerful theme editor to craft, customize, and ship faster.'
+      'Yes, shadcn/studio offers a free, open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.'
   },
   {
     question: 'What is the license for shadcn/studio?',

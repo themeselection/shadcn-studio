@@ -5,11 +5,11 @@ import type { HTMLAttributes } from 'react'
 import type { Playlist } from '../data/Playlists'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { ScrollArea } from '@/registry/new-york/ui/scroll-area'
+import { Button } from '@/components/ui/button'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 type SidebarProps = HTMLAttributes<HTMLDivElement> & {
   playlists: Playlist[]

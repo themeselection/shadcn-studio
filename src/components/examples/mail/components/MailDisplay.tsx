@@ -3,21 +3,16 @@ import { addDays, addHours, format, nextSaturday } from 'date-fns'
 import { Archive, ArchiveX, Clock, Forward, MoreVertical, Reply, ReplyAll, Trash2 } from 'lucide-react'
 
 // Component Imports
-import {
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenu,
-  DropdownMenuTrigger
-} from '@/registry/new-york/ui/dropdown-menu'
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
-import { Button } from '@/registry/new-york/ui/button'
-import { Calendar } from '@/registry/new-york/ui/calendar'
-import { Label } from '@/registry/new-york/ui/label'
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york/ui/popover'
-import { Separator } from '@/registry/new-york/ui/separator'
-import { Switch } from '@/registry/new-york/ui/switch'
-import { Textarea } from '@/registry/new-york/ui/textarea'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/registry/new-york/ui/tooltip'
+import { DropdownMenuContent, DropdownMenuItem, DropdownMenu, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import { Label } from '@/components/ui/label'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { Separator } from '@/components/ui/separator'
+import { Switch } from '@/components/ui/switch'
+import { Textarea } from '@/components/ui/textarea'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import type { Mail } from '../Data'
 
 type MailDisplayProps = {

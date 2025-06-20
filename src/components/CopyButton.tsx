@@ -4,14 +4,14 @@
 import { Check, Copy } from 'lucide-react'
 
 // Component Imports
-import { Button } from '@/registry/new-york/ui/button'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/registry/new-york/ui/tooltip'
+import { Button } from '@/components/ui/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 // Hook Imports
 import { useCopy } from '@/hooks/useCopy'
 
 // Util Imports
-import { cn } from '@/registry/new-york/lib/utils'
+import { cn } from '@/lib/utils'
 
 const CopyButton = ({ source, className, toast }: { source: string | null; className?: string; toast?: string }) => {
   // Hooks

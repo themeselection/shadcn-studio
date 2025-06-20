@@ -4,6 +4,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0-beta.1 (2025-06-20)
+
+### Added
+
+- Added Calendar, Combobox, Date and Time Picker, Form, Input, Input Mask, Input OTP, Select, Switch & Textarea component variants
+- Added Animated Combobox, Select & Switch component variants
+- Added Art Deco & Marshmallow themes
+
+### Updated
+
+- Relocated the following folders to their new paths:
+  - All ui components from `src/registry/new-york/ui` to `src/components/ui`
+  - All component variants from `src/registry/new-york/components` to `src/components/shadcn-studio`
+  - All hooks from `src/registry/new-york/hooks` to `src/hooks`
+  - All libs from `src/registry/new-york/lib` to `src/lib`
+
+### Removed
+
+- Removed all registries from `public/r` and `src/registry` directories including generating scripts
+
 ## v1.0.0-alpha.3 (2025-06-06)
 
 ### Added

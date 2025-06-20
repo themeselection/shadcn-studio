@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { BathIcon, BedIcon, LandPlotIcon } from 'lucide-react'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/new-york/ui/avatar'
-import { Badge } from '@/registry/new-york/ui/badge'
-import { Button } from '@/registry/new-york/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/new-york/ui/card'
-import { Input } from '@/registry/new-york/ui/input'
-import { Label } from '@/registry/new-york/ui/label'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 
 export function CardDemo() {
   return (

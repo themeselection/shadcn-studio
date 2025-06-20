@@ -6,7 +6,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/theme-editor',
+        destination: '/theme-generator',
+        permanent: true
+      },
+      {
+        source: '/theme-editor',
+        destination: '/theme-generator',
         permanent: true
       },
       {
