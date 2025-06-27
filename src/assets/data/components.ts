@@ -2070,6 +2070,97 @@ export const components: ComponentProps[] = [
     isAnimated: true
   },
   {
+    name: 'collapsible-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-01.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-02.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-03.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-04.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-05.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-06.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-07.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-08.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-09.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'collapsible-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/collapsible/collapsible-10.tsx',
+        target: 'components/shadcn-studio/collapsible/collapsible-10.tsx'
+      }
+    ],
+    isAnimated: true
+  },
+  {
     name: 'combobox-01',
     files: [
       {
@@ -2196,6 +2287,126 @@ export const components: ComponentProps[] = [
       }
     ],
     isAnimated: true
+  },
+  {
+    name: 'data-table-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-01.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-02.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-03.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-04.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-05.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-06.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-07.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-08.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-09.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-10.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-11.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-11.tsx'
+      },
+      {
+        path: 'src/hooks/use-pagination.ts'
+      }
+    ]
+  },
+  {
+    name: 'data-table-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-12.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'data-table-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/data-table/data-table-13.tsx',
+        target: 'components/shadcn-studio/data-table/data-table-13.tsx'
+      }
+    ]
   },
   {
     name: 'date-picker-01',
@@ -2780,6 +2991,16 @@ export const components: ComponentProps[] = [
     ]
   },
   {
+    name: 'form-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/form/form-10.tsx',
+        target: 'components/shadcn-studio/form/form-10.tsx'
+      }
+    ],
+    badge: 'New'
+  },
+  {
     name: 'input-01',
     files: [
       {
@@ -3336,6 +3557,144 @@ export const components: ComponentProps[] = [
         target: 'components/shadcn-studio/input-otp/input-otp-10.tsx'
       }
     ]
+  },
+  {
+    name: 'popover-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-01.tsx',
+        target: 'components/shadcn-studio/popover/popover-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-02.tsx',
+        target: 'components/shadcn-studio/popover/popover-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-03.tsx',
+        target: 'components/shadcn-studio/popover/popover-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-04.tsx',
+        target: 'components/shadcn-studio/popover/popover-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-05.tsx',
+        target: 'components/shadcn-studio/popover/popover-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-06.tsx',
+        target: 'components/shadcn-studio/popover/popover-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-07.tsx',
+        target: 'components/shadcn-studio/popover/popover-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-08.tsx',
+        target: 'components/shadcn-studio/popover/popover-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-09.tsx',
+        target: 'components/shadcn-studio/popover/popover-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-10.tsx',
+        target: 'components/shadcn-studio/popover/popover-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-11.tsx',
+        target: 'components/shadcn-studio/popover/popover-11.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-12.tsx',
+        target: 'components/shadcn-studio/popover/popover-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'popover-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-13.tsx',
+        target: 'components/shadcn-studio/popover/popover-13.tsx'
+      }
+    ],
+    isAnimated: true
+  },
+  {
+    name: 'popover-14',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-14.tsx',
+        target: 'components/shadcn-studio/popover/popover-14.tsx'
+      }
+    ],
+    isAnimated: true
+  },
+  {
+    name: 'popover-15',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/popover/popover-15.tsx',
+        target: 'components/shadcn-studio/popover/popover-15.tsx'
+      }
+    ],
+    isAnimated: true
   },
   {
     name: 'radio-group-01',
@@ -4046,6 +4405,150 @@ export const components: ComponentProps[] = [
     isAnimated: true
   },
   {
+    name: 'table-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-01.tsx',
+        target: 'components/shadcn-studio/table/table-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-02.tsx',
+        target: 'components/shadcn-studio/table/table-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-03.tsx',
+        target: 'components/shadcn-studio/table/table-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-04.tsx',
+        target: 'components/shadcn-studio/table/table-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-05.tsx',
+        target: 'components/shadcn-studio/table/table-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-06.tsx',
+        target: 'components/shadcn-studio/table/table-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-07.tsx',
+        target: 'components/shadcn-studio/table/table-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-08.tsx',
+        target: 'components/shadcn-studio/table/table-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-09.tsx',
+        target: 'components/shadcn-studio/table/table-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-10.tsx',
+        target: 'components/shadcn-studio/table/table-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-11.tsx',
+        target: 'components/shadcn-studio/table/table-11.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-12.tsx',
+        target: 'components/shadcn-studio/table/table-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-13.tsx',
+        target: 'components/shadcn-studio/table/table-13.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-14',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-14.tsx',
+        target: 'components/shadcn-studio/table/table-14.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-15',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-15.tsx',
+        target: 'components/shadcn-studio/table/table-15.tsx'
+      }
+    ]
+  },
+  {
+    name: 'table-16',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/table/table-16.tsx',
+        target: 'components/shadcn-studio/table/table-16.tsx'
+      }
+    ]
+  },
+  {
     name: 'textarea-01',
     files: [
       {
@@ -4233,5 +4736,166 @@ export const components: ComponentProps[] = [
         target: 'components/shadcn-studio/textarea/textarea-21.tsx'
       }
     ]
+  },
+  {
+    name: 'tooltip-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-01.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-02.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-03.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-04.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-05.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-06.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-07.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-08.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-09.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-10.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-11.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-11.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-12.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-13.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-13.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-14',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-14.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-14.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-15',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-15.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-15.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tooltip-16',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-16.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-16.tsx'
+      },
+      {
+        path: 'src/components/ui/motion-tooltip.tsx'
+      }
+    ],
+    isAnimated: true
+  },
+  {
+    name: 'tooltip-17',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tooltip/tooltip-17.tsx',
+        target: 'components/shadcn-studio/tooltip/tooltip-17.tsx'
+      },
+      {
+        path: 'src/components/ui/global-tooltip.tsx'
+      }
+    ],
+    isAnimated: true
   }
 ]

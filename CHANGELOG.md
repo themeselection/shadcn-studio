@@ -4,6 +4,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0-beta.2 (2025-06-27)
+
+### Added
+
+- Added Collapsible, Data table, Form, Hover Card, Popover, Table and Tooltip component variants
+- Added Animated Collapsible, Popover and Tooltip component variants
+
 ## v1.0.0-beta.1 (2025-06-20)
 
 ### Added

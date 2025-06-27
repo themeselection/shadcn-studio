@@ -18,17 +18,22 @@ import ButtonGroupSVG from '@/assets/svg/ButtonGroup'
 import CalendarSVG from '@/assets/svg/Calendar'
 import CardSVG from '@/assets/svg/Card'
 import CheckboxSVG from '@/assets/svg/Checkbox'
+import CollapsibleSVG from '@/assets/svg/Collapsible'
 import ComboboxSVG from '@/assets/svg/Combobox'
+import DataTableSVG from '@/assets/svg/DataTable'
 import DatepickerSVG from '@/assets/svg/Datepicker'
 import DialogSVG from '@/assets/svg/Dialog'
 import DropdownSVG from '@/assets/svg/Dropdown'
 import FormSVG from '@/assets/svg/Form'
 import InputSVG from '@/assets/svg/Input'
 import InputOTPSVG from '@/assets/svg/InputOTP'
+import PopoverSVG from '@/assets/svg/Popover'
 import RadioGroupSVG from '@/assets/svg/RadioGroup'
 import SelectSVG from '@/assets/svg/Select'
 import SwitchSVG from '@/assets/svg/Switch'
+import TableSVG from '@/assets/svg/Table'
 import TextareaSVG from '@/assets/svg/Textarea'
+import TooltipSVG from '@/assets/svg/Tooltip'
 
 export type ComponentCategory = {
   slug: string
@@ -340,7 +345,6 @@ export const categories: ComponentCategory[] = [
     slug: 'calendar',
     name: 'Calendar',
     svg: CalendarSVG,
-    badge: 'New',
     breakpoints: {
       xl: 2
     },
@@ -443,17 +447,43 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'collapsible',
+    name: 'Collapsible',
+    svg: CollapsibleSVG,
+    badge: 'New',
+    breakpoints: {
+      xl: 2
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        xl: 2
+      }
+    },
+    components: [
+      { name: 'collapsible-01' },
+      { name: 'collapsible-02' },
+      { name: 'collapsible-03' },
+      { name: 'collapsible-04' },
+      { name: 'collapsible-05' },
+      { name: 'collapsible-06' },
+      { name: 'collapsible-07' },
+      { name: 'collapsible-08' },
+      { name: 'collapsible-09' },
+      { name: 'collapsible-10' }
+    ]
+  },
+  {
     slug: 'combobox',
     name: 'Combobox',
     svg: ComboboxSVG,
-    badge: 'New',
     breakpoints: {
       md: 2,
       xl: 3
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         md: 2,
         xl: 3
@@ -477,10 +507,50 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'data-table',
+    name: 'Data Table',
+    svg: DataTableSVG,
+    badge: 'New',
+    breakpoints: {},
+    components: [
+      { name: 'data-table-01' },
+      { name: 'data-table-02' },
+      { name: 'data-table-03' },
+      { name: 'data-table-04' },
+      { name: 'data-table-05' },
+      { name: 'data-table-06' },
+      { name: 'data-table-07' },
+      { name: 'data-table-08' },
+      { name: 'data-table-09' },
+      { name: 'data-table-10' },
+      { name: 'data-table-11' },
+      { name: 'data-table-12' },
+      { name: 'data-table-13' }
+    ],
+    note: (
+      <Alert className='border-none bg-sky-600/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400'>
+        <CircleAlertIcon />
+        <AlertDescription className='text-sky-600/80 dark:text-sky-400/80'>
+          <span>
+            Built using TanStack Table. For detailed instructions, please refer to this{' '}
+            <a
+              href='https://tanstack.com/table/v8/docs/introduction'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline hover:text-sky-600 dark:hover:text-sky-400'
+            >
+              documentation
+            </a>
+            .
+          </span>
+        </AlertDescription>
+      </Alert>
+    )
+  },
+  {
     slug: 'date-picker',
     name: 'Date and Time Picker',
     svg: DatepickerSVG,
-    badge: 'New',
     breakpoints: {
       md: 2,
       xl: 3
@@ -581,10 +651,9 @@ export const categories: ComponentCategory[] = [
     slug: 'form',
     name: 'Form',
     svg: FormSVG,
-    badge: 'New',
+    badge: 'Updated',
     breakpoints: {
-      md: 2,
-      xl: 3
+      md: 2
     },
     components: [
       { name: 'form-01' },
@@ -595,7 +664,8 @@ export const categories: ComponentCategory[] = [
       { name: 'form-06' },
       { name: 'form-07' },
       { name: 'form-08' },
-      { name: 'form-09' }
+      { name: 'form-09' },
+      { name: 'form-10' }
     ],
     note: (
       <Alert className='border-none bg-sky-600/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400'>
@@ -607,6 +677,8 @@ export const categories: ComponentCategory[] = [
             in your layout. For detailed instructions, please refer to this{' '}
             <a
               href='https://ui.shadcn.com/docs/components/sonner#installation'
+              target='_blank'
+              rel='noopener noreferrer'
               className='underline hover:text-sky-600 dark:hover:text-sky-400'
             >
               documentation
@@ -621,7 +693,6 @@ export const categories: ComponentCategory[] = [
     slug: 'input',
     name: 'Input',
     svg: InputSVG,
-    badge: 'New',
     breakpoints: {
       md: 2,
       xl: 3
@@ -681,7 +752,6 @@ export const categories: ComponentCategory[] = [
     slug: 'input-mask',
     name: 'Input Mask',
     svg: InputSVG,
-    badge: 'New',
     breakpoints: {
       md: 2
     },
@@ -698,7 +768,6 @@ export const categories: ComponentCategory[] = [
     slug: 'input-otp',
     name: 'Input OTP',
     svg: InputOTPSVG,
-    badge: 'New',
     breakpoints: {
       md: 2
     },
@@ -713,6 +782,41 @@ export const categories: ComponentCategory[] = [
       { name: 'input-otp-08' },
       { name: 'input-otp-09' },
       { name: 'input-otp-10' }
+    ]
+  },
+  {
+    slug: 'popover',
+    name: 'Popover',
+    svg: PopoverSVG,
+    badge: 'New',
+    breakpoints: {
+      sm: 2,
+      xl: 3
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        sm: 2,
+        xl: 3
+      }
+    },
+    components: [
+      { name: 'popover-01' },
+      { name: 'popover-02' },
+      { name: 'popover-03' },
+      { name: 'popover-04' },
+      { name: 'popover-05' },
+      { name: 'popover-06' },
+      { name: 'popover-07' },
+      { name: 'popover-08' },
+      { name: 'popover-09' },
+      { name: 'popover-10' },
+      { name: 'popover-11' },
+      { name: 'popover-12' },
+      { name: 'popover-13' },
+      { name: 'popover-14' },
+      { name: 'popover-15' }
     ]
   },
   {
@@ -750,14 +854,12 @@ export const categories: ComponentCategory[] = [
     slug: 'select',
     name: 'Select',
     svg: SelectSVG,
-    badge: 'New',
     breakpoints: {
       md: 2,
       xl: 3
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         md: 2,
         xl: 3
@@ -808,14 +910,12 @@ export const categories: ComponentCategory[] = [
     slug: 'switch',
     name: 'Switch',
     svg: SwitchSVG,
-    badge: 'New',
     breakpoints: {
       sm: 2,
       md: 3
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         sm: 2,
         md: 3
@@ -845,10 +945,34 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'table',
+    name: 'Table',
+    svg: TableSVG,
+    badge: 'New',
+    breakpoints: {},
+    components: [
+      { name: 'table-01' },
+      { name: 'table-02' },
+      { name: 'table-03' },
+      { name: 'table-04' },
+      { name: 'table-05' },
+      { name: 'table-06' },
+      { name: 'table-07' },
+      { name: 'table-08' },
+      { name: 'table-09' },
+      { name: 'table-10' },
+      { name: 'table-11' },
+      { name: 'table-12' },
+      { name: 'table-13' },
+      { name: 'table-14' },
+      { name: 'table-15' },
+      { name: 'table-16' }
+    ]
+  },
+  {
     slug: 'textarea',
     name: 'Textarea',
     svg: TextareaSVG,
-    badge: 'New',
     breakpoints: {
       md: 2,
       xl: 3
@@ -878,6 +1002,43 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'tooltip',
+    name: 'Tooltip',
+    svg: TooltipSVG,
+    badge: 'New',
+    breakpoints: {
+      sm: 2,
+      lg: 3
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        sm: 2,
+        lg: 3
+      }
+    },
+    components: [
+      { name: 'tooltip-01' },
+      { name: 'tooltip-02' },
+      { name: 'tooltip-03' },
+      { name: 'tooltip-04' },
+      { name: 'tooltip-05' },
+      { name: 'tooltip-06' },
+      { name: 'tooltip-07' },
+      { name: 'tooltip-08' },
+      { name: 'tooltip-09' },
+      { name: 'tooltip-10' },
+      { name: 'tooltip-11' },
+      { name: 'tooltip-12' },
+      { name: 'tooltip-13' },
+      { name: 'tooltip-14' },
+      { name: 'tooltip-15' },
+      { name: 'tooltip-16' },
+      { name: 'tooltip-17' }
+    ]
+  },
+  {
     slug: 'carousel',
     name: 'Carousel',
     isComingSoon: true
@@ -885,11 +1046,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'chart',
     name: 'Chart',
-    isComingSoon: true
-  },
-  {
-    slug: 'collapsible',
-    name: 'Collapsible',
     isComingSoon: true
   },
   {
@@ -903,18 +1059,8 @@ export const categories: ComponentCategory[] = [
     isComingSoon: true
   },
   {
-    slug: 'data-table',
-    name: 'Data Table',
-    isComingSoon: true
-  },
-  {
     slug: 'drawer',
     name: 'Drawer',
-    isComingSoon: true
-  },
-  {
-    slug: 'hover-card',
-    name: 'Hover Card',
     isComingSoon: true
   },
   {
@@ -930,11 +1076,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'pagination',
     name: 'Pagination',
-    isComingSoon: true
-  },
-  {
-    slug: 'popover',
-    name: 'Popover',
     isComingSoon: true
   },
   {
@@ -974,11 +1115,6 @@ export const categories: ComponentCategory[] = [
     isComingSoon: true
   },
   {
-    slug: 'table',
-    name: 'Table',
-    isComingSoon: true
-  },
-  {
     slug: 'tabs',
     name: 'Tabs',
     isComingSoon: true
@@ -991,11 +1127,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'toggle-group',
     name: 'Toggle Group',
-    isComingSoon: true
-  },
-  {
-    slug: 'tooltip',
-    name: 'Tooltip',
     isComingSoon: true
   }
 ]

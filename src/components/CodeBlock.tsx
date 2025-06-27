@@ -1,21 +1,18 @@
 'use client'
 
 // React Imports
-import { Fragment, useLayoutEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import type { JSX } from 'react'
 
 // Third-party Imports
+import { Loader2Icon } from 'lucide-react'
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime'
 import { jsx, jsxs } from 'react/jsx-runtime'
 import { codeToHast } from 'shiki/bundle/web'
 import type { BundledLanguage } from 'shiki/bundle/web'
 
-type Props = {
-  code: string | null
-  lang: BundledLanguage
-  initial?: JSX.Element
-  preHighlighted?: JSX.Element | null
-}
+// Hook Imports
+import { useShiki } from '@/hooks/useShiki'
 
 export const highlight = async (code: string, lang: BundledLanguage) => {
   const out = await codeToHast(code, {
@@ -33,31 +30,48 @@ export const highlight = async (code: string, lang: BundledLanguage) => {
   }) as JSX.Element
 }
 
-const CodeBlock = ({ code, lang, initial }: Props) => {
-  const [content, setContent] = useState(initial || null)
+const CodeBlock = ({ code, lang }: { code: string | null; lang: BundledLanguage }) => {
+  // States
+  const [highlightedCode, setHighlightedCode] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
 
-  useLayoutEffect(() => {
-    let isMounted = true
+  // Hooks
+  const { highlightCode, isHighlighterReady } = useShiki()
 
-    if (code) {
-      highlight(code, lang).then(result => {
-        if (isMounted) setContent(result)
-      })
-    } else {
-      setContent(<pre className='bg-sidebar rounded-md p-4 text-sm'>No code available</pre>)
+  useEffect(() => {
+    if (!isHighlighterReady) return
+
+    const highlightTab = async () => {
+      if (code) {
+        try {
+          const highlighted = await highlightCode(code, lang)
+
+          setHighlightedCode(highlighted)
+        } catch (error) {
+          console.error('Error highlighting code:', error)
+        }
+      }
     }
 
-    return () => {
-      isMounted = false
-    }
-  }, [code, lang])
+    // Highlight active tab first
+    highlightTab().then(() => {
+      setIsLoading(false)
+    })
+  }, [isHighlighterReady, highlightCode, highlightedCode, code, lang])
 
-  return content ? (
-    <div className='[&_pre]:bg-sidebar! h-full *:outline-none! [&_code]:font-mono [&_code]:text-[13px] [&_pre]:h-full [&_pre]:max-h-[350px] [&_pre]:overflow-auto [&_pre]:p-4 [&_pre]:leading-snug'>
-      {content}
+  return isLoading ? (
+    <div className='flex min-h-40 flex-1 items-center justify-center p-4'>
+      <Loader2Icon className='text-muted-foreground size-5 animate-spin' />
     </div>
+  ) : isHighlighterReady && highlightedCode ? (
+    <div
+      className='[&_pre]:bg-sidebar! h-full *:outline-none! [&_code]:font-mono [&_code]:text-[13px] [&_pre]:h-full [&_pre]:max-h-[350px] [&_pre]:overflow-auto [&_pre]:p-4 [&_pre]:leading-snug'
+      dangerouslySetInnerHTML={{ __html: highlightedCode }}
+    />
   ) : (
-    <pre className='bg-sidebar rounded-md p-4 text-sm'>Loading...</pre>
+    <div className='p-4'>
+      <code className='text-sm'>{code}</code>
+    </div>
   )
 }
 

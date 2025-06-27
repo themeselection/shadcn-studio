@@ -8,17 +8,27 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 // Third-party Imports
-import { Component, Figma, File, Flame, LayoutPanelTop, Menu, PaintbrushVertical, X } from 'lucide-react'
+import {
+  ChevronRightIcon,
+  Component,
+  Figma,
+  File,
+  Flame,
+  LayoutPanelTop,
+  Menu,
+  PaintbrushVertical,
+  X
+} from 'lucide-react'
 import { useMedia } from 'react-use'
 
 // Component Imports
 import { Button } from '@/components/ui/button'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarMenuSubButton,
@@ -73,9 +83,12 @@ const CustomSidebarMenuItem = ({ children, href, openInNewTab }: CustomSidebarMe
   return (
     <SidebarMenuItem>
       <SidebarMenuButton
-        className={cn('text-muted-foreground h-8.5 cursor-pointer rounded-sm px-3 font-medium', {
-          'text-primary hover:text-primary active:text-primary': active
-        })}
+        className={cn(
+          'text-muted-foreground focus-visible:ring-ring/50 h-8.5 cursor-pointer rounded-sm px-3 font-medium outline-none focus-visible:ring-[3px]',
+          {
+            'text-primary hover:text-primary active:text-primary': active
+          }
+        )}
         {...(href && { asChild: true })}
       >
         {href ? (
@@ -118,7 +131,7 @@ const CustomSidebarMenuSubItem = ({
     >
       <SidebarMenuSubButton
         className={cn(
-          'text-muted-foreground hover:text-foreground active:text-foreground h-8 cursor-pointer px-3 hover:bg-transparent hover:ps-[11px] active:bg-transparent',
+          'text-muted-foreground hover:text-foreground active:text-foreground focus-visible:ring-ring/50 h-8 cursor-pointer rounded-s-none px-3 outline-none hover:bg-transparent hover:ps-[11px] focus-visible:ring-[3px] active:bg-transparent',
           { 'text-primary hover:text-primary active:text-primary ps-[11px]': active }
         )}
         {...(href && { asChild: true })}
@@ -210,80 +223,119 @@ const AppSidebar = () => {
             </SidebarMenu>
           </SidebarGroup>
           <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-4', { 'first:pt-8': !isBreakpointReached })}>
-            <SidebarGroupLabel className='px-3 pb-2 text-sm font-semibold lg:px-4'>Getting Started</SidebarGroupLabel>
-            <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
-              <CustomSidebarMenuSubItem href='/docs/getting-started/introduction'>
-                Introduction
-              </CustomSidebarMenuSubItem>
-            </SidebarMenuSub>
+            <SidebarMenu className='gap-2.5'>
+              <Collapsible className='group/collapsible' defaultOpen>
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton className='text-sidebar-foreground/70 focus-visible:ring-ring/50 h-8.5 cursor-pointer rounded-sm px-3 font-semibold outline-none focus-visible:ring-[3px] lg:px-4'>
+                      <span>Getting Started</span>
+                      <ChevronRightIcon className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90' />
+                    </SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
+                      <CustomSidebarMenuSubItem href='/docs/getting-started/introduction'>
+                        Introduction
+                      </CustomSidebarMenuSubItem>
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+            </SidebarMenu>
           </SidebarGroup>
           <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-4', { 'first:pt-8': !isBreakpointReached })}>
-            <SidebarGroupLabel className='px-3 pb-2 text-sm font-semibold lg:px-4'>Animations</SidebarGroupLabel>
-            <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
-              {categories
-                .filter(category => category.hasAnimation)
-                .map(category => (
-                  <CustomSidebarMenuSubItem
-                    key={category.slug}
-                    {...(category.isComingSoon
-                      ? { href: '/', onClick: e => e.preventDefault() }
-                      : {
-                          href: `/docs/components/${category.slug}#animated-variants`
-                        })}
-                  >
-                    {category.name}
-                    {category.isComingSoon && (
-                      <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
-                        Coming Soon
-                      </SidebarMenuBadge>
-                    )}
-                    {category.animation?.badge && (
-                      <SidebarMenuBadge
-                        className={cn({
-                          'bg-primary text-primary-foreground static rounded-full px-2 py-0.5 font-normal':
-                            category.animation.badge === 'New',
-                          'static rounded-full bg-indigo-600/10 px-2 py-0.5 font-normal text-indigo-600 dark:bg-indigo-400/20 dark:text-indigo-400':
-                            category.animation.badge === 'Updated'
-                        })}
-                      >
-                        {category.animation.badge}
-                      </SidebarMenuBadge>
-                    )}
-                  </CustomSidebarMenuSubItem>
-                ))}
-            </SidebarMenuSub>
+            <SidebarMenu className='gap-2.5'>
+              <Collapsible className='group/collapsible' defaultOpen>
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton className='text-sidebar-foreground/70 focus-visible:ring-ring/50 h-8.5 cursor-pointer rounded-sm px-3 font-semibold outline-none focus-visible:ring-[3px] lg:px-4'>
+                      <span>Animated Components</span>
+                      <ChevronRightIcon className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90' />
+                    </SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
+                      {categories
+                        .filter(category => category.hasAnimation)
+                        .map(category => (
+                          <CustomSidebarMenuSubItem
+                            key={category.slug}
+                            {...(category.isComingSoon
+                              ? { href: '/', onClick: e => e.preventDefault() }
+                              : {
+                                  href: `/docs/components/${category.slug}#animated-variants`
+                                })}
+                          >
+                            {category.name}
+                            {category.isComingSoon && (
+                              <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
+                                Coming Soon
+                              </SidebarMenuBadge>
+                            )}
+                            {category.animation?.badge && (
+                              <SidebarMenuBadge
+                                className={cn({
+                                  'bg-primary text-primary-foreground static rounded-full px-2 py-0.5 font-normal':
+                                    category.animation.badge === 'New',
+                                  'static rounded-full bg-indigo-600/10 px-2 py-0.5 font-normal text-indigo-600 dark:bg-indigo-400/20 dark:text-indigo-400':
+                                    category.animation.badge === 'Updated'
+                                })}
+                              >
+                                {category.animation.badge}
+                              </SidebarMenuBadge>
+                            )}
+                          </CustomSidebarMenuSubItem>
+                        ))}
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+            </SidebarMenu>
           </SidebarGroup>
           <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-4', { 'first:pt-8': !isBreakpointReached })}>
-            <SidebarGroupLabel className='px-3 pb-2 text-sm font-semibold lg:px-4'>Components</SidebarGroupLabel>
-            <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
-              {categories.map(category => (
-                <CustomSidebarMenuSubItem
-                  key={category.slug}
-                  {...(category.isComingSoon
-                    ? { href: '/', onClick: e => e.preventDefault() }
-                    : { href: `/docs/components/${category.slug}` })}
-                >
-                  {category.name}
-                  {category.isComingSoon && (
-                    <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
-                      Coming Soon
-                    </SidebarMenuBadge>
-                  )}
-                  {category.badge && (
-                    <SidebarMenuBadge
-                      className={cn({
-                        'bg-primary text-primary-foreground static rounded-full px-2 py-0.5 font-normal':
-                          category.badge === 'New',
-                        'static rounded-full bg-indigo-600/10 px-2 py-0.5 font-normal text-indigo-600 dark:bg-indigo-400/20 dark:text-indigo-400':
-                          category.badge === 'Updated'
-                      })}
-                    >
-                      {category.badge}
-                    </SidebarMenuBadge>
-                  )}
-                </CustomSidebarMenuSubItem>
-              ))}
-            </SidebarMenuSub>
+            <SidebarMenu className='gap-2.5'>
+              <Collapsible className='group/collapsible' defaultOpen>
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton className='text-sidebar-foreground/70 focus-visible:ring-ring/50 h-8.5 cursor-pointer rounded-sm px-3 font-semibold outline-none focus-visible:ring-[3px] lg:px-4'>
+                      <span>Components</span>
+                      <ChevronRightIcon className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90' />
+                    </SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub className='mx-3 gap-0 border-0 p-0 lg:mx-4'>
+                      {categories.map(category => (
+                        <CustomSidebarMenuSubItem
+                          key={category.slug}
+                          {...(category.isComingSoon
+                            ? { href: '/', onClick: e => e.preventDefault() }
+                            : { href: `/docs/components/${category.slug}` })}
+                        >
+                          {category.name}
+                          {category.isComingSoon && (
+                            <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
+                              Coming Soon
+                            </SidebarMenuBadge>
+                          )}
+                          {category.badge && (
+                            <SidebarMenuBadge
+                              className={cn({
+                                'bg-primary text-primary-foreground static rounded-full px-2 py-0.5 font-normal':
+                                  category.badge === 'New',
+                                'static rounded-full bg-indigo-600/10 px-2 py-0.5 font-normal text-indigo-600 dark:bg-indigo-400/20 dark:text-indigo-400':
+                                  category.badge === 'Updated'
+                              })}
+                            >
+                              {category.badge}
+                            </SidebarMenuBadge>
+                          )}
+                        </CustomSidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+            </SidebarMenu>
           </SidebarGroup>
         </SidebarContent>
       </ScrollArea>

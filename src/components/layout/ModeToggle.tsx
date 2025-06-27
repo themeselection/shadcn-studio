@@ -50,7 +50,7 @@ const ModeToggle = () => {
 
   return (
     <Button variant='outline' size='icon' className='cursor-pointer' onClick={handleClick}>
-      {settings.mode === 'dark' ? <Sun className='size-5' /> : <MoonStar className='size-5' />}
+      {settings.mode === 'dark' ? <Sun /> : <MoonStar />}
       <span className='sr-only'>Toggle Theme</span>
     </Button>
   )

@@ -18,7 +18,7 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import CopyPrompt from '@/components/CopyPrompt'
 import OpenInV0 from '@/components/OpenInV0'
 import CopyButton from '@/components/CopyButton'
@@ -33,23 +33,21 @@ const ComponentDetails = ({ componentsData }: { componentsData: ProcessedCompone
       <CopyPrompt />
       <OpenInV0 />
       <Dialog>
-        <TooltipProvider delayDuration={0}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <DialogTrigger asChild>
-                <Button
-                  variant='ghost'
-                  size='icon'
-                  className='text-muted-foreground hover:text-foreground cursor-pointer opacity-0 transition-none group-focus-within/item:opacity-100 group-hover/item:opacity-100 hover:!bg-transparent disabled:opacity-100'
-                >
-                  <Code />
-                  <span className='sr-only'>View code</span>
-                </Button>
-              </DialogTrigger>
-            </TooltipTrigger>
-            <TooltipContent>View code</TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <DialogTrigger asChild>
+              <Button
+                variant='ghost'
+                size='icon'
+                className='text-muted-foreground hover:text-foreground cursor-pointer opacity-0 transition-none group-focus-within/item:opacity-100 group-hover/item:opacity-100 hover:!bg-transparent disabled:opacity-100'
+              >
+                <Code />
+                <span className='sr-only'>View code</span>
+              </Button>
+            </DialogTrigger>
+          </TooltipTrigger>
+          <TooltipContent>View code</TooltipContent>
+        </Tooltip>
         <DialogContent className='sm:max-w-[900px]'>
           <DialogHeader>
             <DialogTitle className='text-left'>CLI Command</DialogTitle>

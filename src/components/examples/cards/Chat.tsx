@@ -20,7 +20,7 @@ import {
   DialogTitle
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 
 // Util Imports
 import { cn } from '@/lib/utils'
@@ -96,17 +96,15 @@ export function CardsChat() {
               <p className='text-muted-foreground text-sm'>m@example.com</p>
             </div>
           </div>
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button size='icon' variant='outline' className='ml-auto rounded-full' onClick={() => setOpen(true)}>
-                  <Plus />
-                  <span className='sr-only'>New message</span>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent sideOffset={10}>New message</TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button size='icon' variant='outline' className='ml-auto rounded-full' onClick={() => setOpen(true)}>
+                <Plus />
+                <span className='sr-only'>New message</span>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent sideOffset={10}>New message</TooltipContent>
+          </Tooltip>
         </CardHeader>
         <CardContent>
           <div className='space-y-4'>

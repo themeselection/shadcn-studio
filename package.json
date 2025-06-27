@@ -1,6 +1,6 @@
 {
   "name": "shadcn-studio",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -17,6 +17,9 @@
     "clean:node_modules": "rm -rf .next node_modules *.tsbuildinfo"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/modifiers": "^9.0.0",
+    "@dnd-kit/sortable": "^10.0.0",
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
@@ -45,6 +48,7 @@
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@tanstack/react-table": "^8.21.3",
+    "@types/papaparse": "^5.3.16",
     "chroma-js": "^3.1.2",
     "chrono-node": "^2.8.3",
     "class-variance-authority": "^0.7.1",
@@ -59,6 +63,7 @@
     "motion": "^12.18.1",
     "next": "^15.3.3",
     "next-themes": "^0.4.6",
+    "papaparse": "^5.5.3",
     "react": "^19.1.0",
     "react-aria-components": "^1.10.1",
     "react-day-picker": "9.7.0",
@@ -74,6 +79,7 @@
     "tailwind-merge": "^3.3.1",
     "use-mask-input": "^3.4.2",
     "vaul": "^1.1.2",
+    "xlsx": "^0.18.5",
     "zod": "^3.25.67"
   },
   "devDependencies": {
