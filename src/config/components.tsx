@@ -27,11 +27,15 @@ import DropdownSVG from '@/assets/svg/Dropdown'
 import FormSVG from '@/assets/svg/Form'
 import InputSVG from '@/assets/svg/Input'
 import InputOTPSVG from '@/assets/svg/InputOTP'
+import PaginationSVG from '@/assets/svg/Pagination'
 import PopoverSVG from '@/assets/svg/Popover'
 import RadioGroupSVG from '@/assets/svg/RadioGroup'
 import SelectSVG from '@/assets/svg/Select'
+import SonnerSVG from '@/assets/svg/Sonner'
+import SheetSVG from '@/assets/svg/Sheet'
 import SwitchSVG from '@/assets/svg/Switch'
 import TableSVG from '@/assets/svg/Table'
+import TabsSVG from '@/assets/svg/Tabs'
 import TextareaSVG from '@/assets/svg/Textarea'
 import TooltipSVG from '@/assets/svg/Tooltip'
 
@@ -450,13 +454,11 @@ export const categories: ComponentCategory[] = [
     slug: 'collapsible',
     name: 'Collapsible',
     svg: CollapsibleSVG,
-    badge: 'New',
     breakpoints: {
       xl: 2
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         xl: 2
       }
@@ -510,7 +512,6 @@ export const categories: ComponentCategory[] = [
     slug: 'data-table',
     name: 'Data Table',
     svg: DataTableSVG,
-    badge: 'New',
     breakpoints: {},
     components: [
       { name: 'data-table-01' },
@@ -651,7 +652,6 @@ export const categories: ComponentCategory[] = [
     slug: 'form',
     name: 'Form',
     svg: FormSVG,
-    badge: 'Updated',
     breakpoints: {
       md: 2
     },
@@ -785,17 +785,41 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'pagination',
+    name: 'Pagination',
+    svg: PaginationSVG,
+    badge: 'New',
+    breakpoints: {
+      md: 2
+    },
+    components: [
+      { name: 'pagination-01' },
+      { name: 'pagination-02' },
+      { name: 'pagination-03' },
+      { name: 'pagination-04' },
+      { name: 'pagination-05' },
+      { name: 'pagination-06' },
+      { name: 'pagination-07' },
+      { name: 'pagination-08' },
+      { name: 'pagination-09' },
+      { name: 'pagination-10' },
+      { name: 'pagination-11' },
+      { name: 'pagination-12' },
+      { name: 'pagination-13' },
+      { name: 'pagination-14' },
+      { name: 'pagination-15' }
+    ]
+  },
+  {
     slug: 'popover',
     name: 'Popover',
     svg: PopoverSVG,
-    badge: 'New',
     breakpoints: {
       sm: 2,
       xl: 3
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         sm: 2,
         xl: 3
@@ -907,6 +931,58 @@ export const categories: ComponentCategory[] = [
     ]
   },
   {
+    slug: 'sheet',
+    name: 'Sheet',
+    svg: SheetSVG,
+    badge: 'New',
+    breakpoints: {
+      sm: 2,
+      md: 3
+    },
+
+    components: [
+      { name: 'sheet-01' },
+      { name: 'sheet-02' },
+      { name: 'sheet-03' },
+      { name: 'sheet-04' },
+      { name: 'sheet-05' },
+      { name: 'sheet-06' },
+      { name: 'sheet-07' }
+    ]
+  },
+  {
+    slug: 'sonner',
+    name: 'Sonner',
+    badge: 'New',
+    svg: SonnerSVG,
+    breakpoints: {
+      md: 2,
+      xl: 3
+    },
+    components: [
+      { name: 'sonner-01' },
+      { name: 'sonner-02' },
+      { name: 'sonner-03' },
+      { name: 'sonner-04' },
+      { name: 'sonner-05' },
+      { name: 'sonner-06' },
+      { name: 'sonner-07' },
+      { name: 'sonner-08' },
+      { name: 'sonner-09' },
+      { name: 'sonner-10' },
+      { name: 'sonner-11' },
+      { name: 'sonner-12' },
+      { name: 'sonner-13' },
+      { name: 'sonner-14' },
+      { name: 'sonner-15' },
+      { name: 'sonner-16' },
+      { name: 'sonner-17' },
+      { name: 'sonner-18' },
+      { name: 'sonner-19' },
+      { name: 'sonner-20' }
+    ]
+  },
+  {
     slug: 'switch',
     name: 'Switch',
     svg: SwitchSVG,
@@ -948,7 +1024,6 @@ export const categories: ComponentCategory[] = [
     slug: 'table',
     name: 'Table',
     svg: TableSVG,
-    badge: 'New',
     breakpoints: {},
     components: [
       { name: 'table-01' },
@@ -967,6 +1042,53 @@ export const categories: ComponentCategory[] = [
       { name: 'table-14' },
       { name: 'table-15' },
       { name: 'table-16' }
+    ]
+  },
+  {
+    slug: 'tabs',
+    name: 'Tabs',
+    svg: TabsSVG,
+    badge: 'New',
+    breakpoints: {
+      xl: 2
+    },
+    hasAnimation: true,
+    animation: {
+      badge: 'New',
+      breakpoints: {
+        xl: 2
+      }
+    },
+    components: [
+      { name: 'tabs-01' },
+      { name: 'tabs-02' },
+      { name: 'tabs-03' },
+      { name: 'tabs-04' },
+      { name: 'tabs-05' },
+      { name: 'tabs-06' },
+      { name: 'tabs-07' },
+      { name: 'tabs-08' },
+      { name: 'tabs-09' },
+      { name: 'tabs-10' },
+      { name: 'tabs-11' },
+      { name: 'tabs-12' },
+      { name: 'tabs-13' },
+      { name: 'tabs-14' },
+      { name: 'tabs-15' },
+      { name: 'tabs-16' },
+      { name: 'tabs-17' },
+      { name: 'tabs-18' },
+      { name: 'tabs-19' },
+      { name: 'tabs-20' },
+      { name: 'tabs-21' },
+      { name: 'tabs-22' },
+      { name: 'tabs-23' },
+      { name: 'tabs-24' },
+      { name: 'tabs-25' },
+      { name: 'tabs-26' },
+      { name: 'tabs-27' },
+      { name: 'tabs-28' },
+      { name: 'tabs-29' }
     ]
   },
   {
@@ -1005,14 +1127,12 @@ export const categories: ComponentCategory[] = [
     slug: 'tooltip',
     name: 'Tooltip',
     svg: TooltipSVG,
-    badge: 'New',
     breakpoints: {
       sm: 2,
       lg: 3
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         sm: 2,
         lg: 3
@@ -1074,11 +1194,6 @@ export const categories: ComponentCategory[] = [
     isComingSoon: true
   },
   {
-    slug: 'pagination',
-    name: 'Pagination',
-    isComingSoon: true
-  },
-  {
     slug: 'progress',
     name: 'Progress',
     isComingSoon: true
@@ -1087,11 +1202,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'separator',
     name: 'Separator',
-    isComingSoon: true
-  },
-  {
-    slug: 'sheet',
-    name: 'Sheet',
     isComingSoon: true
   },
   {
@@ -1107,16 +1217,6 @@ export const categories: ComponentCategory[] = [
   {
     slug: 'slider',
     name: 'Slider',
-    isComingSoon: true
-  },
-  {
-    slug: 'sonner',
-    name: 'Sonner',
-    isComingSoon: true
-  },
-  {
-    slug: 'tabs',
-    name: 'Tabs',
     isComingSoon: true
   },
   {

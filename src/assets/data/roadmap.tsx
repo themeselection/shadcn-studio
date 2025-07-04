@@ -19,7 +19,7 @@ export const roadmap = [
     title: 'Shadcn Figma UI Kit',
     description:
       'Streamline your design-to-development process with a shadcn UI kit for Figma, plus a dedicated Figma plugin.',
-    status: 'In Progress'
+    status: 'Coming Soon'
   },
   {
     icon: Component,
@@ -32,7 +32,7 @@ export const roadmap = [
     title: 'Shadcn Animated Variants',
     description:
       'Build dynamic and captivating UI with an open-source and premium set of animated components, blocks, templates, and effects.',
-    status: 'Coming Soon'
+    status: 'In Progress'
   },
   {
     icon: FileCode2,

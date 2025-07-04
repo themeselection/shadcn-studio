@@ -2997,8 +2997,7 @@ export const components: ComponentProps[] = [
         path: 'src/components/shadcn-studio/form/form-10.tsx',
         target: 'components/shadcn-studio/form/form-10.tsx'
       }
-    ],
-    badge: 'New'
+    ]
   },
   {
     name: 'input-01',
@@ -3557,6 +3556,142 @@ export const components: ComponentProps[] = [
         target: 'components/shadcn-studio/input-otp/input-otp-10.tsx'
       }
     ]
+  },
+  {
+    name: 'pagination-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-01.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-02.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-03.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-04.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-05.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-06.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-07.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-08.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-09.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-10.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-11.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-11.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-12.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-13.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-13.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-14',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-14.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-14.tsx'
+      }
+    ]
+  },
+  {
+    name: 'pagination-15',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/pagination/pagination-15.tsx',
+        target: 'components/shadcn-studio/pagination/pagination-15.tsx'
+      }
+    ],
+    className: 'col-span-full border-e-0'
   },
   {
     name: 'popover-01',
@@ -4217,6 +4352,250 @@ export const components: ComponentProps[] = [
     isAnimated: true
   },
   {
+    name: 'sheet-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-01.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sheet-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-02.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sheet-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-03.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sheet-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-04.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sheet-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-05.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sheet-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-06.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sheet-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sheet/sheet-07.tsx',
+        target: 'components/shadcn-studio/sheet/sheet-07.tsx'
+      }
+    ],
+    className: 'col-span-full border-e-0'
+  },
+  {
+    name: 'sonner-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-01.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-02.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-03.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-04.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-05.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-06.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-07.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-08.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-09.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-10.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-11.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-11.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-12.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-13.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-13.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-14',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-14.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-14.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-15',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-15.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-15.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-16',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-16.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-16.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-17',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-17.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-17.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-18',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-18.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-18.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-19',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-19.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-19.tsx'
+      }
+    ]
+  },
+  {
+    name: 'sonner-20',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/sonner/sonner-20.tsx',
+        target: 'components/shadcn-studio/sonner/sonner-20.tsx'
+      }
+    ]
+  },
+  {
     name: 'switch-01',
     files: [
       {
@@ -4547,6 +4926,276 @@ export const components: ComponentProps[] = [
         target: 'components/shadcn-studio/table/table-16.tsx'
       }
     ]
+  },
+  {
+    name: 'tabs-01',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-01.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-01.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-02',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-02.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-02.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-03',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-03.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-03.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-04',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-04.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-04.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-05',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-05.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-05.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-06',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-06.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-06.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-07',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-07.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-07.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-08',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-08.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-08.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-09',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-09.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-09.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-10',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-10.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-10.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-11',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-11.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-11.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-12',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-12.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-12.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-13',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-13.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-13.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-14',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-14.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-14.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-15',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-15.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-15.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-16',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-16.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-16.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-17',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-17.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-17.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-18',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-18.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-18.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-19',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-19.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-19.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-20',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-20.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-20.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-21',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-21.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-21.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-22',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-22.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-22.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-23',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-23.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-23.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-24',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-24.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-24.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-25',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-25.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-25.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-26',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-26.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-26.tsx'
+      }
+    ]
+  },
+  {
+    name: 'tabs-27',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-27.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-27.tsx'
+      },
+      {
+        path: 'src/components/ui/motion-highlight.tsx'
+      },
+      {
+        path: 'src/components/ui/motion-tabs.tsx'
+      }
+    ],
+    isAnimated: true
+  },
+  {
+    name: 'tabs-28',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-28.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-28.tsx'
+      }
+    ],
+    isAnimated: true
+  },
+  {
+    name: 'tabs-29',
+    files: [
+      {
+        path: 'src/components/shadcn-studio/tabs/tabs-29.tsx',
+        target: 'components/shadcn-studio/tabs/tabs-29.tsx'
+      }
+    ],
+    isAnimated: true
   },
   {
     name: 'textarea-01',

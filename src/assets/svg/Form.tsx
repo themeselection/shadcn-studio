@@ -50,10 +50,10 @@ const Form = (props: SVGAttributes<SVGElement>) => {
           y2='152'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--mute-foreground)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--mute-foreground)' />
-          <stop offset='0.75' stopColor='var(--mute-foreground)' />
-          <stop offset='1' stopColor='var(--mute-foreground)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint1_linear_5593_504'
@@ -63,10 +63,10 @@ const Form = (props: SVGAttributes<SVGElement>) => {
           y2='152'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--mute-foreground)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--mute-foreground)' />
-          <stop offset='0.75' stopColor='var(--mute-foreground)' />
-          <stop offset='1' stopColor='var(--mute-foreground)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint2_linear_5593_504'
@@ -76,10 +76,10 @@ const Form = (props: SVGAttributes<SVGElement>) => {
           y2='14.7498'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--mute-foreground)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--mute-foreground)' />
-          <stop offset='0.75' stopColor='var(--mute-foreground)' />
-          <stop offset='1' stopColor='var(--mute-foreground)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint3_linear_5593_504'
@@ -89,10 +89,10 @@ const Form = (props: SVGAttributes<SVGElement>) => {
           y2='136.35'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--mute-foreground)' stopOpacity='0' />
-          <stop offset='0.245' stopColor='var(--mute-foreground)' />
-          <stop offset='0.75' stopColor='var(--mute-foreground)' />
-          <stop offset='1' stopColor='var(--mute-foreground)' stopOpacity='0' />
+          <stop stopColor='var(--muted-foreground)' stopOpacity='0' />
+          <stop offset='0.245' stopColor='var(--muted-foreground)' />
+          <stop offset='0.75' stopColor='var(--muted-foreground)' />
+          <stop offset='1' stopColor='var(--muted-foreground)' stopOpacity='0' />
         </linearGradient>
         <clipPath id='clip0_5593_504'>
           <rect width='206' height='152' fill='white' />

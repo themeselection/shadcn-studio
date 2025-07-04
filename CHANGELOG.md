@@ -4,6 +4,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0-beta.3 (2025-07-04)
+
+### Added
+
+- Added Pagination, Sheet, Sonner and Tabs component variants
+- Added Animated Tabs component variants
+
 ## v1.0.0-beta.2 (2025-06-27)
 
 ### Added
