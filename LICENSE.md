@@ -1,4 +1,4 @@
-MIT License
+## MIT License
 
 Copyright (c) 2025 shadcn/studio
 
@@ -19,3 +19,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Commons Clause Restriction:
+- **No Sale or Redistribution of Components:** You may not sell, sublicense, or redistribute the components of shadcn/studio - whether alone, in a bundle, or as a ported version - without modification.
+- **Competing Products:** The Software shall not be used to create any product or service that directly competes with shadcn/studio. A competing product is defined as any software or service that replicates the primary functionalities of shadcn/studio.
