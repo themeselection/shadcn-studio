@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-11",
+  "type": "registry:component",
+  "title": "Sonner 11",
+  "description": "A soft-styled warning toast notification with amber color theming for caution messages",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-11.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SoftWarningSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.warning('Warning: Please check the entered data.', {\n          style: {\n            '--normal-bg':\n              'color-mix(in oklab, light-dark(var(--color-amber-600), var(--color-amber-400)) 10%, var(--background))',\n            '--normal-text': 'light-dark(var(--color-amber-600), var(--color-amber-400))',\n            '--normal-border': 'light-dark(var(--color-amber-600), var(--color-amber-400))'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Soft Warning Toast\n    </Button>\n  )\n}\n\nexport default SoftWarningSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-11.tsx"
+    }
+  ]
+}

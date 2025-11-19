@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-14",
+  "type": "registry:component",
+  "title": "Select 14",
+  "description": "A custom select dropdown with error state and validation message",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-14.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectInvalidState = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with error</Label>\n      <Select defaultValue='1'>\n        <SelectTrigger id={id} aria-invalid className='w-full'>\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value='1'>Tesla</SelectItem>\n          <SelectItem value='2'>BMW</SelectItem>\n          <SelectItem value='3'>Audi</SelectItem>\n          <SelectItem value='4'>Mercedes-Benz</SelectItem>\n        </SelectContent>\n      </Select>\n      <p className='text-destructive mt-2 text-xs' role='alert' aria-live='polite'>\n        Selected option is invalid\n      </p>\n    </div>\n  )\n}\n\nexport default SelectInvalidState\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-14.tsx"
+    }
+  ]
+}

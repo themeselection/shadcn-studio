@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-08",
+  "type": "registry:component",
+  "title": "Button Group 8",
+  "description": "Preview link button group with primary action and external link icon",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-08.tsx",
+      "content": "import { ExternalLinkIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonGroupPreviewDemo = () => {\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <Button variant='outline' className='rounded-none rounded-l-md shadow-none focus-visible:z-10' asChild>\n        <a href='#'>Live preview</a>\n      </Button>\n      <Button\n        variant='outline'\n        size='icon'\n        className='rounded-none rounded-r-md shadow-none focus-visible:z-10'\n        asChild\n      >\n        <a href='#' target='_blank' rel='noopener noreferrer'>\n          <ExternalLinkIcon />\n          <span className='sr-only'>External link</span>\n        </a>\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonGroupPreviewDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-08.tsx"
+    }
+  ]
+}

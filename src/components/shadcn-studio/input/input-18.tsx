@@ -10,11 +10,11 @@ const InputTextAddOnsDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Input with text add-ons</Label>
       <div className='relative'>
-        <Input id={id} type='text' placeholder='shadcnstudio' className='peer ps-17 pe-13' />
-        <span className='pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm peer-disabled:opacity-50'>
+        <Input id={id} type='text' placeholder='shadcnstudio' className='peer pr-13 pl-17' />
+        <span className='pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 text-sm peer-disabled:opacity-50'>
           https://
         </span>
-        <span className='pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-sm peer-disabled:opacity-50'>
+        <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 text-sm peer-disabled:opacity-50'>
           .com
         </span>
       </div>

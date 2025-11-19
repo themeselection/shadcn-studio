@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-13",
+  "type": "registry:component",
+  "title": "Textarea 13",
+  "description": "A textarea with overlapping label for modern form design",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-13.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaWithOverlappingLabelDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='relative w-full max-w-xs space-y-2'>\n      <Label\n        htmlFor={id}\n        className='bg-background text-foreground absolute top-0 left-2 z-10 block -translate-y-1/2 px-1 text-xs font-medium group-has-disabled:opacity-50'\n      >\n        Textarea with overlapping label\n      </Label>\n      <Textarea id={id} className='!bg-background' />\n    </div>\n  )\n}\n\nexport default TextareaWithOverlappingLabelDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-13.tsx"
+    }
+  ]
+}

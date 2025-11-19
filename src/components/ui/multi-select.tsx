@@ -444,7 +444,7 @@ const MultipleSelector = ({
             'p-1': selected.length !== 0,
             'cursor-text': !disabled && selected.length !== 0
           },
-          !hideClearAllButton && 'pe-9',
+          !hideClearAllButton && 'pr-9',
           className
         )}
         onClick={() => {
@@ -458,7 +458,7 @@ const MultipleSelector = ({
               <div
                 key={option.value}
                 className={cn(
-                  'animate-fadeIn bg-background text-secondary-foreground hover:bg-background relative inline-flex h-7 cursor-default items-center rounded-md border ps-2 pe-7 pl-2 text-xs font-medium transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 data-fixed:pe-2',
+                  'animate-fadeIn bg-background text-secondary-foreground hover:bg-background relative inline-flex h-7 cursor-default items-center rounded-md border pr-7 pl-2 text-xs font-medium transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 data-fixed:pr-2',
                   badgeClassName
                 )}
                 data-fixed={option.fixed}
@@ -466,7 +466,7 @@ const MultipleSelector = ({
               >
                 {option.label}
                 <button
-                  className='text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute -inset-y-px -end-px flex size-7 items-center justify-center rounded-e-md border border-transparent p-0 outline-hidden transition-[color,box-shadow] outline-none focus-visible:ring-[3px]'
+                  className='text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute -inset-y-px -right-px flex size-7 items-center justify-center rounded-r-md border border-transparent p-0 outline-hidden transition-[color,box-shadow] outline-none focus-visible:ring-[3px]'
                   onKeyDown={e => {
                     if (e.key === 'Enter') {
                       handleUnselect(option)
@@ -528,7 +528,7 @@ const MultipleSelector = ({
               onChange?.(selected.filter(s => s.fixed))
             }}
             className={cn(
-              'text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute end-0 top-0 flex size-9 items-center justify-center rounded-md border border-transparent transition-[color,box-shadow] outline-none focus-visible:ring-[3px]',
+              'text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute top-0 right-0 flex size-9 items-center justify-center rounded-md border border-transparent transition-[color,box-shadow] outline-none focus-visible:ring-[3px]',
               (hideClearAllButton ||
                 disabled ||
                 selected.length < 1 ||

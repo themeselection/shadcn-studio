@@ -4,6 +4,9 @@ import type { ReactNode } from 'react'
 // Next Imports
 import Link from 'next/link'
 
+// Third-party Imports
+import { Github } from 'lucide-react'
+
 // Component Imports
 import { Button } from '@/components/ui/button'
 import {
@@ -14,13 +17,12 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import CommandMenu from '@/components/layout/CommandMenu'
-import Logo from '@/components/layout/Logo'
+import Logo from '@/components/layout/logo'
 import ModeToggle from '@/components/layout/ModeToggle'
 import NavMenu from '@/components/layout/NavMenu'
 import { ThemeCustomizer } from '@/components/customizer'
 
 // SVG Imports
-import Github from '@/assets/svg/Github'
 import X from '@/assets/svg/X'
 import Discord from '@/assets/svg/Discord'
 
@@ -36,13 +38,13 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className='text-muted-foreground hover:text-foreground cursor-pointer text-sm font-medium max-sm:hidden'>
-                v1.0.0-beta.3
+                v1.0.0
               </DropdownMenuTrigger>
               <DropdownMenuContent align='start'>
                 <DropdownMenuGroup>
                   <DropdownMenuItem asChild>
                     <Link
-                      href='https://github.com/themeselection/shadcn-studio/blob/main/CHANGELOG.md'
+                      href='https://shadcnstudio.com/changelog'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='cursor-pointer'
@@ -51,7 +53,12 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href='/#roadmap' className='cursor-pointer'>
+                    <Link
+                      href='https://github.com/orgs/themeselection/projects/42/views/2'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='cursor-pointer'
+                    >
                       Roadmap
                     </Link>
                   </DropdownMenuItem>

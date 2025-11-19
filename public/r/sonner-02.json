@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-02",
+  "type": "registry:component",
+  "title": "Sonner 2",
+  "description": "A toast notification with title and description for detailed information",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-02.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SonnerWithDescriptionDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast('Event is created', {\n          description: 'Friday, August 15, 2025 at 9:00 AM'\n        })\n      }\n    >\n      Toast with description\n    </Button>\n  )\n}\n\nexport default SonnerWithDescriptionDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-02.tsx"
+    }
+  ]
+}

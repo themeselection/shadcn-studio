@@ -13,7 +13,7 @@ const CheckboxBadgeDemo = () => {
   return (
     <div className='flex items-center gap-2'>
       {snacks.map(label => (
-        <Badge key={label} variant='secondary' className='relative gap-2 px-3 py-1.5'>
+        <Badge key={label} variant='secondary' className='relative gap-2 rounded-sm px-3 py-1.5'>
           <Checkbox
             id={label}
             checked={selected.includes(label)}

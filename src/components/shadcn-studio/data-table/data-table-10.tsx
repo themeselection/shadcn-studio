@@ -82,9 +82,7 @@ const columns: ColumnDef<Item>[] = [
       }[availability]
 
       return (
-        <Badge className={(cn('rounded-full border-none focus-visible:outline-none'), styles)}>
-          {row.getValue('availability')}
-        </Badge>
+        <Badge className={(cn('border-none focus-visible:outline-none'), styles)}>{row.getValue('availability')}</Badge>
       )
     }
   }
@@ -214,7 +212,7 @@ const PaginatedDataTableDemo = () => {
             <SelectTrigger id={id} className='w-fit whitespace-nowrap'>
               <SelectValue placeholder='Select number of results' />
             </SelectTrigger>
-            <SelectContent className='[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2'>
+            <SelectContent className='[&_*[role=option]]:pr-8 [&_*[role=option]]:pl-2 [&_*[role=option]>span]:right-2 [&_*[role=option]>span]:left-auto'>
               {[5, 10, 25, 50].map(pageSize => (
                 <SelectItem key={pageSize} value={pageSize.toString()}>
                   {pageSize}
@@ -253,7 +251,7 @@ const PaginatedDataTableDemo = () => {
                   disabled={!table.getCanPreviousPage()}
                   aria-label='Go to first page'
                 >
-                  <ChevronFirstIcon size={16} aria-hidden='true' />
+                  <ChevronFirstIcon aria-hidden='true' />
                 </Button>
               </PaginationItem>
 
@@ -266,7 +264,7 @@ const PaginatedDataTableDemo = () => {
                   disabled={!table.getCanPreviousPage()}
                   aria-label='Go to previous page'
                 >
-                  <ChevronLeftIcon size={16} aria-hidden='true' />
+                  <ChevronLeftIcon aria-hidden='true' />
                 </Button>
               </PaginationItem>
 
@@ -279,7 +277,7 @@ const PaginatedDataTableDemo = () => {
                   disabled={!table.getCanNextPage()}
                   aria-label='Go to next page'
                 >
-                  <ChevronRightIcon size={16} aria-hidden='true' />
+                  <ChevronRightIcon aria-hidden='true' />
                 </Button>
               </PaginationItem>
 
@@ -292,7 +290,7 @@ const PaginatedDataTableDemo = () => {
                   disabled={!table.getCanNextPage()}
                   aria-label='Go to last page'
                 >
-                  <ChevronLastIcon size={16} aria-hidden='true' />
+                  <ChevronLastIcon aria-hidden='true' />
                 </Button>
               </PaginationItem>
             </PaginationContent>

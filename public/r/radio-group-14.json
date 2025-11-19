@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-14",
+  "type": "registry:component",
+  "title": "Radio Group 14",
+  "description": "An animated radio group with motion effects for notification preferences",
+  "dependencies": [
+    "@radix-ui/react-radio-group",
+    "lucide-react",
+    "motion"
+  ],
+  "registryDependencies": [
+    "label",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/radio-group/radio-group-14.tsx",
+      "content": "import { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/motion-radio-group'\n\nconst RadioGroupAnimatedDemo = () => {\n  return (\n    <RadioGroup defaultValue='realtime'>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='realtime' id='notifications-realtime' />\n        <Label htmlFor='notifications-realtime'>Real-time</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='daily' id='notifications-daily' />\n        <Label htmlFor='notifications-daily'>Daily Digest</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='none' id='notifications-none' />\n        <Label htmlFor='notifications-none'>No Notifications</Label>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupAnimatedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/radio-group/radio-group-14.tsx"
+    },
+    {
+      "path": "src/components/ui/motion-radio-group.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\n\nimport * as RadioGroupPrimitive from '@radix-ui/react-radio-group'\nimport { AnimatePresence, motion, type HTMLMotionProps, type Transition } from 'motion/react'\nimport { CircleIcon } from 'lucide-react'\n\nimport { cn } from '@/lib/utils'\n\ntype RadioGroupItemProps = React.ComponentProps<typeof RadioGroupPrimitive.Item> &\n  HTMLMotionProps<'button'> & {\n    transition?: Transition\n  }\n\nfunction RadioGroup({ className, ...props }: React.ComponentProps<typeof RadioGroupPrimitive.Root>) {\n  return <RadioGroupPrimitive.Root data-slot='radio-group' className={cn('grid gap-3', className)} {...props} />\n}\n\nfunction RadioGroupItem({\n  className,\n  transition = { type: 'spring', stiffness: 200, damping: 16 },\n  ...props\n}: RadioGroupItemProps) {\n  return (\n    <RadioGroupPrimitive.Item asChild {...props}>\n      <motion.button\n        data-slot='radio-group-item'\n        className={cn(\n          'border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 aspect-square size-5 shrink-0 rounded-full border shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50',\n          className\n        )}\n        whileHover={{ scale: 1.05 }}\n        whileTap={{ scale: 0.95 }}\n      >\n        <RadioGroupPrimitive.Indicator\n          data-slot='radio-group-indicator'\n          className='relative flex items-center justify-center'\n        >\n          <AnimatePresence>\n            <motion.div\n              key='radio-group-indicator-circle'\n              data-slot='radio-group-indicator-circle'\n              initial={{ opacity: 0, scale: 0 }}\n              animate={{ opacity: 1, scale: 1 }}\n              exit={{ opacity: 0, scale: 0 }}\n              transition={transition}\n            >\n              <CircleIcon className='size-3 fill-current text-current' />\n            </motion.div>\n          </AnimatePresence>\n        </RadioGroupPrimitive.Indicator>\n      </motion.button>\n    </RadioGroupPrimitive.Item>\n  )\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-radio-group.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-33",
+  "type": "registry:component",
+  "title": "Button 33",
+  "description": "Toggle icon button that switches between menu and close icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-33.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { MenuIcon, XIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst IconButtonToggleDemo = () => {\n  const [isOpen, setIsOpen] = useState(false)\n\n  return (\n    <Button variant='ghost' size='icon' onClick={() => setIsOpen(!isOpen)} aria-label='Toggle menu'>\n      {isOpen ? <XIcon /> : <MenuIcon />}\n    </Button>\n  )\n}\n\nexport default IconButtonToggleDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-33.tsx"
+    }
+  ]
+}

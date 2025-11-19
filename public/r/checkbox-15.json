@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-15",
+  "type": "registry:component",
+  "title": "Checkbox 15",
+  "description": "Tree checkbox with parent-child relationship and indeterminate state",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-15.tsx",
+      "content": "'use client'\n\nimport { useEffect, useState, type ComponentProps } from 'react'\n\nimport { CheckIcon, MinusIcon } from 'lucide-react'\n\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\n\nimport { Label } from '@/components/ui/label'\n\nconst items = ['Child 1', 'Child 2', 'Child 3']\n\nconst Checkbox = (props: ComponentProps<typeof CheckboxPrimitive.Root>) => {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot='checkbox'\n      className='peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:text-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive group size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50'\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot='checkbox-indicator'\n        className='flex items-center justify-center text-current transition-none'\n      >\n        <MinusIcon className='hidden size-2.5 group-data-[state=indeterminate]:block' />\n        <CheckIcon className='hidden size-3.5 group-data-[state=checked]:block' />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nconst CheckboxTreeDemo = () => {\n  const [checked, setChecked] = useState<CheckboxPrimitive.CheckedState>('indeterminate')\n  const [selected, setSelected] = useState<string[]>(['Child 1', 'Child 2'])\n\n  useEffect(() => {\n    if (selected.length === items.length) {\n      setChecked(true)\n    } else if (selected.length > 0) {\n      setChecked('indeterminate')\n    } else {\n      setChecked(false)\n    }\n  }, [selected])\n\n  const handleCheckedChange = (checked: CheckboxPrimitive.CheckedState) => {\n    setChecked(checked)\n\n    if (checked === true) {\n      setSelected([...items])\n    } else if (checked === false) {\n      setSelected([])\n    }\n  }\n\n  return (\n    <div className='flex flex-col gap-4'>\n      <div className='flex items-center gap-2'>\n        <Checkbox id='parent' checked={checked} onCheckedChange={handleCheckedChange} />\n        <Label htmlFor='parent'>Parent</Label>\n      </div>\n      <div className='flex flex-col gap-2 pl-6'>\n        {items.map(label => (\n          <div key={label} className='flex items-center gap-2'>\n            <Checkbox\n              id={label}\n              checked={selected.includes(label)}\n              onCheckedChange={checked =>\n                setSelected(checked ? [...selected, label] : selected.filter(item => item !== label))\n              }\n            />\n            <Label htmlFor={label}>{label}</Label>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n\nexport default CheckboxTreeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-15.tsx"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-06",
+  "type": "registry:component",
+  "title": "Combobox 6",
+  "description": "combobox with add new option functionality",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "command",
+    "label",
+    "popover",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/combobox/combobox-06.tsx",
+      "content": "'use client'\n\nimport { useId, useState } from 'react'\n\nimport { CheckIcon, ChevronsUpDownIcon, PlusIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator\n} from '@/components/ui/command'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nimport { cn } from '@/lib/utils'\n\nconst universities = [\n  {\n    value: 'harvard',\n    label: 'Harvard University'\n  },\n  {\n    value: 'cambridge',\n    label: 'University of Cambridge'\n  },\n  {\n    value: 'stanford',\n    label: 'Stanford University'\n  },\n  {\n    value: 'texas',\n    label: 'University of Texas'\n  }\n]\n\nconst ComboboxWithSearchAndButtonDemo = () => {\n  const id = useId()\n  const [open, setOpen] = useState<boolean>(false)\n  const [value, setValue] = useState<string>('harvard')\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Combobox with search and add button</Label>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger asChild>\n          <Button\n            id={id}\n            variant='outline'\n            role='combobox'\n            aria-expanded={open}\n            className='bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]'\n          >\n            <span className={cn('truncate', !value && 'text-muted-foreground')}>\n              {value ? (\n                universities.find(university => university.value === value)?.label\n              ) : (\n                <span className='text-muted-foreground'>Select university</span>\n              )}\n            </span>\n            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>\n          <Command>\n            <CommandInput placeholder='Find university' />\n            <CommandList>\n              <CommandEmpty>No university found.</CommandEmpty>\n              <CommandGroup>\n                {universities.map(university => (\n                  <CommandItem\n                    key={university.value}\n                    value={university.value}\n                    onSelect={currentValue => {\n                      setValue(currentValue === value ? '' : currentValue)\n                      setOpen(false)\n                    }}\n                  >\n                    {university.label}\n                    {value === university.value && <CheckIcon size={16} className='ml-auto' />}\n                  </CommandItem>\n                ))}\n              </CommandGroup>\n              <CommandSeparator />\n              <CommandGroup>\n                <Button variant='ghost' className='w-full justify-start font-normal'>\n                  <PlusIcon className='-ms-2 opacity-60' aria-hidden='true' />\n                  New university\n                </Button>\n              </CommandGroup>\n            </CommandList>\n          </Command>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default ComboboxWithSearchAndButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/combobox/combobox-06.tsx"
+    }
+  ]
+}

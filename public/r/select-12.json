@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-12",
+  "type": "registry:component",
+  "title": "Select 12",
+  "description": "A custom select dropdown with icon",
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-12.tsx",
+      "content": "import { useId } from 'react'\n\nimport { FilmIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectWithIconDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with icon</Label>\n      <Select defaultValue='god of wars'>\n        <SelectTrigger id={id} className='relative w-full pl-9'>\n          <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 group-has-[select[disabled]]:opacity-50'>\n            <FilmIcon size={16} aria-hidden='true' />\n          </div>\n          <SelectValue placeholder='Select time' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value='god of wars'>God of Wars</SelectItem>\n          <SelectItem value='ghost rider'>Ghost Rider</SelectItem>\n          <SelectItem value='the cloth'>The Cloth</SelectItem>\n          <SelectItem value='the possession'>The Possession</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectWithIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-12.tsx"
+    }
+  ]
+}

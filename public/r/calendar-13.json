@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-13",
+  "type": "registry:component",
+  "title": "Calendar 13",
+  "description": "Custom styled calendar with sky blue theme for selected dates",
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-13.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarCustomSelectDayDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Calendar\n        mode='single'\n        selected={date}\n        onSelect={setDate}\n        className='rounded-md border'\n        classNames={{\n          day_button:\n            'rounded-full! data-[selected-single=true]:bg-sky-600! data-[selected-single=true]:text-white! data-[selected-single=true]:dark:bg-sky-400! data-[selected-single=true]:group-data-[focused=true]/day:ring-sky-600/20 data-[selected-single=true]:dark:group-data-[focused=true]/day:ring-sky-400/40',\n          today: 'rounded-full! bg-accent!'\n        }}\n      />\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\n        Custom day select calendar\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarCustomSelectDayDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-13.tsx"
+    }
+  ]
+}

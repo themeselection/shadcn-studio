@@ -9,7 +9,7 @@ const AvatarVerifiedDemo = () => {
         <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />
         <AvatarFallback className='text-xs'>HR</AvatarFallback>
       </Avatar>
-      <span className='absolute -end-1.5 -top-1.5'>
+      <span className='absolute -top-1.5 -right-1.5'>
         <span className='sr-only'>Verified</span>
         <BadgeCheckIcon className='text-background size-5 fill-sky-500' />
       </span>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-29",
+  "type": "registry:component",
+  "title": "Select 29",
+  "description": "A status select dropdown with colored circle indicators for each status",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-29.tsx",
+      "content": "import { useId } from 'react'\n\nimport { CircleIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectStatusDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Status select</Label>\n      <Select defaultValue='1'>\n        <SelectTrigger\n          id={id}\n          className='w-full [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0'\n        >\n          <SelectValue placeholder='Select status' />\n        </SelectTrigger>\n        <SelectContent className='[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]]:pr-8 [&_*[role=option]]:pl-2 [&_*[role=option]>span]:right-2 [&_*[role=option]>span]:left-auto [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0'>\n          <SelectItem value='1'>\n            <span className='flex items-center gap-2'>\n              <CircleIcon className='size-2 fill-violet-500 text-violet-500' />\n              <span className='truncate'>In Progress</span>\n            </span>\n          </SelectItem>\n          <SelectItem value='2'>\n            <span className='flex items-center gap-2'>\n              <CircleIcon className='size-2 fill-amber-500 text-amber-500' />\n              <span className='truncate'>Pending</span>\n            </span>\n          </SelectItem>\n          <SelectItem value='3'>\n            <span className='flex items-center gap-2'>\n              <CircleIcon className='size-2 fill-emerald-600 text-emerald-600' />\n              <span className='truncate'>Completed</span>\n            </span>\n          </SelectItem>\n          <SelectItem value='4'>\n            <span className='flex items-center gap-2'>\n              <CircleIcon className='size-2 fill-gray-500 text-gray-500' />\n              <span className='truncate'>Cancelled</span>\n            </span>\n          </SelectItem>\n          <SelectItem value='5'>\n            <span className='flex items-center gap-2'>\n              <CircleIcon className='size-2 fill-red-500 text-red-500' />\n              <span className='truncate'>Rejected</span>\n            </span>\n          </SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectStatusDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-29.tsx"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-26",
+  "type": "registry:component",
+  "title": "Alert 26",
+  "description": "Solid info alert with full primary background for prominent informational messages.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-26.tsx",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSolidDemo = () => {\n  return (\n    <Alert className='bg-primary text-primary-foreground border-none'>\n      <CircleAlertIcon />\n      <AlertTitle>Editing your profile</AlertTitle>\n      <AlertDescription className='text-primary-foreground/80'>\n        Changes won&apos;t be saved until you click &quot;Update.&quot;\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSolidDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-26.tsx"
+    }
+  ]
+}

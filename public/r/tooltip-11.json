@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-11",
+  "type": "registry:component",
+  "title": "Tooltip 11",
+  "description": "A hover card with media content including image and description links",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "hover-card"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-11.tsx",
+      "content": "import { ChevronRightIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'\n\nconst HoverCardMediaDemo = () => {\n  return (\n    <HoverCard openDelay={0} closeDelay={0}>\n      <HoverCardTrigger asChild>\n        <Button variant='link'>Hover Card Media</Button>\n      </HoverCardTrigger>\n      <HoverCardContent>\n        <div className='space-y-2'>\n          <img\n            src='https://lp-cms-production.imgix.net/2021-01/GettyRF_450207051.jpg?width=232'\n            alt='Content image'\n            className='w-full rounded'\n          />\n          <div className='space-y-1'>\n            <p className='text-sm font-medium'>About Himalayas</p>\n            <p className='text-muted-foreground text-xs'>\n              The Great Himalayan mountain ranges in the Indian sub-continent region.{' '}\n              <a\n                href='https://en.wikipedia.org/wiki/Himalayas'\n                target='_blank'\n                rel='noopener noreferrer'\n                className='hover:text-foreground flex w-fit underline'\n              >\n                Read more\n                <ChevronRightIcon className='size-4' />\n              </a>\n            </p>\n          </div>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  )\n}\n\nexport default HoverCardMediaDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-11.tsx"
+    }
+  ]
+}

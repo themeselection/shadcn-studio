@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-08",
+  "type": "registry:component",
+  "title": "Date Picker 8",
+  "description": "Simple time input field with step control for precise time selection",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/date-picker/date-picker-08.tsx",
+      "content": "import { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst DatePickerDemo = () => {\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor='time-picker' className='px-1'>\n        Time input\n      </Label>\n      <Input\n        type='time'\n        id='time-picker'\n        step='1'\n        defaultValue='08:30:00'\n        className='bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'\n      />\n    </div>\n  )\n}\n\nexport default DatePickerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/date-picker/date-picker-08.tsx"
+    }
+  ]
+}

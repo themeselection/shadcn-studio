@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-29",
+  "type": "registry:component",
+  "title": "Alert 29",
+  "description": "Solid info alert with full blue background for prominent informational messages.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-29.tsx",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSolidInfoDemo = () => {\n  return (\n    <Alert className='border-none bg-sky-600 text-white dark:bg-sky-400'>\n      <CircleAlertIcon />\n      <AlertTitle>Your profile is visible</AlertTitle>\n      <AlertDescription className='text-white/80'>Anyone can view your basic information.</AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSolidInfoDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-29.tsx"
+    }
+  ]
+}

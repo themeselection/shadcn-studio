@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-10",
+  "type": "registry:component",
+  "title": "Switch 10",
+  "description": "A switch with icon label that toggles between sun and moon icons for theme switching",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label",
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-10.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { MoonIcon, SunIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport { Switch } from '@/components/ui/switch'\n\nconst SwitchIconLabelDemo = () => {\n  const [checked, setChecked] = useState<boolean>(true)\n\n  return (\n    <div className='inline-flex items-center gap-2'>\n      <Switch id='icon-label' checked={checked} onCheckedChange={setChecked} aria-label='Toggle switch' />\n      <Label htmlFor='icon-label'>\n        <span className='sr-only'>Toggle switch</span>\n        {checked ? (\n          <MoonIcon className='size-4' aria-hidden='true' />\n        ) : (\n          <SunIcon className='size-4' aria-hidden='true' />\n        )}\n      </Label>\n    </div>\n  )\n}\n\nexport default SwitchIconLabelDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-10.tsx"
+    }
+  ]
+}

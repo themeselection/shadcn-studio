@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-07",
+  "type": "registry:component",
+  "title": "Calendar 7",
+  "description": "Range calendar with disabled weekends for business day selection only",
+  "dependencies": [
+    "react-day-picker"
+  ],
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-07.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { type DateRange } from 'react-day-picker'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarDisabledWeekendsDemo = () => {\n  const [dateRange, setDateRange] = useState<DateRange | undefined>({\n    from: new Date(2025, 5, 17),\n    to: new Date(2025, 5, 20)\n  })\n\n  return (\n    <div>\n      <Calendar\n        mode='range'\n        defaultMonth={dateRange?.from}\n        selected={dateRange}\n        onSelect={setDateRange}\n        disabled={{ dayOfWeek: [0, 6] }}\n        className='rounded-lg border'\n        excludeDisabled\n      />\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\n        Disabled weekend calendar\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarDisabledWeekendsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-07.tsx"
+    }
+  ]
+}

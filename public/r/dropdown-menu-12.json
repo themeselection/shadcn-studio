@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-12",
+  "type": "registry:component",
+  "title": "Dropdown Menu 12",
+  "description": "User profile menu dropdown with icons for profile, settings, billing, and FAQ",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-12.tsx",
+      "content": "import { CircleHelpIcon, DollarSignIcon, ReceiptIcon, SettingsIcon, UserIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst DropdownMenuItemIconDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Menu item with icon</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56'>\n        <DropdownMenuLabel>User Profile</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <UserIcon />\n            Profile\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <SettingsIcon />\n            Settings\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <ReceiptIcon />\n            Billing Plans\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <DollarSignIcon />\n            Pricing\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <CircleHelpIcon />\n            FAQ\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuItemIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-12.tsx"
+    }
+  ]
+}

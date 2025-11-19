@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-07",
+  "type": "registry:component",
+  "title": "Sonner 7",
+  "description": "A promise-based toast notification with loading, success, and error states",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-07.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SonnerWithPromiseDemo = () => {\n  const promise = () =>\n    new Promise((resolve, reject) =>\n      setTimeout(() => {\n        if (Math.random() < 0.5) {\n          resolve('foo')\n        } else {\n          reject('fox')\n        }\n      }, 2000)\n    )\n\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.promise(promise, {\n          loading: 'Loading...',\n          success: 'Toast has been added successfully!',\n          error: 'Oops, there was an error adding the toast.'\n        })\n      }\n    >\n      Toast with promise\n    </Button>\n  )\n}\n\nexport default SonnerWithPromiseDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-07.tsx"
+    }
+  ]
+}

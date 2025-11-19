@@ -163,18 +163,18 @@ const DataTableDensityDemo = () => {
               <SelectLabel>Density</SelectLabel>
               <SelectItem value='compact'>
                 <div className='flex items-center gap-2'>
-                  <Rows4Icon className='h-4 w-4' />
+                  <Rows4Icon className='size-4' />
                   Compact
                 </div>
               </SelectItem>
               <SelectItem value='standard' className='flex items-center gap-2'>
                 <div className='flex items-center gap-2'>
-                  <Rows3Icon className='h-4 w-4' /> Standard
+                  <Rows3Icon className='size-4' /> Standard
                 </div>
               </SelectItem>
               <SelectItem value='flexible' className='flex items-center gap-2'>
                 <div className='flex items-center gap-2'>
-                  <Rows2Icon className='h-4 w-4' />
+                  <Rows2Icon className='size-4' />
                   Flexible
                 </div>
               </SelectItem>

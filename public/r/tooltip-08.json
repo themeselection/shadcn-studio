@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-08",
+  "type": "registry:component",
+  "title": "Tooltip 8",
+  "description": "A tooltip displaying user information with avatar and name",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-08.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipAvatarDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Avatar\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent>\n        <div className='flex items-center gap-1.5'>\n          <Avatar className='size-5'>\n            <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n            <AvatarFallback className='text-xs'>HR</AvatarFallback>\n          </Avatar>\n          <p className='font-medium'>Hallie Richards</p>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipAvatarDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-08.tsx"
+    }
+  ]
+}

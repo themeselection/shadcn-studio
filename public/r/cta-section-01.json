@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-section-01",
+  "type": "registry:block",
+  "title": "CTA 1",
+  "description": "Rounded card layout with app download content featuring heading, description, and App Store/Google Play download buttons",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/cta-section/cta-section-01/page.tsx",
+      "content": "import CTA from '@/components/shadcn-studio/blocks/cta-section-01/cta-section-01'\n\nconst CTASection = () => {\n  return <CTA />\n}\n\nexport default CTASection\n",
+      "type": "registry:page",
+      "target": "app/cta-section-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/cta-section-01/cta-section-01.tsx",
+      "content": "import { Card, CardContent } from '@/components/ui/card'\n\nconst CTA = () => {\n  return (\n    <section className='bg-muted py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        <Card className='rounded-3xl border-none py-8 shadow-lg sm:py-16 lg:py-24'>\n          <CardContent className='flex flex-wrap items-center justify-between gap-8 px-8 sm:flex-nowrap sm:px-16 lg:px-24'>\n            <div className='max-w-xs lg:max-w-lg'>\n              <h2 className='mb-4 text-3xl font-bold'>Download our mobile app</h2>\n              <p className='text-muted-foreground text-lg font-medium'>\n                With a variety of unique blocks, you can effortlessly create a page without any coding. Build your next\n                landing page with ease.\n              </p>\n            </div>\n            <div className='flex flex-wrap items-center gap-6 max-md:w-full max-md:flex-col md:justify-end'>\n              <div className='bg-card-foreground flex w-[200px] items-center gap-4 rounded-md px-6 py-3'>\n                <img\n                  src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/apple-icon.png'\n                  alt='App Store'\n                  className='size-8.5 invert dark:invert-0'\n                />\n                <div className='flex flex-col items-start'>\n                  <p className='text-card text-xs leading-4'>Download on the</p>\n                  <p className='text-card text-base leading-6 font-medium opacity-90'>App Store</p>\n                </div>\n              </div>\n\n              <div className='bg-card-foreground flex w-[200px] items-center gap-4 rounded-md px-6 py-3'>\n                <img\n                  src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/google-play-icon.png'\n                  alt='Google Play'\n                  className='size-8.5'\n                />\n                <div className='flex flex-col items-start'>\n                  <p className='text-card text-xs leading-4'>Download on the</p>\n                  <p className='text-card text-base leading-6 font-medium opacity-90'>Google Play</p>\n                </div>\n              </div>\n            </div>\n          </CardContent>\n        </Card>\n      </div>\n    </section>\n  )\n}\n\nexport default CTA\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/cta-section-01/cta-section-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "cta-section"
+  }
+}

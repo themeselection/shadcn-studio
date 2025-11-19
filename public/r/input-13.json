@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-13",
+  "type": "registry:component",
+  "title": "Input 13",
+  "description": "An email input field with custom indigo focus ring styling",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-13.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputColoredRingDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with colored ring</Label>\n      <Input\n        id={id}\n        type='email'\n        placeholder='Email address'\n        className='focus-visible:border-indigo-500 focus-visible:ring-indigo-500/20 dark:focus-visible:ring-indigo-500/40'\n      />\n    </div>\n  )\n}\n\nexport default InputColoredRingDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-13.tsx"
+    }
+  ]
+}

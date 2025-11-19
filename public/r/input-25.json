@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-25",
+  "type": "registry:component",
+  "title": "Input 25",
+  "description": "An email input field with an inset label positioned above the input area",
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-25.tsx",
+      "content": "import { useId } from 'react'\n\nconst InputInsetLabelDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='border-input bg-background focus-within:border-ring focus-within:ring-ring/50 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-aria-invalid:border-destructive relative w-full max-w-xs rounded-md border shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-disabled:pointer-events-none has-disabled:cursor-not-allowed has-disabled:opacity-50 has-[input:is(:disabled)]:*:pointer-events-none'>\n      <label htmlFor={id} className='text-foreground dark:bg-input/30 block px-3 pt-1 text-xs font-medium'>\n        Input with inset label\n      </label>\n      <input\n        id={id}\n        type='email'\n        placeholder='Email address'\n        className='text-foreground placeholder:text-muted-foreground dark:bg-input/30 flex h-9 w-full bg-transparent px-3 pb-1 text-sm focus-visible:outline-none'\n      />\n    </div>\n  )\n}\n\nexport default InputInsetLabelDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-25.tsx"
+    }
+  ]
+}

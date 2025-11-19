@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-02",
+  "type": "registry:component",
+  "title": "Popover 2",
+  "description": "A dimensions popover with input fields for width, max width, height, and max height settings",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-02.tsx",
+      "content": "import { PencilRulerIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst PopoverDimensionsDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <PencilRulerIcon />\n          <span className='sr-only'>Dimensions</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-4'>\n          <div className='space-y-2'>\n            <h4 className='leading-none font-medium'>Dimensions</h4>\n            <p className='text-muted-foreground text-sm'>Set the dimensions for the layer.</p>\n          </div>\n          <div className='grid gap-2'>\n            <div className='grid grid-cols-3 items-center gap-4'>\n              <Label htmlFor='width'>Width</Label>\n              <Input id='width' defaultValue='100%' className='col-span-2 h-8' />\n            </div>\n            <div className='grid grid-cols-3 items-center gap-4'>\n              <Label htmlFor='maxWidth'>Max. width</Label>\n              <Input id='maxWidth' defaultValue='300px' className='col-span-2 h-8' />\n            </div>\n            <div className='grid grid-cols-3 items-center gap-4'>\n              <Label htmlFor='height'>Height</Label>\n              <Input id='height' defaultValue='25px' className='col-span-2 h-8' />\n            </div>\n            <div className='grid grid-cols-3 items-center gap-4'>\n              <Label htmlFor='maxHeight'>Max. height</Label>\n              <Input id='maxHeight' defaultValue='none' className='col-span-2 h-8' />\n            </div>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverDimensionsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-02.tsx"
+    }
+  ]
+}

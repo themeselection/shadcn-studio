@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-30",
+  "type": "registry:component",
+  "title": "Input 30",
+  "description": "An email input field paired with a subscribe button for newsletter signups",
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-30.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputButtonDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with button</Label>\n      <div className='flex gap-2'>\n        <Input id={id} type='email' placeholder='Email address' />\n        <Button type='submit'>Subscribe</Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-30.tsx"
+    }
+  ]
+}

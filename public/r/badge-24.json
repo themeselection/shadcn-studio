@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-24",
+  "type": "registry:component",
+  "title": "Badge 24",
+  "description": "Online status indicator badge with green dot over avatar",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/badge/badge-24.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst BadgeStatusOnlineDemo = () => {\n  return (\n    <div className='relative w-fit'>\n      <Avatar className='size-10'>\n        <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n        <AvatarFallback>HR</AvatarFallback>\n      </Avatar>\n      <span className='border-background absolute -right-0.5 -bottom-0.5 size-3 rounded-full border-2 bg-green-600 dark:bg-green-400'>\n        <span className='sr-only'>Online</span>\n      </span>\n    </div>\n  )\n}\n\nexport default BadgeStatusOnlineDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-24.tsx"
+    }
+  ]
+}

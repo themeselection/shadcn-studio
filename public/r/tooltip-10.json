@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-10",
+  "type": "registry:component",
+  "title": "Tooltip 10",
+  "description": "A directional tooltip demo showing placement on all four sides for e.g. top, right, bottom, left",
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-10.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipDirectionsDemo = () => {\n  return (\n    <div className='flex flex-wrap gap-2'>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant='outline' size='sm'>\n            Left\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side='left'>Tooltip on left</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant='outline' size='sm'>\n            Top\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side='top'>Tooltip on top</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant='outline' size='sm'>\n            Bottom\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side='bottom'>Tooltip on bottom</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant='outline' size='sm'>\n            Right\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent side='right'>Tooltip on right</TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n\nexport default TooltipDirectionsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-10.tsx"
+    }
+  ]
+}

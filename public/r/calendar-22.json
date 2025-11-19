@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-22",
+  "type": "registry:component",
+  "title": "Calendar 22",
+  "description": "Calendar with preset date shortcuts (Today, Yesterday, Tomorrow, in 3 days, in a week, etc.)",
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-22.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { addDays } from 'date-fns'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Card, CardContent, CardFooter } from '@/components/ui/card'\n\nconst CalendarWithPresetsDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Card className='max-w-xs py-4'>\n        <CardContent className='px-4'>\n          <Calendar\n            mode='single'\n            selected={date}\n            onSelect={setDate}\n            defaultMonth={date}\n            className='w-full bg-transparent p-0'\n          />\n        </CardContent>\n        <CardFooter className='flex flex-wrap gap-2 border-t px-4 !pt-4'>\n          {[\n            { label: 'Today', value: 0 },\n            { label: 'Yesterday', value: -1 },\n            { label: 'Tomorrow', value: 1 },\n            { label: 'In 3 days', value: 3 },\n            { label: 'In a week', value: 7 },\n            { label: 'In 2 weeks', value: 14 }\n          ].map(preset => (\n            <Button\n              key={preset.value}\n              variant='outline'\n              size='sm'\n              className='flex-1'\n              onClick={() => {\n                const newDate = addDays(new Date(), preset.value)\n\n                setDate(newDate)\n              }}\n            >\n              {preset.label}\n            </Button>\n          ))}\n        </CardFooter>\n      </Card>\n      <p className='text-muted-foreground mt-4 text-center text-xs' role='region'>\n        Calendar with presets\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarWithPresetsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-22.tsx"
+    }
+  ]
+}

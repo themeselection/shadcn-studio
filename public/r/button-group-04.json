@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-04",
+  "type": "registry:component",
+  "title": "Button Group 4",
+  "description": "Rounded media control button group with play, pause, and skip functions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-04.tsx",
+      "content": "import { PauseIcon, PlayIcon, SkipBackIcon, SkipForwardIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst ButtonGroupRoundedDemo = () => {\n  return (\n    <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-full shadow-xs'>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none rounded-l-full focus-visible:z-10'>\n            <SkipBackIcon />\n            <span className='sr-only'>Skip Back</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Skip Back</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none focus-visible:z-10'>\n            <PlayIcon />\n            <span className='sr-only'>Play</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Play</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none focus-visible:z-10'>\n            <PauseIcon />\n            <span className='sr-only'>Pause</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Pause</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none rounded-r-full focus-visible:z-10'>\n            <SkipForwardIcon />\n            <span className='sr-only'>Skip Forward</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Skip Forward</TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n\nexport default ButtonGroupRoundedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-04.tsx"
+    }
+  ]
+}

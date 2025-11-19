@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-01",
+  "type": "registry:component",
+  "title": "Form 1",
+  "description": "Form with radio group selection and alert notifications for user feedback",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "form",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-01.tsx",
+      "content": "'use client'\n\nimport { CheckCheckIcon } from 'lucide-react'\n\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nconst RadioGroupFormDemo = () => {\n  const FormSchema = z.object({\n    selectedOption: z.string().nonempty({\n      message: 'You must select an option.'\n    })\n  })\n\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema),\n    defaultValues: { selectedOption: '' }\n  })\n\n  function onSubmit(data: z.infer<typeof FormSchema>) {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>Selected Option: {data.selectedOption}</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-xs space-y-6'>\n        <FormField\n          control={form.control}\n          name='selectedOption'\n          render={({ field }) => (\n            <FormItem className='space-y-3'>\n              <FormLabel>Manage data sharing preferences</FormLabel>\n              <FormControl>\n                <RadioGroup onValueChange={field.onChange} value={field.value}>\n                  <div className='flex items-center space-x-2'>\n                    <RadioGroupItem value='share data' id='share-option' />\n                    <FormLabel htmlFor='share-option' className='font-normal'>\n                      Share Data for Personalized Experience\n                    </FormLabel>\n                  </div>\n                  <div className='flex items-center space-x-2'>\n                    <RadioGroupItem value='do not share' id='no-share-option' />\n                    <FormLabel htmlFor='no-share-option' className='font-normal'>\n                      Do Not Share Any Data\n                    </FormLabel>\n                  </div>\n                  <div className='flex items-center space-x-2'>\n                    <RadioGroupItem value='customize' id='customize-option' />\n                    <FormLabel htmlFor='customize-option' className='font-normal'>\n                      Customize Data Sharing Preferences\n                    </FormLabel>\n                  </div>\n                </RadioGroup>\n              </FormControl>\n              <FormDescription>Please select one of the options to proceed.</FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n        <Button type='submit'>Update Preferences</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default RadioGroupFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-01.tsx"
+    }
+  ]
+}

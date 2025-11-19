@@ -33,12 +33,10 @@ const ButtonGroupDropdownDemo = () => {
 
   return (
     <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-md shadow-xs'>
-      <Button className='rounded-none rounded-s-md shadow-none focus-visible:z-10'>
-        {options[Number(selectedIndex)].label}
-      </Button>
+      <Button className='rounded-none rounded-l-md focus-visible:z-10'>{options[Number(selectedIndex)].label}</Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button size='icon' className='rounded-none rounded-e-md focus-visible:z-10'>
+          <Button size='icon' className='rounded-none rounded-r-md focus-visible:z-10'>
             <ChevronDownIcon />
             <span className='sr-only'>Select option</span>
           </Button>

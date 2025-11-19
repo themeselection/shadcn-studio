@@ -18,7 +18,7 @@ const CardActionDemo = () => {
         variant='ghost'
         size='icon'
         onClick={() => setIsActive(false)}
-        className='absolute end-2 top-2 rounded-full'
+        className='absolute top-2 right-2 rounded-full'
       >
         <XIcon />
         <span className='sr-only'>Close</span>

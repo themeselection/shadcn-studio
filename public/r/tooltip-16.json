@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-16",
+  "type": "registry:component",
+  "title": "Tooltip 16",
+  "description": "An animated tooltip with stacked avatars and hover effects using motion-tooltip component",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-16.tsx",
+      "content": "import { AnimatedTooltip } from '@/components/ui/motion-tooltip'\n\nconst avatars = [\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'HL',\n    name: 'Howard Lloyd',\n    designation: 'Product Manager'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    fallback: 'OS',\n    name: 'Olivia Sparks',\n    designation: 'Software Engineer'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    fallback: 'HR',\n    name: 'Hallie Richards',\n    designation: 'UI/UX Designer'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-16.png',\n    fallback: 'JW',\n    name: 'Jenny Wilson',\n    designation: 'Junior Developer'\n  }\n]\n\nconst AnimatedTooltipDemo = () => {\n  return (\n    <div className='space-y-4'>\n      <div className='flex w-full flex-row items-center justify-center'>\n        <AnimatedTooltip items={avatars} />\n      </div>\n      <p className='text-muted-foreground text-xs'>\n        Inspired by{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://ui.aceternity.com/components/animated-tooltip'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          Aceternity UI\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default AnimatedTooltipDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-16.tsx"
+    },
+    {
+      "path": "src/components/ui/motion-tooltip.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\n\nimport { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from 'motion/react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nimport { cn } from '@/lib/utils'\n\ninterface TooltipItem {\n  image: string\n  name: string\n  fallback: string\n  designation: string\n}\n\nfunction AnimatedTooltip({ items, className }: { items: TooltipItem[]; className?: string }) {\n  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null)\n  const springConfig = { stiffness: 100, damping: 5 }\n\n  // going to set this value on mouse move\n  const x = useMotionValue(0)\n\n  // rotate the tooltip\n  const rotate = useSpring(useTransform(x, [-100, 100], [-45, 45]), springConfig)\n\n  // translate the tooltip\n  const translateX = useSpring(useTransform(x, [-100, 100], [-50, 50]), springConfig)\n\n  const handleMouseMove = (event: any) => {\n    const halfWidth = event.target.offsetWidth / 2\n\n    // set the x value, which is then used in transform and rotate\n    x.set(event.nativeEvent.offsetX - halfWidth)\n  }\n\n  return (\n    <>\n      {items.map((item, index) => (\n        <div\n          className={cn('relative -me-2.5', className)}\n          key={item.name}\n          onMouseEnter={() => setHoveredIndex(index)}\n          onMouseLeave={() => setHoveredIndex(null)}\n        >\n          <AnimatePresence mode='popLayout'>\n            {hoveredIndex === index && (\n              <motion.div\n                initial={{ opacity: 0, y: 20, scale: 0.6 }}\n                animate={{\n                  opacity: 1,\n                  y: 0,\n                  scale: 1,\n                  transition: {\n                    type: 'spring',\n                    stiffness: 260,\n                    damping: 10\n                  }\n                }}\n                exit={{ opacity: 0, y: 20, scale: 0.6 }}\n                style={{\n                  translateX: translateX,\n                  rotate: rotate,\n                  whiteSpace: 'nowrap'\n                }}\n                className='bg-foreground text-background absolute -top-2 left-1/2 z-50 flex -translate-x-1/2 -translate-y-full flex-col items-center justify-center rounded-md px-4 py-2 text-xs shadow-xl'\n              >\n                <div className='relative z-1 text-base font-semibold'>{item.name}</div>\n                <div className='text-background/80 text-xs'>{item.designation}</div>\n              </motion.div>\n            )}\n          </AnimatePresence>\n          <Avatar\n            className='ring-background relative size-10 ring-2 transition-all duration-300 ease-in-out hover:z-1 hover:scale-105'\n            onMouseMove={handleMouseMove}\n          >\n            <AvatarImage src={item.image} alt={item.name} />\n            <AvatarFallback className='text-xs'>{item.fallback}</AvatarFallback>\n          </Avatar>\n        </div>\n      ))}\n    </>\n  )\n}\n\nexport { AnimatedTooltip }\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-tooltip.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-15",
+  "type": "registry:component",
+  "title": "Popover 15",
+  "description": "A user profile popover with avatar, bio, and social statistics display with zoom-in animation",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-15.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst PopoverZoomInDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline'>Zoom in</Button>\n      </PopoverTrigger>\n      <PopoverContent className='data-[state=open]:!zoom-in-0 data-[state=closed]:!zoom-out-0 origin-center duration-400'>\n        <div className='grid gap-4'>\n          <div className='flex flex-col items-center gap-2'>\n            <Avatar className='size-20'>\n              <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Howard Lloyd' />\n              <AvatarFallback className='text-xs'>HL</AvatarFallback>\n            </Avatar>\n            <div className='flex flex-col items-center text-center'>\n              <p className='text-lg font-semibold'>Howard Lloyd</p>\n              <span className='text-sm'>@iamhoward</span>\n            </div>\n          </div>\n          <div className='from-border/20 via-border to-border/20 mx-auto h-px w-45 bg-gradient-to-r' />\n          <p className='text-center text-sm italic'>\n            Product Manager @oliviasparks, passionate about building user-centric solutions that solve real problems.\n          </p>\n          <div className='flex justify-center gap-2 text-sm'>\n            <div className='font-medium'>\n              512 <span className='text-muted-foreground font-normal'>followers</span>\n            </div>\n            <div className='font-medium'>\n              128 <span className='text-muted-foreground font-normal'>following</span>\n            </div>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverZoomInDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-15.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-07",
+  "type": "registry:component",
+  "title": "Avatar 7",
+  "description": "Status avatar with busy indicator showing red status dot.",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/avatar/avatar-07.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst AvatarStatusBusyDemo = () => {\n  return (\n    <div className='relative w-fit'>\n      <Avatar>\n        <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <span className='border-background bg-destructive absolute -right-0.5 -bottom-0.5 size-3 rounded-full border-2'>\n        <span className='sr-only'>Busy</span>\n      </span>\n    </div>\n  )\n}\n\nexport default AvatarStatusBusyDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/avatar/avatar-07.tsx"
+    }
+  ]
+}

@@ -172,7 +172,7 @@ const DataTableColumnsVisibilityDemo = () => {
                 placeholder='Search'
                 onKeyDown={e => e.stopPropagation()}
               />
-              <SearchIcon className='absolute inset-y-0 left-2 my-auto h-4 w-4' />
+              <SearchIcon className='absolute inset-y-0 left-2 my-auto size-4' />
             </div>
             <DropdownMenuSeparator />
             {table

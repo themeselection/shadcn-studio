@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-11",
+  "type": "registry:component",
+  "title": "Popover 11",
+  "description": "A notifications popover with unread indicators and mark-as-read functionality",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "popover",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-11.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { BellIcon, CircleIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Separator } from '@/components/ui/separator'\n\nconst notifications = [\n  {\n    id: 1,\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    message: 'Harry assigned you task of New API implementation',\n    fallback: 'HL',\n    time: '15 Minutes'\n  },\n  {\n    id: 2,\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    message: 'Jerry joined team',\n    fallback: 'OS',\n    time: '35 Minutes'\n  },\n  {\n    id: 3,\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    message: 'Congratulate ruby for married life',\n    fallback: 'HR',\n    time: '3 days'\n  }\n]\n\nconst PopoverNotificationsDemo = () => {\n  const [readMessages, setReadMessages] = useState([3])\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <BellIcon />\n          <span className='sr-only'>Notifications</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80 p-0'>\n        <div className='grid'>\n          <div className='flex items-center justify-between gap-2 px-4 py-2.5'>\n            <span className='font-medium'>Notifications</span>\n            <Button\n              variant='secondary'\n              className='h-7 rounded-full px-2 py-1 text-xs'\n              onClick={() => setReadMessages(notifications.map(item => item.id))}\n            >\n              Mark as all read\n            </Button>\n          </div>\n          <Separator className='' />\n          <ul className='grid gap-4 p-2'>\n            {notifications.map(item => (\n              <li\n                key={item.id}\n                className='hover:bg-accent flex items-start gap-2 rounded-lg px-2 py-1.5'\n                onClick={() => setReadMessages([...readMessages, item.id])}\n              >\n                <Avatar className='rounded-lg'>\n                  <AvatarImage src={item.image} alt={item.fallback} />\n                  <AvatarFallback className='rounded-lg text-xs'>{item.fallback}</AvatarFallback>\n                </Avatar>\n                <div className='flex-1 space-y-1'>\n                  <div className='text-sm font-medium'>{item.message}</div>\n                  <p className='text-muted-foreground text-xs'>{`${item.time} ago`}</p>\n                </div>\n                {!readMessages.includes(item.id) && (\n                  <CircleIcon className='fill-primary text-primary size-2 self-center' />\n                )}\n              </li>\n            ))}\n          </ul>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverNotificationsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-11.tsx"
+    }
+  ]
+}

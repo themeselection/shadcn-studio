@@ -12,7 +12,7 @@ const InputFileDemo = () => {
       <Input
         id={id}
         type='file'
-        className='text-muted-foreground file:border-input file:text-foreground p-0 pr-3 italic file:me-3 file:h-full file:border-0 file:border-e file:border-solid file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic'
+        className='text-muted-foreground file:border-input file:text-foreground p-0 pr-3 italic file:mr-3 file:h-full file:border-0 file:border-r file:border-solid file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic'
       />
     </div>
   )

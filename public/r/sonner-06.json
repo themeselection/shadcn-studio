@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-06",
+  "type": "registry:component",
+  "title": "Sonner 6",
+  "description": "A toast notification with action button for interactive user responses",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-06.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SonnerWithActionDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast('Action completed successfully!', {\n          action: {\n            label: 'Undo',\n            onClick: () => console.log('Undo')\n          }\n        })\n      }\n    >\n      Toast with action\n    </Button>\n  )\n}\n\nexport default SonnerWithActionDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-06.tsx"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-09",
+  "type": "registry:component",
+  "title": "Button 9",
+  "description": "A button component with custom extra small sizing",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-09.tsx",
+      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonExtraSmallDemo = () => {\n  return <Button className='h-7 px-2 py-1 text-xs'>Extra Small</Button>\n}\n\nexport default ButtonExtraSmallDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-09.tsx"
+    }
+  ]
+}

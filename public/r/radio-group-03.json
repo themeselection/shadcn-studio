@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-03",
+  "type": "registry:component",
+  "title": "Radio Group 3",
+  "description": "A colored radio group with custom styling for different states",
+  "registryDependencies": [
+    "label",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/radio-group/radio-group-03.tsx",
+      "content": "import { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nconst RadioGroupColorsDemo = () => {\n  return (\n    <RadioGroup defaultValue='destructive' className='flex items-center gap-4'>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem\n          value='destructive'\n          id='color-destructive'\n          className='border-destructive text-destructive [&_svg]:fill-destructive focus-visible:ring-destructive/20 focus-visible:border-destructive dark:focus-visible:ring-destructive/40'\n        />\n        <Label htmlFor='color-destructive'>Destructive</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem\n          value='success'\n          id='color-success'\n          className='border-green-600 text-green-600 focus-visible:border-green-600 focus-visible:ring-green-600/20 dark:border-green-400 dark:text-green-400 dark:focus-visible:border-green-400 dark:focus-visible:ring-green-400/40 [&_svg]:fill-green-600 dark:[&_svg]:fill-green-400'\n        />\n        <Label htmlFor='color-success'>Success</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem\n          value='info'\n          id='color-info'\n          className='border-sky-600 text-sky-600 focus-visible:border-sky-600 focus-visible:ring-sky-600/20 dark:border-sky-400 dark:text-sky-400 dark:focus-visible:border-sky-400 dark:focus-visible:ring-sky-400/40 [&_svg]:fill-sky-600 dark:[&_svg]:fill-sky-400'\n        />\n        <Label htmlFor='color-info'>Info</Label>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupColorsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/radio-group/radio-group-03.tsx"
+    }
+  ]
+}

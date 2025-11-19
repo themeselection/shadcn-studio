@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-15",
+  "type": "registry:component",
+  "title": "Textarea 15",
+  "description": "A textarea with inset label for compact form layouts",
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-15.tsx",
+      "content": "import { useId } from 'react'\n\nconst TextareaWithInsetLabelDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='border-input bg-background focus-within:border-ring focus-within:ring-ring/50 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-aria-invalid:border-destructive relative w-full max-w-xs rounded-md border shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-disabled:pointer-events-none has-disabled:cursor-not-allowed has-disabled:opacity-50 has-[input:is(:disabled)]:*:pointer-events-none'>\n      <label htmlFor={id} className='text-foreground block px-3 pt-1 text-xs font-medium'>\n        Textarea with inset label\n      </label>\n      <textarea\n        id={id}\n        className='text-foreground placeholder:text-muted-foreground/70 flex min-h-14 w-full px-3 pb-2 text-sm focus-visible:outline-none'\n      />\n    </div>\n  )\n}\n\nexport default TextareaWithInsetLabelDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-15.tsx"
+    }
+  ]
+}

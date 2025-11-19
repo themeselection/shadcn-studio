@@ -115,9 +115,6 @@ export const presets: Record<string, ThemeStyles> = {
       'shadow-spread': '0px',
       'shadow-offset-x': '0px',
       'shadow-offset-y': '1px'
-    },
-    meta: {
-      badge: 'New'
     }
   },
   'art-deco': {
@@ -167,7 +164,6 @@ export const presets: Record<string, ThemeStyles> = {
       'shadow-offset-x': '0px',
       'shadow-offset-y': '1px'
     },
-
     dark: {
       background: 'oklch(0.32 0 0)',
       foreground: 'oklch(0.96 0.03 106.96)',
@@ -207,9 +203,6 @@ export const presets: Record<string, ThemeStyles> = {
       'shadow-spread': '0px',
       'shadow-offset-x': '0px',
       'shadow-offset-y': '1px'
-    },
-    meta: {
-      badge: 'New'
     }
   },
   'vs-code': {

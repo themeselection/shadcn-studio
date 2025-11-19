@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-09",
+  "type": "registry:component",
+  "title": "Input OTP 9",
+  "description": "A 6-digit OTP input field with outlined grouped layout and visual separator",
+  "registryDependencies": [
+    "input-otp",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input-otp/input-otp-09.tsx",
+      "content": "import { useId } from 'react'\n\nimport { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@/components/ui/input-otp'\nimport { Label } from '@/components/ui/label'\n\nconst InputOTPOutlinedGroupedDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='space-y-3'>\n      <Label htmlFor={id}>Input OTP Outline Grouped</Label>\n      <InputOTP id={id} maxLength={6}>\n        <InputOTPGroup className='gap-2 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border'>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup className='gap-2 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border'>\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n    </div>\n  )\n}\n\nexport default InputOTPOutlinedGroupedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input-otp/input-otp-09.tsx"
+    }
+  ]
+}

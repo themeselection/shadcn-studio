@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-09",
+  "type": "registry:component",
+  "title": "Form 9",
+  "description": "Form with date picker in popover for date selection",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "calendar",
+    "form",
+    "popover",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-09.tsx",
+      "content": "'use client'\n\nimport { CalendarIcon, CheckCheckIcon } from 'lucide-react'\n\nimport { format } from 'date-fns'\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nimport { cn } from '@/lib/utils'\n\nconst FormSchema = z.object({\n  dob: z.date({\n    required_error: 'A date of birth is required.'\n  })\n})\n\nconst DatePickerFormDemo = () => {\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema)\n  })\n\n  function onSubmit() {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 sm:w-100 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>Great we send you a personalized outfit suggestion!</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-xs space-y-6'>\n        <FormField\n          control={form.control}\n          name='dob'\n          render={({ field }) => (\n            <FormItem className='flex flex-col'>\n              <FormLabel>Timeless Trends for You</FormLabel>\n              <Popover>\n                <PopoverTrigger asChild>\n                  <FormControl>\n                    <Button\n                      variant={'outline'}\n                      className={cn('pl-3 text-left font-normal', !field.value && 'text-muted-foreground')}\n                    >\n                      {field.value ? format(field.value, 'PPP') : <span>Pick a date</span>}\n                      <CalendarIcon className='ml-auto opacity-50' />\n                    </Button>\n                  </FormControl>\n                </PopoverTrigger>\n                <PopoverContent className='w-auto p-0' align='start'>\n                  <Calendar\n                    mode='single'\n                    selected={field.value}\n                    onSelect={field.onChange}\n                    disabled={date => date > new Date() || date < new Date('1900-01-01')}\n                  />\n                </PopoverContent>\n              </Popover>\n              <FormDescription>\n                Enter your birth date to reveal styles and outfits tailored to your fashion journey.\n              </FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n        <Button type='submit'>Submit</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default DatePickerFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-09.tsx"
+    }
+  ]
+}

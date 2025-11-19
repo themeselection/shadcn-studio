@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-06",
+  "type": "registry:component",
+  "title": "Alert 6",
+  "description": "Focused icon alert with avatar-wrapped warning icon and destructive background styling.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-06.tsx",
+      "content": "import { FileWarningIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Avatar, AvatarFallback } from '@/components/ui/avatar'\n\nconst AlertFocusedIconDemo = () => {\n  return (\n    <Alert className='flex items-center gap-3'>\n      <Avatar className='rounded-md'>\n        <AvatarFallback className='bg-destructive dark:bg-destructive/60 rounded-md text-white'>\n          <FileWarningIcon className='size-4' />\n        </AvatarFallback>\n      </Avatar>\n      <AlertTitle>This file contains virus!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertFocusedIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-06.tsx"
+    }
+  ]
+}

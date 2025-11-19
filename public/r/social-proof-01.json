@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "social-proof-01",
+  "type": "registry:block",
+  "title": "Social Proof 1",
+  "description": "Feature checklist layout with split design showcasing product benefits alongside a complementary image. Perfect for highlighting key features with checkmark icons and descriptive content.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/social-proof/social-proof-01/page.tsx",
+      "content": "import SocialProof from '@/components/shadcn-studio/blocks/social-proof-01/social-proof-01'\n\nconst features = [\n  {\n    title: 'Powerful Campaign Tracking & ROI Analysis',\n    description: 'Track campaign performance and analyze return on investment'\n  },\n  {\n    title: 'Customizable Reporting & Data Exportation',\n    description: 'Create custom reports and export data easily'\n  }\n]\n\nconst SocialProofPage = () => {\n  return <SocialProof features={features} />\n}\n\nexport default SocialProofPage\n",
+      "type": "registry:page",
+      "target": "app/social-proof-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/social-proof-01/social-proof-01.tsx",
+      "content": "import { CircleCheckIcon } from 'lucide-react'\n\ntype Feature = {\n  title: string\n  description: string\n}\n\nconst SocialProof = ({ features }: { features: Feature[] }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        <div className='flex items-center gap-20 max-lg:flex-col'>\n          <div>\n            <div className='space-y-4'>\n              <p className='text-primary text-sm font-medium uppercase'>Social Proof</p>\n              <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Create Impactful White Label Reports</h2>\n              <p className='text-muted-foreground text-lg'>\n                Craft customizable reports that showcase your campaign&apos;s success, align with your brand, and\n                simplify sharing insights with stakeholders while enabling data export and ROI analysis.\n              </p>\n            </div>\n\n            <ul className='mt-11 space-y-6 text-lg font-medium'>\n              {features.map((feature, index) => (\n                <li key={index} className='flex gap-2'>\n                  <CircleCheckIcon className='mt-0.75 size-5' />\n                  <span>{feature.title}</span>\n                </li>\n              ))}\n            </ul>\n          </div>\n\n          <div className='shrink-0'>\n            <img\n              src='https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/social-proof/image-1.png'\n              alt='Social Widget'\n              className='w-142 object-contain dark:hidden'\n            />\n            <img\n              src='https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/social-proof/image-1-dark.png'\n              alt='Social Widget'\n              className='hidden w-142 object-contain dark:inline-block'\n            />\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default SocialProof\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/social-proof-01/social-proof-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "social-proof"
+  }
+}

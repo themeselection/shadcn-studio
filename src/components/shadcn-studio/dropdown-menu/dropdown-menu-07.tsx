@@ -1,4 +1,4 @@
-import { User, Settings, Bell, LogOut, CreditCard } from 'lucide-react'
+import { UserIcon, SettingsIcon, BellIcon, LogOutIcon, CreditCardIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -12,23 +12,23 @@ import {
 
 const listItems = [
   {
-    icon: User,
+    icon: UserIcon,
     property: 'Profile'
   },
   {
-    icon: Settings,
+    icon: SettingsIcon,
     property: 'Settings'
   },
   {
-    icon: CreditCard,
+    icon: CreditCardIcon,
     property: 'Billing'
   },
   {
-    icon: Bell,
+    icon: BellIcon,
     property: 'Notifications'
   },
   {
-    icon: LogOut,
+    icon: LogOutIcon,
     property: 'Sign Out'
   }
 ]

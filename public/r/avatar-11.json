@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-11",
+  "type": "registry:component",
+  "title": "Avatar 11",
+  "description": "Avatar with notification badge showing count number for alerts and messages.",
+  "registryDependencies": [
+    "avatar",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/avatar/avatar-11.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Badge } from '@/components/ui/badge'\n\nconst AvatarNotificationBadgeDemo = () => {\n  return (\n    <div className='relative w-fit'>\n      <Avatar className='size-10 rounded-sm'>\n        <AvatarImage\n          src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\n          alt='Hallie Richards'\n          className='rounded-sm'\n        />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <Badge className='absolute -top-2.5 -right-2.5 h-5 min-w-5 bg-indigo-500 px-1 tabular-nums'>8</Badge>\n    </div>\n  )\n}\n\nexport default AvatarNotificationBadgeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/avatar/avatar-11.tsx"
+    }
+  ]
+}

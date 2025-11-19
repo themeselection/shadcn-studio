@@ -12,7 +12,7 @@ const InputStartSelectDemo = () => {
       <Label htmlFor={id}>Input with start select</Label>
       <div className='flex rounded-md shadow-xs'>
         <Select defaultValue='https://'>
-          <SelectTrigger id={id} className='rounded-e-none shadow-none focus-visible:z-1'>
+          <SelectTrigger id={id} className='rounded-r-none shadow-none focus-visible:z-1'>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -36,7 +36,7 @@ const InputStartSelectDemo = () => {
             </SelectItem>
           </SelectContent>
         </Select>
-        <Input id={id} type='text' placeholder='shadcnstudio.com' className='-ms-px rounded-s-none shadow-none' />
+        <Input id={id} type='text' placeholder='shadcnstudio.com' className='-ms-px rounded-l-none shadow-none' />
       </div>
     </div>
   )

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "app-integration-01",
+  "type": "registry:block",
+  "title": "App Integration 1",
+  "description": "Two-column layout with integration cards featuring tool logos, names, descriptions, and call-to-action for conversion-focused app showcases",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/app-integration/app-integration-01/page.tsx",
+      "content": "import AppIntegration from '@/components/shadcn-studio/blocks/app-integration-01/app-integration-01'\n\nconst integrations = [\n  {\n    name: 'Microsoft',\n    description: 'Empowering Innovation and Connectivity',\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/microsoft-icon.png',\n    alt: 'Microsoft'\n  },\n  {\n    name: 'Spotify',\n    description: 'Your soundtrack to every moment.',\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/spotify-icon.png',\n    alt: 'Spotify'\n  },\n  {\n    name: 'Github',\n    description: 'Your Hub for Open Source Innovation',\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/github-white.png',\n    alt: 'Github'\n  }\n]\n\nconst AppIntegrationPage = () => {\n  return <AppIntegration integrations={integrations} />\n}\n\nexport default AppIntegrationPage\n",
+      "type": "registry:page",
+      "target": "app/app-integration-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/app-integration-01/app-integration-01.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'\n\ntype Integration = {\n  name: string\n  description: string\n  image: string\n  alt: string\n}[]\n\nconst AppIntegration = ({ integrations }: { integrations: Integration }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        <div className='grid grid-cols-1 items-center gap-6 md:grid-cols-2'>\n          <div className='space-y-4'>\n            <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>\n              Connects with your favourite tools to boost conversions!\n            </h2>\n            <p className='text-muted-foreground text-xl'>\n              Harness the potential of seamless integration to boost your sales performance! Discover how connecting\n              your tools can lead to greater efficiency and impressive results.\n            </p>\n            <Button size='lg' className='rounded-lg text-base'>\n              Check all app\n            </Button>\n          </div>\n\n          <div className='space-y-6'>\n            {integrations.map((integration, index) => (\n              <Card key={index} className='bg-transparent py-4 shadow-none'>\n                <CardContent className='flex items-center gap-6'>\n                  <div className='flex size-17 shrink-0 items-center justify-center rounded-md border'>\n                    <img src={integration.image} alt={integration.alt} className='size-10' />\n                  </div>\n                  <div>\n                    <CardTitle className='text-xl font-medium'>{integration.name}</CardTitle>\n                    <CardDescription className='text-base'>{integration.description}</CardDescription>\n                  </div>\n                </CardContent>\n              </Card>\n            ))}\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default AppIntegration\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/app-integration-01/app-integration-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "app-integration"
+  }
+}

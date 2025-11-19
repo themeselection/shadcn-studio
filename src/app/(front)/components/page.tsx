@@ -16,10 +16,12 @@ export const metadata: Metadata = {
     title: 'Shadcn Components',
     description:
       'An open-source collection of copy-and-paste Shadcn Components designed to accelerate your project development.',
-    url: 'https://shadcnstudio.com/components',
+    type: 'website',
+    siteName: 'Shadcn Studio',
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/components`,
     images: [
       {
-        url: 'https://cdn.shadcnstudio.com/ss-assets/smm/marketing/shadcn-studio-smm-banner.png',
+        url: 'https://cdn.themeselection.com/ts-assets/shadcn-studio/free/marketing/shadcn-studio-smm-banner.png',
         type: 'image/png',
         width: 1200,
         height: 630,
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
       'An open-source collection of copy-and-paste Shadcn Components designed to accelerate your project development.'
   },
   alternates: {
-    canonical: 'https://shadcnstudio.com/components'
+    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/components`
   }
 }
 
@@ -56,9 +58,7 @@ const Page = () => {
               <Link href={`/docs/components/${category.slug}`}>
                 <div className='bg-primary/[0.045] relative flex h-52 items-center justify-center border-b dark:bg-transparent'>
                   <category.svg className='transition-all duration-300 group-hover:scale-110' />
-                  {category.badge && (
-                    <span className='absolute start-4 top-2 font-["Gamja_Flower"] text-xl'>{category.badge}</span>
-                  )}
+                  {category.badge && <span className='font-kalam absolute top-2 left-4'>{category.badge}</span>}
                 </div>
                 <div className='flex flex-col gap-0.5 p-4 text-center'>
                   <h2 className='text-lg font-medium'>{category.name}</h2>

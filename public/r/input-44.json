@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-44",
+  "type": "registry:component",
+  "title": "Input 44",
+  "description": "Number field with rounded increment/decrement buttons positioned at the end using React Aria",
+  "dependencies": [
+    "lucide-react",
+    "react-aria-components"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-44.tsx",
+      "content": "'use client'\n\nimport { MinusIcon, PlusIcon } from 'lucide-react'\n\nimport { Button, Group, Input, Label, NumberField } from 'react-aria-components'\n\nconst InputWithEndButtonsRoundedDemo = () => {\n  return (\n    <NumberField defaultValue={1024} minValue={0} className='w-full max-w-xs space-y-2'>\n      <Label className='flex items-center gap-2 text-sm leading-none font-medium select-none'>\n        Input with end buttons (rounded)\n      </Label>\n      <Group className='dark:bg-input/30 border-input data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive relative inline-flex h-9 w-full min-w-0 items-center overflow-hidden rounded-md border bg-transparent text-base whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50 data-focus-within:ring-[3px] md:text-sm'>\n        <Input className='selection:bg-primary selection:text-primary-foreground w-full grow px-3 py-2 text-center tabular-nums outline-none' />\n        <Button\n          slot='decrement'\n          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground mr-1.5 flex aspect-square h-5 items-center justify-center rounded-sm border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'\n        >\n          <MinusIcon className='size-3' />\n          <span className='sr-only'>Decrement</span>\n        </Button>\n        <Button\n          slot='increment'\n          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground mr-2 flex aspect-square h-5 items-center justify-center rounded-sm border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'\n        >\n          <PlusIcon className='size-3' />\n          <span className='sr-only'>Increment</span>\n        </Button>\n      </Group>\n      <p className='text-muted-foreground text-xs'>\n        Built with{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://react-spectrum.adobe.com/react-aria/NumberField.html'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          React Aria\n        </a>\n      </p>\n    </NumberField>\n  )\n}\n\nexport default InputWithEndButtonsRoundedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-44.tsx"
+    }
+  ]
+}

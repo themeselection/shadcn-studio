@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-01",
+  "type": "registry:component",
+  "title": "Breadcrumb 1",
+  "description": "Basic breadcrumb navigation with standard separators for page hierarchy",
+  "registryDependencies": [
+    "breadcrumb"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/breadcrumb/breadcrumb-01.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from '@/components/ui/breadcrumb'\n\nconst BreadcrumbDemo = () => {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>Home</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>Documents</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage>Add Document</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n\nexport default BreadcrumbDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/breadcrumb/breadcrumb-01.tsx"
+    }
+  ]
+}

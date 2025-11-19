@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-29",
+  "type": "registry:component",
+  "title": "Tabs 29",
+  "description": "Animated underline tabs with dynamic underline position tracking using framer motion",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tabs/tabs-29.tsx",
+      "content": "'use client'\n\nimport { useLayoutEffect, useRef, useState } from 'react'\n\nimport { motion } from 'motion/react'\n\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise Me',\n    value: 'surprise',\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst AnimatedUnderlineTabsDemo = () => {\n  const [activeTab, setActiveTab] = useState('explore')\n  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])\n  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })\n\n  useLayoutEffect(() => {\n    const activeIndex = tabs.findIndex(tab => tab.value === activeTab)\n    const activeTabElement = tabRefs.current[activeIndex]\n\n    if (activeTabElement) {\n      const { offsetLeft, offsetWidth } = activeTabElement\n\n      setUnderlineStyle({\n        left: offsetLeft,\n        width: offsetWidth\n      })\n    }\n  }, [activeTab])\n\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs value={activeTab} onValueChange={setActiveTab} className='gap-4'>\n        <TabsList className='bg-background relative rounded-none border-b p-0'>\n          {tabs.map((tab, index) => (\n            <TabsTrigger\n              key={tab.value}\n              value={tab.value}\n              ref={el => {\n                tabRefs.current[index] = el\n              }}\n              className='bg-background dark:data-[state=active]:bg-background relative z-10 rounded-none border-0 data-[state=active]:shadow-none'\n            >\n              {tab.name}\n            </TabsTrigger>\n          ))}\n\n          <motion.div\n            className='bg-primary absolute bottom-0 z-20 h-0.5'\n            layoutId='underline'\n            style={{\n              left: underlineStyle.left,\n              width: underlineStyle.width\n            }}\n            transition={{\n              type: 'spring',\n              stiffness: 400,\n              damping: 40\n            }}\n          />\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default AnimatedUnderlineTabsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tabs/tabs-29.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

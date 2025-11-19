@@ -19,7 +19,7 @@ const DialogMiddleLeftAlignDemo = () => {
         <DialogTrigger asChild>
           <Button variant='outline'>Middle left align</Button>
         </DialogTrigger>
-        <DialogContent className='sm:left-0 sm:ms-6 sm:max-w-[425px] sm:translate-x-0'>
+        <DialogContent className='sm:left-0 sm:ml-6 sm:max-w-[425px] sm:translate-x-0'>
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>Make changes to your profile here. Click save when you&apos;re done.</DialogDescription>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-15",
+  "type": "registry:component",
+  "title": "Dropdown Menu 15",
+  "description": "Left side animation dropdown menu",
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-15.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger,\n  DropdownMenuSeparator\n} from '@/components/ui/dropdown-menu'\n\nconst DropdownSlideLeftAnimationDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Slide Left Animation</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent\n        align='start'\n        className='data-[state=closed]:slide-out-to-left-20 data-[state=open]:slide-in-from-left-20 data-[state=closed]:zoom-out-100 data-[state=open]:zoom-in-100 w-56 duration-400'\n      >\n        <DropdownMenuLabel>Settings</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>My Profile</DropdownMenuItem>\n          <DropdownMenuItem>Settings</DropdownMenuItem>\n          <DropdownMenuItem>Billing</DropdownMenuItem>\n          <DropdownMenuItem>FAQs</DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuLabel>Contact</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>Call Support</DropdownMenuItem>\n          <DropdownMenuItem>Chat with us</DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownSlideLeftAnimationDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-15.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

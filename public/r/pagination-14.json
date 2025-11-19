@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-14",
+  "type": "registry:component",
+  "title": "Pagination 14",
+  "description": "A pagination component with page size selector dropdown for customizable results per page",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "pagination",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-14.tsx",
+      "content": "import { ChevronFirstIcon, ChevronLastIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'\n\nimport { Pagination, PaginationContent, PaginationItem, PaginationLink } from '@/components/ui/pagination'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst PaginationWithSelectDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationLink href='#' aria-label='Go to first page' size='icon' className='rounded-full'>\n            <ChevronFirstIcon className='size-4' />\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' aria-label='Go to previous page' size='icon' className='rounded-full'>\n            <ChevronLeftIcon className='size-4' />\n          </PaginationLink>\n        </PaginationItem>\n\n        <PaginationItem>\n          <Select defaultValue={String(1)} aria-label='Select page'>\n            <SelectTrigger id='select-page' className='w-fit whitespace-nowrap' aria-label='Select page'>\n              <SelectValue placeholder='Select page' />\n            </SelectTrigger>\n            <SelectContent>\n              {Array.from({ length: 10 }, (_, i) => i + 1).map(page => (\n                <SelectItem key={page} value={String(page)}>\n                  Page {page}\n                </SelectItem>\n              ))}\n            </SelectContent>\n          </Select>\n        </PaginationItem>\n\n        <PaginationItem>\n          <PaginationLink href='#' aria-label='Go to next page' size='icon' className='rounded-full'>\n            <ChevronRightIcon className='size-4' />\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' aria-label='Go to last page' size='icon' className='rounded-full'>\n            <ChevronLastIcon className='size-4' />\n          </PaginationLink>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default PaginationWithSelectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-14.tsx"
+    }
+  ]
+}

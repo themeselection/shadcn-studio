@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-mask-01",
+  "type": "registry:component",
+  "title": "Input Mask 1",
+  "description": "An input field with custom alphanumeric mask pattern for structured data entry",
+  "dependencies": [
+    "use-mask-input"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input-mask/input-mask-01.tsx",
+      "content": "'use client'\n\nimport { useId } from 'react'\n\nimport { withMask } from 'use-mask-input'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputWithMaskDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with mask</Label>\n      <Input\n        id={id}\n        type='text'\n        placeholder='AB12 CDE'\n        ref={withMask('AA99 AAA', {\n          placeholder: '_',\n          showMaskOnHover: false\n        })}\n      />\n      <p className='text-muted-foreground text-xs'>\n        Built with{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://github.com/eduardoborges/use-mask-input'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          use-mask-input\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default InputWithMaskDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input-mask/input-mask-01.tsx"
+    }
+  ]
+}

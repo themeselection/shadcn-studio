@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-04",
+  "type": "registry:component",
+  "title": "Breadcrumb 4",
+  "description": "Breadcrumb with dot icon separators for minimal visual hierarchy",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "breadcrumb"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/breadcrumb/breadcrumb-04.tsx",
+      "content": "import { DotIcon } from 'lucide-react'\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from '@/components/ui/breadcrumb'\n\nconst BreadcrumbDotSeparatorDemo = () => {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>Home</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <DotIcon className='size-4' />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>Documents</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <DotIcon className='size-4' />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbPage>Add Document</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n\nexport default BreadcrumbDotSeparatorDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/breadcrumb/breadcrumb-04.tsx"
+    }
+  ]
+}

@@ -12,8 +12,8 @@ const SelectWithIconDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Select with icon</Label>
       <Select defaultValue='god of wars'>
-        <SelectTrigger id={id} className='relative w-full ps-9'>
-          <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50'>
+        <SelectTrigger id={id} className='relative w-full pl-9'>
+          <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 group-has-[select[disabled]]:opacity-50'>
             <FilmIcon size={16} aria-hidden='true' />
           </div>
           <SelectValue placeholder='Select time' />

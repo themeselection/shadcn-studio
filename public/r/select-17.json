@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-17",
+  "type": "registry:component",
+  "title": "Select 17",
+  "description": "A custom select dropdown with colored background and themed styling",
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-17.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst SelectBackgroundColorDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with background color</Label>\n      <Select defaultValue='hindi'>\n        <SelectTrigger className='w-full border-sky-600 bg-sky-600/10 text-sky-600 shadow-none focus-visible:border-sky-600 focus-visible:ring-sky-600/20 dark:bg-sky-400/10 dark:text-sky-400 dark:hover:bg-sky-400/10 dark:focus-visible:ring-sky-400/40 [&_svg]:!text-sky-600 dark:[&_svg]:!text-sky-400'>\n          <SelectValue placeholder='Select a fruit' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup className='[&_div:focus]:bg-sky-600/20 [&_div:focus]:text-sky-600 dark:[&_div:focus]:bg-sky-400/20 dark:[&_div:focus]:text-sky-400'>\n            <SelectLabel>Languages</SelectLabel>\n            <SelectItem value='hindi' className='focus:[&_svg]:!text-sky-600 dark:focus:[&_svg]:!text-sky-400'>\n              Hindi\n            </SelectItem>\n            <SelectItem value='english' className='focus:[&_svg]:!text-sky-600 dark:focus:[&_svg]:!text-sky-400'>\n              English\n            </SelectItem>\n            <SelectItem value='spanish' className='focus:[&_svg]:!text-sky-600 dark:focus:[&_svg]:!text-sky-400'>\n              Spanish\n            </SelectItem>\n            <SelectItem value='mandarin' className='focus:[&_svg]:!text-sky-600 dark:focus:[&_svg]:!text-sky-400'>\n              Mandarin\n            </SelectItem>\n            <SelectItem value='french' className='focus:[&_svg]:!text-sky-600 dark:focus:[&_svg]:!text-sky-400'>\n              French\n            </SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectBackgroundColorDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-17.tsx"
+    }
+  ]
+}

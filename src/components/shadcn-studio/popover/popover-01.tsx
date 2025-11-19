@@ -39,7 +39,9 @@ const PopoverRatingsDemo = () => {
           </div>
           <div className='grid'>
             <div className='flex items-center justify-between'>
-              <Badge variant='secondary'>+6 this week</Badge>
+              <Badge variant='secondary' className='rounded-sm'>
+                +6 this week
+              </Badge>
               <a href='#' className='text-sm hover:underline'>
                 See all
               </a>

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "logo-cloud-01",
+  "type": "registry:block",
+  "title": "Logo Cloud 1",
+  "description": "Muted background logo cloud with centered card container, underlined text highlight, and flexbox logo grid arrangement with responsive gap spacing and centered alignment",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/logo-cloud/logo-cloud-01/page.tsx",
+      "content": "import LogoCloud from '@/components/shadcn-studio/blocks/logo-cloud-01/logo-cloud-01'\n\nconst logos = [\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/amazon-logo-bw.png',\n    alt: 'Amazon'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/hubspot-logo-bw.png',\n    alt: 'HubSpot'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/walmart-logo-bw.png',\n    alt: 'Walmart'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/microsoft-logo-bw.png',\n    alt: 'Microsoft'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/evernote-icon-bw.png',\n    alt: 'Evernote'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/paypal-logo-bw.png',\n    alt: 'PayPal'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/airbnb-logo-bw.png',\n    alt: 'Airbnb'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/adobe-logo-bw.png',\n    alt: 'Adobe'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/shopify-logo-bw.png',\n    alt: 'Shopify'\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/brand-logo/huawei-logo-bw.png',\n    alt: 'Huawei'\n  }\n]\n\nconst LogoCloudPage = () => {\n  return <LogoCloud logos={logos} />\n}\n\nexport default LogoCloudPage\n",
+      "type": "registry:page",
+      "target": "app/logo-cloud-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/logo-cloud-01/logo-cloud-01.tsx",
+      "content": "import { Card, CardContent } from '@/components/ui/card'\n\ntype Logos = {\n  image: string\n  alt: string\n}\n\nconst LogoCloud = ({ logos }: { logos: Logos[] }) => {\n  return (\n    <section className='bg-muted py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* Header */}\n        <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>\n          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>\n            <span>A thriving</span>{' '}\n            <span className='relative z-1'>\n              community of businesses\n              <span className='bg-primary absolute bottom-1 left-0 -z-1 h-px w-full'></span>\n            </span>{' '}\n            <span>driving innovation</span>\n          </h2>\n          <p className='text-muted-foreground text-xl'>Proudly partnering with top brands to drive success.</p>\n        </div>\n\n        <Card className='py-14 shadow-lg'>\n          <CardContent className='px-14'>\n            <div className='flex flex-wrap items-center justify-center gap-x-16 gap-y-8 max-sm:flex-col'>\n              {logos.map((logo, index) => (\n                <img key={index} src={logo.image} alt={logo.alt} className='h-7' />\n              ))}\n            </div>\n          </CardContent>\n        </Card>\n      </div>\n    </section>\n  )\n}\n\nexport default LogoCloud\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/logo-cloud-01/logo-cloud-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "logo-cloud"
+  }
+}

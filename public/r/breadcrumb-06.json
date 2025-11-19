@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-06",
+  "type": "registry:component",
+  "title": "Breadcrumb 6",
+  "description": "Breadcrumb with dropdown menu integration for compact nested navigation and outlined badge components for modern tab-like appearance",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "breadcrumb",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/breadcrumb/breadcrumb-06.tsx",
+      "content": "import { ChevronDownIcon, HomeIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from '@/components/ui/breadcrumb'\nimport { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'\n\nconst BreadcrumbWithDropdownDemo = () => {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>\n            <Badge variant='outline' className='text-muted-foreground hover:text-foreground'>\n              <HomeIcon className='size-3' />\n              Home\n            </Badge>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator> / </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>\n            <Badge variant='outline' className='text-muted-foreground hover:text-foreground'>\n              Documents\n            </Badge>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator> / </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbPage>\n            <DropdownMenu>\n              <DropdownMenuTrigger className='flex items-center gap-1'>\n                Add Document\n                <ChevronDownIcon className='size-4' />\n              </DropdownMenuTrigger>\n              <DropdownMenuContent align='start'>\n                <DropdownMenuItem>Documentation</DropdownMenuItem>\n                <DropdownMenuItem>Themes</DropdownMenuItem>\n                <DropdownMenuItem>GitHub</DropdownMenuItem>\n              </DropdownMenuContent>\n            </DropdownMenu>\n          </BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n\nexport default BreadcrumbWithDropdownDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/breadcrumb/breadcrumb-06.tsx"
+    }
+  ]
+}

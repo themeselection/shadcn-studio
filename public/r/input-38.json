@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-38",
+  "type": "registry:component",
+  "title": "Input 38",
+  "description": "Search input field with search icon and microphone button for voice input",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-38.tsx",
+      "content": "import { useId } from 'react'\n\nimport { MicIcon, SearchIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputSearchIconDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Search input with icon and button</Label>\n      <div className='relative'>\n        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>\n          <SearchIcon className='size-4' />\n          <span className='sr-only'>Search</span>\n        </div>\n        <Input\n          id={id}\n          type='search'\n          placeholder='Search...'\n          className='peer px-9 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'\n        />\n        <Button\n          variant='ghost'\n          size='icon'\n          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'\n        >\n          <MicIcon />\n          <span className='sr-only'>Press to speak</span>\n        </Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputSearchIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-38.tsx"
+    }
+  ]
+}

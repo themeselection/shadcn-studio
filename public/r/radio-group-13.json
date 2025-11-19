@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-13",
+  "type": "registry:component",
+  "title": "Radio Group 13",
+  "description": "A vertical card radio group with icons and centered layout for plan selection",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "label",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/radio-group/radio-group-13.tsx",
+      "content": "import { useId } from 'react'\n\nimport { UserIcon, CrownIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nconst RadioGroupCardVerticalRadioDemo = () => {\n  const id = useId()\n\n  return (\n    <RadioGroup className='w-full max-w-96 justify-items-center sm:grid-cols-2' defaultValue='1'>\n      <div className='border-input has-data-[state=checked]:border-primary/50 relative flex w-full max-w-50 flex-col items-center gap-3 rounded-md border p-4 shadow-xs outline-none'>\n        <RadioGroupItem\n          value='1'\n          id={`${id}-1`}\n          className='order-1 size-5 after:absolute after:inset-0 [&_svg]:size-3'\n          aria-describedby={`${id}-1-description`}\n          aria-label='plan-radio-basic'\n        />\n        <div className='grid grow justify-items-center gap-2'>\n          <UserIcon />\n          <Label htmlFor={`${id}-1`} className='justify-center'>\n            Basic\n          </Label>\n          <p id={`${id}-1-description`} className='text-muted-foreground text-center text-xs'>\n            Get 1 project with 1 teams members.\n          </p>\n        </div>\n      </div>\n      <div className='border-input has-data-[state=checked]:border-primary/50 relative flex w-full max-w-50 flex-col items-center gap-3 rounded-md border p-4 shadow-xs outline-none'>\n        <RadioGroupItem\n          value='2'\n          id={`${id}-2`}\n          className='order-1 size-5 after:absolute after:inset-0 [&_svg]:size-3'\n          aria-describedby={`${id}-2-description`}\n          aria-label='plan-radio-premium'\n        />\n        <div className='grid grow justify-items-center gap-2'>\n          <CrownIcon />\n          <Label htmlFor={`${id}-2`} className='justify-center'>\n            Premium\n          </Label>\n          <p id={`${id}-2-description`} className='text-muted-foreground text-center text-xs'>\n            Get 5 projects with 5 team members.\n          </p>\n        </div>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupCardVerticalRadioDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/radio-group/radio-group-13.tsx"
+    }
+  ]
+}

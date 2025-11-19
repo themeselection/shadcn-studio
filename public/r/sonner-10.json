@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-10",
+  "type": "registry:component",
+  "title": "Sonner 10",
+  "description": "A soft-styled success toast notification with green color theming for positive feedback",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-10.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SoftSuccessSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.success('Action completed successfully!', {\n          style: {\n            '--normal-bg':\n              'color-mix(in oklab, light-dark(var(--color-green-600), var(--color-green-400)) 10%, var(--background))',\n            '--normal-text': 'light-dark(var(--color-green-600), var(--color-green-400))',\n            '--normal-border': 'light-dark(var(--color-green-600), var(--color-green-400))'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Soft Success Toast\n    </Button>\n  )\n}\n\nexport default SoftSuccessSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-10.tsx"
+    }
+  ]
+}

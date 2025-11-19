@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-22",
+  "type": "registry:component",
+  "title": "Select 22",
+  "description": "A custom select dropdown with multiple option groups",
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-22.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst SelectWithOptionsGroupsDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with options groups</Label>\n      <Select defaultValue='7'>\n        <SelectTrigger id={id} className='w-full'>\n          <SelectValue placeholder='Select framework' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectLabel>North America</SelectLabel>\n            <SelectItem value='1'>United States</SelectItem>\n            <SelectItem value='2'>Canada</SelectItem>\n            <SelectItem value='3'>Mexico</SelectItem>\n          </SelectGroup>\n          <SelectGroup>\n            <SelectLabel>Europe</SelectLabel>\n            <SelectItem value='4'>United Kingdom</SelectItem>\n            <SelectItem value='5'>Germany</SelectItem>\n            <SelectItem value='6'>France</SelectItem>\n          </SelectGroup>\n          <SelectGroup>\n            <SelectLabel>Asia</SelectLabel>\n            <SelectItem value='7'>India</SelectItem>\n            <SelectItem value='8'>Japan</SelectItem>\n            <SelectItem value='9'>China</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectWithOptionsGroupsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-22.tsx"
+    }
+  ]
+}

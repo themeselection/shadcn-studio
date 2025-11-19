@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-28",
+  "type": "registry:component",
+  "title": "Tabs 28",
+  "description": "Expandable tabs with icons and collapsible content using framer motion animations",
+  "dependencies": [
+    "lucide-react",
+    "motion"
+  ],
+  "registryDependencies": [
+    "tabs",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tabs/tabs-28.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { motion, AnimatePresence } from 'motion/react'\nimport { BookIcon, GiftIcon, HeartIcon } from 'lucide-react'\n\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nimport { cn } from '@/lib/utils'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    icon: BookIcon,\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    icon: HeartIcon,\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise Me',\n    value: 'surprise',\n    icon: GiftIcon,\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst ExpandableTabsDemo = () => {\n  const [activeTab, setActiveTab] = useState('explore')\n\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs value={activeTab} onValueChange={setActiveTab} className='gap-4'>\n        <TabsList className='h-auto gap-2 rounded-xl p-1'>\n          {tabs.map(({ icon: Icon, name, value }) => {\n            const isActive = activeTab === value\n\n            return (\n              <motion.div\n                key={value}\n                layout\n                className={cn(\n                  'flex h-8 items-center justify-center overflow-hidden rounded-md',\n                  isActive ? 'flex-1' : 'flex-none'\n                )}\n                onClick={() => setActiveTab(value)}\n                initial={false}\n                animate={{\n                  width: isActive ? 120 : 32\n                }}\n                transition={{\n                  type: 'tween',\n                  stiffness: 400,\n                  damping: 25\n                }}\n              >\n                <TabsTrigger value={value} asChild>\n                  <motion.div\n                    className='flex h-8 w-full items-center justify-center'\n                    animate={{ filter: 'blur(0px)' }}\n                    exit={{ filter: 'blur(2px)' }}\n                    transition={{ duration: 0.25, ease: 'easeOut' }}\n                  >\n                    <Icon className='aspect-square size-4 shrink-0' />\n                    <AnimatePresence initial={false}>\n                      {isActive && (\n                        <motion.span\n                          className='font-medium max-sm:hidden'\n                          initial={{ opacity: 0, scaleX: 0.8 }}\n                          animate={{ opacity: 1, scaleX: 1 }}\n                          transition={{ duration: 0.25, ease: 'easeOut' }}\n                          style={{ originX: 0 }}\n                        >\n                          {name}\n                        </motion.span>\n                      )}\n                    </AnimatePresence>\n                  </motion.div>\n                </TabsTrigger>\n              </motion.div>\n            )\n          })}\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default ExpandableTabsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tabs/tabs-28.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

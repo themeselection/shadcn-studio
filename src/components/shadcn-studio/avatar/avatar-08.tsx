@@ -9,7 +9,7 @@ const AvatarStatusRingDemo = () => {
         <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />
         <AvatarFallback className='text-xs'>HR</AvatarFallback>
       </Avatar>
-      <span className='absolute -end-1.5 -bottom-1.5 inline-flex size-4 items-center justify-center rounded-full bg-green-600 dark:bg-green-400'>
+      <span className='absolute -right-1.5 -bottom-1.5 inline-flex size-4 items-center justify-center rounded-full bg-green-600 dark:bg-green-400'>
         <CheckIcon className='size-3 text-white' />
       </span>
     </div>

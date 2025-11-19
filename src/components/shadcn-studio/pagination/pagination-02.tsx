@@ -8,7 +8,7 @@ const PaginationWithIconDemo = () => {
       <PaginationContent>
         <PaginationItem>
           <PaginationLink href='#' aria-label='Go to previous page' size='icon'>
-            <ChevronLeftIcon className='h-4 w-4' />
+            <ChevronLeftIcon className='size-4' />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
@@ -24,7 +24,7 @@ const PaginationWithIconDemo = () => {
         </PaginationItem>
         <PaginationItem>
           <PaginationLink href='#' aria-label='Go to next page' size='icon'>
-            <ChevronRightIcon className='h-4 w-4' />
+            <ChevronRightIcon className='size-4' />
           </PaginationLink>
         </PaginationItem>
       </PaginationContent>

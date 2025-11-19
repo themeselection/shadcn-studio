@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-07",
+  "type": "registry:component",
+  "title": "Form 7",
+  "description": "Form with select dropdown components for option selection",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "form",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-07.tsx",
+      "content": "'use client'\n\nimport { CheckCheckIcon } from 'lucide-react'\n\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectFormDemo = () => {\n  const FormSchema = z.object({\n    email: z\n      .string({\n        required_error: 'Please select an email.'\n      })\n      .email()\n  })\n\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema)\n  })\n\n  function onSubmit() {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 sm:w-110 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>Your account has been recovered</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-xs space-y-6'>\n        <FormField\n          control={form.control}\n          name='email'\n          render={({ field }) => (\n            <FormItem>\n              <FormLabel>Email</FormLabel>\n              <Select onValueChange={field.onChange} defaultValue={field.value}>\n                <FormControl>\n                  <SelectTrigger className='w-full'>\n                    <SelectValue placeholder='Enter your registered email' />\n                  </SelectTrigger>\n                </FormControl>\n                <SelectContent>\n                  <SelectItem value='m@example.com'>user1@gmail.com</SelectItem>\n                  <SelectItem value='m@google.com'>user007@gmail.com</SelectItem>\n                  <SelectItem value='m@support.com'>user69@outlook.com</SelectItem>\n                </SelectContent>\n              </Select>\n              <FormDescription>Recover Your Account</FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n        <Button type='submit'>Recover</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default SelectFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-07.tsx"
+    }
+  ]
+}

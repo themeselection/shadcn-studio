@@ -1,4 +1,4 @@
-import { CircleHelp, DollarSign, Receipt, Settings, User } from 'lucide-react'
+import { CircleHelpIcon, DollarSignIcon, ReceiptIcon, SettingsIcon, UserIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -20,23 +20,23 @@ const DropdownMenuItemIconDemo = () => {
         <DropdownMenuLabel>User Profile</DropdownMenuLabel>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <User />
+            <UserIcon />
             Profile
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Settings />
+            <SettingsIcon />
             Settings
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Receipt />
+            <ReceiptIcon />
             Billing Plans
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <DollarSign />
+            <DollarSignIcon />
             Pricing
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <CircleHelp />
+            <CircleHelpIcon />
             FAQ
           </DropdownMenuItem>
         </DropdownMenuGroup>

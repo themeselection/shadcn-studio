@@ -13,11 +13,11 @@ const InputEndInlineButtonDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Input with end inline button</Label>
       <div className='relative'>
-        <Input id={id} type='email' placeholder='Email address' className='pe-9' />
+        <Input id={id} type='email' placeholder='Email address' className='pr-9' />
         <Button
           variant='ghost'
           size='icon'
-          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 end-0 rounded-s-none hover:bg-transparent'
+          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'
         >
           <SendHorizonalIcon />
           <span className='sr-only'>Subscribe</span>

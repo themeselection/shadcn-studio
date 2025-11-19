@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-01",
+  "type": "registry:block",
+  "title": "Portfolio 1",
+  "description": "Portfolio showcase with masonry grid layout featuring project details, client information, and social media links",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/portfolio/portfolio-01/page.tsx",
+      "content": "import Portfolio from '@/components/shadcn-studio/blocks/portfolio-01/portfolio-01'\n\nconst images: string[] = [\n  'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/portfolio/image-37.png',\n  'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/portfolio/image-36.png',\n  'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/portfolio/image-35.png',\n  'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/portfolio/image-34.png',\n  'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/portfolio/image-33.png',\n  'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/portfolio/image-32.png'\n]\n\nconst PortfolioPage = () => {\n  return <Portfolio images={images} />\n}\n\nexport default PortfolioPage\n",
+      "type": "registry:page",
+      "target": "app/portfolio-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/portfolio-01/portfolio-01.tsx",
+      "content": "import { FacebookIcon, GithubIcon, InstagramIcon, TwitterIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Separator } from '@/components/ui/separator'\n\nconst Portfolio = ({ images }: { images: string[] }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl space-y-12 px-4 sm:space-y-16 sm:px-6 lg:space-y-24 lg:px-8'>\n        {/* Section Header */}\n        <div className='space-y-4'>\n          <Badge variant='outline' className='text-sm font-normal'>\n            Our portfolio\n          </Badge>\n\n          <h2 className='text-2xl font-semibold sm:text-3xl lg:text-4xl'>Our Impactful Creations</h2>\n\n          <p className='text-muted-foreground text-xl'>\n            A glimpse into our work, showcasing the power of design, technology, and strategic thinking.\n          </p>\n        </div>\n\n        {/* Portfolio Content */}\n        <div className='grid gap-6 lg:grid-cols-3'>\n          {/* Left Section */}\n          <div className='columns-1 gap-6 sm:col-span-2 sm:columns-2'>\n            {images.map((image, index) => (\n              <div key={index} className='mb-6 break-inside-avoid-column overflow-hidden rounded-xl'>\n                <img src={image} alt={`Portfolio Image ${index + 1}`} className='w-full object-cover' />\n              </div>\n            ))}\n          </div>\n\n          {/* Right Section */}\n          <div className='space-y-6 px-6'>\n            <h3 className='text-3xl font-medium'>AI Innovations</h3>\n\n            <p className='text-muted-foreground'>\n              Explore cutting-edge AI solutions that enhance productivity and streamline workflows across various\n              industries.Our technologies empower businesses to automate repetitive tasks, allowing teams to focus on\n              strategic initiatives.\n              <br />\n              Join us in transforming the future of work with intelligent systems that adapt to your unique needs.\n            </p>\n\n            <Separator />\n\n            <ul className='space-y-4'>\n              <li className='flex items-center gap-8'>\n                <span className='w-21 text-lg font-medium'>Client:</span>\n                <span className='text-muted-foreground'>AI Innovations</span>\n              </li>\n              <li className='flex items-center gap-8'>\n                <span className='w-21 text-lg font-medium'>Services:</span>\n                <span className='text-muted-foreground'>Machine Learning</span>\n              </li>\n              <li className='flex items-center gap-8'>\n                <span className='w-21 text-lg font-medium'>Year:</span>\n                <span className='text-muted-foreground'>2024</span>\n              </li>\n            </ul>\n\n            <Separator />\n\n            <div className='flex items-center gap-8'>\n              <span className='w-21 text-lg font-medium'>Share:</span>\n              <div className='flex gap-2'>\n                <a href='#'>\n                  <FacebookIcon className='size-5.5 text-sky-600' />\n                </a>\n                <a href='#'>\n                  <InstagramIcon className='text-destructive size-5.5' />\n                </a>\n                <a href='#'>\n                  <GithubIcon className='text-primary size-5.5' />\n                </a>\n                <a href='#'>\n                  <TwitterIcon className='size-5.5 text-sky-600' />\n                </a>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default Portfolio\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/portfolio-01/portfolio-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "portfolio"
+  }
+}

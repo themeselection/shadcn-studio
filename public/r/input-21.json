@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-21",
+  "type": "registry:component",
+  "title": "Input 21",
+  "description": "A URL input field with both external \"https://\" and \".com\" add-on boxes",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-21.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputAddOnsDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with add-ons</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <span className='border-input bg-background text-muted-foreground -z-1 inline-flex items-center rounded-l-md border px-3 text-sm'>\n          https://\n        </span>\n        <Input id={id} type='text' placeholder='shadcnstudio' className='-mx-px rounded-none shadow-none' />\n        <span className='border-input bg-background text-muted-foreground -z-1 inline-flex items-center rounded-r-md border px-3 text-sm'>\n          .com\n        </span>\n      </div>\n    </div>\n  )\n}\n\nexport default InputAddOnsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-21.tsx"
+    }
+  ]
+}

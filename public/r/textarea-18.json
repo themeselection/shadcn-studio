@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-18",
+  "type": "registry:component",
+  "title": "Textarea 18",
+  "description": "A textarea with disabled resize functionality for fixed dimensions",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-18.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaNoResizeDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>No resize textarea</Label>\n      <Textarea id={id} placeholder='Type your feedback here' className='[resize:none]' />\n    </div>\n  )\n}\n\nexport default TextareaNoResizeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-18.tsx"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-38",
+  "type": "registry:component",
+  "title": "Button 38",
+  "description": "Notification icon button with animated blue dot indicator",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-38.tsx",
+      "content": "import { BellIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst IconButtonNotificationDotDemo = () => {\n  return (\n    <Button variant='outline' size='icon' className='relative'>\n      <BellIcon />\n      <span className='absolute -top-0.5 -right-0.5 size-2 animate-bounce rounded-full bg-sky-600 dark:bg-sky-400' />\n      <span className='sr-only'>Notifications</span>\n    </Button>\n  )\n}\n\nexport default IconButtonNotificationDotDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-38.tsx"
+    }
+  ]
+}

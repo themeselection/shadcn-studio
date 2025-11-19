@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-05",
+  "type": "registry:component",
+  "title": "Pagination 5",
+  "description": "A bordered pagination component with dividers and connected button styling",
+  "registryDependencies": [
+    "button",
+    "pagination",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-05.tsx",
+      "content": "import { buttonVariants } from '@/components/ui/button'\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nimport { cn } from '@/lib/utils'\n\nconst pages = [1, 2, 3]\n\nconst BorderedPaginationDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent className='gap-0 divide-x overflow-hidden rounded-lg border'>\n        <PaginationItem>\n          <PaginationPrevious href='#' className='rounded-none' />\n        </PaginationItem>\n        {pages.map(page => {\n          const isActive = page === 2\n\n          return (\n            <PaginationItem key={page}>\n              <PaginationLink\n                href={`#${page}`}\n                className={cn(\n                  {\n                    [buttonVariants({\n                      variant: 'default',\n                      className:\n                        'hover:!text-primary-foreground dark:bg-primary dark:text-primary-foreground dark:hover:text-primary-foreground dark:hover:bg-primary/90 dark:border-transparent'\n                    })]: isActive\n                  },\n                  'rounded-none border-none'\n                )}\n                isActive={isActive}\n              >\n                {page}\n              </PaginationLink>\n            </PaginationItem>\n          )\n        })}\n        <PaginationItem>\n          <PaginationNext href='#' className='rounded-none' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default BorderedPaginationDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-05.tsx"
+    }
+  ]
+}

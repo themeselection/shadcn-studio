@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-06",
+  "type": "registry:component",
+  "title": "Collapsible 6",
+  "description": "Simple text content collapsible with expandable paragraph sections",
+  "registryDependencies": [
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/collapsible/collapsible-06.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'\n\nconst CollapsibleShowMoreDemo = () => {\n  const [isTrackOrderOpen, setIsTrackOrderOpen] = useState(true)\n  const [isCancelOrderOpen, setIsCancelOrderOpen] = useState(false)\n\n  return (\n    <div className='w-full space-y-4'>\n      <div className='space-y-2'>\n        <p className='font-medium'>How can I track my order?</p>\n        <Collapsible open={isTrackOrderOpen} onOpenChange={setIsTrackOrderOpen} className='space-y-2'>\n          <CollapsibleContent>\n            <p className='text-sm'>\n              To track your order, simply log in to your account and navigate to the order history section. You&apos;ll\n              find detailed information about your order status and tracking number there.\n            </p>\n          </CollapsibleContent>\n          <CollapsibleTrigger>\n            <span className='text-muted-foreground text-sm underline'>\n              {isTrackOrderOpen ? 'Hide answer' : 'Show answer'}\n            </span>\n          </CollapsibleTrigger>\n        </Collapsible>\n      </div>\n      <div className='space-y-2'>\n        <p className='font-medium'>Can I cancel my order?</p>\n        <Collapsible open={isCancelOrderOpen} onOpenChange={setIsCancelOrderOpen} className='space-y-2'>\n          <CollapsibleContent>\n            <p className='text-sm'>\n              Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.\n            </p>\n          </CollapsibleContent>\n          <CollapsibleTrigger>\n            <span className='text-muted-foreground text-sm underline'>\n              {isCancelOrderOpen ? 'Hide answer' : 'Show answer'}\n            </span>\n          </CollapsibleTrigger>\n        </Collapsible>\n      </div>\n    </div>\n  )\n}\n\nexport default CollapsibleShowMoreDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/collapsible/collapsible-06.tsx"
+    }
+  ]
+}

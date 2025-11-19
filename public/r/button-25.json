@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-25",
+  "type": "registry:component",
+  "title": "Button 25",
+  "description": "Notifications button with bell icon and red notification badge counter",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-25.tsx",
+      "content": "import { BellIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\n\nconst ButtonNotificationsBadgeDemo = () => {\n  return (\n    <Button variant='outline' className='relative'>\n      <BellIcon />\n      Notifications\n      <Badge variant='destructive' className='absolute -top-2.5 -right-2.5 h-5 min-w-5 px-1 tabular-nums'>\n        8\n      </Badge>\n    </Button>\n  )\n}\n\nexport default ButtonNotificationsBadgeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-25.tsx"
+    }
+  ]
+}

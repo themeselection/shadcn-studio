@@ -8,7 +8,7 @@ const CardTestimonialDemo = () => {
     <Card className='max-w-md border-none'>
       <CardContent>
         <p>
-          Incredible time-saver! FlyonUI has made UI development a breeze. The pre build components are not only{' '}
+          Incredible time-saver! shadcn/studio has made UI development a breeze. The pre build components are not only{' '}
           <span className='bg-primary/10'>visually appealing but also highly customizable</span>, fitting seamlessly
           into my projects. With a wide array of options to choose from, I can easily match.
         </p>

@@ -16,14 +16,14 @@ const InputWithEndButtonsDemo = () => {
           slot='decrement'
           className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground -me-px flex aspect-square h-[inherit] items-center justify-center border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
         >
-          <MinusIcon className='size-4' />
+          <MinusIcon />
           <span className='sr-only'>Decrement</span>
         </Button>
         <Button
           slot='increment'
-          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground -me-px flex aspect-square h-[inherit] items-center justify-center rounded-e-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
+          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground -me-px flex aspect-square h-[inherit] items-center justify-center rounded-r-md border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
         >
-          <PlusIcon className='size-4' />
+          <PlusIcon />
           <span className='sr-only'>Increment</span>
         </Button>
       </Group>

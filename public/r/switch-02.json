@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-02",
+  "type": "registry:component",
+  "title": "Switch 2",
+  "description": "A square-styled switch with rounded corners for alternative visual design",
+  "registryDependencies": [
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-02.tsx",
+      "content": "import { Switch } from '@/components/ui/switch'\n\nconst SwitchSquareDemo = () => {\n  return <Switch aria-label='Square switch' className='rounded-xs [&_span]:rounded-xs' />\n}\n\nexport default SwitchSquareDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-02.tsx"
+    }
+  ]
+}

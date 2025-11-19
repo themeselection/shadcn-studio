@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-03",
+  "type": "registry:component",
+  "title": "Dropdown Menu 3",
+  "description": "Chat list dropdown with avatars, message previews, and notification badges",
+  "registryDependencies": [
+    "avatar",
+    "badge",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-03.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst listItems = [\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png',\n    fallback: 'PG',\n    name: 'Phillip George',\n    message: 'Hii samira, thanks for the...',\n    time: '9:00AM',\n    newMessages: 1\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-2.png',\n    fallback: 'JD',\n    name: 'Jaylon Donin',\n    message: \"I'll send the texts and...\",\n    time: '10:00PM',\n    newMessages: 3\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'TC',\n    name: 'Tiana Curtis',\n    message: \"That's Great!\",\n    time: '8:30AM',\n    newMessages: null\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-4.png',\n    fallback: 'ZV',\n    name: 'Zaire Vetrovs',\n    message: 'https://www.youtub...',\n    time: '5:50AM',\n    newMessages: 2\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    fallback: 'KP',\n    name: 'Kianna Philips',\n    message: 'Okay, It was awesome.',\n    time: '6.45PM',\n    newMessages: null\n  }\n]\n\nconst DropdownMenuItemAvatarDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Menu item with avatar</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-91'>\n        <DropdownMenuLabel>Chat List</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          {listItems.map((item, index) => (\n            <DropdownMenuItem key={index} className='justify-between'>\n              <Avatar>\n                <AvatarImage src={item.src} alt={item.name} />\n                <AvatarFallback className='text-xs'>{item.fallback}</AvatarFallback>\n              </Avatar>\n              <div className='flex flex-1 flex-col'>\n                <span className='text-popover-foreground'>{item.name}</span>\n                <span className='text-muted-foreground text-xs'>{item.message}</span>\n              </div>\n              {item.newMessages ? (\n                <div className='flex flex-col items-end gap-1'>\n                  <span className='text-muted-foreground text-xs'>{item.time}</span>\n                  <Badge className='h-5 min-w-5 bg-green-600 px-1 dark:bg-green-400'>{item.newMessages}</Badge>\n                </div>\n              ) : (\n                <span className='text-muted-foreground text-xs'>{item.time}</span>\n              )}\n            </DropdownMenuItem>\n          ))}\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuItemAvatarDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-03.tsx"
+    }
+  ]
+}

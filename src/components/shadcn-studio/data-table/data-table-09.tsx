@@ -129,7 +129,7 @@ const columns: ColumnDef<Team>[] = [
       return row.getCanExpand() ? (
         <Button
           {...{
-            className: 'size-7 shadow-none text-muted-foreground',
+            className: 'size-7 text-muted-foreground',
             onClick: row.getToggleExpandedHandler(),
             'aria-expanded': row.getIsExpanded(),
             'aria-label': row.getIsExpanded()
@@ -140,9 +140,9 @@ const columns: ColumnDef<Team>[] = [
           }}
         >
           {row.getIsExpanded() ? (
-            <ChevronUpIcon className='opacity-60' size={16} aria-hidden='true' />
+            <ChevronUpIcon className='opacity-60' aria-hidden='true' />
           ) : (
-            <ChevronDownIcon className='opacity-60' size={16} aria-hidden='true' />
+            <ChevronDownIcon className='opacity-60' aria-hidden='true' />
           )}
         </Button>
       ) : undefined

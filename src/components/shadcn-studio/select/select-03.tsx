@@ -12,7 +12,7 @@ const NativeSelectWithIconDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Native select with icon</Label>
       <div className='group relative'>
-        <SelectNative id={id} className='ps-9' defaultValue=''>
+        <SelectNative id={id} className='pl-9' defaultValue=''>
           <option value='' disabled>
             Pick your favorite movie
           </option>
@@ -21,7 +21,7 @@ const NativeSelectWithIconDemo = () => {
           <option value='3'>The Dark Knight</option>
           <option value='4'>Inception</option>
         </SelectNative>
-        <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50'>
+        <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 group-has-[select[disabled]]:opacity-50'>
           <FilmIcon size={16} aria-hidden='true' />
         </div>
       </div>

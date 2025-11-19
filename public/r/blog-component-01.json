@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-component-01",
+  "type": "registry:block",
+  "title": "Blog 1",
+  "description": "Three-column blog grid with featured images, titles, descriptions, and read more buttons for journey and destination content",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/blog-component/blog-component-01/page.tsx",
+      "content": "import Blog from '@/components/shadcn-studio/blocks/blog-component-01/blog-component-01'\n\nconst blogCards = [\n  {\n    img: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/blog/image-1.png',\n    alt: 'Modern house',\n    title: 'Laws of Transfer of Immovable Property',\n    description:\n      'Experience the charm of this lovely and cozy apartment, featuring warm decor and inviting spaces, perfect for relaxation and comfort, ideal for your next getaway.',\n    blogLink: '#'\n  },\n  {\n    img: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/blog/image-2.png',\n    alt: 'Traditional house',\n    title: 'Thane Development Plan 2026 & Master Plan',\n    description:\n      'Discover a unique nook in the heart of the city, offering convenience and access to attractions. Stylishly designed, it provides a comfortable retreat.',\n    blogLink: '#'\n  },\n  {\n    img: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/blog/image-3.png',\n    alt: 'Modern house with pool',\n    title: 'What is a Property Sale Agreement?',\n    description:\n      'Welcome to this charming independent house bedroom, featuring a spacious layout and cozy furnishings. Enjoy abundant natural light and peaceful.',\n    blogLink: '#'\n  }\n]\n\nconst BlogPage = () => {\n  return <Blog blogCards={blogCards} />\n}\n\nexport default BlogPage\n",
+      "type": "registry:page",
+      "target": "app/blog-component-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/blog-component-01/blog-component-01.tsx",
+      "content": "import { ArrowRightIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Card, CardContent, CardTitle, CardDescription, CardHeader, CardFooter } from '@/components/ui/card'\n\ntype BlogCard = {\n  img: string\n  alt: string\n  title: string\n  description: string\n  blogLink: string\n}[]\n\nconst Blog = ({ blogCards }: { blogCards: BlogCard }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* Header */}\n        <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>\n          <p className='text-primary text-sm font-medium uppercase'>Blog list</p>\n          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Plan your upcoming journey.</h2>\n          <p className='text-muted-foreground text-xl'>\n            Explore new destinations, indulge in local cuisines, and immerse yourself in diverse cultures.\n          </p>\n        </div>\n\n        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>\n          {blogCards.map((item, index) => (\n            <Card className='pt-0 shadow-none max-lg:last:col-span-full' key={index}>\n              <CardContent className='px-0'>\n                <img src={item.img} alt={item.alt} className='aspect-video h-60 w-full rounded-t-xl object-cover' />\n              </CardContent>\n              <CardHeader className='mb-2 gap-3'>\n                <CardTitle className='text-xl'>\n                  <a href={item.blogLink}>{item.title}</a>\n                </CardTitle>\n                <CardDescription className='text-base'>{item.description}</CardDescription>\n              </CardHeader>\n              <CardFooter>\n                <Button className='group rounded-lg text-base has-[>svg]:px-6' size='lg' asChild>\n                  <a href={item.blogLink}>\n                    Read More\n                    <ArrowRightIcon className='transition-transform duration-200 group-hover:translate-x-0.5' />\n                  </a>\n                </Button>\n              </CardFooter>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default Blog\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/blog-component-01/blog-component-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "blog-component"
+  }
+}

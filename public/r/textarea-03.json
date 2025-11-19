@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-03",
+  "type": "registry:component",
+  "title": "Textarea 3",
+  "description": "A textarea with helper text below for additional context",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-03.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaWithHelperTextDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Textarea with helper text</Label>\n      <Textarea placeholder='Type your feedback here' id={id} />\n      <p className='text-muted-foreground text-xs'>Your feedback is useful for us.</p>\n    </div>\n  )\n}\n\nexport default TextareaWithHelperTextDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-03.tsx"
+    }
+  ]
+}

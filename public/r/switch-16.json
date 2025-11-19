@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-16",
+  "type": "registry:component",
+  "title": "Switch 16",
+  "description": "A switch card with Google Cloud icon for backup service toggle functionality",
+  "registryDependencies": [
+    "label",
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-16.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Switch } from '@/components/ui/switch'\n\nconst SwitchCardDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none'>\n      <Switch\n        id={id}\n        className='order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2.5 data-[state=checked]:[&_span]:rtl:-translate-x-2.5'\n        aria-describedby={`${id}-description`}\n      />\n      <div className='flex grow gap-3'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/google-icon.png?width=20&height=20&format=auto'\n          alt='Google Icon'\n          className='size-5'\n        />\n        <div className='grid grow gap-2'>\n          <Label htmlFor={id}>Google Cloud Backup</Label>\n          <p id={`${id}-description`} className='text-muted-foreground text-xs'>\n            Backup every picture, video and PDFs.\n          </p>\n        </div>\n      </div>\n    </div>\n  )\n}\n\nexport default SwitchCardDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-16.tsx"
+    }
+  ]
+}

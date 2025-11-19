@@ -1,0 +1,53 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-section-01",
+  "type": "registry:block",
+  "title": "Hero 1",
+  "description": "Centered vertical layout hero with navigation header, AI-powered badge in muted container, decorative SVG underline animation on \"Effortless\" text, call-to-action button, and full-width bottom dish image showcase",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "dropdown-menu",
+    "navigation-menu",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/hero-section/hero-section-01/page.tsx",
+      "content": "import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-section-01'\nimport Header from '@/components/shadcn-studio/blocks/hero-section-01/header'\nimport type { NavigationSection } from '@/components/shadcn-studio/blocks/hero-section-01/header'\n\nconst navigationData: NavigationSection[] = [\n  {\n    title: 'Home',\n    href: '#'\n  },\n  {\n    title: 'Products',\n    href: '#'\n  },\n  {\n    title: 'About Us',\n    href: '#'\n  },\n  {\n    title: 'Contacts',\n    href: '#'\n  }\n]\n\nconst HeroSectionPage = () => {\n  return (\n    <div className='relative'>\n      {/* Header Section */}\n      <Header navigationData={navigationData} />\n\n      {/* Main Content */}\n      <main className='flex flex-col'>\n        <HeroSection />\n      </main>\n    </div>\n  )\n}\n\nexport default HeroSectionPage\n",
+      "type": "registry:page",
+      "target": "app/hero-section-01/page.tsx"
+    },
+    {
+      "path": "src/assets/svg/logo.tsx",
+      "content": "// React Imports\nimport type { SVGAttributes } from 'react'\n\nconst Logo = (props: SVGAttributes<SVGElement>) => {\n  return (\n    <svg width='1em' height='1em' viewBox='0 0 328 329' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>\n      <rect y='0.5' width='328' height='328' rx='164' fill='black' className='dark:fill-white' />\n      <path\n        d='M165.018 72.3008V132.771C165.018 152.653 148.9 168.771 129.018 168.771H70.2288'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <path\n        d='M166.627 265.241L166.627 204.771C166.627 184.889 182.744 168.771 202.627 168.771L261.416 168.771'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='238.136'\n        y1='98.8184'\n        x2='196.76'\n        y2='139.707'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='135.688'\n        y1='200.957'\n        x2='94.3128'\n        y2='241.845'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='133.689'\n        y1='137.524'\n        x2='92.5566'\n        y2='96.3914'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='237.679'\n        y1='241.803'\n        x2='196.547'\n        y2='200.671'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n    </svg>\n  )\n}\n\nexport default Logo\n",
+      "type": "registry:component",
+      "target": "assets/svg/logo.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/hero-section-01/header.tsx",
+      "content": "import { MenuIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'\nimport {\n  NavigationMenu,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList\n} from '@/components/ui/navigation-menu'\n\nimport { cn } from '@/lib/utils'\n\nimport Logo from '@/components/layout/logo'\n\nexport type NavigationSection = {\n  title: string\n  href: string\n}\n\ntype HeaderProps = {\n  navigationData: NavigationSection[]\n  className?: string\n}\n\nconst Header = ({ navigationData, className }: HeaderProps) => {\n  return (\n    <header className={cn('bg-background sticky top-0 z-50 h-16 border-b', className)}>\n      <div className='mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8'>\n        {/* Logo */}\n        <a href='#'>\n          <Logo className='gap-3' />\n        </a>\n\n        {/* Navigation */}\n        <NavigationMenu className='max-md:hidden'>\n          <NavigationMenuList className='flex-wrap justify-start gap-0'>\n            {navigationData.map(navItem => (\n              <NavigationMenuItem key={navItem.title}>\n                <NavigationMenuLink\n                  href={navItem.href}\n                  className='text-muted-foreground hover:text-primary px-3 py-1.5 text-base! font-medium hover:bg-transparent'\n                >\n                  {navItem.title}\n                </NavigationMenuLink>\n              </NavigationMenuItem>\n            ))}\n          </NavigationMenuList>\n        </NavigationMenu>\n\n        {/* Login Button */}\n        <Button className='rounded-lg max-md:hidden' asChild>\n          <a href='#'>Login</a>\n        </Button>\n\n        {/* Navigation for small screens */}\n        <div className='flex gap-4 md:hidden'>\n          <Button className='rounded-lg' asChild>\n            <a href='#'>Login</a>\n          </Button>\n\n          <DropdownMenu>\n            <DropdownMenuTrigger asChild>\n              <Button variant='outline' size='icon'>\n                <MenuIcon />\n                <span className='sr-only'>Menu</span>\n              </Button>\n            </DropdownMenuTrigger>\n            <DropdownMenuContent className='w-56' align='end'>\n              {navigationData.map((item, index) => (\n                <DropdownMenuItem key={index}>\n                  <a href={item.href}>{item.title}</a>\n                </DropdownMenuItem>\n              ))}\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </div>\n      </div>\n    </header>\n  )\n}\n\nexport default Header\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/hero-section-01/header.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/hero-section-01/hero-section-01.tsx",
+      "content": "import { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\n\nconst HeroSection = () => {\n  return (\n    <section className='flex min-h-[calc(100dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-16 lg:gap-24 lg:pt-24'>\n      {/* Hero Content */}\n      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8'>\n        <div className='bg-muted flex items-center gap-2.5 rounded-full border px-3 py-2'>\n          <Badge>AI-Powered</Badge>\n          <span className='text-muted-foreground'>Solution for client-facing businesses</span>\n        </div>\n\n        <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>\n          Sizzling Summer Delights\n          <br />\n          <span className='relative'>\n            Effortless\n            <svg\n              width='223'\n              height='12'\n              viewBox='0 0 223 12'\n              fill='none'\n              xmlns='http://www.w3.org/2000/svg'\n              className='absolute inset-x-0 bottom-0 w-full translate-y-1/2 max-sm:hidden'\n            >\n              <path\n                d='M1.11716 10.428C39.7835 4.97282 75.9074 2.70494 114.894 1.98894C143.706 1.45983 175.684 0.313587 204.212 3.31596C209.925 3.60546 215.144 4.59884 221.535 5.74551'\n                stroke='url(#paint0_linear_10365_68643)'\n                strokeWidth='2'\n                strokeLinecap='round'\n              />\n              <defs>\n                <linearGradient\n                  id='paint0_linear_10365_68643'\n                  x1='18.8541'\n                  y1='3.72033'\n                  x2='42.6487'\n                  y2='66.6308'\n                  gradientUnits='userSpaceOnUse'\n                >\n                  <stop stopColor='var(--primary)' />\n                  <stop offset='1' stopColor='var(--primary-foreground)' />\n                </linearGradient>\n              </defs>\n            </svg>\n          </span>{' '}\n          Recipes for Parties!\n        </h1>\n\n        <p className='text-muted-foreground'>\n          Dive into a world of flavor this summer with our collection of Sizzling Summer Delights!\n          <br />\n          From refreshing appetizers to delightful desserts\n        </p>\n\n        <Button size='lg' asChild>\n          <a href='#'>Try It Now</a>\n        </Button>\n      </div>\n\n      {/* Image */}\n      <img\n        src='https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/hero/image-19.png'\n        alt='Dishes'\n        className='min-h-67 w-full object-cover'\n      />\n    </section>\n  )\n}\n\nexport default HeroSection\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/hero-section-01/hero-section-01.tsx"
+    },
+    {
+      "path": "src/components/layout/logo.tsx",
+      "content": "// SVG Imports\nimport LogoSvg from '@/assets/svg/logo'\n\n// Util Imports\nimport { cn } from '@/lib/utils'\n\nconst Logo = ({ className }: { className?: string }) => {\n  return (\n    <div className={cn('flex items-center gap-2.5', className)}>\n      <LogoSvg className='size-8.5' />\n      <span className='text-xl font-semibold'>shadcn/studio</span>\n    </div>\n  )\n}\n\nexport default Logo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/logo.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "hero-section"
+  }
+}

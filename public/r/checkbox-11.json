@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-11",
+  "type": "registry:component",
+  "title": "Checkbox 11",
+  "description": "Custom icon checkboxes with heart, star, and circle icons for visual feedback",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-11.tsx",
+      "content": "import { HeartIcon, CircleIcon, StarIcon } from 'lucide-react'\n\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\n\nconst CheckboxCustomIconsDemo = () => {\n  return (\n    <div className='flex items-center gap-2'>\n      <CheckboxPrimitive.Root\n        data-slot='checkbox'\n        defaultChecked\n        className='group focus-visible:ring-ring/50 rounded-sm outline-none focus-visible:ring-3'\n        aria-label='Heart icon'\n      >\n        <span className='group-data-[state=checked]:hidden'>\n          <HeartIcon className='stroke-1' />\n        </span>\n        <span className='group-data-[state=unchecked]:hidden'>\n          <HeartIcon className='fill-destructive stroke-destructive stroke-1' />\n        </span>\n      </CheckboxPrimitive.Root>\n      <CheckboxPrimitive.Root\n        data-slot='checkbox'\n        defaultChecked\n        className='group focus-visible:ring-ring/50 rounded-sm outline-none focus-visible:ring-3'\n        aria-label='Star icon'\n      >\n        <span className='group-data-[state=checked]:hidden'>\n          <StarIcon className='stroke-1' />\n        </span>\n        <span className='group-data-[state=unchecked]:hidden'>\n          <StarIcon className='fill-amber-500 stroke-amber-500 stroke-1 dark:fill-amber-400 dark:stroke-amber-400' />\n        </span>\n      </CheckboxPrimitive.Root>\n      <CheckboxPrimitive.Root\n        data-slot='checkbox'\n        defaultChecked\n        className='group focus-visible:ring-ring/50 rounded-sm outline-none focus-visible:ring-3'\n        aria-label='Circle icon'\n      >\n        <span className='group-data-[state=checked]:hidden'>\n          <CircleIcon className='stroke-1' />\n        </span>\n        <span className='group-data-[state=unchecked]:hidden'>\n          <CircleIcon className='fill-green-600 stroke-green-600 stroke-1 dark:fill-green-400 dark:stroke-green-400' />\n        </span>\n      </CheckboxPrimitive.Root>\n    </div>\n  )\n}\n\nexport default CheckboxCustomIconsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-11.tsx"
+    }
+  ]
+}

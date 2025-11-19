@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-05",
+  "type": "registry:component",
+  "title": "Sonner 5",
+  "description": "A closable toast notification with user-controlled dismiss functionality",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-05.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst ClosableSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast('Action completed successfully!', {\n          closeButton: true\n        })\n      }\n    >\n      Closable Toast\n    </Button>\n  )\n}\n\nexport default ClosableSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-05.tsx"
+    }
+  ]
+}

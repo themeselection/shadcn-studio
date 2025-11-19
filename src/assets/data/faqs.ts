@@ -20,7 +20,7 @@ export const faqs = [
   {
     question: 'Can I save my custom theme?',
     answer:
-      'Yes, you may save your custom theme by clicking the "Hold to save theme" button. This will save the theme to your browser’s local storage, allowing you to apply it whenever needed.'
+      'Yes, you may save your custom theme by clicking the "Hold to save theme" button. This will save the theme to your browser\'s local storage, allowing you to apply it whenever needed.'
   },
   {
     question: 'Can I import/export theme?',
@@ -47,7 +47,7 @@ export const introFaqs = [
   {
     question: 'How can I use the customized components in my project?',
     answer:
-      'Explore the collection of components, blocks, themes, and template variants, copy-paste the code or install via the registry, then customize to fit your project’s needs.'
+      "Explore the collection of components, blocks, themes, and template variants, copy-paste the code or install via the registry, then customize to fit your project's needs."
   },
   {
     question: 'Is shadcn/studio free to use?',
@@ -70,7 +70,7 @@ export const introFaqs = [
   {
     question: 'Can I modify the shadcn/studio components, blocks, themes or template after copying/installing them?',
     answer:
-      'After copying the code or installing via the registry, you own it—freely customize the code to perfectly match your project’s needs with full flexibility.'
+      "After copying the code or installing via the registry, you own it—freely customize the code to perfectly match your project's needs with full flexibility."
   },
   {
     question: 'Can I use shadcn/studio with my existing shadcn/ui project?',

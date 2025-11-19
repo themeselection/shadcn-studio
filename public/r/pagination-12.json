@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-12",
+  "type": "registry:component",
+  "title": "Pagination 12",
+  "description": "A numberless pagination component with current page indicator text display",
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-12.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nconst NumberlessPaginationWithTextDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent className='w-full justify-between'>\n        <PaginationItem>\n          <PaginationPrevious href='#' className='border' />\n        </PaginationItem>\n        <PaginationItem>\n          <p className='text-muted-foreground text-sm' aria-live='polite'>\n            Page <span className='text-foreground'>2</span> of <span className='text-foreground'>5</span>\n          </p>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href='#' className='border' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default NumberlessPaginationWithTextDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-12.tsx"
+    }
+  ]
+}

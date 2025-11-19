@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-12",
+  "type": "registry:component",
+  "title": "Switch 12",
+  "description": "A switch with check and X icon indicators that change visibility based on toggle state",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-12.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { CheckIcon, XIcon } from 'lucide-react'\n\nimport { Switch } from '@/components/ui/switch'\n\nconst SwitchIconIndicatorDemo = () => {\n  const [checked, setChecked] = useState<boolean>(true)\n\n  return (\n    <div>\n      <div className='relative inline-grid h-7 grid-cols-[1fr_1fr] items-center text-sm font-medium'>\n        <Switch\n          checked={checked}\n          onCheckedChange={setChecked}\n          className='peer data-[state=checked]:bg-input/50 data-[state=unchecked]:bg-input/50 [&_span]:!bg-background absolute inset-0 h-[inherit] w-14 [&_span]:size-6.5 [&_span]:transition-transform [&_span]:duration-300 [&_span]:ease-[cubic-bezier(0.16,1,0.3,1)] [&_span]:data-[state=checked]:translate-x-7 [&_span]:data-[state=checked]:rtl:-translate-x-7'\n          aria-label='Switch with icon indicators'\n        />\n        <span className='peer-data-[state=checked]:text-muted-foreground/70 pointer-events-none relative ml-1.75 flex min-w-7 items-center text-center'>\n          <CheckIcon className='size-4' aria-hidden='true' />\n        </span>\n        <span className='peer-data-[state=unchecked]:text-muted-foreground/70 pointer-events-none relative -ms-0.25 flex min-w-7 items-center text-center'>\n          <XIcon className='size-4' aria-hidden='true' />\n        </span>\n      </div>\n    </div>\n  )\n}\n\nexport default SwitchIconIndicatorDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-12.tsx"
+    }
+  ]
+}

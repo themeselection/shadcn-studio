@@ -3,25 +3,55 @@ import type { SVGAttributes } from 'react'
 
 const Logo = (props: SVGAttributes<SVGElement>) => {
   return (
-    <svg width='1em' height='1em' viewBox='0 0 324 323' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
-      <rect x='0.5' width='323' height='323' rx='161.5' fill='black' />
-      <rect
-        x='88.1023'
-        y='144.792'
-        width='151.802'
-        height='36.5788'
-        rx='18.2894'
-        transform='rotate(-38.5799 88.1023 144.792)'
-        fill='white'
+    <svg width='1em' height='1em' viewBox='0 0 328 329' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+      <rect y='0.5' width='328' height='328' rx='164' fill='black' className='dark:fill-white' />
+      <path
+        d='M165.018 72.3008V132.771C165.018 152.653 148.9 168.771 129.018 168.771H70.2288'
+        stroke='white'
+        strokeWidth='20'
+        className='dark:stroke-black'
       />
-      <rect
-        x='85.3459'
-        y='244.537'
-        width='151.802'
-        height='36.5788'
-        rx='18.2894'
-        transform='rotate(-38.5799 85.3459 244.537)'
-        fill='white'
+      <path
+        d='M166.627 265.241L166.627 204.771C166.627 184.889 182.744 168.771 202.627 168.771L261.416 168.771'
+        stroke='white'
+        strokeWidth='20'
+        className='dark:stroke-black'
+      />
+      <line
+        x1='238.136'
+        y1='98.8184'
+        x2='196.76'
+        y2='139.707'
+        stroke='white'
+        strokeWidth='20'
+        className='dark:stroke-black'
+      />
+      <line
+        x1='135.688'
+        y1='200.957'
+        x2='94.3128'
+        y2='241.845'
+        stroke='white'
+        strokeWidth='20'
+        className='dark:stroke-black'
+      />
+      <line
+        x1='133.689'
+        y1='137.524'
+        x2='92.5566'
+        y2='96.3914'
+        stroke='white'
+        strokeWidth='20'
+        className='dark:stroke-black'
+      />
+      <line
+        x1='237.679'
+        y1='241.803'
+        x2='196.547'
+        y2='200.671'
+        stroke='white'
+        strokeWidth='20'
+        className='dark:stroke-black'
       />
     </svg>
   )

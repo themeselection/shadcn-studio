@@ -30,6 +30,14 @@ const NavMenu = () => {
         Docs
       </Link>
       <Link
+        href='/blocks'
+        className={cn('text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm', {
+          'text-primary hover:text-primary/80 font-medium': pathname.startsWith('/blocks')
+        })}
+      >
+        Blocks
+      </Link>
+      <Link
         href='/components'
         className={cn('text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm', {
           'text-primary hover:text-primary/80 font-medium': pathname.startsWith('/components')

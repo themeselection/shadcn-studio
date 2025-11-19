@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-06",
+  "type": "registry:component",
+  "title": "Form 6",
+  "description": "Form with textarea component for multi-line text input",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "form",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-06.tsx",
+      "content": "'use client'\n\nimport { CheckCheckIcon } from 'lucide-react'\n\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaFormDemo = () => {\n  // Validation schema\n  const FormSchema = z.object({\n    message: z\n      .string()\n      .min(50, 'Message must be at least 50 characters long.')\n      .max(500, 'Message cannot exceed 500 characters.')\n  })\n\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema),\n    defaultValues: { message: '' }\n  })\n\n  function onSubmit() {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 sm:w-110 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>Your application is submitted. We will contact you soon.</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-xs space-y-6'>\n        {/* Textarea Field */}\n        <FormField\n          control={form.control}\n          name='message'\n          render={({ field }) => (\n            <FormItem>\n              <FormLabel>Tell Us About Yourself</FormLabel>\n              <FormControl>\n                <Textarea placeholder=\"Why do you think you're the perfect fit for this position?\" {...field} />\n              </FormControl>\n              <FormDescription>\n                Please include your qualifications, skills, and experiences that make you stand out.\n              </FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n\n        <Button type='submit'>Submit</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default TextareaFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-06.tsx"
+    }
+  ]
+}

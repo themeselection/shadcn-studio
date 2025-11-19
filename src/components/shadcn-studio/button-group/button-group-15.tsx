@@ -7,13 +7,13 @@ import { Button } from '@/components/ui/button'
 const ButtonGroupScaleDemo = () => {
   return (
     <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-md shadow-xs'>
-      <Button className='rounded-none rounded-s-md shadow-none transition-none focus-visible:z-10' asChild>
+      <Button className='rounded-none rounded-l-md transition-none focus-visible:z-10' asChild>
         <motion.button whileTap={{ scale: 0.9 }}>
           <ChevronLeftIcon />
           Previous
         </motion.button>
       </Button>
-      <Button className='rounded-none rounded-e-md shadow-none transition-none focus-visible:z-10' asChild>
+      <Button className='rounded-none rounded-r-md transition-none focus-visible:z-10' asChild>
         <motion.button whileTap={{ scale: 0.9 }}>
           Next
           <ChevronRightIcon />

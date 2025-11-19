@@ -1,0 +1,44 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-component-01",
+  "type": "registry:block",
+  "title": "Footer 1",
+  "description": "Simple three-section footer with logo and brand name, centered navigation links, social media icons, separator line, and copyright text with heart emoji",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "separator",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/footer-component/footer-component-01/page.tsx",
+      "content": "import Footer from '@/components/shadcn-studio/blocks/footer-component-01/footer-component-01'\n\nconst FooterPage = () => {\n  return <Footer />\n}\n\nexport default FooterPage\n",
+      "type": "registry:page",
+      "target": "app/footer-component-01/page.tsx"
+    },
+    {
+      "path": "src/assets/svg/logo.tsx",
+      "content": "// React Imports\nimport type { SVGAttributes } from 'react'\n\nconst Logo = (props: SVGAttributes<SVGElement>) => {\n  return (\n    <svg width='1em' height='1em' viewBox='0 0 328 329' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>\n      <rect y='0.5' width='328' height='328' rx='164' fill='black' className='dark:fill-white' />\n      <path\n        d='M165.018 72.3008V132.771C165.018 152.653 148.9 168.771 129.018 168.771H70.2288'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <path\n        d='M166.627 265.241L166.627 204.771C166.627 184.889 182.744 168.771 202.627 168.771L261.416 168.771'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='238.136'\n        y1='98.8184'\n        x2='196.76'\n        y2='139.707'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='135.688'\n        y1='200.957'\n        x2='94.3128'\n        y2='241.845'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='133.689'\n        y1='137.524'\n        x2='92.5566'\n        y2='96.3914'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='237.679'\n        y1='241.803'\n        x2='196.547'\n        y2='200.671'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n    </svg>\n  )\n}\n\nexport default Logo\n",
+      "type": "registry:component",
+      "target": "assets/svg/logo.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/footer-component-01/footer-component-01.tsx",
+      "content": "import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from 'lucide-react'\n\nimport { Separator } from '@/components/ui/separator'\n\nimport Logo from '@/components/layout/logo'\n\nconst Footer = () => {\n  return (\n    <footer>\n      <div className='mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 max-md:flex-col sm:px-6 sm:py-6 md:gap-6 md:py-8'>\n        <a href='#'>\n          <div className='flex items-center gap-3'>\n            <Logo className='gap-3' />\n          </div>\n        </a>\n\n        <div className='flex items-center gap-5 whitespace-nowrap'>\n          <a href='#'>About</a>\n          <a href='#'>Features</a>\n          <a href='#'>Works</a>\n          <a href='#'>Career</a>\n        </div>\n\n        <div className='flex items-center gap-4'>\n          <a href='#'>\n            <FacebookIcon className='size-5' />\n          </a>\n          <a href='#'>\n            <InstagramIcon className='size-5' />\n          </a>\n          <a href='#'>\n            <TwitterIcon className='size-5' />\n          </a>\n          <a href='#'>\n            <YoutubeIcon className='size-5' />\n          </a>\n        </div>\n      </div>\n\n      <Separator />\n\n      <div className='mx-auto flex max-w-7xl justify-center px-4 py-8 sm:px-6'>\n        <p className='text-center font-medium text-balance'>\n          {`©${new Date().getFullYear()}`} <a href='#'>Shadcn/studio</a>, Made with ❤️ for better web.\n        </p>\n      </div>\n    </footer>\n  )\n}\n\nexport default Footer\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/footer-component-01/footer-component-01.tsx"
+    },
+    {
+      "path": "src/components/layout/logo.tsx",
+      "content": "// SVG Imports\nimport LogoSvg from '@/assets/svg/logo'\n\n// Util Imports\nimport { cn } from '@/lib/utils'\n\nconst Logo = ({ className }: { className?: string }) => {\n  return (\n    <div className={cn('flex items-center gap-2.5', className)}>\n      <LogoSvg className='size-8.5' />\n      <span className='text-xl font-semibold'>shadcn/studio</span>\n    </div>\n  )\n}\n\nexport default Logo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/logo.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "footer-component"
+  }
+}

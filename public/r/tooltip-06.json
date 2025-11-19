@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-06",
+  "type": "registry:component",
+  "title": "Tooltip 6",
+  "description": "A tooltip with rounded corners for a modern soft appearance",
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-06.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipRoundedDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Rounded\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className='rounded-full'>\n        <p>This tooltip is rounded</p>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipRoundedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-06.tsx"
+    }
+  ]
+}

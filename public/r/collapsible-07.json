@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-07",
+  "type": "registry:component",
+  "title": "Collapsible 7",
+  "description": "FAQ card with collapsible answer section and expandable image content",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "card",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/collapsible/collapsible-07.tsx",
+      "content": "import { ChevronUpIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Card, CardAction, CardContent, CardTitle } from '@/components/ui/card'\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'\n\nconst CollapsibleCardDemo = () => {\n  return (\n    <Card className='w-full max-w-md pb-0'>\n      <Collapsible>\n        <div className='flex items-center justify-between px-6 pb-6'>\n          <CardTitle>How do I track my order?</CardTitle>\n          <CardAction>\n            <CollapsibleTrigger asChild>\n              <Button variant='outline' size='sm'>\n                <span className='[[data-state=open]>&]:hidden'>Show</span>\n                <span className='[[data-state=closed]>&]:hidden'>Hide</span>\n                <ChevronUpIcon className='[[data-state=closed]>&]:rotate-180' />\n              </Button>\n            </CollapsibleTrigger>\n          </CardAction>\n        </div>\n        <CollapsibleContent>\n          <CardContent className='space-y-2 px-0'>\n            <p className='px-6'>You&apos;ll receive tracking information via email once your order ships.</p>\n            <img\n              src='https://cdn.shadcnstudio.com/ss-assets/components/accordion/image-1.jpg?width=446&format=auto'\n              alt='Banner'\n              className='aspect-video h-70 rounded-b-xl object-cover'\n            />\n          </CardContent>\n        </CollapsibleContent>\n      </Collapsible>\n    </Card>\n  )\n}\n\nexport default CollapsibleCardDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/collapsible/collapsible-07.tsx"
+    }
+  ]
+}

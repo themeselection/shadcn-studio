@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-01",
+  "type": "registry:component",
+  "title": "Checkbox 1",
+  "description": "Basic checkbox with label for simple true/false selection",
+  "registryDependencies": [
+    "checkbox",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-01.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst CheckboxDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox id={id} />\n      <Label htmlFor={id}>Accept terms and conditions</Label>\n    </div>\n  )\n}\n\nexport default CheckboxDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-01.tsx"
+    }
+  ]
+}

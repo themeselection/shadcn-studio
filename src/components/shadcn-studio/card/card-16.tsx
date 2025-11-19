@@ -53,8 +53,8 @@ const CardSpotlightDemo = () => {
             Glide your cursor here and watch magic unfold — an experience designed just for you.
           </CardContent>
         </Card>
-        <div className='blob absolute start-0 top-0 h-20 w-20 rounded-full bg-sky-600/60 opacity-0 blur-2xl transition-all duration-300 ease-in-out dark:bg-sky-400/60' />
-        <div className='fake-blob absolute start-0 top-0 h-20 w-20 rounded-full' />
+        <div className='blob absolute top-0 left-0 size-20 rounded-full bg-sky-600/60 opacity-0 blur-2xl transition-all duration-300 ease-in-out dark:bg-sky-400/60' />
+        <div className='fake-blob absolute top-0 left-0 size-20 rounded-full' />
       </div>
     </div>
   )

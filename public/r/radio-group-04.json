@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-04",
+  "type": "registry:component",
+  "title": "Radio Group 4",
+  "description": "A radio group with different sizes for various display options",
+  "registryDependencies": [
+    "label",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/radio-group/radio-group-04.tsx",
+      "content": "import { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nconst RadioGroupSizesDemo = () => {\n  return (\n    <RadioGroup defaultValue='default' className='flex items-center gap-4'>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='default' id='size-default' />\n        <Label htmlFor='size-default'>Default</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='medium' id='size-medium' className='size-5 [&_svg]:size-3' />\n        <Label htmlFor='size-medium'>Medium</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem value='large' id='size-large' className='size-6 [&_svg]:size-3.5' />\n        <Label htmlFor='size-large'>Large</Label>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupSizesDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/radio-group/radio-group-04.tsx"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-12",
+  "type": "registry:component",
+  "title": "Input 12",
+  "description": "An email input field with error validation and dynamic error message display",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-12.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputErrorDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with error</Label>\n      <Input\n        id={id}\n        type='email'\n        placeholder='Email address'\n        className='peer'\n        defaultValue='invalid@email.com'\n        aria-invalid\n      />\n      <p className='text-muted-foreground peer-aria-invalid:text-destructive text-xs'>This email is invalid.</p>\n    </div>\n  )\n}\n\nexport default InputErrorDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-12.tsx"
+    }
+  ]
+}

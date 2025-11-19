@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-12",
+  "type": "registry:component",
+  "title": "Table 12",
+  "description": "A vertical table layout for displaying data in a column-oriented format with key-value pairs",
+  "registryDependencies": [
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/table/table-12.tsx",
+      "content": "import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'\n\nconst VerticalTableDemo = () => {\n  return (\n    <div className='mx-auto w-full max-w-lg'>\n      <div className='overflow-hidden rounded-md border'>\n        <Table>\n          <TableBody>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Product Name</TableCell>\n              <TableCell className='py-2'>Iphone 16 PRO</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Serial Number</TableCell>\n              <TableCell className='py-2'>DF121543309KU</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Category</TableCell>\n              <TableCell className='py-2'>Smartphone</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Purchase Date</TableCell>\n              <TableCell className='py-2'>15/06/205</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Warranty Expiry</TableCell>\n              <TableCell className='py-2'>15/06/2026</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Origin</TableCell>\n              <TableCell className='py-2'>China</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Assign User</TableCell>\n              <TableCell className='py-2'>Alice Johnson</TableCell>\n            </TableRow>\n            <TableRow className='*:border-border [&>:not(:last-child)]:border-r'>\n              <TableCell className='bg-muted/50 py-2 font-medium'>Value</TableCell>\n              <TableCell className='py-2'>$1,120.0</TableCell>\n            </TableRow>\n          </TableBody>\n        </Table>\n      </div>\n      <p className='text-muted-foreground mt-4 text-center text-sm'>Vertical table</p>\n    </div>\n  )\n}\n\nexport default VerticalTableDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/table/table-12.tsx"
+    }
+  ]
+}

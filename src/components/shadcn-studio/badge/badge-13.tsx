@@ -15,7 +15,7 @@ const BadgeSelectableDemo = () => {
   return (
     <Badge
       variant={selected ? 'secondary' : 'outline'}
-      className='has-focus-visible:border-ring/50 has-focus-visible:ring-ring/50 relative cursor-pointer outline-none has-focus-visible:ring-2'
+      className='has-focus-visible:border-ring/50 has-focus-visible:ring-ring/50 relative cursor-pointer rounded-sm outline-none has-focus-visible:ring-2'
     >
       <Checkbox
         id={id}

@@ -1,11 +1,11 @@
 // React Imports
 import type { ComponentType } from 'react'
 
-// Type Imports
-import type { ComponentProps } from '@/types/components'
+// Third-party Imports
+import type { RegistryItem } from 'shadcn/schema'
 
 type ComponentLoaderProps = {
-  componentName: ComponentProps['name']
+  componentName: RegistryItem['name']
   category: string
 }
 

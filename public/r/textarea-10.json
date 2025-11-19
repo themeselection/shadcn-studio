@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-10",
+  "type": "registry:component",
+  "title": "Textarea 10",
+  "description": "Textarea size variations with small, default, and large height options",
+  "registryDependencies": [
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-10.tsx",
+      "content": "import { Textarea } from '@/components/ui/textarea'\n\nconst TextareaSizesDemo = () => {\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Textarea className='min-h-10 py-1.5' placeholder='Small Textarea' />\n      <Textarea placeholder='Default(Medium) Textarea' />\n      <Textarea className='min-h-20 py-2.5' placeholder='Large Textarea' />\n    </div>\n  )\n}\n\nexport default TextareaSizesDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-10.tsx"
+    }
+  ]
+}

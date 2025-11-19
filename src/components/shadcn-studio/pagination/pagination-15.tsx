@@ -26,7 +26,7 @@ const TablePaginationDemo = () => {
           <SelectTrigger id={id} className='w-fit whitespace-nowrap'>
             <SelectValue placeholder='Select number of results' />
           </SelectTrigger>
-          <SelectContent className='[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2'>
+          <SelectContent className='[&_*[role=option]]:pr-8 [&_*[role=option]]:pl-2 [&_*[role=option]>span]:right-2 [&_*[role=option]>span]:left-auto'>
             <SelectItem value='10'>10</SelectItem>
             <SelectItem value='25'>25</SelectItem>
             <SelectItem value='50'>50</SelectItem>
@@ -43,12 +43,12 @@ const TablePaginationDemo = () => {
         <PaginationContent>
           <PaginationItem>
             <PaginationLink href='#' aria-label='Go to first page' size='icon' className='rounded-full'>
-              <ChevronFirstIcon className='h-4 w-4' />
+              <ChevronFirstIcon className='size-4' />
             </PaginationLink>
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href='#' aria-label='Go to previous page' size='icon' className='rounded-full'>
-              <ChevronLeftIcon className='h-4 w-4' />
+              <ChevronLeftIcon className='size-4' />
             </PaginationLink>
           </PaginationItem>
           {pages.map(page => (
@@ -70,12 +70,12 @@ const TablePaginationDemo = () => {
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href='#' aria-label='Go to next page' size='icon' className='rounded-full'>
-              <ChevronRightIcon className='h-4 w-4' />
+              <ChevronRightIcon className='size-4' />
             </PaginationLink>
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href='#' aria-label='Go to last page' size='icon' className='rounded-full'>
-              <ChevronLastIcon className='h-4 w-4' />
+              <ChevronLastIcon className='size-4' />
             </PaginationLink>
           </PaginationItem>
         </PaginationContent>

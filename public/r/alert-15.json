@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-15",
+  "type": "registry:component",
+  "title": "Alert 15",
+  "description": "Pure destructive alert using built-in destructive variant with error styling.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-15.tsx",
+      "content": "import { TriangleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\n\nconst AlertPureDestructiveDemo = () => {\n  return (\n    <Alert variant='destructive' className='border-destructive'>\n      <TriangleAlertIcon />\n      <AlertTitle>Unable to process your payment.</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertPureDestructiveDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-15.tsx"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { ChevronDown, HomeIcon } from 'lucide-react'
+import { ChevronDownIcon, HomeIcon } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import {
@@ -17,7 +17,7 @@ const BreadcrumbWithDropdownDemo = () => {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href='#'>
-            <Badge variant='outline' className='text-muted-foreground hover:text-foreground rounded-full'>
+            <Badge variant='outline' className='text-muted-foreground hover:text-foreground'>
               <HomeIcon className='size-3' />
               Home
             </Badge>
@@ -26,7 +26,7 @@ const BreadcrumbWithDropdownDemo = () => {
         <BreadcrumbSeparator> / </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href='#'>
-            <Badge variant='outline' className='text-muted-foreground hover:text-foreground rounded-full'>
+            <Badge variant='outline' className='text-muted-foreground hover:text-foreground'>
               Documents
             </Badge>
           </BreadcrumbLink>
@@ -37,7 +37,7 @@ const BreadcrumbWithDropdownDemo = () => {
             <DropdownMenu>
               <DropdownMenuTrigger className='flex items-center gap-1'>
                 Add Document
-                <ChevronDown className='size-4' />
+                <ChevronDownIcon className='size-4' />
               </DropdownMenuTrigger>
               <DropdownMenuContent align='start'>
                 <DropdownMenuItem>Documentation</DropdownMenuItem>

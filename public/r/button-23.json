@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-23",
+  "type": "registry:component",
+  "title": "Button 23",
+  "description": "Save button with a floppy disk icon and soft blue background for non-intrusive actions.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-23.tsx",
+      "content": "import { SaveIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonSaveDemo = () => {\n  return (\n    <Button className='bg-sky-600/10 text-sky-600 hover:bg-sky-600/20 focus-visible:ring-sky-600/20 dark:bg-sky-400/10 dark:text-sky-400 dark:hover:bg-sky-400/20 dark:focus-visible:ring-sky-400/40'>\n      <SaveIcon />\n      Save\n    </Button>\n  )\n}\n\nexport default ButtonSaveDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-23.tsx"
+    }
+  ]
+}

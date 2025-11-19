@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-03",
+  "type": "registry:component",
+  "title": "Button 3",
+  "description": "A rounded button with icon and text content",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-03.tsx",
+      "content": "import { StarIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonRoundedDemo = () => {\n  return (\n    <Button className='rounded-full'>\n      <StarIcon />\n      Star\n    </Button>\n  )\n}\n\nexport default ButtonRoundedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-03.tsx"
+    }
+  ]
+}

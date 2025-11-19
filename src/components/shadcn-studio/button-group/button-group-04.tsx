@@ -8,7 +8,7 @@ const ButtonGroupRoundedDemo = () => {
     <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-full shadow-xs'>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className='rounded-none rounded-s-full shadow-none focus-visible:z-10'>
+          <Button className='rounded-none rounded-l-full focus-visible:z-10'>
             <SkipBackIcon />
             <span className='sr-only'>Skip Back</span>
           </Button>
@@ -17,7 +17,7 @@ const ButtonGroupRoundedDemo = () => {
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className='rounded-none shadow-none focus-visible:z-10'>
+          <Button className='rounded-none focus-visible:z-10'>
             <PlayIcon />
             <span className='sr-only'>Play</span>
           </Button>
@@ -26,7 +26,7 @@ const ButtonGroupRoundedDemo = () => {
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className='rounded-none shadow-none focus-visible:z-10'>
+          <Button className='rounded-none focus-visible:z-10'>
             <PauseIcon />
             <span className='sr-only'>Pause</span>
           </Button>
@@ -35,7 +35,7 @@ const ButtonGroupRoundedDemo = () => {
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button className='rounded-none rounded-e-full shadow-none focus-visible:z-10'>
+          <Button className='rounded-none rounded-r-full focus-visible:z-10'>
             <SkipForwardIcon />
             <span className='sr-only'>Skip Forward</span>
           </Button>

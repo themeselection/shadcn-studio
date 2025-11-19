@@ -9,7 +9,7 @@ const CollapsibleDemo = () => {
       <div className='flex items-center justify-between gap-4 px-4'>
         <div className='text-sm font-semibold'>@peduarte starred 3 repositories</div>
         <CollapsibleTrigger asChild>
-          <Button variant='ghost' size='icon' className='size-8'>
+          <Button variant='ghost' size='icon-sm'>
             <ChevronsUpDownIcon />
             <span className='sr-only'>Toggle</span>
           </Button>

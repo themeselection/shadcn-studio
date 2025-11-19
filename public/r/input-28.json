@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-28",
+  "type": "registry:component",
+  "title": "Input 28",
+  "description": "A URL input field with a protocol selector dropdown at the start",
+  "registryDependencies": [
+    "input",
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-28.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst InputStartSelectDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with start select</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Select defaultValue='https://'>\n          <SelectTrigger id={id} className='rounded-r-none shadow-none focus-visible:z-1'>\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            <SelectItem value='https://' className='pr-2 [&_svg]:hidden'>\n              https://\n            </SelectItem>\n            <SelectItem value='http://' className='pr-2 [&_svg]:hidden'>\n              http://\n            </SelectItem>\n            <SelectItem value='ftp://' className='pr-2 [&_svg]:hidden'>\n              ftp://\n            </SelectItem>\n            <SelectItem value='sftp://' className='pr-2 [&_svg]:hidden'>\n              sftp://\n            </SelectItem>\n            <SelectItem value='ws://' className='pr-2 [&_svg]:hidden'>\n              ws://\n            </SelectItem>\n            <SelectItem value='wss://' className='pr-2 [&_svg]:hidden'>\n              wss://\n            </SelectItem>\n          </SelectContent>\n        </Select>\n        <Input id={id} type='text' placeholder='shadcnstudio.com' className='-ms-px rounded-l-none shadow-none' />\n      </div>\n    </div>\n  )\n}\n\nexport default InputStartSelectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-28.tsx"
+    }
+  ]
+}

@@ -42,7 +42,7 @@ const CardTweetDemo = () => {
             Follow
           </Button>
           <Button variant='ghost' size='icon' aria-label='Toggle menu'>
-            <EllipsisIcon className='size-4' />
+            <EllipsisIcon />
           </Button>
         </div>
       </CardHeader>
@@ -67,19 +67,19 @@ const CardTweetDemo = () => {
       </CardContent>
       <CardFooter className='flex items-center gap-1'>
         <Button variant='ghost' size='sm' onClick={() => setLiked(!liked)}>
-          <HeartIcon className={cn('size-4', liked && 'fill-destructive stroke-destructive')} />
+          <HeartIcon className={cn(liked && 'fill-destructive stroke-destructive')} />
           2.1K
         </Button>
         <Button variant='ghost' size='sm'>
-          <MessageCircleIcon className='size-4' />
+          <MessageCircleIcon />
           1.4K
         </Button>
         <Button variant='ghost' size='sm'>
-          <RepeatIcon className='size-4' />
+          <RepeatIcon />
           669
         </Button>
         <Button variant='ghost' size='sm'>
-          <SendIcon className='size-4' />
+          <SendIcon />
           1.1K
         </Button>
       </CardFooter>

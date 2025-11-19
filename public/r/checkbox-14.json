@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-14",
+  "type": "registry:component",
+  "title": "Checkbox 14",
+  "description": "List group checkboxes with icons and skills selection in bordered layout",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "checkbox",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-14.tsx",
+      "content": "import { ChartPieIcon, CodeIcon, PaletteIcon } from 'lucide-react'\n\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst skills = [\n  { label: 'Web Development', icon: CodeIcon },\n  { label: 'Data Analysis', icon: ChartPieIcon },\n  { label: 'Graphic Design', icon: PaletteIcon }\n]\n\nconst CheckboxListGroupDemo = () => {\n  return (\n    <ul className='flex w-full flex-col divide-y rounded-md border'>\n      {skills.map(({ label, icon: Icon }) => (\n        <li key={label}>\n          <Label htmlFor={label} className='flex items-center justify-between gap-2 px-5 py-3'>\n            <span className='flex items-center gap-2'>\n              <Icon className='size-4' /> {label}\n            </span>\n            <Checkbox id={label} />\n          </Label>\n        </li>\n      ))}\n    </ul>\n  )\n}\n\nexport default CheckboxListGroupDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-14.tsx"
+    }
+  ]
+}

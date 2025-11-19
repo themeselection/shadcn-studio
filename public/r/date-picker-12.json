@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-12",
+  "type": "registry:component",
+  "title": "Date Picker 12",
+  "description": "Travel date picker with departure/return dates and time selection for bookings",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "input",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/date-picker/date-picker-12.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { ChevronDownIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst DatePickerRangeAndTimePickerDemo = () => {\n  const [openFrom, setOpenFrom] = useState(false)\n  const [openTo, setOpenTo] = useState(false)\n  const [dateFrom, setDateFrom] = useState<Date | undefined>(new Date('2025-06-18'))\n  const [dateTo, setDateTo] = useState<Date | undefined>(new Date('2025-06-25'))\n\n  return (\n    <div className='flex w-full max-w-64 min-w-0 flex-col gap-6'>\n      <div className='flex gap-4'>\n        <div className='flex flex-1 flex-col gap-3'>\n          <Label htmlFor='date-from' className='px-1'>\n            Departure date\n          </Label>\n          <Popover open={openFrom} onOpenChange={setOpenFrom}>\n            <PopoverTrigger asChild>\n              <Button variant='outline' id='date-from' className='w-full justify-between font-normal'>\n                {dateFrom\n                  ? dateFrom.toLocaleDateString('en-US', {\n                      day: '2-digit',\n                      month: 'short',\n                      year: 'numeric'\n                    })\n                  : 'Pick a date'}\n                <ChevronDownIcon />\n              </Button>\n            </PopoverTrigger>\n            <PopoverContent className='w-auto overflow-hidden p-0' align='start'>\n              <Calendar\n                mode='single'\n                selected={dateFrom}\n                onSelect={date => {\n                  setDateFrom(date)\n                  setOpenFrom(false)\n                }}\n              />\n            </PopoverContent>\n          </Popover>\n        </div>\n        <div className='flex flex-col gap-3'>\n          <Label htmlFor='time-from' className='invisible px-1'>\n            From\n          </Label>\n          <Input\n            type='time'\n            id='time-from'\n            step='1'\n            defaultValue='09:30:00'\n            className='bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'\n          />\n        </div>\n      </div>\n      <div className='flex gap-4'>\n        <div className='flex flex-1 flex-col gap-3'>\n          <Label htmlFor='date-to' className='px-1'>\n            Return date\n          </Label>\n          <Popover open={openTo} onOpenChange={setOpenTo}>\n            <PopoverTrigger asChild>\n              <Button variant='outline' id='date-to' className='w-full justify-between font-normal'>\n                {dateTo\n                  ? dateTo.toLocaleDateString('en-US', {\n                      day: '2-digit',\n                      month: 'short',\n                      year: 'numeric'\n                    })\n                  : 'Pick a date'}\n                <ChevronDownIcon />\n              </Button>\n            </PopoverTrigger>\n            <PopoverContent className='w-auto overflow-hidden p-0' align='start'>\n              <Calendar\n                mode='single'\n                selected={dateTo}\n                captionLayout='dropdown'\n                onSelect={date => {\n                  setDateTo(date)\n                  setOpenTo(false)\n                }}\n                disabled={dateFrom && { before: dateFrom }}\n              />\n            </PopoverContent>\n          </Popover>\n        </div>\n        <div className='flex flex-col gap-3'>\n          <Label htmlFor='time-to' className='invisible px-1'>\n            To\n          </Label>\n          <Input\n            type='time'\n            id='time-to'\n            step='1'\n            defaultValue='18:30:00'\n            className='bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'\n          />\n        </div>\n      </div>\n    </div>\n  )\n}\n\nexport default DatePickerRangeAndTimePickerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/date-picker/date-picker-12.tsx"
+    }
+  ]
+}

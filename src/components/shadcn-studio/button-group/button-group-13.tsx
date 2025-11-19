@@ -5,7 +5,7 @@ import { RippleButton } from '@/components/ui/ripple-button'
 const ButtonGroupRippleDemo = () => {
   return (
     <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>
-      <RippleButton variant='outline' className='rounded-none rounded-s-md shadow-none focus-visible:z-10'>
+      <RippleButton variant='outline' className='rounded-none rounded-l-md shadow-none focus-visible:z-10'>
         <InboxIcon />
         Inbox
       </RippleButton>
@@ -13,7 +13,7 @@ const ButtonGroupRippleDemo = () => {
         <ArchiveIcon />
         Archived
       </RippleButton>
-      <RippleButton variant='outline' className='rounded-none rounded-e-md shadow-none focus-visible:z-10'>
+      <RippleButton variant='outline' className='rounded-none rounded-r-md shadow-none focus-visible:z-10'>
         <SendHorizonalIcon />
         Sent
       </RippleButton>

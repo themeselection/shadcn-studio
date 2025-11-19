@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-06",
+  "type": "registry:component",
+  "title": "Textarea 6",
+  "description": "A textarea with hint text providing user guidance and tips",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-06.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaWithHintTextDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <div className='flex items-center justify-between gap-1'>\n        <Label htmlFor={id}>Input with hint text</Label>\n        <span className='text-muted-foreground text-xs'>Optional field</span>\n      </div>\n      <Textarea placeholder='Type your feedback here' id={id} />\n    </div>\n  )\n}\n\nexport default TextareaWithHintTextDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-06.tsx"
+    }
+  ]
+}

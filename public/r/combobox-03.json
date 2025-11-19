@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-03",
+  "type": "registry:component",
+  "title": "Combobox 3",
+  "description": "Grouped combobox with disabled options and category-based selection",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "command",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/combobox/combobox-03.tsx",
+      "content": "'use client'\n\nimport { Fragment, useId, useState } from 'react'\n\nimport { CheckIcon, ChevronsUpDownIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nimport { cn } from '@/lib/utils'\n\nconst items = [\n  {\n    category: 'Fruits',\n    items: [{ value: 'Apples' }, { value: 'Bananas' }, { value: 'Cherries' }]\n  },\n  {\n    category: 'Vegetables',\n    items: [{ value: 'Carrots' }, { value: 'Broccoli', disabled: true }, { value: 'Spinach' }]\n  },\n  {\n    category: 'Beverages',\n    items: [{ value: 'Tea' }, { value: 'Coffee', disabled: true }, { value: 'Juice' }]\n  }\n]\n\nconst ComboboxOptionDisabledDemo = () => {\n  const id = useId()\n  const [open, setOpen] = useState<boolean>(false)\n  const [value, setValue] = useState<string>('')\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Combobox disabled option </Label>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger asChild>\n          <Button\n            id={id}\n            variant='outline'\n            role='combobox'\n            aria-expanded={open}\n            className='bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]'\n          >\n            {value ? (\n              <span className='flex min-w-0 items-center gap-2'>\n                <span className='truncate'>{value}</span>\n              </span>\n            ) : (\n              <span className='text-muted-foreground'>Select item</span>\n            )}\n            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>\n          <Command>\n            <CommandInput placeholder='Search item...' />\n            <CommandList>\n              <CommandEmpty>No item found.</CommandEmpty>\n              {items.map(group => (\n                <Fragment key={group.category}>\n                  <CommandGroup heading={group.category}>\n                    {group.items.map(item => (\n                      <CommandItem\n                        key={item.value}\n                        value={item.value}\n                        onSelect={currentValue => {\n                          setValue(currentValue)\n                          setOpen(false)\n                        }}\n                        className={cn(item.disabled && 'cursor-not-allowed opacity-50')}\n                        disabled={item.disabled}\n                      >\n                        {item.value}\n                        {value === item.value && <CheckIcon size={16} className='ml-auto' />}\n                      </CommandItem>\n                    ))}\n                  </CommandGroup>\n                </Fragment>\n              ))}\n            </CommandList>\n          </Command>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default ComboboxOptionDisabledDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/combobox/combobox-03.tsx"
+    }
+  ]
+}

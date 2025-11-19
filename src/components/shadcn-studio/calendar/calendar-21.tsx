@@ -37,8 +37,8 @@ const CalendarWithAdvanceSelectionDemo = () => {
         endMonth={endDate}
         className='overflow-hidden rounded-md border p-2'
         classNames={{
-          month_caption: 'ms-2.5 me-20 justify-start',
-          nav: 'flex absolute w-fit end-0 items-center'
+          month_caption: 'ml-2.5 mr-20 justify-start',
+          nav: 'flex absolute w-fit right-0 items-center'
         }}
         components={{
           CaptionLabel: (props: CaptionLabelProps) => (
@@ -184,7 +184,6 @@ function CaptionLabel({
     >
       {children}
       <ChevronDownIcon
-        size={16}
         className='text-muted-foreground/80 shrink-0 transition-transform duration-200'
         aria-hidden='true'
       />
@@ -202,7 +201,6 @@ function CollapsibleYear({ title, children, open }: { title: string; children: R
           size='sm'
         >
           <ChevronDownIcon
-            size={16}
             className='text-muted-foreground/80 shrink-0 transition-transform duration-200'
             aria-hidden='true'
           />

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-09",
+  "type": "registry:component",
+  "title": "Textarea 9",
+  "description": "A filled textarea with muted background and transparent border styling",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-09.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaFilledDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Filled Textarea</Label>\n      <Textarea className='bg-muted border-transparent shadow-none' placeholder='Type your feedback here' id={id} />\n    </div>\n  )\n}\n\nexport default TextareaFilledDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-09.tsx"
+    }
+  ]
+}

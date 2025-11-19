@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-05",
+  "type": "registry:component",
+  "title": "Switch 5",
+  "description": "Multiple size variations of switches with small, medium, and large options",
+  "registryDependencies": [
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-05.tsx",
+      "content": "import { Switch } from '@/components/ui/switch'\n\nconst SwitchSizesDemo = () => {\n  return (\n    <div className='flex items-center gap-3'>\n      <Switch aria-label='Small switch' />\n      <Switch\n        aria-label='Medium switch'\n        className='h-6 w-10 [&_span]:size-5 data-[state=checked]:[&_span]:translate-x-4.5 data-[state=checked]:[&_span]:rtl:-translate-x-4.5'\n      />\n      <Switch\n        aria-label='Large switch'\n        className='h-7 w-12 [&_span]:size-6 data-[state=checked]:[&_span]:translate-x-5.5 data-[state=checked]:[&_span]:rtl:-translate-x-5.5'\n      />\n    </div>\n  )\n}\n\nexport default SwitchSizesDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-05.tsx"
+    }
+  ]
+}

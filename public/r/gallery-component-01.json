@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-component-01",
+  "type": "registry:block",
+  "title": "Gallery 1",
+  "description": "Gallery section with centered header featuring underlined text highlight, flexible grid layout supporting both single images and 2x2 grid sections for versatile image arrangement",
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/gallery-component/gallery-component-01/page.tsx",
+      "content": "import Gallery from '@/components/shadcn-studio/blocks/gallery-component-01/gallery-component-01'\n\nconst gallerySections = [\n  {\n    images: [\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-10.png',\n        alt: 'Coastal cliffs and ocean view'\n      }\n    ]\n  },\n  {\n    type: 'grid',\n    images: [\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-9.png',\n        alt: 'Silhouettes on beach'\n      },\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-8.png',\n        alt: 'Snowy mountain peaks'\n      },\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-7.png',\n        alt: 'Rolling green hills'\n      },\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-6.png',\n        alt: 'Sunset landscape'\n      }\n    ]\n  },\n  {\n    type: 'grid',\n    images: [\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-4.png',\n        alt: 'Silhouettes on beach'\n      },\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-3.png',\n        alt: 'Snowy mountain peaks'\n      },\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-2.png',\n        alt: 'Rolling green hills'\n      },\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-1.png',\n        alt: 'Sunset landscape'\n      }\n    ]\n  },\n  {\n    images: [\n      {\n        src: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-5.png',\n        alt: 'Coastal cliffs and ocean view'\n      }\n    ]\n  }\n]\n\nconst GalleryPage = () => {\n  return <Gallery sections={gallerySections} />\n}\n\nexport default GalleryPage\n",
+      "type": "registry:page",
+      "target": "app/gallery-component-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/gallery-component-01/gallery-component-01.tsx",
+      "content": "import { cn } from '@/lib/utils'\n\ntype GalleryImage = {\n  src: string\n  alt: string\n}\n\ntype GallerySection = {\n  type?: string\n  images: GalleryImage[]\n}\n\nconst Gallery = ({ sections }: { sections: GallerySection[] }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* Header */}\n        <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>\n          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>\n            <span className='relative z-1'>\n              Explore our\n              <span className='bg-primary absolute bottom-1 left-0 -z-1 h-px w-full' aria-hidden='true'></span>\n            </span>{' '}\n            Gallery\n          </h2>\n          <p className='text-muted-foreground text-xl'>\n            Explore our gallery to learn more about our amazing products and their features.\n          </p>\n        </div>\n\n        {/* Gallery Grid */}\n        <div className='grid gap-6 md:grid-cols-2'>\n          {sections.map((section, sectionIndex) => (\n            <div key={sectionIndex} className={cn({ 'grid grid-cols-2 gap-6': section.type === 'grid' })}>\n              {section.images.map((image, imageIndex) => (\n                <img key={imageIndex} src={image.src} alt={image.alt} className='rounded-lg object-cover' />\n              ))}\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default Gallery\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/gallery-component-01/gallery-component-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "gallery-component"
+  }
+}

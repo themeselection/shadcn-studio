@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-us-page-01",
+  "type": "registry:block",
+  "title": "Contact Us 1",
+  "description": "Two-column layout with contact illustration image and contact information grid featuring avatar icons and contact details",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "card",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/contact-us-page/contact-us-page-01/page.tsx",
+      "content": "import { Clock8Icon, MapPinIcon, BriefcaseBusinessIcon, PhoneIcon } from 'lucide-react'\n\nimport ContactUs from '@/components/shadcn-studio/blocks/contact-us-page-01/contact-us-page-01'\n\nconst contactInfo = [\n  {\n    title: 'Office Hours',\n    icon: Clock8Icon,\n    description: 'Monday-Friday\\n8:00 am to 5:00 pm'\n  },\n  {\n    title: 'Our Address',\n    icon: MapPinIcon,\n    description: '802 Perston Rd,Maine\\n96812, USA'\n  },\n  {\n    title: 'Office 2',\n    icon: BriefcaseBusinessIcon,\n    description: '802 Perston Rd,Maine\\n96812, USA'\n  },\n  {\n    title: 'Get in Touch',\n    icon: PhoneIcon,\n    description: '+1-316-888-9685\\n+1-316-477-0169'\n  }\n]\n\nconst ContactUsPage = () => {\n  return <ContactUs contactInfo={contactInfo} />\n}\n\nexport default ContactUsPage\n",
+      "type": "registry:page",
+      "target": "app/contact-us-page-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/contact-us-page-01/contact-us-page-01.tsx",
+      "content": "import type { ComponentType } from 'react'\n\nimport { Card, CardContent } from '@/components/ui/card'\nimport { Avatar, AvatarFallback } from '@/components/ui/avatar'\n\ntype ContactInfo = {\n  title: string\n  icon: ComponentType\n  description: string\n}[]\n\nconst ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {\n  return (\n    <section className='bg-muted py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* Header */}\n        <div className='relative mx-auto mb-12 w-fit sm:mb-16 lg:mb-24'>\n          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Contact Us</h2>\n          <span className='bg-primary absolute top-9 left-0 h-px w-full'></span>\n        </div>\n\n        <div className='grid items-center gap-12 lg:grid-cols-2'>\n          <img\n            src='https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/contact-us/image-1.png'\n            alt='Contact illustration'\n            className='size-full rounded-md object-cover max-lg:max-h-70'\n          />\n\n          <div>\n            <h3 className='mb-6 text-2xl font-semibold'>Happy to help you!</h3>\n            <p className='text-muted-foreground mb-10 text-lg font-medium'>\n              shadcn/studio gives you the blocks and components you need to create a truly professional website, landing\n              page or admin panel for your SaaS and gives the blocks.\n            </p>\n\n            {/* Contact Info Grid */}\n            <div className='grid gap-6 sm:grid-cols-2'>\n              {contactInfo.map((info, index) => (\n                <Card className='border-none shadow-none' key={index}>\n                  <CardContent className='flex flex-col items-center gap-4 text-center'>\n                    <Avatar className='size-9 border'>\n                      <AvatarFallback className='bg-transparent [&>svg]:size-5'>\n                        <info.icon />\n                      </AvatarFallback>\n                    </Avatar>\n                    <div className='space-y-3'>\n                      <h4 className='text-lg font-semibold'>{info.title}</h4>\n                      <div className='text-muted-foreground text-base font-medium'>\n                        {info.description.split('\\n').map((line, idx) => (\n                          <p key={idx}>{line}</p>\n                        ))}\n                      </div>\n                    </div>\n                  </CardContent>\n                </Card>\n              ))}\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default ContactUs\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/contact-us-page-01/contact-us-page-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "contact-us-page"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-13",
+  "type": "registry:component",
+  "title": "Tooltip 13",
+  "description": "A project hover card with progress bar, timeline, and team avatars",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "hover-card",
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-13.tsx",
+      "content": "import { CalendarIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'\nimport { Progress } from '@/components/ui/progress'\n\nconst avatars = [\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'OS',\n    name: 'Olivia Sparks'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    fallback: 'HL',\n    name: 'Howard Lloyd'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    fallback: 'HR',\n    name: 'Hallie Richards'\n  }\n]\n\nconst HoverCardProjectDemo = () => {\n  return (\n    <HoverCard openDelay={0} closeDelay={0}>\n      <HoverCardTrigger asChild>\n        <Button variant='link'>Hover Card Project</Button>\n      </HoverCardTrigger>\n      <HoverCardContent>\n        <div className='space-y-3'>\n          <div className='flex items-center justify-between gap-2 text-sm font-semibold'>\n            <span>Resume project completion</span>\n            <span>25%</span>\n          </div>\n          <Progress value={25} />\n          <p className='text-sm'>Developing platform where ai will generate resume automatically Ai</p>\n          <div className='text-muted-foreground flex items-center gap-2 text-xs'>\n            <CalendarIcon className='size-4' />\n            <span>Started in December 2024</span>\n          </div>\n          <div className='flex -space-x-2'>\n            {avatars.map((avatar, index) => (\n              <Avatar key={index} className='ring-background ring-2'>\n                <AvatarImage src={avatar.src} alt={avatar.name} />\n                <AvatarFallback className='text-xs'>{avatar.fallback}</AvatarFallback>\n              </Avatar>\n            ))}\n            <Avatar className='ring-background ring-2'>\n              <AvatarFallback className='text-xs'>+6</AvatarFallback>\n            </Avatar>\n          </div>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  )\n}\n\nexport default HoverCardProjectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-13.tsx"
+    }
+  ]
+}

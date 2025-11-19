@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-08",
+  "type": "registry:component",
+  "title": "Collapsible 8",
+  "description": "Menu items with dropdown actions and nested navigation structure",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "collapsible",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/collapsible/collapsible-08.tsx",
+      "content": "'use client'\n\nimport { ChevronRightIcon, CircleSmallIcon, LogOutIcon, SettingsIcon, UserIcon, UsersIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuGroup,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst CollapsibleDropdownMenuDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Dropdown with collapsible</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56'>\n        <DropdownMenuItem>\n          <UserIcon />\n          <span>Profile</span>\n        </DropdownMenuItem>\n        <Collapsible asChild>\n          <DropdownMenuGroup>\n            <CollapsibleTrigger asChild>\n              <DropdownMenuItem onSelect={event => event.preventDefault()} className='justify-between'>\n                <div className='flex items-center gap-2'>\n                  <SettingsIcon />\n                  <span>Settings</span>\n                </div>\n                <ChevronRightIcon className='shrink-0 transition-transform [[data-state=\"open\"]>&]:rotate-90' />\n              </DropdownMenuItem>\n            </CollapsibleTrigger>\n            <CollapsibleContent className='pl-4'>\n              <DropdownMenuItem>\n                <CircleSmallIcon />\n                <span>Account</span>\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <CircleSmallIcon />\n                <span>Security</span>\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <CircleSmallIcon />\n                <span>Billing & plans</span>\n              </DropdownMenuItem>\n            </CollapsibleContent>\n          </DropdownMenuGroup>\n        </Collapsible>\n        <Collapsible asChild>\n          <DropdownMenuGroup>\n            <CollapsibleTrigger asChild>\n              <DropdownMenuItem onSelect={event => event.preventDefault()} className='justify-between'>\n                <div className='flex items-center gap-2'>\n                  <UsersIcon />\n                  <span>Users</span>\n                </div>\n                <ChevronRightIcon className='shrink-0 transition-transform [[data-state=\"open\"]>&]:rotate-90' />\n              </DropdownMenuItem>\n            </CollapsibleTrigger>\n            <CollapsibleContent className='pl-4'>\n              <DropdownMenuItem>\n                <CircleSmallIcon />\n                <span>Teams</span>\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <CircleSmallIcon />\n                <span>Projects</span>\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <CircleSmallIcon />\n                <span>Connections</span>\n              </DropdownMenuItem>\n            </CollapsibleContent>\n          </DropdownMenuGroup>\n        </Collapsible>\n        <DropdownMenuItem>\n          <LogOutIcon />\n          <span>Log out</span>\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default CollapsibleDropdownMenuDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/collapsible/collapsible-08.tsx"
+    }
+  ]
+}

@@ -2,10 +2,14 @@
 import type { ForwardRefExoticComponent, RefAttributes } from 'react'
 
 // Third-party Imports
-import { File, Circle, type LucideProps } from 'lucide-react'
+import { File, CircleIcon } from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
 
 // Config Imports
 import { categories } from '@/config/components'
+
+// Data Imports
+import { blockCategories } from './blocks-index'
 
 type SearchData = {
   title: string
@@ -14,6 +18,8 @@ type SearchData = {
     name: string
     href: string
     shortcut?: string
+    openInNewTab?: boolean
+    tags?: string[]
   }[]
 }
 
@@ -35,6 +41,11 @@ export const searchData: SearchData[] = [
         icon: File,
         name: 'Components',
         href: '/components'
+      },
+      {
+        icon: File,
+        name: 'Blocks',
+        href: '/blocks'
       }
     ]
   },
@@ -42,7 +53,7 @@ export const searchData: SearchData[] = [
     title: 'Getting Started',
     data: [
       {
-        icon: Circle,
+        icon: CircleIcon,
         name: 'Introduction',
         href: '/docs/getting-started/introduction'
       }
@@ -54,10 +65,19 @@ export const searchData: SearchData[] = [
       ...categories
         .filter(category => !category.isComingSoon)
         .map(category => ({
-          icon: Circle,
+          icon: CircleIcon,
           name: category.name,
-          href: `/docs/components/${category.slug}`
+          href: `/docs/components/${category.slug}`,
+          tags: category.tags
         }))
     ]
-  }
+  },
+  ...blockCategories.map(category => ({
+    title: category.title,
+    data: category.sections.map(section => ({
+      icon: CircleIcon,
+      name: section.title,
+      href: section.url
+    }))
+  }))
 ]

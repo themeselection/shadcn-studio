@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-mask-06",
+  "type": "registry:component",
+  "title": "Input Mask 6",
+  "description": "A comprehensive credit card details form with card number, expiry, and CVC inputs with automatic formatting",
+  "dependencies": [
+    "lucide-react",
+    "react-payment-inputs"
+  ],
+  "devDependencies": [
+    "@types/react-payment-inputs"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input-mask/input-mask-06.tsx",
+      "content": "'use client'\n\nimport { useId } from 'react'\n\nimport { CreditCardIcon } from 'lucide-react'\n\nimport { usePaymentInputs } from 'react-payment-inputs'\nimport images, { type CardImages } from 'react-payment-inputs/images'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputCardDetailsDemo = () => {\n  const id = useId()\n  const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps, getCardImageProps } = usePaymentInputs()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label>Card details</Label>\n      <div>\n        <div className='relative focus-within:z-1'>\n          <Input {...getCardNumberProps()} id={`number-${id}`} className='peer rounded-b-none pr-9 shadow-none' />\n          <div className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>\n            {meta.cardType ? (\n              <svg\n                className='w-6 overflow-hidden'\n                {...getCardImageProps({\n                  images: images as unknown as CardImages\n                })}\n              />\n            ) : (\n              <CreditCardIcon className='size-4' />\n            )}\n            <span className='sr-only'>Card Provider</span>\n          </div>\n        </div>\n        <div className='-mt-px flex'>\n          <div className='min-w-0 flex-1 focus-within:z-1'>\n            <Input\n              {...getExpiryDateProps()}\n              id={`expiry-${id}`}\n              className='rounded-t-none rounded-r-none shadow-none'\n            />\n          </div>\n          <div className='-ms-px min-w-0 flex-1 focus-within:z-1'>\n            <Input {...getCVCProps()} id={`cvc-${id}`} className='rounded-t-none rounded-l-none shadow-none' />\n          </div>\n        </div>\n      </div>\n      <p className='text-muted-foreground text-xs'>\n        Built with{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://github.com/medipass/react-payment-inputs'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          React Payment Inputs\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default InputCardDetailsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input-mask/input-mask-06.tsx"
+    }
+  ]
+}

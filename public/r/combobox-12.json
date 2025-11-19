@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-12",
+  "type": "registry:component",
+  "title": "Combobox 12",
+  "description": "Multi-select combobox with a count badge showing the number of selected frameworks.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "command",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/combobox/combobox-12.tsx",
+      "content": "'use client'\n\nimport { useId, useState } from 'react'\n\nimport { CheckIcon, ChevronsUpDownIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\nimport { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst frameworks = [\n  { value: 'react', label: 'React' },\n  { value: 'nextjs', label: 'Nextjs' },\n  { value: 'angular', label: 'Angular' },\n  { value: 'vue', label: 'VueJS' },\n  { value: 'django', label: 'Django' },\n  { value: 'astro', label: 'Astro' },\n  { value: 'remix', label: 'Remix' },\n  { value: 'svelte', label: 'Svelte' },\n  { value: 'solidjs', label: 'SolidJS' },\n  { value: 'qwik', label: 'Qwik' }\n]\n\nconst ComboboxMultipleCountBadgeDemo = () => {\n  const id = useId()\n  const [open, setOpen] = useState(false)\n\n  const [selectedValues, setSelectedValues] = useState<string[]>([\n    'react',\n    'nextjs',\n    'angular',\n    'vue',\n    'django',\n    'astro'\n  ])\n\n  const toggleSelection = (value: string) => {\n    setSelectedValues(prev => (prev.includes(value) ? prev.filter(v => v !== value) : [...prev, value]))\n  }\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Multiple Count badge</Label>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger asChild>\n          <Button\n            id={id}\n            variant='outline'\n            role='combobox'\n            aria-expanded={open}\n            className='h-auto min-h-8 w-full justify-between hover:bg-transparent'\n          >\n            {selectedValues.length > 0 ? (\n              <span>\n                <Badge variant='outline' className='rounded-sm'>\n                  {selectedValues.length}\n                </Badge>{' '}\n                frameworks selected\n              </span>\n            ) : (\n              <span className='text-muted-foreground'>Select framework</span>\n            )}\n            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='w-(--radix-popper-anchor-width) p-0'>\n          <Command>\n            <CommandInput placeholder='Search framework...' />\n            <CommandList>\n              <CommandEmpty>No framework found.</CommandEmpty>\n              <CommandGroup>\n                {frameworks.map(framework => (\n                  <CommandItem\n                    key={framework.value}\n                    value={framework.value}\n                    onSelect={() => toggleSelection(framework.value)}\n                  >\n                    <span className='truncate'>{framework.label}</span>\n                    {selectedValues.includes(framework.value) && <CheckIcon size={16} className='ml-auto' />}\n                  </CommandItem>\n                ))}\n              </CommandGroup>\n            </CommandList>\n          </Command>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default ComboboxMultipleCountBadgeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/combobox/combobox-12.tsx"
+    }
+  ]
+}

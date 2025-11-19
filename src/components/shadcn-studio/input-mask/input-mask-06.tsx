@@ -19,8 +19,8 @@ const InputCardDetailsDemo = () => {
       <Label>Card details</Label>
       <div>
         <div className='relative focus-within:z-1'>
-          <Input {...getCardNumberProps()} id={`number-${id}`} className='peer rounded-b-none pe-9 shadow-none' />
-          <div className='text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50'>
+          <Input {...getCardNumberProps()} id={`number-${id}`} className='peer rounded-b-none pr-9 shadow-none' />
+          <div className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>
             {meta.cardType ? (
               <svg
                 className='w-6 overflow-hidden'
@@ -39,11 +39,11 @@ const InputCardDetailsDemo = () => {
             <Input
               {...getExpiryDateProps()}
               id={`expiry-${id}`}
-              className='rounded-e-none rounded-t-none shadow-none'
+              className='rounded-t-none rounded-r-none shadow-none'
             />
           </div>
           <div className='-ms-px min-w-0 flex-1 focus-within:z-1'>
-            <Input {...getCVCProps()} id={`cvc-${id}`} className='rounded-s-none rounded-t-none shadow-none' />
+            <Input {...getCVCProps()} id={`cvc-${id}`} className='rounded-t-none rounded-l-none shadow-none' />
           </div>
         </div>
       </div>

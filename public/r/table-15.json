@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-15",
+  "type": "registry:component",
+  "title": "Table 15",
+  "description": "A table with selectable rows using checkboxes for bulk actions and data manipulation",
+  "registryDependencies": [
+    "checkbox",
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/table/table-15.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'\n\nconst items = [\n  {\n    id: '1',\n    name: 'Philip George',\n    email: 'philipgeorge20@gmail.com',\n    location: 'Mumbai, India',\n    status: 'Active',\n    balance: '$10,696.00'\n  },\n  {\n    id: '2',\n    name: 'Sarah Chen',\n    email: 'sarah.c@company.com',\n    location: 'Singapore',\n    status: 'Active',\n    balance: '$600.00'\n  },\n  {\n    id: '3',\n    name: 'James Wilson',\n    email: 'j.wilson@company.com',\n    location: 'London, UK',\n    status: 'Inactive',\n    balance: '$650.00'\n  },\n  {\n    id: '4',\n    name: 'Maria Garcia',\n    email: 'm.garcia@company.com',\n    location: 'Madrid, Spain',\n    status: 'Active',\n    balance: '$0.00'\n  },\n  {\n    id: '5',\n    name: 'David Kim',\n    email: 'd.kim@company.com',\n    location: 'Seoul, KR',\n    status: 'Active',\n    balance: '-$1,000.00'\n  }\n]\n\nconst TableSelectableRowDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full'>\n      <div className='overflow-hidden rounded-md border'>\n        <Table>\n          <TableHeader>\n            <TableRow className='hover:bg-transparent'>\n              <TableHead>\n                <Checkbox id={id} aria-label='select-all' />\n              </TableHead>\n              <TableHead>Name</TableHead>\n              <TableHead>Email</TableHead>\n              <TableHead>Location</TableHead>\n              <TableHead>Status</TableHead>\n              <TableHead className='text-right'>Balance</TableHead>\n            </TableRow>\n          </TableHeader>\n          <TableBody>\n            {items.map(item => (\n              <TableRow key={item.id} className='has-data-[state=checked]:bg-muted/50'>\n                <TableCell>\n                  <Checkbox id={`table-checkbox-${item.id}`} aria-label={`user-checkbox-${item.id}`} />\n                </TableCell>\n                <TableCell className='font-medium'>{item.name}</TableCell>\n                <TableCell>{item.email}</TableCell>\n                <TableCell>{item.location}</TableCell>\n                <TableCell>{item.status}</TableCell>\n                <TableCell className='text-right'>{item.balance}</TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n          <TableFooter className='bg-transparent'>\n            <TableRow className='hover:bg-transparent'>\n              <TableCell colSpan={5}>Total</TableCell>\n              <TableCell className='text-right'>$2,500.00</TableCell>\n            </TableRow>\n          </TableFooter>\n        </Table>\n      </div>\n      <p className='text-muted-foreground mt-4 text-center text-sm'>Table with row selection</p>\n    </div>\n  )\n}\n\nexport default TableSelectableRowDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/table/table-15.tsx"
+    }
+  ]
+}

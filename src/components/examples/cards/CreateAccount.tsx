@@ -1,10 +1,13 @@
+// Third-party Imports
+import { Github } from 'lucide-react'
+
 // Component Imports
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
-import Github from '@/assets/svg/Github'
+// SVG Imports
 import Google from '@/assets/svg/Google'
 
 export function CardsCreateAccount() {

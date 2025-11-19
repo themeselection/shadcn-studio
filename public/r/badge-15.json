@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-15",
+  "type": "registry:component",
+  "title": "Badge 15",
+  "description": "Gradient outline badge with bordered gradient effect",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/badge/badge-15.tsx",
+      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeGradientOutlineDemo = () => {\n  return (\n    <div className='flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 p-0.5'>\n      <Badge className='bg-background hover:bg-background text-foreground border-none'>Gradient Outline</Badge>\n    </div>\n  )\n}\n\nexport default BadgeGradientOutlineDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-15.tsx"
+    }
+  ]
+}

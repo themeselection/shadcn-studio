@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "error-page-01",
+  "type": "registry:block",
+  "title": "Error 1",
+  "description": "Two-column error page layout with left-side text content (Whoops heading, error message, description) and right-side black background featuring centered astronaut illustration",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/error-page/error-page-01/page.tsx",
+      "content": "import Error from '@/components/shadcn-studio/blocks/error-page-01/error-page-01'\n\nconst ErrorPage = () => {\n  return <Error />\n}\n\nexport default ErrorPage\n",
+      "type": "registry:page",
+      "target": "app/error-page-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/error-page-01/error-page-01.tsx",
+      "content": "import { Button } from '@/components/ui/button'\n\nconst Error = () => {\n  return (\n    <div className='grid min-h-screen grid-cols-1 lg:grid-cols-2'>\n      <div className='flex flex-col items-center justify-center px-4 py-8 text-center'>\n        <h2 className='mb-6 text-5xl font-semibold'>Whoops!</h2>\n        <h3 className='mb-1.5 text-3xl font-semibold'>Something went wrong</h3>\n        <p className='text-muted-foreground mb-6 max-w-sm'>\n          The page you&apos;re looking for isn&apos;t found, we suggest you back to home.\n        </p>\n        <Button asChild size='lg' className='rounded-lg text-base'>\n          <a href='#'>Back to home page</a>\n        </Button>\n      </div>\n\n      {/* Right Section: Illustration */}\n      <div className='relative max-h-screen w-full p-2 max-lg:hidden'>\n        <div className='h-full w-full rounded-2xl bg-black'></div>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/error/image-1.png'\n          alt='404 illustration'\n          className='absolute top-1/2 left-1/2 h-[clamp(260px,25vw,406px)] -translate-x-1/2 -translate-y-1/2'\n        />\n      </div>\n    </div>\n  )\n}\n\nexport default Error\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/error-page-01/error-page-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "error-page"
+  }
+}

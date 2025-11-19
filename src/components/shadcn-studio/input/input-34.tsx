@@ -32,9 +32,9 @@ const InputCharacterLimitDemo = () => {
           value={value}
           maxLength={maxLength}
           onChange={handleChange}
-          className='peer pe-14'
+          className='peer pr-14'
         />
-        <span className='text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-xs tabular-nums peer-disabled:opacity-50'>
+        <span className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 text-xs tabular-nums peer-disabled:opacity-50'>
           {characterCount}/{maxLength}
         </span>
       </div>

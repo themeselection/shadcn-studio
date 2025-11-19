@@ -12,7 +12,7 @@ const AvatarNotificationBadgeDemo = () => {
         />
         <AvatarFallback className='text-xs'>HR</AvatarFallback>
       </Avatar>
-      <Badge className='absolute -end-2.5 -top-2.5 h-5 min-w-5 rounded-full bg-indigo-500 px-1 tabular-nums'>8</Badge>
+      <Badge className='absolute -top-2.5 -right-2.5 h-5 min-w-5 bg-indigo-500 px-1 tabular-nums'>8</Badge>
     </div>
   )
 }

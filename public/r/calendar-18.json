@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-18",
+  "type": "registry:component",
+  "title": "Calendar 18",
+  "description": "Calendar with \"Today\" quick action button for fast current date selection",
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-18.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'\n\nconst CalendarWithTodayMonthButtonDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date(2025, 5, 15))\n  const [month, setMonth] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Card>\n        <CardHeader>\n          <CardTitle>Book the show</CardTitle>\n          <CardDescription>Find a date</CardDescription>\n          <CardAction>\n            <Button\n              size='sm'\n              variant='outline'\n              onClick={() => {\n                setMonth(new Date())\n                setDate(new Date())\n              }}\n            >\n              Today\n            </Button>\n          </CardAction>\n        </CardHeader>\n        <CardContent>\n          <Calendar\n            mode='single'\n            month={month}\n            onMonthChange={setMonth}\n            selected={date}\n            onSelect={setDate}\n            className='bg-transparent p-0'\n          />\n        </CardContent>\n      </Card>\n      <p className='text-muted-foreground mt-4 text-center text-xs' role='region'>\n        Calendar with today button\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarWithTodayMonthButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-18.tsx"
+    }
+  ]
+}

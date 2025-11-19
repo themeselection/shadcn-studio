@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-01",
+  "type": "registry:component",
+  "title": "Textarea 1",
+  "description": "A basic textarea input field with placeholder text",
+  "registryDependencies": [
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-01.tsx",
+      "content": "import { Textarea } from '@/components/ui/textarea'\n\nconst TextareaDemo = () => {\n  return <Textarea placeholder='Type your message here.' className='w-full max-w-xs' />\n}\n\nexport default TextareaDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-01.tsx"
+    }
+  ]
+}

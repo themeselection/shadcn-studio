@@ -26,7 +26,7 @@ const ButtonCopyStateDemo = () => {
       <span className={cn('transition-all', copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0')}>
         <CheckIcon className='stroke-green-600 dark:stroke-green-400' />
       </span>
-      <span className={cn('absolute start-4 transition-all', copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100')}>
+      <span className={cn('absolute left-4 transition-all', copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100')}>
         <CopyIcon />
       </span>
       {copied ? 'Copied!' : 'Copy'}

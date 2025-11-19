@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-16",
+  "type": "registry:component",
+  "title": "Checkbox 16",
+  "description": "Form checkbox with terms acceptance, description text, and action buttons",
+  "registryDependencies": [
+    "button",
+    "checkbox",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-16.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Button } from '@/components/ui/button'\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst CheckboxFormDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-start gap-2'>\n      <Checkbox id={id} defaultChecked />\n      <div className='grid gap-2'>\n        <Label htmlFor={id} className='gap-1 leading-4'>\n          Accept terms and conditions\n        </Label>\n        <p className='text-muted-foreground text-xs'>\n          By clicking this checkbox, you agree to the terms and conditions.\n        </p>\n        <div className='flex flex-wrap gap-2'>\n          <Button variant='outline' size='sm'>\n            Reset\n          </Button>\n          <Button size='sm'>Submit</Button>\n        </div>\n      </div>\n    </div>\n  )\n}\n\nexport default CheckboxFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-16.tsx"
+    }
+  ]
+}

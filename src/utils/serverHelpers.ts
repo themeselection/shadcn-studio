@@ -5,26 +5,7 @@ import { cookies } from 'next/headers'
 import 'server-only'
 
 // Type Imports
-import type { Mode, ModeSettings } from '@/contexts/settingsContext'
-
-export const getMode = async (): Promise<Mode> => {
-  try {
-    const cookieStore = await cookies()
-    const settings = cookieStore.get('shadcn-studio-mode')
-
-    if (!settings?.value) return 'light'
-
-    try {
-      const parsedSettings = JSON.parse(settings.value) as ModeSettings
-
-      return parsedSettings.mode || 'light'
-    } catch {
-      return 'light'
-    }
-  } catch {
-    return 'light'
-  }
-}
+import type { ModeSettings } from '@/contexts/settingsContext'
 
 export const getSettingsFromCookie = async (): Promise<ModeSettings> => {
   try {

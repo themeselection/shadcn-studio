@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-11",
+  "type": "registry:component",
+  "title": "Calendar 11",
+  "description": "Event calendar with integrated event list display and add event functionality",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-11.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { formatDateRange } from 'little-date'\nimport { PlusIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Card, CardContent, CardFooter } from '@/components/ui/card'\n\nconst events = [\n  {\n    title: 'Team Sync Meeting',\n    from: '2025-06-12T09:00:00',\n    to: '2025-06-12T10:00:00'\n  },\n  {\n    title: 'Design Review',\n    from: '2025-06-12T11:30:00',\n    to: '2025-06-12T12:30:00'\n  },\n  {\n    title: 'Client Presentation',\n    from: '2025-06-12T14:00:00',\n    to: '2025-06-12T15:00:00'\n  }\n]\n\nconst CalendarEventListDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Card className='w-2xs py-4'>\n        <CardContent className='px-4'>\n          <Calendar mode='single' selected={date} onSelect={setDate} className='w-full bg-transparent p-0' required />\n        </CardContent>\n        <CardFooter className='flex flex-col items-start gap-3 border-t px-4 !pt-4'>\n          <div className='flex w-full items-center justify-between px-1'>\n            <div className='text-sm font-medium'>\n              {date?.toLocaleDateString('en-US', {\n                day: 'numeric',\n                month: 'long',\n                year: 'numeric'\n              })}\n            </div>\n            <Button variant='ghost' size='icon' className='size-6' title='Add Event'>\n              <PlusIcon />\n              <span className='sr-only'>Add Event</span>\n            </Button>\n          </div>\n          <div className='flex w-full flex-col gap-2'>\n            {events.map(event => (\n              <div\n                key={event.title}\n                className='bg-muted after:bg-primary/70 relative rounded-md p-2 pl-6 text-sm after:absolute after:inset-y-2 after:left-2 after:w-1 after:rounded-full'\n              >\n                <div className='font-medium'>{event.title}</div>\n                <div className='text-muted-foreground text-xs'>\n                  {formatDateRange(new Date(event.from), new Date(event.to))}\n                </div>\n              </div>\n            ))}\n          </div>\n        </CardFooter>\n      </Card>\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\n        Calendar with event list\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarEventListDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-11.tsx"
+    }
+  ]
+}

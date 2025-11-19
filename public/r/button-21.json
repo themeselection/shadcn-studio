@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-21",
+  "type": "registry:component",
+  "title": "Button 21",
+  "description": "Button with badge indicator showing unread message count",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-21.tsx",
+      "content": "import { MailCheckIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\n\nconst ButtonMessagesBadgeDemo = () => {\n  return (\n    <Button variant='outline'>\n      <MailCheckIcon />\n      Messages\n      <Badge variant='destructive' className='px-1.5 py-px'>\n        99+\n      </Badge>\n    </Button>\n  )\n}\n\nexport default ButtonMessagesBadgeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-21.tsx"
+    }
+  ]
+}

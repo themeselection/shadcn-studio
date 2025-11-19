@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-19",
+  "type": "registry:component",
+  "title": "Switch 19",
+  "description": "Animated motion switches in multiple sizes with smooth transition effects",
+  "dependencies": [
+    "@radix-ui/react-switch",
+    "motion"
+  ],
+  "registryDependencies": [
+    "label",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-19.tsx",
+      "content": "import { Label } from '@/components/ui/label'\nimport { Switch } from '@/components/ui/motion-switch'\n\nconst SwitchAnimatedDemo = () => {\n  return (\n    <div className='flex flex-col gap-3'>\n      <div className='flex items-center space-x-2'>\n        <Switch aria-label='Animated small switch' size='sm' id='small-switch' />\n        <Label htmlFor='small-switch'>Small switch</Label>\n      </div>\n      <div className='flex items-center space-x-2'>\n        <Switch aria-label='Animated medium switch' size='md' id='medium-switch' />\n        <Label htmlFor='medium-switch'>Medium switch</Label>\n      </div>\n      <div className='flex items-center space-x-2'>\n        <Switch aria-label='Animated large switch' size='lg' id='large-switch' />\n        <Label htmlFor='large-switch'>Large switch</Label>\n      </div>\n    </div>\n  )\n}\n\nexport default SwitchAnimatedDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-19.tsx"
+    },
+    {
+      "path": "src/components/ui/motion-switch.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\n\nimport * as SwitchPrimitive from '@radix-ui/react-switch'\nimport { motion } from 'motion/react'\n\nimport { cn } from '@/lib/utils'\n\nconst SIZES = {\n  sm: { TRACK_WIDTH: 26, THUMB_SIZE: 14, THUMB_STRETCH: 18 },\n  md: { TRACK_WIDTH: 32, THUMB_SIZE: 16, THUMB_STRETCH: 25 },\n  lg: { TRACK_WIDTH: 48, THUMB_SIZE: 24, THUMB_STRETCH: 40 }\n}\n\nconst STRETCH_DURATION = 120 // ms\n\ntype Size = keyof typeof SIZES\n\ninterface SwitchProps extends React.ComponentProps<typeof SwitchPrimitive.Root> {\n  size?: Size\n}\n\nfunction Switch({ className, size = 'md', ...props }: SwitchProps) {\n  const { TRACK_WIDTH, THUMB_SIZE, THUMB_STRETCH } = SIZES[size]\n  const [isChecked, setIsChecked] = React.useState(props.checked ?? props.defaultChecked ?? false)\n  const [isStretching, setIsStretching] = React.useState(false)\n\n  React.useEffect(() => {\n    if (props.checked !== undefined) setIsChecked(props.checked)\n  }, [props.checked])\n\n  React.useEffect(() => {\n    setIsStretching(true)\n    const timeout = setTimeout(() => setIsStretching(false), STRETCH_DURATION)\n\n    return () => clearTimeout(timeout)\n  }, [isChecked])\n\n  const handleCheckedChange = (checked: boolean) => {\n    setIsChecked(checked)\n    props.onCheckedChange?.(checked)\n  }\n\n  const thumbWidth = isStretching ? THUMB_STRETCH : THUMB_SIZE\n  const offsetUnchecked = 0\n  const offsetChecked = TRACK_WIDTH - thumbWidth - 2\n\n  const thumbLeft = isChecked ? offsetChecked : offsetUnchecked\n\n  return (\n    <SwitchPrimitive.Root\n      data-slot='switch'\n      className={cn(\n        `peer data-[state=checked]:bg-primary data-[state=unchecked]:bg-input focus-visible:border-ring focus-visible:ring-ring/50 dark:data-[state=unchecked]:bg-input/80 relative inline-flex shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50`,\n\n        // Dynamic width/height\n        size === 'sm' ? 'h-4 w-6.5' : size === 'lg' ? 'h-7 w-12' : 'h-[1.15rem] w-8',\n        className\n      )}\n      checked={isChecked}\n      onCheckedChange={handleCheckedChange}\n      {...props}\n    >\n      <SwitchPrimitive.Thumb asChild>\n        <motion.span\n          data-slot='switch-thumb'\n          className={cn(\n            'bg-background dark:data-[state=unchecked]:bg-foreground dark:data-[state=checked]:bg-primary-foreground pointer-events-none absolute block rounded-full ring-0'\n          )}\n          animate={{\n            width: thumbWidth,\n            left: thumbLeft,\n            transition: { duration: STRETCH_DURATION / 1000 }\n          }}\n          style={{\n            height: THUMB_SIZE,\n            minWidth: THUMB_SIZE,\n            maxWidth: THUMB_STRETCH\n          }}\n        />\n      </SwitchPrimitive.Thumb>\n    </SwitchPrimitive.Root>\n  )\n}\n\nexport { Switch }\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-switch.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-05",
+  "type": "registry:component",
+  "title": "Input 5",
+  "description": "A read-only email input field with default value and muted styling",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-05.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputReadOnlyDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Read-only input</Label>\n      <Input\n        id={id}\n        type='email'\n        placeholder='Email address'\n        defaultValue='example@xyz.com'\n        className='read-only:bg-muted'\n        readOnly\n      />\n    </div>\n  )\n}\n\nexport default InputReadOnlyDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-05.tsx"
+    }
+  ]
+}

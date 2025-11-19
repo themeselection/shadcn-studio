@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-12",
+  "type": "registry:component",
+  "title": "Popover 12",
+  "description": "An informational popover with image and content layout for location details",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-12.tsx",
+      "content": "import { ChevronRightIcon, MapPinIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst PopoverAboutHimalayasDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <MapPinIcon />\n          <span className='sr-only'>About Himalayas</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-85 p-0'>\n        <div className='flex'>\n          <div className='space-y-2 p-4'>\n            <p className='font-medium'>About Himalayas</p>\n            <p className='text-muted-foreground text-xs'>\n              The Great Himalayan mountain ranges in the Indian sub-continent region.{' '}\n            </p>\n            <a\n              href='https://en.wikipedia.org/wiki/Himalayas'\n              target='_blank'\n              rel='noopener noreferrer'\n              className='flex w-fit text-xs hover:underline'\n            >\n              Read more\n              <ChevronRightIcon className='size-4' />\n            </a>\n          </div>\n          <img\n            src='https://lp-cms-production.imgix.net/2021-01/GettyRF_450207051.jpg?height=136'\n            alt='the himalayas'\n            className='h-34 w-2/5 rounded-r-md object-cover'\n          />\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverAboutHimalayasDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-12.tsx"
+    }
+  ]
+}

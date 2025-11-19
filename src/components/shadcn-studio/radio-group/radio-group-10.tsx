@@ -34,7 +34,7 @@ const RadioGroupSplitListGroupDemo = () => {
                 {item.value === '2' && (
                   <Badge
                     variant='outline'
-                    className='border-green-500 bg-green-500/10 px-1.5 py-px text-xs text-green-500'
+                    className='rounded-sm border-green-500 bg-green-500/10 px-1.5 py-px text-xs text-green-500'
                   >
                     Best Seller
                   </Badge>

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-03",
+  "type": "registry:component",
+  "title": "Tabs 3",
+  "description": "Tabs with icons for enhanced visual navigation and improved user experience",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tabs/tabs-03.tsx",
+      "content": "import { BookIcon, GiftIcon, HeartIcon } from 'lucide-react'\n\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    icon: BookIcon,\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    icon: HeartIcon,\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise',\n    value: 'surprise',\n    icon: GiftIcon,\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst TabsWithIconDemo = () => {\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs defaultValue='explore' className='gap-4'>\n        <TabsList>\n          {tabs.map(({ icon: Icon, name, value }) => (\n            <TabsTrigger key={value} value={value} className='flex items-center gap-1 px-2.5 sm:px-3'>\n              <Icon />\n              {name}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default TabsWithIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tabs/tabs-03.tsx"
+    }
+  ]
+}

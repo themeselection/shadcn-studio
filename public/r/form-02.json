@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-02",
+  "type": "registry:component",
+  "title": "Form 2",
+  "description": "Form with checkbox controls and alert integration for user selections",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "checkbox",
+    "form"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-02.tsx",
+      "content": "'use client'\n\nimport { CheckCheckIcon } from 'lucide-react'\n\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\n\nconst CheckboxFormDemo = () => {\n  const FormSchema = z.object({\n    acceptTerms: z.boolean().refine(val => val === true, {\n      message: 'You must accept the terms and conditions.'\n    })\n  })\n\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema),\n    defaultValues: { acceptTerms: false }\n  })\n\n  function onSubmit() {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>Welcome to the community!</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-xs space-y-6'>\n        <FormField\n          control={form.control}\n          name='acceptTerms'\n          render={({ field }) => (\n            <FormItem>\n              <div className='flex items-center space-x-2'>\n                <FormControl>\n                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />\n                </FormControl>\n                <FormLabel>Agree to Join the Community</FormLabel>\n              </div>\n              <FormDescription>\n                By clicking &apos;Join Now&apos;, you accept our Community Guidelines and Privacy Policy. We&apos;re\n                excited to have you on board!\n              </FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n\n        <Button type='submit'>Join Now</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default CheckboxFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-02.tsx"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-07",
+  "type": "registry:component",
+  "title": "Accordion 7",
+  "description": "Avatar-based accordion displaying user profiles with avatar images, names, and email addresses.",
+  "registryDependencies": [
+    "accordion",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/accordion/accordion-07.tsx",
+      "content": "import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst items = [\n  {\n    name: 'Richard Payne',\n    email: 'pwright@yahoo.com',\n    avatarImage: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png',\n    content:\n      'Richard Payne is a remarkable individual known for his exceptional skills and expertise in various fields. With a strong background in technology and a passion for innovation, Richard has made significant contributions to the industry.'\n  },\n  {\n    name: 'Jordan Stevenson',\n    email: 'wramirez@outlook.com',\n    avatarImage: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-2.png',\n    content:\n      'Jordan Stevenson is a talented individual with a passion for technology and innovation. Jordan has made significant contributions to various projects and has a deep understanding of programming languages and frameworks.'\n  },\n  {\n    name: 'Nicholas Tanner',\n    email: 'snguyen@icloud.com',\n    avatarImage: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    content:\n      'Nicholas Tanner is a highly skilled individual with a strong passion for technology and innovation. Nicholas has made significant contributions to numerous projects and possesses a deep understanding of various programming languages and frameworks.'\n  }\n]\n\nconst AccordionAvatarDemo = () => {\n  return (\n    <Accordion type='single' collapsible className='w-full' defaultValue='item-1'>\n      {items.map((item, index) => (\n        <AccordionItem key={index} value={`item-${index + 1}`}>\n          <AccordionTrigger className='items-center hover:no-underline'>\n            <span className='flex items-center gap-4'>\n              <Avatar className='size-10.5 rounded-sm'>\n                <AvatarImage src={item.avatarImage} alt={item.name} className='rounded-sm' />\n                <AvatarFallback className='rounded-sm text-xs'>\n                  {item.name.split(/\\s/).reduce((response, word) => (response += word.slice(0, 1)), '')}\n                </AvatarFallback>\n              </Avatar>\n              <span className='flex flex-col space-y-0.5'>\n                <span>{item.name}</span>\n                <span className='text-muted-foreground font-normal'>{item.email}</span>\n              </span>\n            </span>\n          </AccordionTrigger>\n          <AccordionContent className='text-muted-foreground'>{item.content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n\nexport default AccordionAvatarDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/accordion/accordion-07.tsx"
+    }
+  ]
+}

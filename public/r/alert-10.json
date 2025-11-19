@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-10",
+  "type": "registry:component",
+  "title": "Alert 10",
+  "description": "Gradient background alert with email verification message and gradient styling.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-10.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { CircleAlertIcon, XIcon } from 'lucide-react'\n\nimport { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'\n\nconst AlertGradientDemo = () => {\n  const [isActive, setIsActive] = useState(true)\n\n  if (!isActive) return null\n\n  return (\n    <Alert className='border-accent-foreground/20 from-accent text-accent-foreground flex justify-between bg-gradient-to-b to-transparent to-60%'>\n      <CircleAlertIcon />\n      <div className='flex flex-1 flex-col gap-1'>\n        <AlertTitle>Verify your email to activate your account</AlertTitle>\n        <AlertDescription className='text-accent-foreground/60'>\n          We&apos;ve sent a confirmation link to your inbox. Check your email to complete the sign-up.\n        </AlertDescription>\n      </div>\n      <button className='cursor-pointer' onClick={() => setIsActive(false)}>\n        <XIcon className='size-5' />\n        <span className='sr-only'>Close</span>\n      </button>\n    </Alert>\n  )\n}\n\nexport default AlertGradientDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-10.tsx"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-component-01",
+  "type": "registry:block",
+  "title": "Pricing 1",
+  "description": "Interactive pricing cards with monthly/annual toggle switch and plan comparison features",
+  "registryDependencies": [
+    "button",
+    "card",
+    "switch",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/pricing-component/pricing-component-01/page.tsx",
+      "content": "import Pricing from '@/components/shadcn-studio/blocks/pricing-component-01/pricing-component-01'\n\nconst pricingData = [\n  {\n    id: 'starter',\n    title: 'Starter',\n    description: 'Ideal for crypto pros!',\n    monthly: 99,\n    annual: 999\n  },\n  {\n    id: 'professional',\n    title: 'Professional',\n    description: 'Ideal for business owners.',\n    monthly: 199,\n    annual: 1999\n  }\n]\n\nconst PricingPage = () => {\n  return <Pricing pricingData={pricingData} />\n}\n\nexport default PricingPage\n",
+      "type": "registry:page",
+      "target": "app/pricing-component-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/pricing-component-01/pricing-component-01.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Button } from '@/components/ui/button'\nimport { Card, CardContent } from '@/components/ui/card'\nimport { Switch } from '@/components/ui/switch'\nimport { Separator } from '@/components/ui/separator'\n\ntype PricingPlan = {\n  id: string\n  title: string\n  description: string\n  monthly: number\n  annual: number\n}[]\n\nconst PricingCards = ({ pricingData }: { pricingData: PricingPlan }) => {\n  const [isAnnual, setIsAnnual] = useState(false)\n\n  return (\n    <section className='bg-muted py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl space-y-12 px-4 sm:px-6 lg:space-y-24 lg:px-8'>\n        <div className='flex flex-col items-center gap-10 text-center'>\n          <div className='flex flex-col items-center gap-4'>\n            <h2 className='text-2xl font-semibold sm:text-3xl lg:text-4xl'>Select the Best Plan for You!</h2>\n            <p className='text-muted-foreground text-xl'>\n              Discover Our Flexible Plans, Compare Features, and Choose <br />\n              the Ideal Option for Your Needs.\n            </p>\n          </div>\n\n          <div className='flex items-center gap-3'>\n            <span className='font-medium'>Monthly</span>\n            <Switch checked={isAnnual} onCheckedChange={setIsAnnual} />\n            <span className='font-medium'>Annually</span>\n          </div>\n        </div>\n        <div className='flex items-center justify-center gap-6 max-lg:flex-col'>\n          {pricingData.map(plan => {\n            const price = isAnnual ? plan.annual : plan.monthly\n            const period = isAnnual ? 'year' : 'month'\n            const savings = isAnnual ? plan.monthly * 12 - plan.annual : null\n\n            return (\n              <Card key={plan.id} className='w-full shadow-none sm:w-lg'>\n                <CardContent className='flex justify-between gap-4'>\n                  <div className='flex flex-col justify-center gap-5'>\n                    <div className='flex flex-col gap-2'>\n                      <h3 className='text-3xl font-semibold'>{plan.title}</h3>\n                      <p className='text-muted-foreground text-base'>{plan.description}</p>\n                    </div>\n                    <div className='flex flex-col items-end sm:hidden'>\n                      <div className='flex items-end'>\n                        <span className='text-primary text-5xl font-bold'>${price}</span>\n                        <span className='text-muted-foreground ml-1 text-lg'>/{period}</span>\n                      </div>\n                      {savings && (\n                        <span className='mt-1 text-sm font-medium text-green-600'>\n                          Save ${savings.toLocaleString()}/year\n                        </span>\n                      )}\n                    </div>\n                    <Button className='w-fit'>Enterprise</Button>\n                  </div>\n\n                  <Separator orientation='vertical' className='!h-[132px] max-sm:hidden' />\n\n                  <div className='flex items-end justify-end max-sm:hidden'>\n                    <div className='flex flex-col items-end'>\n                      <div className='flex items-end'>\n                        <span className='text-primary text-5xl font-bold'>${price}</span>\n                        <span className='text-muted-foreground ml-1 text-lg'>/{period}</span>\n                      </div>\n                      {savings && (\n                        <span className='mt-1 text-sm font-medium text-green-600'>\n                          Save ${savings.toLocaleString()}/year\n                        </span>\n                      )}\n                    </div>\n                  </div>\n                </CardContent>\n              </Card>\n            )\n          })}\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default PricingCards\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/pricing-component-01/pricing-component-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "pricing-component"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-40",
+  "type": "registry:component",
+  "title": "Button 40",
+  "description": "Button with ring hover effect that shows animated border on hover",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-40.tsx",
+      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonRingHoverDemo = () => {\n  return (\n    <Button className='ring-offset-background hover:ring-primary/90 transition-all duration-300 hover:ring-2 hover:ring-offset-2'>\n      Ring Hover\n    </Button>\n  )\n}\n\nexport default ButtonRingHoverDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-40.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

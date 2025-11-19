@@ -45,7 +45,7 @@ const TabsWithBadgeDemo = () => {
           {tabs.map(tab => (
             <TabsTrigger key={tab.value} value={tab.value} className='flex items-center gap-1 px-2.5 sm:px-3'>
               {tab.name}
-              <Badge className='h-5 min-w-5 rounded-full px-1 tabular-nums'>{tab.count}</Badge>
+              <Badge className='h-5 min-w-5 px-1 tabular-nums'>{tab.count}</Badge>
             </TabsTrigger>
           ))}
         </TabsList>

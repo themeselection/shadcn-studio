@@ -10,8 +10,8 @@ const InputStartTextAddOnDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Input with start text add-on</Label>
       <div className='relative'>
-        <Input id={id} type='text' placeholder='shadcnstudio.com' className='peer ps-17' />
-        <span className='pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm peer-disabled:opacity-50'>
+        <Input id={id} type='text' placeholder='shadcnstudio.com' className='peer pl-17' />
+        <span className='pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 text-sm peer-disabled:opacity-50'>
           https://
         </span>
       </div>

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-21",
+  "type": "registry:component",
+  "title": "Select 21",
+  "description": "A custom select dropdown with required field indicator",
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-21.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectRequiredDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id} className='gap-1'>\n        Required select <span className='text-destructive'>*</span>\n      </Label>\n      <Select defaultValue='2' required>\n        <SelectTrigger id={id} className='w-full'>\n          <SelectValue placeholder='Select framework' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value='1'>United States</SelectItem>\n          <SelectItem value='2'>Japan</SelectItem>\n          <SelectItem value='3'>Australia</SelectItem>\n          <SelectItem value='4'>Brazil</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectRequiredDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-21.tsx"
+    }
+  ]
+}

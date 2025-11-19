@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-19",
+  "type": "registry:component",
+  "title": "Tabs 19",
+  "description": "Vertical tabs with sharp corners and rectangular styling",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tabs/tabs-19.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise Me',\n    value: 'surprise',\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst TabsVerticalSharpDemo = () => {\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs defaultValue='explore' className='flex-row'>\n        <TabsList className='bg-background h-full flex-col rounded-none border-l p-0'>\n          {tabs.map(tab => (\n            <TabsTrigger\n              key={tab.value}\n              value={tab.value}\n              className='bg-background data-[state=active]:border-primary dark:data-[state=active]:border-primary h-full w-full justify-start rounded-none border-l-3 border-transparent data-[state=active]:shadow-none'\n            >\n              {tab.name}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default TabsVerticalSharpDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tabs/tabs-19.tsx"
+    }
+  ]
+}

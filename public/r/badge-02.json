@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-02",
+  "type": "registry:component",
+  "title": "Badge 2",
+  "description": "Secondary variant badge with muted styling for less prominent labels",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/badge/badge-02.tsx",
+      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeSecondaryDemo = () => {\n  return <Badge variant='secondary'>Secondary</Badge>\n}\n\nexport default BadgeSecondaryDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-02.tsx"
+    }
+  ]
+}

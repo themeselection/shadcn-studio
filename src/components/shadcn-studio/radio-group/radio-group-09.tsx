@@ -31,7 +31,7 @@ const RadioGroupListGroupDemo = () => {
               />
               <Label className='inline-flex items-center' htmlFor={`${id}-${item.value}`}>
                 {item.label}
-                {item.value === '2' && <Badge className='px-1.5 py-px text-xs'>Best Seller</Badge>}
+                {item.value === '2' && <Badge className='rounded-sm px-1.5 py-px text-xs'>Best Seller</Badge>}
               </Label>
             </div>
             <div id={`${`${id}-${item.value}`}-price`} className='text-muted-foreground text-xs leading-[inherit]'>

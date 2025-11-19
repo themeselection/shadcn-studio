@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-07",
+  "type": "registry:component",
+  "title": "Combobox 7",
+  "description": "Timezone selector combobox with real timezone data from Intl API",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "command",
+    "label",
+    "popover",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/combobox/combobox-07.tsx",
+      "content": "'use client'\n\nimport { useId, useMemo, useState } from 'react'\n\nimport { CheckIcon, ChevronsUpDownIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nimport { cn } from '@/lib/utils'\n\nconst ComboboxTimezoneDemo = () => {\n  const id = useId()\n  const [open, setOpen] = useState(false)\n  const [value, setValue] = useState<string>('Indian/Cocos')\n\n  // Fetch supported timezones\n  const timezones = Intl.supportedValuesOf('timeZone')\n\n  const formattedTimezones = useMemo(() => {\n    return timezones\n      .map(timezone => {\n        const formatter = new Intl.DateTimeFormat('en', {\n          timeZone: timezone,\n          timeZoneName: 'shortOffset'\n        })\n\n        const parts = formatter.formatToParts(new Date())\n        const offset = parts.find(part => part.type === 'timeZoneName')?.value || ''\n        const formattedOffset = offset === 'GMT' ? 'GMT+0' : offset\n\n        return {\n          value: timezone,\n          label: `(${formattedOffset}) ${timezone.replace(/_/g, ' ')}`,\n          numericOffset: parseInt(formattedOffset.replace('GMT', '').replace('+', '') || '0')\n        }\n      })\n      .sort((a, b) => a.numericOffset - b.numericOffset) // Sort by numeric offset\n  }, [timezones])\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Timezone combobox</Label>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger asChild>\n          <Button id={id} variant='outline' role='combobox' aria-expanded={open} className='w-full justify-between'>\n            <span className={cn('truncate')}>\n              {value ? (\n                formattedTimezones.find(timezone => timezone.value === value)?.label\n              ) : (\n                <span className='text-muted-foreground'>Select timezone</span>\n              )}\n            </span>\n            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='w-(--radix-popper-anchor-width) p-0'>\n          <Command>\n            <CommandInput placeholder='Search timezone' />\n            <CommandList>\n              <CommandEmpty>No timezone found.</CommandEmpty>\n              <CommandGroup>\n                {formattedTimezones.map(({ value: itemValue, label }) => (\n                  <CommandItem\n                    key={itemValue}\n                    value={itemValue}\n                    onSelect={currentValue => {\n                      setValue(currentValue === value ? '' : currentValue)\n                      setOpen(false)\n                    }}\n                  >\n                    <span className='truncate'>{label}</span>\n                    {value === itemValue && <CheckIcon size={16} className='ml-auto' />}\n                  </CommandItem>\n                ))}\n              </CommandGroup>\n            </CommandList>\n          </Command>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default ComboboxTimezoneDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/combobox/combobox-07.tsx"
+    }
+  ]
+}

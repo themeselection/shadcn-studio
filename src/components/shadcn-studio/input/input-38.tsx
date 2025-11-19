@@ -13,7 +13,7 @@ const InputSearchIconDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Search input with icon and button</Label>
       <div className='relative'>
-        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50'>
+        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>
           <SearchIcon className='size-4' />
           <span className='sr-only'>Search</span>
         </div>
@@ -26,7 +26,7 @@ const InputSearchIconDemo = () => {
         <Button
           variant='ghost'
           size='icon'
-          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 end-0 rounded-s-none hover:bg-transparent'
+          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'
         >
           <MicIcon />
           <span className='sr-only'>Press to speak</span>

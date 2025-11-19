@@ -11,7 +11,7 @@ const AvatarStatusAwayDemo = () => {
         />
         <AvatarFallback className='text-xs'>HR</AvatarFallback>
       </Avatar>
-      <span className='border-background absolute -end-1.5 -top-1.5 size-3 rounded-full border-2 bg-amber-600 dark:bg-amber-400'>
+      <span className='border-background absolute -top-1.5 -right-1.5 size-3 rounded-full border-2 bg-amber-600 dark:bg-amber-400'>
         <span className='sr-only'>Away</span>
       </span>
     </div>

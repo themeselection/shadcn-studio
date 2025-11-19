@@ -1,19 +1,26 @@
 // React Imports
 import { cache } from 'react'
 
+// Third-party Imports
+import type { RegistryItem } from 'shadcn/schema'
+
 // Type Imports
-import type { ComponentProps, FileTree } from '@/types/components'
+import type { FileTree } from '@/types/components'
 
-// Data Imports
-import { components } from '@/assets/data/components'
+// Registry Import
+import registryJson from '@/../registry.json'
 
-export const getComponentsByNames = (names: string[]): ComponentProps[] => {
+const components: RegistryItem[] = (registryJson.items as RegistryItem[]).filter(
+  item => item.type === 'registry:component'
+)
+
+export const getComponentsByNames = (names: string[]): RegistryItem[] => {
   const componentsMap = new Map(components.map(comp => [comp.name, comp]))
 
-  return names.map(name => componentsMap.get(name)).filter((comp): comp is ComponentProps => comp !== undefined)
+  return names.map(name => componentsMap.get(name)).filter((comp): comp is RegistryItem => comp !== undefined)
 }
 
-async function getFileContent(file: ComponentProps['files'][number]) {
+async function getFileContent(file: NonNullable<RegistryItem['files']>[number]) {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_APP_URL!}/api/get-file-content?path=${encodeURIComponent(file.path)}`
@@ -34,7 +41,7 @@ async function getFileContent(file: ComponentProps['files'][number]) {
   }
 }
 
-export function getComponentStyles(component: ComponentProps): ComponentProps['files'][number] {
+export function getComponentStyles(component: RegistryItem): NonNullable<RegistryItem['files']>[number] {
   let styles = ''
 
   // Add @plugin entries first, before everything else
@@ -200,7 +207,7 @@ ${Object.entries(component.cssVars.theme)
   return {
     path: 'styles/globals.css',
     content: styles
-  }
+  } as NonNullable<RegistryItem['files']>[number]
 }
 
 export async function getComponentItem(name: string) {
@@ -210,7 +217,7 @@ export async function getComponentItem(name: string) {
     return null
   }
 
-  const files: ComponentProps['files'] = []
+  const files: RegistryItem['files'] = []
 
   for (const file of item.files ?? []) {
     const content = await getFileContent(file)
@@ -229,7 +236,7 @@ export async function getComponentItem(name: string) {
     files.push(stylesFile)
   }
 
-  const ComponentItem: ComponentProps = {
+  const ComponentItem: RegistryItem = {
     ...item,
     files
   }

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-29",
+  "type": "registry:component",
+  "title": "Input 29",
+  "description": "A domain input field with a TLD selector dropdown at the end",
+  "registryDependencies": [
+    "input",
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-29.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst InputEndSelectDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end select</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Input\n          id={id}\n          type='text'\n          placeholder='shadcnstudio'\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\n        />\n        <Select defaultValue='.com'>\n          <SelectTrigger id={id} className='rounded-l-none shadow-none'>\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            <SelectItem value='.com' className='pr-2 [&_svg]:hidden'>\n              .com\n            </SelectItem>\n            <SelectItem value='.org' className='pr-2 [&_svg]:hidden'>\n              .org\n            </SelectItem>\n            <SelectItem value='.net' className='pr-2 [&_svg]:hidden'>\n              .net\n            </SelectItem>\n          </SelectContent>\n        </Select>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndSelectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-29.tsx"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-06",
+  "type": "registry:component",
+  "title": "Button Group 6",
+  "description": "Zoom control button group with increment/decrement and percentage display",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-06.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { ZoomInIcon, ZoomOutIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonGroupZoomDemo = () => {\n  const [zoom, setZoom] = useState(95)\n\n  const handleZoomIn = () => {\n    if (zoom < 100) {\n      setZoom(zoom + 5)\n    }\n  }\n\n  const handleZoomOut = () => {\n    if (zoom > 0) {\n      setZoom(zoom - 5)\n    }\n  }\n\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <Button\n        variant='outline'\n        size='icon'\n        className='rounded-none rounded-l-md shadow-none focus-visible:z-10'\n        onClick={handleZoomOut}\n        disabled={zoom === 0}\n      >\n        <ZoomOutIcon />\n        <span className='sr-only'>Zoom out</span>\n      </Button>\n      <span className='bg-background dark:border-input dark:bg-input/30 flex items-center border px-3 text-sm font-medium'>\n        {`${zoom}%`}\n      </span>\n      <Button\n        variant='outline'\n        size='icon'\n        className='rounded-none rounded-r-md shadow-none focus-visible:z-10'\n        onClick={handleZoomIn}\n        disabled={zoom === 100}\n      >\n        <ZoomInIcon />\n        <span className='sr-only'>Zoom in</span>\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonGroupZoomDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-06.tsx"
+    }
+  ]
+}

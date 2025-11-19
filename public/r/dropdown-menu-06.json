@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-06",
+  "type": "registry:component",
+  "title": "Dropdown Menu 6",
+  "description": "Text editing dropdown menu with formatting options and descriptions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-06.tsx",
+      "content": "import { AlignJustifyIcon, Heading1Icon, Heading2Icon, PencilIcon, TextSearchIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst listItems = [\n  {\n    icon: Heading1Icon,\n    property: 'Heading 1',\n    description: 'big section or hero heading'\n  },\n  {\n    icon: Heading2Icon,\n    property: 'Heading 2',\n    description: 'Sub section heading'\n  },\n  {\n    icon: AlignJustifyIcon,\n    property: 'Align justify',\n    description: 'text will fill all area'\n  },\n  {\n    icon: TextSearchIcon,\n    property: 'text search',\n    description: 'find any text'\n  }\n]\n\nconst DropdownMenuEditMenuDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='ghost' size='icon' className='rounded-full'>\n          <PencilIcon />\n          <span className='sr-only'>Edit menu</span>\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56'>\n        <DropdownMenuLabel>Edit text</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          {listItems.map((item, index) => (\n            <DropdownMenuItem key={index}>\n              <span className='flex items-center justify-center rounded-md border p-2'>\n                <item.icon />\n              </span>\n              <div className='flex flex-col'>\n                <span className='text-popover-foreground'>{item.property}</span>\n                <span className='text-muted-foreground text-xs'>{item.description}</span>\n              </div>\n            </DropdownMenuItem>\n          ))}\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuEditMenuDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-06.tsx"
+    }
+  ]
+}

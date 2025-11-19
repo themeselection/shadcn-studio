@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-13",
+  "type": "registry:component",
+  "title": "Alert 13",
+  "description": "displaying a minimal \"New message!\" notification with an attention icon and an actionable \"Open\" button",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-13.tsx",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\n\nconst AlertWithActionDemo = () => {\n  return (\n    <Alert className='flex items-center justify-between [&>svg]:translate-y-0'>\n      <CircleAlertIcon />\n      <AlertTitle className='flex-1'>New message!</AlertTitle>\n      <Button variant='outline' className='h-7 cursor-pointer rounded-md px-2'>\n        Open\n      </Button>\n    </Alert>\n  )\n}\n\nexport default AlertWithActionDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-13.tsx"
+    }
+  ]
+}

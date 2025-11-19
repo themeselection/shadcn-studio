@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-04",
+  "type": "registry:component",
+  "title": "Button 4",
+  "description": "A button with animated icon that moves on hover",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-04.tsx",
+      "content": "import { ArrowRightIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonIconHoverDemo = () => {\n  return (\n    <Button className='group'>\n      Get In Touch\n      <ArrowRightIcon className='transition-transform duration-200 group-hover:translate-x-0.5' />\n    </Button>\n  )\n}\n\nexport default ButtonIconHoverDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-04.tsx"
+    }
+  ]
+}

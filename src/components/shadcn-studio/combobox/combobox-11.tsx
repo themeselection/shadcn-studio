@@ -55,14 +55,14 @@ const ComboboxMultipleExpandableDemo = () => {
             aria-expanded={open}
             className='h-auto min-h-8 w-full justify-between hover:bg-transparent'
           >
-            <div className='flex flex-wrap items-center gap-1 pe-2.5'>
+            <div className='flex flex-wrap items-center gap-1 pr-2.5'>
               {selectedValues.length > 0 ? (
                 <>
                   {visibleItems.map(val => {
                     const framework = frameworks.find(c => c.value === val)
 
                     return framework ? (
-                      <Badge key={val} variant='outline'>
+                      <Badge key={val} variant='outline' className='rounded-sm'>
                         {framework.label}
                         <Button
                           variant='ghost'
@@ -88,6 +88,7 @@ const ComboboxMultipleExpandableDemo = () => {
                         e.stopPropagation()
                         setExpanded(prev => !prev)
                       }}
+                      className='rounded-sm'
                     >
                       {expanded ? 'Show Less' : `+${hiddenCount} more`}
                     </Badge>
@@ -97,7 +98,7 @@ const ComboboxMultipleExpandableDemo = () => {
                 <span className='text-muted-foreground'>Select framework</span>
               )}
             </div>
-            <ChevronsUpDownIcon size={16} className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
+            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='w-(--radix-popper-anchor-width) p-0'>

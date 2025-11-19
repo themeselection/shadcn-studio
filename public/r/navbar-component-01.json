@@ -1,0 +1,45 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navbar-component-01",
+  "type": "registry:block",
+  "title": "Navbar 1",
+  "description": "A sticky navigation header with centered logo and brand name flanked symmetrically by navigation links on both sides. Features a search icon button and responsive mobile dropdown menu, perfect for balanced logo-centric layouts.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/navbar-component/navbar-component-01/page.tsx",
+      "content": "import Navbar from '@/components/shadcn-studio/blocks/navbar-component-01/navbar-component-01'\n\nconst navigationData = [\n  {\n    title: 'Home',\n    href: '#'\n  },\n  {\n    title: 'Products',\n    href: '#'\n  },\n  {\n    title: 'About Us',\n    href: '#'\n  },\n  {\n    title: 'Contacts',\n    href: '#'\n  }\n]\n\nconst NavbarPage = () => {\n  return (\n    <div className='h-60'>\n      <Navbar navigationData={navigationData} />\n    </div>\n  )\n}\n\nexport default NavbarPage\n",
+      "type": "registry:page",
+      "target": "app/navbar-component-01/page.tsx"
+    },
+    {
+      "path": "src/assets/svg/logo.tsx",
+      "content": "// React Imports\nimport type { SVGAttributes } from 'react'\n\nconst Logo = (props: SVGAttributes<SVGElement>) => {\n  return (\n    <svg width='1em' height='1em' viewBox='0 0 328 329' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>\n      <rect y='0.5' width='328' height='328' rx='164' fill='black' className='dark:fill-white' />\n      <path\n        d='M165.018 72.3008V132.771C165.018 152.653 148.9 168.771 129.018 168.771H70.2288'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <path\n        d='M166.627 265.241L166.627 204.771C166.627 184.889 182.744 168.771 202.627 168.771L261.416 168.771'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='238.136'\n        y1='98.8184'\n        x2='196.76'\n        y2='139.707'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='135.688'\n        y1='200.957'\n        x2='94.3128'\n        y2='241.845'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='133.689'\n        y1='137.524'\n        x2='92.5566'\n        y2='96.3914'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n      <line\n        x1='237.679'\n        y1='241.803'\n        x2='196.547'\n        y2='200.671'\n        stroke='white'\n        strokeWidth='20'\n        className='dark:stroke-black'\n      />\n    </svg>\n  )\n}\n\nexport default Logo\n",
+      "type": "registry:component",
+      "target": "assets/svg/logo.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/navbar-component-01/navbar-component-01.tsx",
+      "content": "import { MenuIcon, SearchIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nimport Logo from '@/components/layout/logo'\n\ntype NavigationItem = {\n  title: string\n  href: string\n}[]\n\nconst Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {\n  return (\n    <header className='bg-background sticky top-0 z-50'>\n      <div className='mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-7 sm:px-6'>\n        <div className='text-muted-foreground flex flex-1 items-center gap-8 font-medium md:justify-center lg:gap-16'>\n          <a href='#' className='hover:text-primary max-md:hidden'>\n            Home\n          </a>\n          <a href='#' className='hover:text-primary max-md:hidden'>\n            Products\n          </a>\n          <a href='#'>\n            <Logo className='text-foreground gap-3' />\n          </a>\n          <a href='#' className='hover:text-primary max-md:hidden'>\n            About Us\n          </a>\n          <a href='#' className='hover:text-primary max-md:hidden'>\n            Contacts\n          </a>\n        </div>\n\n        <div className='flex items-center gap-6'>\n          <Button variant='ghost' size='icon'>\n            <SearchIcon />\n            <span className='sr-only'>Search</span>\n          </Button>\n          <DropdownMenu>\n            <DropdownMenuTrigger className='md:hidden' asChild>\n              <Button variant='outline' size='icon'>\n                <MenuIcon />\n                <span className='sr-only'>Menu</span>\n              </Button>\n            </DropdownMenuTrigger>\n            <DropdownMenuContent className='w-56' align='end'>\n              <DropdownMenuGroup>\n                {navigationData.map((item, index) => (\n                  <DropdownMenuItem key={index}>\n                    <a href={item.href}>{item.title}</a>\n                  </DropdownMenuItem>\n                ))}\n              </DropdownMenuGroup>\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </div>\n      </div>\n    </header>\n  )\n}\n\nexport default Navbar\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/navbar-component-01/navbar-component-01.tsx"
+    },
+    {
+      "path": "src/components/layout/logo.tsx",
+      "content": "// SVG Imports\nimport LogoSvg from '@/assets/svg/logo'\n\n// Util Imports\nimport { cn } from '@/lib/utils'\n\nconst Logo = ({ className }: { className?: string }) => {\n  return (\n    <div className={cn('flex items-center gap-2.5', className)}>\n      <LogoSvg className='size-8.5' />\n      <span className='text-xl font-semibold'>shadcn/studio</span>\n    </div>\n  )\n}\n\nexport default Logo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/logo.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "navbar-component"
+  }
+}

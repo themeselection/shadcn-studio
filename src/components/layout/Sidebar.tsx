@@ -9,14 +9,15 @@ import { usePathname } from 'next/navigation'
 
 // Third-party Imports
 import {
+  BotIcon,
   ChevronRightIcon,
   Component,
   Figma,
-  File,
   Flame,
   LayoutPanelTop,
   Menu,
-  PaintbrushVertical,
+  PaletteIcon,
+  PanelsLeftBottomIcon,
   X
 } from 'lucide-react'
 import { useMedia } from 'react-use'
@@ -39,7 +40,7 @@ import {
   SidebarMenu,
   useSidebar
 } from '@/components/ui/sidebar'
-import Logo from '@/components/layout/Logo'
+import Logo from '@/components/layout/logo'
 
 // Util Imports
 import { cn } from '@/lib/utils'
@@ -188,37 +189,36 @@ const AppSidebar = () => {
         <SidebarContent>
           <SidebarGroup className={cn('px-3 pt-0 pb-4 last:pb-8 lg:px-5', { 'first:pt-8': !isBreakpointReached })}>
             <SidebarMenu className='gap-2.5'>
+              <CustomSidebarMenuItem href='/components'>
+                <Component className='!size-5' />
+                Components
+              </CustomSidebarMenuItem>
               <CustomSidebarMenuItem href='/theme-generator'>
-                <PaintbrushVertical className='!size-5' />
+                <PaletteIcon className='!size-5' />
                 Theme Generator
                 <SidebarMenuBadge className='bg-destructive/10 text-destructive static gap-0.5 rounded-full px-2 py-0.5 font-normal'>
                   <Flame className='size-4' /> Hot
                 </SidebarMenuBadge>
               </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem href='/components'>
-                <Component className='!size-5' />
-                Components
-              </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem>
-                <Figma className='!size-5' />
-                Figma UI Kit
-                <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
-                  Coming Soon
-                </SidebarMenuBadge>
-              </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem>
+              <CustomSidebarMenuItem href='/blocks'>
                 <LayoutPanelTop className='!size-5' />
                 Blocks
-                <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
-                  Coming Soon
-                </SidebarMenuBadge>
               </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem>
-                <File className='!size-5' />
+              <CustomSidebarMenuItem href='https://shadcnstudio.com/templates' openInNewTab>
+                <PanelsLeftBottomIcon className='!size-5' />
                 Templates
-                <SidebarMenuBadge className='bg-muted text-muted-foreground static rounded-full px-2 py-0.5 font-normal'>
-                  Coming Soon
-                </SidebarMenuBadge>
+              </CustomSidebarMenuItem>
+              <CustomSidebarMenuItem href='https://shadcnstudio.com/figma' openInNewTab>
+                <Figma className='!size-5' />
+                Figma UI Kit
+              </CustomSidebarMenuItem>
+              <CustomSidebarMenuItem href='https://shadcnstudio.com/mcp' openInNewTab>
+                <BotIcon className='!size-5' />
+                shadcn/studio MCP
+              </CustomSidebarMenuItem>
+              <CustomSidebarMenuItem href='https://shadcnstudio.com/figma-plugin' openInNewTab>
+                <Figma className='!size-5' />
+                Figma to Code (Figma Plugin)
               </CustomSidebarMenuItem>
             </SidebarMenu>
           </SidebarGroup>

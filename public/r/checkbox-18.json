@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-18",
+  "type": "registry:component",
+  "title": "Checkbox 18",
+  "description": "Animated todo checkbox with strikethrough effect and smooth transitions",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "motion"
+  ],
+  "registryDependencies": [
+    "label",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-18.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/components/ui/motion-checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst CheckboxAnimatedTodoListDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox\n        id={id}\n        defaultChecked\n        className='rounded-full focus-visible:border-blue-500 focus-visible:ring-blue-500/20 data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500! dark:text-white dark:focus-visible:ring-blue-500/40'\n      />\n      <Label\n        htmlFor={id}\n        className='after:bg-primary peer-data-[state=checked]:text-primary relative after:absolute after:top-1/2 after:left-0 after:h-px after:w-full after:origin-bottom after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out peer-data-[state=checked]:after:origin-bottom peer-data-[state=checked]:after:scale-x-100'\n      >\n        Animated todo list item\n      </Label>\n    </div>\n  )\n}\n\nexport default CheckboxAnimatedTodoListDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-18.tsx"
+    },
+    {
+      "path": "src/components/ui/motion-checkbox.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\n\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\nimport { motion, type HTMLMotionProps } from 'motion/react'\n\nimport { cn } from '@/lib/utils'\n\ntype CheckboxProps = React.ComponentProps<typeof CheckboxPrimitive.Root> & HTMLMotionProps<'button'>\n\nfunction Checkbox({ className, onCheckedChange, ...props }: CheckboxProps) {\n  const [isChecked, setIsChecked] = React.useState(props?.checked ?? props?.defaultChecked ?? false)\n\n  React.useEffect(() => {\n    if (props?.checked !== undefined) setIsChecked(props.checked)\n  }, [props?.checked])\n\n  const handleCheckedChange = React.useCallback(\n    (checked: boolean) => {\n      setIsChecked(checked)\n      onCheckedChange?.(checked)\n    },\n    [onCheckedChange]\n  )\n\n  return (\n    <CheckboxPrimitive.Root {...props} onCheckedChange={handleCheckedChange} asChild>\n      <motion.button\n        data-slot='checkbox'\n        className={cn(\n          'peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-colors duration-500 outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50',\n          className\n        )}\n        whileTap={{ scale: 0.95 }}\n        whileHover={{ scale: 1.05 }}\n        {...props}\n      >\n        <CheckboxPrimitive.Indicator forceMount asChild>\n          <motion.svg\n            data-slot='checkbox-indicator'\n            xmlns='http://www.w3.org/2000/svg'\n            fill='none'\n            viewBox='0 0 24 24'\n            strokeWidth='3.5'\n            stroke='currentColor'\n            className='size-3.5'\n            initial='unchecked'\n            animate={isChecked ? 'checked' : 'unchecked'}\n          >\n            <motion.path\n              strokeLinecap='round'\n              strokeLinejoin='round'\n              d='M4.5 12.75l6 6 9-13.5'\n              variants={{\n                checked: {\n                  pathLength: 1,\n                  opacity: 1,\n                  transition: {\n                    duration: 0.2,\n                    delay: 0.2\n                  }\n                },\n                unchecked: {\n                  pathLength: 0,\n                  opacity: 0,\n                  transition: {\n                    duration: 0.2\n                  }\n                }\n              }}\n            />\n          </motion.svg>\n        </CheckboxPrimitive.Indicator>\n      </motion.button>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nexport { Checkbox }\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-checkbox.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

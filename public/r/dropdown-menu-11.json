@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-11",
+  "type": "registry:component",
+  "title": "Dropdown Menu 11",
+  "description": "Task priority selector dropdown with icons and priority levels",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-11.tsx",
+      "content": "import { ChevronDownIcon, ChevronUpIcon, ChevronsUpIcon, EqualIcon, ChevronsDownIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst listItems = [\n  {\n    icon: ChevronsUpIcon,\n    color: 'text-destructive',\n    priority: 'Highest'\n  },\n  {\n    icon: ChevronUpIcon,\n    color: 'text-destructive/60',\n    priority: 'High'\n  },\n  {\n    icon: EqualIcon,\n    color: 'text-amber-600 dark:text-amber-400',\n    priority: 'Medium'\n  },\n  {\n    icon: ChevronDownIcon,\n    color: 'text-green-600/60 dark:text-green-400/60',\n    priority: 'Low'\n  },\n  {\n    icon: ChevronsDownIcon,\n    color: 'text-green-600 dark:text-green-400',\n    priority: 'Lowest'\n  }\n]\n\nconst DropdownMenuBorderedMenuDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Bordered Menu</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56 shadow-none'>\n        <DropdownMenuLabel>Task priority</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          {listItems.map((item, index) => (\n            <DropdownMenuItem key={index}>\n              <item.icon className={item.color} />\n              {item.priority}\n            </DropdownMenuItem>\n          ))}\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuBorderedMenuDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-11.tsx"
+    }
+  ]
+}

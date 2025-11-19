@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-13",
+  "type": "registry:component",
+  "title": "Popover 13",
+  "description": "A promotional popover with QR code and coupon code with copy functionality with slide in from left animation",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "popover",
+    "separator",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-13.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { CheckIcon, CopyIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Separator } from '@/components/ui/separator'\n\nimport { cn } from '@/lib/utils'\n\nconst PopoverSlideInLeftDemo = () => {\n  const [copied, setCopied] = useState<boolean>(false)\n\n  const handleCopy = async () => {\n    try {\n      await navigator.clipboard.writeText('SUMMER25OFF')\n      setCopied(true)\n      setTimeout(() => setCopied(false), 1500)\n    } catch (err) {\n      console.error('Failed to copy text: ', err)\n    }\n  }\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline'>Slide-in from left</Button>\n      </PopoverTrigger>\n      <PopoverContent className='data-[state=open]:slide-in-from-left-20 data-[state=closed]:slide-out-to-left-20 data-[state=open]:slide-in-from-top-0 data-[state=closed]:slide-out-to-top-0 data-[state=closed]:zoom-out-100 data-[state=open]:zoom-in-100 w-80 duration-400'>\n        <div className='flex flex-col items-center gap-4'>\n          <div className='space-y-1 text-center'>\n            <div className='text-lg font-semibold'>Summer Sale Discount</div>\n            <p className='text-sm'>Scan this code at checkout for 25% off</p>\n          </div>\n          <div className='aspect-square rounded-xl border p-2'>\n            <img\n              src='https://cdn.shadcnstudio.com/ss-assets/components/popover/qr-code.png?height=152'\n              alt='Discount QR Code'\n              className='size-38 rounded-md'\n            />\n          </div>\n          <div className='flex w-full items-center gap-1.5'>\n            <Separator className='flex-1' />\n            <span className='text-muted-foreground text-xs'>or use coupon code</span>\n            <Separator className='flex-1' />\n          </div>\n          <div className='flex w-full gap-2'>\n            <Input\n              type='text'\n              placeholder='Discount code'\n              defaultValue='SUMMER25OFF'\n              className='disabled:bg-muted'\n              disabled\n            />\n            <Button variant='outline' size='icon' className='relative' onClick={handleCopy}>\n              <span className={cn('transition-all', copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0')}>\n                <CheckIcon className='stroke-green-600 dark:stroke-green-400' />\n              </span>\n              <span\n                className={cn(\n                  'absolute left-2.25 transition-all',\n                  copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'\n                )}\n              >\n                <CopyIcon />\n              </span>\n            </Button>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverSlideInLeftDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-13.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

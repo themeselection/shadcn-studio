@@ -47,7 +47,7 @@ const ComboboxCountryFlagDemo = () => {
             ) : (
               <span className='text-muted-foreground'>Select country</span>
             )}
-            <ChevronDownIcon size={16} className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
+            <ChevronDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>

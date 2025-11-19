@@ -15,13 +15,13 @@ const ButtonGroupLikeDemo = () => {
     <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>
       <Button
         variant='outline'
-        className='rounded-none rounded-s-md shadow-none focus-visible:z-10'
+        className='rounded-none rounded-l-md shadow-none focus-visible:z-10'
         onClick={() => setIsLiked(!isLiked)}
       >
         <HeartIcon className={cn({ 'fill-destructive stroke-destructive': isLiked })} />
         Like
       </Button>
-      <span className='bg-background dark:border-input dark:bg-input/30 flex items-center rounded-e-md border px-3 text-sm font-medium'>
+      <span className='bg-background dark:border-input dark:bg-input/30 flex items-center rounded-r-md border px-3 text-sm font-medium'>
         {isLiked ? 46 : 45}
       </span>
     </div>

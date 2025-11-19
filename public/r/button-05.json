@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-05",
+  "type": "registry:component",
+  "title": "Button 5",
+  "description": "Outline buttons with icons positioned before and after text",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-05.tsx",
+      "content": "import { Redo2Icon, Undo2Icon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonIconDemo = () => {\n  return (\n    <div className='flex flex-wrap items-center gap-4'>\n      <Button variant='outline'>\n        <Undo2Icon />\n        Undo\n      </Button>\n      <Button variant='outline'>\n        Redo\n        <Redo2Icon />\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-05.tsx"
+    }
+  ]
+}

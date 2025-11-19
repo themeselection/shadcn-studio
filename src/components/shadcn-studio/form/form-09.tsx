@@ -53,7 +53,7 @@ const DatePickerFormDemo = () => {
                       className={cn('pl-3 text-left font-normal', !field.value && 'text-muted-foreground')}
                     >
                       {field.value ? format(field.value, 'PPP') : <span>Pick a date</span>}
-                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
+                      <CalendarIcon className='ml-auto opacity-50' />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>

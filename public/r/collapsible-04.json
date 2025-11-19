@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-04",
+  "type": "registry:component",
+  "title": "Collapsible 4",
+  "description": "User list with avatars, status indicators and expandable team member details",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/collapsible/collapsible-04.tsx",
+      "content": "import { ChevronRightIcon, PanelsTopLeftIcon, PlusIcon, UserIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'\n\nconst users = [\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'HL',\n    name: 'Howard Lloyd',\n    bio: 'Senior Product Manager with 8+ years of experience in SaaS product development and team leadership.',\n    projects: 5,\n    followers: 120\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    fallback: 'OS',\n    name: 'Olivia Sparks',\n    bio: 'Full-stack Software Engineer specializing in React, Node.js, and cloud architecture solutions.',\n    projects: 3,\n    followers: 95,\n    followed: true\n  },\n  {\n    image: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    fallback: 'HR',\n    name: 'Hallie Richards',\n    bio: 'Creative UI/UX Designer with expertise in user research, wireframing, and accessible interface design.',\n    projects: 4,\n    followers: 80\n  }\n]\n\nconst CollapsibleProfileDemo = () => {\n  return (\n    <ul className='flex w-full max-w-[350px] flex-col gap-4'>\n      {users.map(user => (\n        <Collapsible key={user.name} asChild>\n          <li className='flex flex-col gap-2'>\n            <CollapsibleTrigger className='flex w-full items-center justify-between gap-4'>\n              <div className='flex items-center gap-2'>\n                <Avatar>\n                  <AvatarImage src={user.image} alt={user.fallback} />\n                  <AvatarFallback>{user.fallback}</AvatarFallback>\n                </Avatar>\n                <span className='font-medium'>{user.name}</span>\n              </div>\n              <ChevronRightIcon className='size-4 transition-transform [[data-state=open]_&]:rotate-90' />\n            </CollapsibleTrigger>\n            <CollapsibleContent>\n              <div className='flex flex-col gap-2'>\n                <p className='text-muted-foreground text-sm'>{user.bio}</p>\n                <div className='flex items-center justify-between gap-2'>\n                  <div className='flex items-center gap-4'>\n                    <span className='flex items-center gap-2'>\n                      <UserIcon className='size-4' />\n                      <span className='text-sm'>{user.followers}</span>\n                    </span>\n                    <span className='flex items-center gap-2'>\n                      <PanelsTopLeftIcon className='size-4' />\n                      <span className='text-sm'>{user.projects}</span>\n                    </span>\n                  </div>\n                  {user.followed ? (\n                    <Button variant='outline' className='h-7 rounded-full px-3 py-1 text-xs'>\n                      Following\n                    </Button>\n                  ) : (\n                    <Button className='h-7 rounded-full px-3 py-1 text-xs'>\n                      Follow\n                      <PlusIcon />\n                    </Button>\n                  )}\n                </div>\n              </div>\n            </CollapsibleContent>\n          </li>\n        </Collapsible>\n      ))}\n    </ul>\n  )\n}\n\nexport default CollapsibleProfileDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/collapsible/collapsible-04.tsx"
+    }
+  ]
+}

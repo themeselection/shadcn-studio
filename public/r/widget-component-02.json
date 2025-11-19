@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "widget-component-02",
+  "type": "registry:block",
+  "title": "Widget 2",
+  "description": "Product insights widget with advanced analytics, chart visualization, and comprehensive product data overview",
+  "dependencies": [
+    "lucide-react",
+    "recharts"
+  ],
+  "registryDependencies": [
+    "card",
+    "chart",
+    "separator",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/dashboard-and-application/widgets-component/widget-component-02/page.tsx",
+      "content": "import ProductInsightsCard from '@/components/shadcn-studio/blocks/widget-product-insights'\n\nconst WidgetCardPreview = () => {\n  return (\n    <div className='mx-auto max-w-7xl px-4 py-8 sm:px-8 sm:py-16'>\n      <div className='flex justify-center'>\n        <ProductInsightsCard className='w-full max-w-85.5' />\n      </div>\n    </div>\n  )\n}\n\nexport default WidgetCardPreview\n",
+      "type": "registry:page",
+      "target": "app/widget-component-02/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/widget-product-insights.tsx",
+      "content": "'use client'\n\nimport { Bar, BarChart } from 'recharts'\n\nimport { Card, CardContent, CardHeader } from '@/components/ui/card'\nimport { type ChartConfig, ChartContainer } from '@/components/ui/chart'\nimport { Separator } from '@/components/ui/separator'\n\nimport { cn } from '@/lib/utils'\n\n// Product reached data\nconst productReachChartData = [\n  { month: 'January', reached: 168 },\n  { month: 'February', reached: 305 },\n  { month: 'March', reached: 213 },\n  { month: 'April', reached: 330 },\n  { month: 'May', reached: 305 }\n]\n\nconst productReachChartConfig = {\n  reached: {\n    label: 'Reached',\n    color: 'var(--primary)'\n  }\n} satisfies ChartConfig\n\n// Order placed data\nconst orderPlacedChartData = [\n  { month: 'January', orders: 168 },\n  { month: 'February', orders: 305 },\n  { month: 'March', orders: 213 },\n  { month: 'April', orders: 330 },\n  { month: 'May', orders: 305 }\n]\n\nconst orderPlacedChartConfig = {\n  orders: {\n    label: 'Orders',\n    color: 'color-mix(in oklab, var(--primary) 10%, transparent)'\n  }\n} satisfies ChartConfig\n\nconst ProductInsightsCard = ({ className }: { className?: string }) => {\n  return (\n    <Card className={cn('gap-4', className)}>\n      <CardHeader className='flex justify-between'>\n        <div className='flex flex-col gap-1'>\n          <span className='text-lg font-semibold'>Product insight</span>\n          <span className='text-muted-foreground text-sm'>Published on 12 MAY 2025 - 6:10 PM</span>\n        </div>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/blocks/dashboard-application/widgets/image-7.png'\n          alt='Product'\n          className='w-20.5 rounded-md'\n        />\n      </CardHeader>\n      <CardContent className='space-y-4'>\n        <Separator />\n        <div className='flex items-center justify-between gap-1'>\n          <div className='flex flex-col gap-1'>\n            <span className='text-xs'>Product reached</span>\n            <span className='text-2xl font-semibold'>21,153</span>\n          </div>\n          <ChartContainer config={productReachChartConfig} className='min-h-13 max-w-18'>\n            <BarChart accessibilityLayer data={productReachChartData} barSize={8}>\n              <Bar dataKey='reached' fill='var(--color-reached)' radius={2} />\n            </BarChart>\n          </ChartContainer>\n        </div>\n\n        <div className='flex items-center justify-between gap-1'>\n          <div className='flex flex-col gap-1'>\n            <span className='text-xs'>Order placed </span>\n            <span className='text-2xl font-semibold'>2,123</span>\n          </div>\n          <ChartContainer config={orderPlacedChartConfig} className='min-h-13 max-w-18'>\n            <BarChart accessibilityLayer data={orderPlacedChartData} barSize={8}>\n              <Bar dataKey='orders' fill='var(--color-orders)' radius={2} />\n            </BarChart>\n          </ChartContainer>\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n\nexport default ProductInsightsCard\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/widget-product-insights.tsx"
+    }
+  ],
+  "meta": {
+    "category": "dashboard-and-application",
+    "section": "widgets-component"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-11",
+  "type": "registry:component",
+  "title": "Input 11",
+  "description": "An email input field with hint text indicating the field is optional",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-11.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputHintTextDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <div className='flex items-center justify-between gap-1'>\n        <Label htmlFor={id}>Input with hint text</Label>\n        <span className='text-muted-foreground text-xs'>Optional field</span>\n      </div>\n      <Input id={id} type='email' placeholder='Email address' />\n    </div>\n  )\n}\n\nexport default InputHintTextDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-11.tsx"
+    }
+  ]
+}

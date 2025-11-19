@@ -12,8 +12,8 @@ const InputEndIconDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Input with end icon</Label>
       <div className='relative'>
-        <Input id={id} type='email' placeholder='Email address' className='peer pe-9' />
-        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50'>
+        <Input id={id} type='email' placeholder='Email address' className='peer pr-9' />
+        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>
           <MailIcon className='size-4' />
           <span className='sr-only'>Email</span>
         </div>

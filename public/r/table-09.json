@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-09",
+  "type": "registry:component",
+  "title": "Table 9",
+  "description": "A table with vertical scrolling functionality for displaying large datasets",
+  "registryDependencies": [
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/table/table-09.tsx",
+      "content": "import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'\n\nconst invoices = [\n  {\n    invoice: 'INV001',\n    paymentStatus: 'Paid',\n    totalAmount: '$250.00',\n    paymentMethod: 'Credit Card'\n  },\n  {\n    invoice: 'INV002',\n    paymentStatus: 'Pending',\n    totalAmount: '$150.00',\n    paymentMethod: 'PayPal'\n  },\n  {\n    invoice: 'INV003',\n    paymentStatus: 'Unpaid',\n    totalAmount: '$350.00',\n    paymentMethod: 'Bank Transfer'\n  },\n  {\n    invoice: 'INV004',\n    paymentStatus: 'Paid',\n    totalAmount: '$450.00',\n    paymentMethod: 'Credit Card'\n  },\n  {\n    invoice: 'INV005',\n    paymentStatus: 'Paid',\n    totalAmount: '$550.00',\n    paymentMethod: 'PayPal'\n  },\n  {\n    invoice: 'INV006',\n    paymentStatus: 'Pending',\n    totalAmount: '$200.00',\n    paymentMethod: 'Bank Transfer'\n  },\n  {\n    invoice: 'INV007',\n    paymentStatus: 'Unpaid',\n    totalAmount: '$300.00',\n    paymentMethod: 'Credit Card'\n  },\n  {\n    invoice: 'INV008',\n    paymentStatus: 'Paid',\n    totalAmount: '$350.00',\n    paymentMethod: 'Debit Card'\n  },\n  {\n    invoice: 'INV009',\n    paymentStatus: 'Pending',\n    totalAmount: '$969.00',\n    paymentMethod: 'Google Pay'\n  },\n  {\n    invoice: 'INV010',\n    paymentStatus: 'Unpaid',\n    totalAmount: '$815.00',\n    paymentMethod: 'Apple Pay'\n  }\n]\n\nconst OverflowScrollTableDemo = () => {\n  return (\n    <div className='w-full'>\n      <div className='grid [&>div]:max-h-70 [&>div]:rounded-sm [&>div]:border'>\n        <Table>\n          <TableHeader>\n            <TableRow>\n              <TableHead className='w-25'>Invoice</TableHead>\n              <TableHead>Status</TableHead>\n              <TableHead>Method</TableHead>\n              <TableHead className='text-right'>Amount</TableHead>\n            </TableRow>\n          </TableHeader>\n          <TableBody>\n            {invoices.map(invoice => (\n              <TableRow key={invoice.invoice}>\n                <TableCell className='font-medium'>{invoice.invoice}</TableCell>\n                <TableCell>{invoice.paymentStatus}</TableCell>\n                <TableCell>{invoice.paymentMethod}</TableCell>\n                <TableCell className='text-right'>{invoice.totalAmount}</TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n          <TableFooter>\n            <TableRow>\n              <TableCell colSpan={3}>Total</TableCell>\n              <TableCell className='text-right'>$2,500.00</TableCell>\n            </TableRow>\n          </TableFooter>\n        </Table>\n      </div>\n      <p className='text-muted-foreground mt-4 text-center text-sm'>Overflow scroll table</p>\n    </div>\n  )\n}\n\nexport default OverflowScrollTableDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/table/table-09.tsx"
+    }
+  ]
+}

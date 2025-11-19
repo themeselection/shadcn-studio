@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-10",
+  "type": "registry:component",
+  "title": "Dialog 10",
+  "description": "Referral program dialog with avatar display and email sharing functionality",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "dialog",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dialog/dialog-10.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { Checkbox } from '@/components/ui/checkbox'\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger\n} from '@/components/ui/dialog'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst avatars = [\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'OS',\n    name: 'Olivia Sparks'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    fallback: 'HL',\n    name: 'Howard Lloyd'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    fallback: 'HR',\n    name: 'Hallie Richards'\n  }\n]\n\nconst DialogReferAndEarnDemo = () => {\n  return (\n    <Dialog>\n      <form>\n        <DialogTrigger asChild>\n          <Button variant='outline'>Refer & Earn</Button>\n        </DialogTrigger>\n        <DialogContent className='sm:max-w-xl'>\n          <DialogHeader>\n            <DialogTitle className='text-xl'>Refers & Earn AI Credits</DialogTitle>\n            <DialogDescription className='text-base'>\n              Get 5 AI credits per successful referral sign up. Use AI credits to get AskFred insights, custom meetings\n              notes, automated soundbites etc.\n            </DialogDescription>\n          </DialogHeader>\n          <form className='flex flex-col gap-4 pt-4'>\n            <div className='grid grow-1 gap-3'>\n              <Label htmlFor='email'>Refer by email</Label>\n              <Input type='text' id='email' name='email' placeholder='Emails, separated by comas or tab' required />\n            </div>\n            <div className='flex items-center gap-3'>\n              <Checkbox id='terms' />\n              <Label htmlFor='terms'>Refer 13 people from acme.com</Label>\n            </div>\n            <div className='flex -space-x-2'>\n              {avatars.map((avatar, index) => (\n                <Avatar key={index} className='ring-background ring-2'>\n                  <AvatarImage src={avatar.src} alt={avatar.name} />\n                  <AvatarFallback className='text-xs'>{avatar.fallback}</AvatarFallback>\n                </Avatar>\n              ))}\n              <Avatar className='ring-background ring-2'>\n                <AvatarFallback className='text-xs'>+10</AvatarFallback>\n              </Avatar>\n            </div>\n            <DialogFooter className='sm:justify-end'>\n              <DialogClose asChild>\n                <Button variant='outline'>Cancel</Button>\n              </DialogClose>\n              <Button type='submit'>Refer</Button>\n            </DialogFooter>\n          </form>\n        </DialogContent>\n      </form>\n    </Dialog>\n  )\n}\n\nexport default DialogReferAndEarnDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dialog/dialog-10.tsx"
+    }
+  ]
+}

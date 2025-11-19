@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-02",
+  "type": "registry:component",
+  "title": "Calendar 2",
+  "description": "Multi-month calendar displaying two months side by side for single date selection",
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-02.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarMultiMonthDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Calendar\n        mode='single'\n        defaultMonth={date}\n        numberOfMonths={2}\n        selected={date}\n        onSelect={setDate}\n        className='rounded-lg border'\n      />\n      <p className='text-muted-foreground mt-4 text-center text-xs' role='region'>\n        Multi month calendar\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarMultiMonthDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-02.tsx"
+    }
+  ]
+}

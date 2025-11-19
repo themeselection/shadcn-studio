@@ -200,7 +200,7 @@ const ThemeControlPanel = () => {
         {/* Themes Selection */}
         <ThemePresetSelect
           presets={presets}
-          currentPreset={settings.theme.preset || null}
+          currentPreset={settings.theme.preset || 'default'}
           onPresetChange={applyThemePreset}
         />
 

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-dropdown-02",
+  "type": "registry:block",
+  "title": "Dashboard Dropdown 2",
+  "description": "A user profile dropdown with avatar display, user information, profile settings, and account actions for user management.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/dashboard-and-application/dashboard-dropdown/dashboard-dropdown-02/page.tsx",
+      "content": "import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'\n\nimport ProfileDropdown from '@/components/shadcn-studio/blocks/dropdown-profile'\n\nconst DropdownPage = () => {\n  return (\n    <div className='flex h-132 items-start justify-center p-8'>\n      <ProfileDropdown\n        defaultOpen\n        align='center'\n        trigger={\n          <button className='rounded-full'>\n            <Avatar className='size-10 cursor-pointer'>\n              <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png' alt='John Doe' />\n              <AvatarFallback>JD</AvatarFallback>\n            </Avatar>\n          </button>\n        }\n      />\n    </div>\n  )\n}\n\nexport default DropdownPage\n",
+      "type": "registry:page",
+      "target": "app/dashboard-dropdown-02/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/dropdown-profile.tsx",
+      "content": "import type { ReactNode } from 'react'\n\nimport {\n  UserIcon,\n  SettingsIcon,\n  CreditCardIcon,\n  UsersIcon,\n  SquarePenIcon,\n  CirclePlusIcon,\n  LogOutIcon\n} from 'lucide-react'\n\nimport { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\ntype Props = {\n  trigger: ReactNode\n  defaultOpen?: boolean\n  align?: 'start' | 'center' | 'end'\n}\n\nconst ProfileDropdown = ({ trigger, defaultOpen, align = 'end' }: Props) => {\n  return (\n    <DropdownMenu defaultOpen={defaultOpen}>\n      <DropdownMenuTrigger asChild>{trigger}</DropdownMenuTrigger>\n      <DropdownMenuContent className='w-80' align={align || 'end'}>\n        <DropdownMenuLabel className='flex items-center gap-4 px-4 py-2.5 font-normal'>\n          <div className='relative'>\n            <Avatar className='size-10'>\n              <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png' alt='John Doe' />\n              <AvatarFallback>JD</AvatarFallback>\n            </Avatar>\n            <span className='ring-card absolute right-0 bottom-0 block size-2 rounded-full bg-green-600 ring-2' />\n          </div>\n          <div className='flex flex-1 flex-col items-start'>\n            <span className='text-foreground text-lg font-semibold'>John Doe</span>\n            <span className='text-muted-foreground text-base'>john.doe@example.com</span>\n          </div>\n        </DropdownMenuLabel>\n\n        <DropdownMenuSeparator />\n\n        <DropdownMenuGroup>\n          <DropdownMenuItem className='px-4 py-2.5 text-base'>\n            <UserIcon className='text-foreground size-5' />\n            <span>My account</span>\n          </DropdownMenuItem>\n          <DropdownMenuItem className='px-4 py-2.5 text-base'>\n            <SettingsIcon className='text-foreground size-5' />\n            <span>Settings</span>\n          </DropdownMenuItem>\n          <DropdownMenuItem className='px-4 py-2.5 text-base'>\n            <CreditCardIcon className='text-foreground size-5' />\n            <span>Billing</span>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n\n        <DropdownMenuSeparator />\n\n        <DropdownMenuGroup>\n          <DropdownMenuItem className='px-4 py-2.5 text-base'>\n            <UsersIcon className='text-foreground size-5' />\n            <span>Manage team</span>\n          </DropdownMenuItem>\n          <DropdownMenuItem className='px-4 py-2.5 text-base'>\n            <SquarePenIcon className='text-foreground size-5' />\n            <span>Customization</span>\n          </DropdownMenuItem>\n          <DropdownMenuItem className='px-4 py-2.5 text-base'>\n            <CirclePlusIcon className='text-foreground size-5' />\n            <span>Add team account</span>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n\n        <DropdownMenuSeparator />\n\n        <DropdownMenuItem variant='destructive' className='px-4 py-2.5 text-base'>\n          <LogOutIcon className='size-5' />\n          <span>Logout</span>\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default ProfileDropdown\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/dropdown-profile.tsx"
+    }
+  ],
+  "meta": {
+    "category": "dashboard-and-application",
+    "section": "dashboard-dropdown"
+  }
+}

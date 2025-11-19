@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-08",
+  "type": "registry:component",
+  "title": "Button 8",
+  "description": "A button component with small size variant",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-08.tsx",
+      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonSmallDemo = () => {\n  return <Button size='sm'>Small</Button>\n}\n\nexport default ButtonSmallDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-08.tsx"
+    }
+  ]
+}

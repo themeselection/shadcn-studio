@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-04",
+  "type": "registry:component",
+  "title": "Input 4",
+  "description": "A disabled email input field that prevents user interaction",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-04.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputDisabledDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Disabled input</Label>\n      <Input id={id} type='email' placeholder='Email address' disabled />\n    </div>\n  )\n}\n\nexport default InputDisabledDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-04.tsx"
+    }
+  ]
+}

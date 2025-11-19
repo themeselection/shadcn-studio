@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faq-component-01",
+  "type": "registry:block",
+  "title": "FAQ 1",
+  "description": "Simple accordion-style FAQ section with collapsible questions and answers using shadcn/ui accordion component, featuring a clean header and single-column layout for basic Q&A display",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/faq-component/faq-component-01/page.tsx",
+      "content": "import FAQ from '@/components/shadcn-studio/blocks/faq-component-01/faq-component-01'\n\nconst faqItems = [\n  {\n    question: 'Do you charge for each upgrade?',\n    answer:\n      'Some upgrades are free, while others may have an additional cost, depending on the type of upgrade and your current plan. For specific pricing details, please check our pricing page or contact our support team.'\n  },\n  {\n    question: 'Do I need to purchase a license for each website?',\n    answer:\n      'Yes, you need to purchase a separate license for each website where you plan to use our components. Each license is tied to a single domain and its subdomains. This ensures proper licensing compliance and helps us maintain and improve our products for all users.'\n  },\n  {\n    question: 'What is regular license?',\n    answer:\n      'A regular license grants you the right to use our components on a single website or project. It includes access to all basic features, documentation, and standard support. This license is perfect for individual developers or small businesses working on a single project.'\n  },\n  {\n    question: 'What is extended license?',\n    answer:\n      'An extended license provides additional rights and features beyond the regular license. It includes usage rights for multiple websites, priority support, access to premium components, and the ability to use components in commercial projects that you sell to end customers. Perfect for agencies and large enterprises.'\n  }\n]\n\nconst FAQPage = () => {\n  return <FAQ faqItems={faqItems} />\n}\n\nexport default FAQPage\n",
+      "type": "registry:page",
+      "target": "app/faq-component-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/faq-component-01/faq-component-01.tsx",
+      "content": "import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n\ntype FAQs = {\n  question: string\n  answer: string\n}[]\n\nconst FAQ = ({ faqItems }: { faqItems: FAQs }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* FAQ Header */}\n        <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>\n          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Need Help? We&apos;ve Got Answers</h2>\n          <p className='text-muted-foreground text-xl'>\n            Explore Our Most Commonly Asked Questions and Find the Information You Need.\n          </p>\n        </div>\n\n        <Accordion type='single' collapsible className='w-full' defaultValue='item-1'>\n          {faqItems.map((item, index) => (\n            <AccordionItem key={index} value={`item-${index + 1}`}>\n              <AccordionTrigger className='text-lg'>{item.question}</AccordionTrigger>\n              <AccordionContent className='text-muted-foreground'>{item.answer}</AccordionContent>\n            </AccordionItem>\n          ))}\n        </Accordion>\n      </div>\n    </section>\n  )\n}\n\nexport default FAQ\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/faq-component-01/faq-component-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "faq-component"
+  }
+}

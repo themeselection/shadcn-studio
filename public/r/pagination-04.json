@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-04",
+  "type": "registry:component",
+  "title": "Pagination 4",
+  "description": "A pagination component with secondary button styling and custom variants",
+  "registryDependencies": [
+    "button",
+    "pagination",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-04.tsx",
+      "content": "import { buttonVariants } from '@/components/ui/button'\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nimport { cn } from '@/lib/utils'\n\nconst PaginationWithSecondaryButtonDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationPrevious href='#' />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#'>1</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink\n            href='#'\n            isActive\n            className={cn(\n              'hover:!text-secondary-foreground !border-none !shadow-none',\n              buttonVariants({\n                variant: 'secondary',\n                size: 'icon'\n              })\n            )}\n          >\n            2\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#'>3</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href='#' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default PaginationWithSecondaryButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-04.tsx"
+    }
+  ]
+}

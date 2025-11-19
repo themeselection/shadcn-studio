@@ -29,7 +29,7 @@ const ConfettiPiece = ({ index }: { index: number }) => {
 
   return (
     <motion.div
-      className='absolute h-1 w-1 rounded-full'
+      className='absolute size-1 rounded-full'
       style={{ backgroundColor: color }}
       {...particleAnimation(index)}
     />

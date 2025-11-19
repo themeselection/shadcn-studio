@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-42",
+  "type": "registry:component",
+  "title": "Button 42",
+  "description": "Button with tap scale animation using Framer Motion",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-42.tsx",
+      "content": "import * as motion from 'motion/react-client'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonTapAnimationDemo = () => {\n  return (\n    <Button className='transition-none' asChild>\n      <motion.button whileTap={{ scale: 0.85 }}>Tap Animation</motion.button>\n    </Button>\n  )\n}\n\nexport default ButtonTapAnimationDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-42.tsx"
+    }
+  ],
+  "meta": {
+    "isAnimated": true
+  }
+}

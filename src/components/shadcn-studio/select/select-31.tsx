@@ -42,13 +42,13 @@ const SelectWithAvatarsDemo = () => {
       <Select defaultValue='1'>
         <SelectTrigger
           id={id}
-          className='w-full ps-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0'
+          className='w-full pl-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0'
         >
           <SelectValue placeholder='Select framework' />
         </SelectTrigger>
-        <SelectContent className='[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2'>
+        <SelectContent className='[&_*[role=option]]:pr-8 [&_*[role=option]]:pl-2 [&_*[role=option]>span]:right-2 [&_*[role=option]>span]:left-auto [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2'>
           <SelectGroup>
-            <SelectLabel className='ps-2'>Impersonate user</SelectLabel>
+            <SelectLabel className='pl-2'>Impersonate user</SelectLabel>
             {users.map(item => (
               <SelectItem key={item.id} value={item.id}>
                 <Avatar className='size-5'>

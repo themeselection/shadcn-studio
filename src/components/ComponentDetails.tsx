@@ -19,8 +19,7 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import CopyPrompt from '@/components/CopyPrompt'
-import OpenInV0 from '@/components/OpenInV0'
+import ComponentCli from '@/components/ComponentCli'
 import CopyButton from '@/components/CopyButton'
 import CodeBlock from '@/components/CodeBlock'
 import CodeBlockMultipleView from './CodeBlockMultipleView'
@@ -30,8 +29,6 @@ const ComponentDetails = ({ componentsData }: { componentsData: ProcessedCompone
 
   return (
     <div className='absolute end-2 top-2 flex items-center gap-2'>
-      <CopyPrompt />
-      <OpenInV0 />
       <Dialog>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -54,18 +51,7 @@ const ComponentDetails = ({ componentsData }: { componentsData: ProcessedCompone
             <DialogDescription className='sr-only'>Use the CLI to add components to your project</DialogDescription>
           </DialogHeader>
           <div className='min-w-0 space-y-5'>
-            <div className='overflow-hidden rounded-md border'>
-              <img
-                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-light.png'
-                alt='CLI Light'
-                className='dark:hidden'
-              />
-              <img
-                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-dark.png'
-                alt='CLI Dark'
-                className='hidden dark:block'
-              />
-            </div>
+            <ComponentCli name={component.name} toast='Installation command' />
             <div className='space-y-4'>
               <h2 className='text-left text-lg leading-none font-semibold'>Manual Code</h2>
               <div className='overflow-hidden rounded-md border'>

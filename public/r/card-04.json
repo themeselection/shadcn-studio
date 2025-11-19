@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-04",
+  "type": "registry:component",
+  "title": "Card 4",
+  "description": "Image showcase card with gradient background and bottom-aligned image",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/card/card-04.tsx",
+      "content": "import { Card, CardContent, CardHeader, CardDescription, CardTitle } from '@/components/ui/card'\n\nconst CardBottomImageDemo = () => {\n  return (\n    <Card className='max-w-md pb-0'>\n      <CardHeader>\n        <CardTitle>Fluid Gradient Flow</CardTitle>\n        <CardDescription>A vibrant and abstract background with smooth gradient curves.</CardDescription>\n      </CardHeader>\n      <CardContent className='px-0'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-1.png?height=280&format=auto'\n          alt='Banner'\n          className='aspect-video h-70 rounded-b-xl object-cover'\n        />\n      </CardContent>\n    </Card>\n  )\n}\n\nexport default CardBottomImageDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/card/card-04.tsx"
+    }
+  ]
+}

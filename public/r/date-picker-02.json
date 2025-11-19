@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-02",
+  "type": "registry:component",
+  "title": "Date Picker 2",
+  "description": "Date range picker with popover calendar for selecting start and end dates",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/date-picker/date-picker-02.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { ChevronDownIcon } from 'lucide-react'\nimport { type DateRange } from 'react-day-picker'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst DatePickerRangeDemo = () => {\n  const [range, setRange] = useState<DateRange | undefined>(undefined)\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor='dates' className='px-1'>\n        Range date picker\n      </Label>\n      <Popover>\n        <PopoverTrigger asChild>\n          <Button variant='outline' id='dates' className='w-full justify-between font-normal'>\n            {range?.from && range?.to\n              ? `${range.from.toLocaleDateString()} - ${range.to.toLocaleDateString()}`\n              : 'Pick a date'}\n            <ChevronDownIcon />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='w-auto overflow-hidden p-0' align='start'>\n          <Calendar\n            mode='range'\n            selected={range}\n            onSelect={range => {\n              setRange(range)\n            }}\n          />\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default DatePickerRangeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/date-picker/date-picker-02.tsx"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-01",
+  "type": "registry:component",
+  "title": "Popover 1",
+  "description": "A ratings popover displaying star ratings with progress bars and review statistics",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "popover",
+    "progress",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-01.tsx",
+      "content": "import { StarIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Progress } from '@/components/ui/progress'\nimport { Separator } from '@/components/ui/separator'\n\nconst ratings = {\n  1: 0,\n  2: 15,\n  3: 30,\n  4: 30,\n  5: 225\n}\n\nconst PopoverRatingsDemo = () => {\n  const totalReviews = Object.values(ratings).reduce((acc, count) => acc + count, 0)\n  const totalRating = Object.entries(ratings).reduce((acc, [star, count]) => acc + Number(star) * count, 0)\n  const averageRating = Number((totalRating / totalReviews || 0).toFixed(2))\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <StarIcon />\n          <span className='sr-only'>Ratings & reviews</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-4'>\n          <div className='space-y-1'>\n            <div className='flex items-center gap-1'>\n              <span className='text-xl font-semibold'>{averageRating}</span>\n              <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400' />\n            </div>\n            <div className='text-sm font-medium'>Total {totalReviews} reviews</div>\n            <p className='text-muted-foreground text-sm'>All reviews are from genuine customers.</p>\n          </div>\n          <div className='grid'>\n            <div className='flex items-center justify-between'>\n              <Badge variant='secondary' className='rounded-sm'>\n                +6 this week\n              </Badge>\n              <a href='#' className='text-sm hover:underline'>\n                See all\n              </a>\n            </div>\n            <Separator className='my-2' />\n            <ul className='space-y-2'>\n              {Object.entries(ratings)\n                .reverse()\n                .map(([star, count]) => (\n                  <li key={star} className='flex items-center gap-2'>\n                    <span className='shrink-0 text-sm'>{star} star</span>\n                    <Progress value={(count / totalReviews) * 100} className='w-full' />\n                    <span className='shrink-0 text-sm'>{count.toString()}</span>\n                  </li>\n                ))}\n            </ul>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverRatingsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-01.tsx"
+    }
+  ]
+}

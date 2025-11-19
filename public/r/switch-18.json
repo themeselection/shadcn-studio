@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-18",
+  "type": "registry:component",
+  "title": "Switch 18",
+  "description": "A list group of switches with icons for skill preference selection across multiple categories",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label",
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-18.tsx",
+      "content": "import { ChartPieIcon, CodeIcon, PaletteIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport { Switch } from '@/components/ui/switch'\n\nconst skills = [\n  { label: 'Web Development', icon: CodeIcon },\n  { label: 'Data Analysis', icon: ChartPieIcon },\n  { label: 'Graphic Design', icon: PaletteIcon }\n]\n\nconst SwitchListGroupDemo = () => {\n  return (\n    <fieldset className='w-full max-w-96 space-y-4'>\n      <legend className='text-foreground text-sm leading-none font-medium'>Switch to your preferred field: </legend>\n      <ul className='flex w-full flex-col divide-y rounded-md border'>\n        {skills.map(({ label, icon: Icon }) => (\n          <li key={label}>\n            <Label htmlFor={label} className='flex items-center justify-between gap-2 px-5 py-3'>\n              <span className='flex items-center gap-2'>\n                <Icon className='size-4' /> {label}\n              </span>\n              <Switch id={label} />\n            </Label>\n          </li>\n        ))}\n      </ul>\n    </fieldset>\n  )\n}\n\nexport default SwitchListGroupDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-18.tsx"
+    }
+  ]
+}

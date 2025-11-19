@@ -11,7 +11,7 @@ const BadgeCartDemo = () => {
           <ShoppingCartIcon className='size-5' />
         </AvatarFallback>
       </Avatar>
-      <Badge className='absolute -end-2.5 -top-2.5 h-5 min-w-5 rounded-full px-1 tabular-nums'>8</Badge>
+      <Badge className='absolute -top-2.5 -right-2.5 h-5 min-w-5 px-1 tabular-nums'>8</Badge>
     </div>
   )
 }

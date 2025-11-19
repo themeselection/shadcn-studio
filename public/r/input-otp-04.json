@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-04",
+  "type": "registry:component",
+  "title": "Input OTP 4",
+  "description": "A 4-digit OTP input field with countdown timer and automatic resend functionality",
+  "registryDependencies": [
+    "input-otp",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input-otp/input-otp-04.tsx",
+      "content": "'use client'\n\nimport { useEffect, useId, useState } from 'react'\n\nimport { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp'\nimport { Label } from '@/components/ui/label'\n\nconst InputOTPWithResendTimerDemo = () => {\n  const [timeLeft, setTimeLeft] = useState(30)\n  const id = useId()\n\n  useEffect(() => {\n    if (timeLeft > 0) {\n      const timer = setTimeout(() => {\n        setTimeLeft(prev => prev - 1)\n      }, 1000)\n\n      return () => clearTimeout(timer)\n    }\n  }, [timeLeft])\n\n  const formatTime = (seconds: number) => {\n    const mins = Math.floor(seconds / 60)\n    const secs = seconds % 60\n\n    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`\n  }\n\n  const handleResend = () => {\n    setTimeLeft(60)\n  }\n\n  return (\n    <div className='space-y-3'>\n      <Label htmlFor={id}>Input OTP with resend timer</Label>\n      <InputOTP id={id} maxLength={4}>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n        </InputOTPGroup>\n      </InputOTP>\n      <p className='text-muted-foreground text-xs'>\n        {timeLeft > 0 ? (\n          `Resend available in ${formatTime(timeLeft)}`\n        ) : (\n          <a\n            href='#'\n            onClick={e => {\n              e.preventDefault()\n              handleResend()\n            }}\n            className='hover:text-primary underline'\n          >\n            Resend code\n          </a>\n        )}\n      </p>\n    </div>\n  )\n}\n\nexport default InputOTPWithResendTimerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input-otp/input-otp-04.tsx"
+    }
+  ]
+}

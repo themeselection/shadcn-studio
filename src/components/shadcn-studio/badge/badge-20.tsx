@@ -6,7 +6,7 @@ const BadgeFailedDemo = () => {
   return (
     <Badge
       variant='outline'
-      className='text-destructive [a&]:hover:bg-destructive/10 [a&]:hover:text-destructive/90 border-destructive'
+      className='text-destructive [a&]:hover:bg-destructive/10 [a&]:hover:text-destructive/90 border-destructive rounded-sm'
     >
       <BanIcon className='size-3' />
       Failed

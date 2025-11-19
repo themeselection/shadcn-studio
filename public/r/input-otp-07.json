@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-07",
+  "type": "registry:component",
+  "title": "Input OTP 7",
+  "description": "A 4-digit OTP input field with minimal underline styling and no background",
+  "registryDependencies": [
+    "input-otp",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input-otp/input-otp-07.tsx",
+      "content": "import { useId } from 'react'\n\nimport { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp'\nimport { Label } from '@/components/ui/label'\n\nconst InputOTPMinimalDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='space-y-3'>\n      <Label htmlFor={id}>Input OTP minimal</Label>\n      <InputOTP id={id} maxLength={4}>\n        <InputOTPGroup className='gap-2 *:data-[active=true]:ring-0 *:data-[slot=input-otp-slot]:rounded-none *:data-[slot=input-otp-slot]:border-0 *:data-[slot=input-otp-slot]:border-b-2 *:data-[slot=input-otp-slot]:shadow-none *:dark:data-[slot=input-otp-slot]:bg-transparent'>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n        </InputOTPGroup>\n      </InputOTP>\n    </div>\n  )\n}\n\nexport default InputOTPMinimalDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input-otp/input-otp-07.tsx"
+    }
+  ]
+}

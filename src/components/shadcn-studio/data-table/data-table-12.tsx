@@ -139,11 +139,7 @@ export const columns: ColumnDef<Payment>[] = [
           'bg-amber-600/10 text-amber-600 focus-visible:ring-amber-600/20 dark:bg-amber-400/10 dark:text-amber-400 dark:focus-visible:ring-amber-400/40 [a&]:hover:bg-amber-600/5 dark:[a&]:hover:bg-amber-400/5'
       }[status]
 
-      return (
-        <Badge className={(cn('rounded-full border-none focus-visible:outline-none'), styles)}>
-          {row.getValue('status')}
-        </Badge>
-      )
+      return <Badge className={(cn('border-none focus-visible:outline-none'), styles)}>{row.getValue('status')}</Badge>
     }
   },
   {
@@ -283,22 +279,22 @@ const DataTableWithExportDemo = () => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant='outline' size='sm'>
-                <DownloadIcon className='mr-2 h-4 w-4' />
+                <DownloadIcon className='mr-2' />
                 Export
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='end'>
               <DropdownMenuItem onClick={exportToCSV}>
-                <FileTextIcon className='mr-2 h-4 w-4' />
+                <FileTextIcon className='mr-2 size-4' />
                 Export as CSV
               </DropdownMenuItem>
               <DropdownMenuItem onClick={exportToExcel}>
-                <FileSpreadsheetIcon className='mr-2 h-4 w-4' />
+                <FileSpreadsheetIcon className='mr-2 size-4' />
                 Export as Excel
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={exportToJSON}>
-                <FileTextIcon className='mr-2 h-4 w-4' />
+                <FileTextIcon className='mr-2 size-4' />
                 Export as JSON
               </DropdownMenuItem>
             </DropdownMenuContent>

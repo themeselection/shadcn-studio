@@ -76,9 +76,7 @@ const columns: ColumnDef<Item>[] = [
       }[availability]
 
       return (
-        <Badge className={(cn('rounded-full border-none focus-visible:outline-none'), styles)}>
-          {row.getValue('availability')}
-        </Badge>
+        <Badge className={(cn('border-none focus-visible:outline-none'), styles)}>{row.getValue('availability')}</Badge>
       )
     }
   }
@@ -218,7 +216,7 @@ const DataTableWithPaginationDemo = () => {
                   disabled={!table.getCanPreviousPage()}
                   aria-label='Go to previous page'
                 >
-                  <ChevronLeftIcon size={16} aria-hidden='true' />
+                  <ChevronLeftIcon aria-hidden='true' />
                 </Button>
               </PaginationItem>
 
@@ -260,7 +258,7 @@ const DataTableWithPaginationDemo = () => {
                   disabled={!table.getCanNextPage()}
                   aria-label='Go to next page'
                 >
-                  <ChevronRightIcon size={16} aria-hidden='true' />
+                  <ChevronRightIcon aria-hidden='true' />
                 </Button>
               </PaginationItem>
             </PaginationContent>

@@ -1,4 +1,4 @@
-import { AlignJustify, Heading1, Heading2, Pencil, TextSearch } from 'lucide-react'
+import { AlignJustifyIcon, Heading1Icon, Heading2Icon, PencilIcon, TextSearchIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -12,22 +12,22 @@ import {
 
 const listItems = [
   {
-    icon: Heading1,
+    icon: Heading1Icon,
     property: 'Heading 1',
     description: 'big section or hero heading'
   },
   {
-    icon: Heading2,
+    icon: Heading2Icon,
     property: 'Heading 2',
     description: 'Sub section heading'
   },
   {
-    icon: AlignJustify,
+    icon: AlignJustifyIcon,
     property: 'Align justify',
     description: 'text will fill all area'
   },
   {
-    icon: TextSearch,
+    icon: TextSearchIcon,
     property: 'text search',
     description: 'find any text'
   }
@@ -38,7 +38,7 @@ const DropdownMenuEditMenuDemo = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='icon' className='rounded-full'>
-          <Pencil />
+          <PencilIcon />
           <span className='sr-only'>Edit menu</span>
         </Button>
       </DropdownMenuTrigger>

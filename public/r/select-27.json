@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-27",
+  "type": "registry:component",
+  "title": "Select 27",
+  "description": "A music genre select dropdown with icons for each option",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-27.tsx",
+      "content": "import { useId } from 'react'\n\nimport { GuitarIcon, HeadphonesIcon, MicVocalIcon, MusicIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst SelectDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select option with icon</Label>\n      <Select defaultValue='rock'>\n        <SelectTrigger id={id} className='w-full'>\n          <SelectValue placeholder='Select a music genre' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectLabel>Music Genres</SelectLabel>\n            <SelectItem value='rock'>\n              <GuitarIcon />\n              Rock\n            </SelectItem>\n            <SelectItem value='electronic'>\n              <HeadphonesIcon />\n              Electronic\n            </SelectItem>\n            <SelectItem value='pop'>\n              <MicVocalIcon />\n              Pop\n            </SelectItem>\n            <SelectItem value='jazz'>\n              <MusicIcon />\n              Jazz\n            </SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-27.tsx"
+    }
+  ]
+}

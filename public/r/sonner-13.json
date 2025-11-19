@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-13",
+  "type": "registry:component",
+  "title": "Sonner 13",
+  "description": "An outline-styled info toast notification with border highlighting for informational messages",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-13.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst OutlineInfoSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.info('This is for your information, please note.', {\n          style: {\n            '--normal-bg': 'var(--background)',\n            '--normal-text': 'light-dark(var(--color-sky-600), var(--color-sky-400))',\n            '--normal-border': 'light-dark(var(--color-sky-600), var(--color-sky-400))'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Outline Info Toast\n    </Button>\n  )\n}\n\nexport default OutlineInfoSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-13.tsx"
+    }
+  ]
+}

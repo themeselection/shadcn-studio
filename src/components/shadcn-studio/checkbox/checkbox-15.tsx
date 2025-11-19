@@ -29,7 +29,7 @@ const Checkbox = (props: ComponentProps<typeof CheckboxPrimitive.Root>) => {
 }
 
 const CheckboxTreeDemo = () => {
-  const [checked, setChecked] = useState<CheckboxPrimitive.CheckedState>()
+  const [checked, setChecked] = useState<CheckboxPrimitive.CheckedState>('indeterminate')
   const [selected, setSelected] = useState<string[]>(['Child 1', 'Child 2'])
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const CheckboxTreeDemo = () => {
         <Checkbox id='parent' checked={checked} onCheckedChange={handleCheckedChange} />
         <Label htmlFor='parent'>Parent</Label>
       </div>
-      <div className='flex flex-col gap-2 ps-6'>
+      <div className='flex flex-col gap-2 pl-6'>
         {items.map(label => (
           <div key={label} className='flex items-center gap-2'>
             <Checkbox

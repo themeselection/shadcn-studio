@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-07",
+  "type": "registry:component",
+  "title": "Popover 7",
+  "description": "A file deletion confirmation popover with warning icon and action buttons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-07.tsx",
+      "content": "import { FileWarningIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst PopoverDeleteFileDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <FileWarningIcon />\n          <span className='sr-only'>Delete File</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='flex flex-col items-center gap-4'>\n          <div className='flex aspect-square size-12 items-center justify-center rounded-full bg-red-500/10'>\n            <FileWarningIcon className='text-destructive size-6' />\n          </div>\n          <div className='space-y-2 text-center'>\n            <div className='font-semibold text-balance'>Are you sure you want to delete this file?</div>\n            <p className='text-muted-foreground text-sm'>\n              Deleting this file can affect your project and other files connection so keep in mind before making\n              decision\n            </p>\n          </div>\n          <div className='grid w-full grid-cols-2 gap-2'>\n            <Button variant='secondary' size='sm'>\n              Cancel\n            </Button>\n            <Button variant='destructive' size='sm'>\n              Delete File\n            </Button>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverDeleteFileDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-07.tsx"
+    }
+  ]
+}

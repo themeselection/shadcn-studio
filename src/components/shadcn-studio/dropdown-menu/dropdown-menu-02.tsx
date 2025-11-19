@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Check } from 'lucide-react'
+import { CheckIcon } from 'lucide-react'
 
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import {
@@ -66,7 +66,7 @@ const DropdownMenuUserSwitcherDemo = () => {
                 <span className='text-muted-foreground max-w-[20ch] truncate text-xs'>{user.mail}</span>
               </div>
             </div>
-            {selectUser.id === user.id && <Check className='ml-auto' />}
+            {selectUser.id === user.id && <CheckIcon className='ml-auto' />}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

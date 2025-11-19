@@ -16,7 +16,7 @@ const CalendarWithTimeInput = () => {
   return (
     <div>
       <Card className='gap-5 py-5'>
-        <CardHeader className='flex items-center gap-2 border-b px-3 !pb-3'>
+        <CardHeader className='flex items-center border-b px-3 !pb-3'>
           <Label htmlFor={id} className='text-xs'>
             Enter time
           </Label>
@@ -26,9 +26,9 @@ const CalendarWithTimeInput = () => {
               type='time'
               step='1'
               defaultValue='12:00:00'
-              className='peer appearance-none ps-9 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'
+              className='peer appearance-none pl-9 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'
             />
-            <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50'>
+            <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>
               <ClockIcon size={16} aria-hidden='true' />
             </div>
           </div>

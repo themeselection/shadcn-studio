@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-05",
+  "type": "registry:component",
+  "title": "Button Group 5",
+  "description": "Social media links button group with branded colors and hover effects",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-05.tsx",
+      "content": "import { DribbbleIcon, FacebookIcon, InstagramIcon, TwitchIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonGroupSocialDemo = () => {\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <Button\n        variant='outline'\n        className='rounded-none rounded-l-md shadow-none hover:!bg-[#9146ff]/10 focus-visible:z-10'\n        asChild\n      >\n        <a href='#' target='_blank' rel='noopener noreferrer'>\n          <TwitchIcon className='stroke-[#9146ff]' />\n          <span className='sr-only'>Twitch</span>\n        </a>\n      </Button>\n      <Button variant='outline' className='rounded-none shadow-none hover:!bg-[#EA4C89]/10 focus-visible:z-10' asChild>\n        <a href='#' target='_blank' rel='noopener noreferrer'>\n          <DribbbleIcon className='stroke-[#EA4C89]' />\n          <span className='sr-only'>Dribbble</span>\n        </a>\n      </Button>\n      <Button variant='outline' className='rounded-none shadow-none hover:!bg-[#fb169a]/10 focus-visible:z-10' asChild>\n        <a href='#' target='_blank' rel='noopener noreferrer'>\n          <InstagramIcon className='stroke-[#fb169a]' />\n          <span className='sr-only'>Instagram</span>\n        </a>\n      </Button>\n      <Button\n        variant='outline'\n        className='rounded-none rounded-r-md shadow-none hover:!bg-[#0866ff]/10 focus-visible:z-10'\n        asChild\n      >\n        <a href='#' target='_blank' rel='noopener noreferrer'>\n          <FacebookIcon className='stroke-[#0866ff]' />\n          <span className='sr-only'>Facebook</span>\n        </a>\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonGroupSocialDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-05.tsx"
+    }
+  ]
+}

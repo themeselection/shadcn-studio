@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-01",
+  "type": "registry:component",
+  "title": "Pagination 1",
+  "description": "A basic pagination component with previous, numbered pages, and next controls",
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-01.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nconst PaginationDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationPrevious href='#' />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#'>1</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' isActive>\n            2\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#'>3</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href='#' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default PaginationDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-01.tsx"
+    }
+  ]
+}

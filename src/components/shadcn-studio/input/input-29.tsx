@@ -15,10 +15,10 @@ const InputEndSelectDemo = () => {
           id={id}
           type='text'
           placeholder='shadcnstudio'
-          className='-me-px rounded-e-none shadow-none focus-visible:z-1'
+          className='-me-px rounded-r-none shadow-none focus-visible:z-1'
         />
         <Select defaultValue='.com'>
-          <SelectTrigger id={id} className='rounded-s-none shadow-none'>
+          <SelectTrigger id={id} className='rounded-l-none shadow-none'>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

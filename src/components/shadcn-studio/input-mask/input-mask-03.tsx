@@ -18,8 +18,8 @@ const InputCardNumberDemo = () => {
     <div className='w-full max-w-xs space-y-2'>
       <Label htmlFor={id}>Card number</Label>
       <div className='relative'>
-        <Input {...getCardNumberProps()} id={id} className='peer pe-11' />
-        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50'>
+        <Input {...getCardNumberProps()} id={id} className='peer pr-11' />
+        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>
           {meta.cardType ? (
             <svg
               className='w-6 overflow-hidden'

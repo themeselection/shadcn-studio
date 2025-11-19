@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-12",
+  "type": "registry:component",
+  "title": "Calendar 12",
+  "description": "Multi-select calendar allowing selection of multiple individual dates",
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-12.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarMultiSelectDemo = () => {\n  const [dates, setDates] = useState<Date[]>([new Date(2025, 5, 12), new Date(2025, 5, 17)])\n\n  return (\n    <div>\n      <Calendar mode='multiple' required selected={dates} onSelect={setDates} max={5} className='rounded-lg border' />\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\n        Multi day select calendar\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarMultiSelectDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-12.tsx"
+    }
+  ]
+}

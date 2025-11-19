@@ -15,9 +15,9 @@ const InputEndButtonDemo = () => {
           id={id}
           type='email'
           placeholder='Email address'
-          className='-me-px rounded-e-none shadow-none focus-visible:z-1'
+          className='-me-px rounded-r-none shadow-none focus-visible:z-1'
         />
-        <Button className='rounded-s-none'>Subscribe</Button>
+        <Button className='rounded-l-none'>Subscribe</Button>
       </div>
     </div>
   )

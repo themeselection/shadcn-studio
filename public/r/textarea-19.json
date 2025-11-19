@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-19",
+  "type": "registry:component",
+  "title": "Textarea 19",
+  "description": "A textarea with character count display and remaining characters indicator",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-19.tsx",
+      "content": "'use client'\n\nimport { useId, useState, type ChangeEvent } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst maxLength = 200\nconst initialValue = ''\n\nconst TextareaCharacterLeftDemo = () => {\n  const [value, setValue] = useState(initialValue)\n  const [characterCount, setCharacterCount] = useState(initialValue.length)\n\n  const id = useId()\n\n  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {\n    if (e.target.value.length <= maxLength) {\n      setValue(e.target.value)\n      setCharacterCount(e.target.value.length)\n    }\n  }\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Textarea with characters left</Label>\n      <Textarea placeholder='Type your feedback here' value={value} maxLength={maxLength} onChange={handleChange} />\n      <p className='text-muted-foreground text-xs'>\n        <span className='tabular-nums'>{maxLength - characterCount}</span> characters left\n      </p>\n    </div>\n  )\n}\n\nexport default TextareaCharacterLeftDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-19.tsx"
+    }
+  ]
+}

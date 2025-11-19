@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-15",
+  "type": "registry:component",
+  "title": "Pagination 15",
+  "description": "A comprehensive pagination component with page size selector, tooltips, and detailed navigation controls",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label",
+    "pagination",
+    "select",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-15.tsx",
+      "content": "import { useId } from 'react'\n\nimport { ChevronFirstIcon, ChevronLastIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink\n} from '@/components/ui/pagination'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst pages = [1, 2, 3]\n\nconst TablePaginationDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex w-full flex-wrap items-center justify-between gap-6 max-sm:justify-center'>\n      <div className='flex shrink-0 items-center gap-3'>\n        <Label htmlFor={id}>Rows per page</Label>\n        <Select defaultValue='10'>\n          <SelectTrigger id={id} className='w-fit whitespace-nowrap'>\n            <SelectValue placeholder='Select number of results' />\n          </SelectTrigger>\n          <SelectContent className='[&_*[role=option]]:pr-8 [&_*[role=option]]:pl-2 [&_*[role=option]>span]:right-2 [&_*[role=option]>span]:left-auto'>\n            <SelectItem value='10'>10</SelectItem>\n            <SelectItem value='25'>25</SelectItem>\n            <SelectItem value='50'>50</SelectItem>\n          </SelectContent>\n        </Select>\n      </div>\n      <div className='text-muted-foreground flex grow items-center justify-end whitespace-nowrap max-sm:justify-center'>\n        <p className='text-muted-foreground text-sm whitespace-nowrap' aria-live='polite'>\n          Showing <span className='text-foreground'>1</span> to <span className='text-foreground'>10</span> of{' '}\n          <span className='text-foreground'>100</span> products\n        </p>\n      </div>\n      <Pagination className='w-fit max-sm:mx-0'>\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationLink href='#' aria-label='Go to first page' size='icon' className='rounded-full'>\n              <ChevronFirstIcon className='size-4' />\n            </PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href='#' aria-label='Go to previous page' size='icon' className='rounded-full'>\n              <ChevronLeftIcon className='size-4' />\n            </PaginationLink>\n          </PaginationItem>\n          {pages.map(page => (\n            <PaginationItem key={page}>\n              <PaginationLink href={`#${page}`} isActive={page === 2} className='rounded-full'>\n                {page}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n          <PaginationItem>\n            <Tooltip>\n              <TooltipTrigger asChild>\n                <PaginationEllipsis />\n              </TooltipTrigger>\n              <TooltipContent>\n                <p>2 other pages</p>\n              </TooltipContent>\n            </Tooltip>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href='#' aria-label='Go to next page' size='icon' className='rounded-full'>\n              <ChevronRightIcon className='size-4' />\n            </PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href='#' aria-label='Go to last page' size='icon' className='rounded-full'>\n              <ChevronLastIcon className='size-4' />\n            </PaginationLink>\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n\nexport default TablePaginationDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-15.tsx"
+    }
+  ],
+  "meta": {
+    "className": "col-span-full border-r-0"
+  }
+}

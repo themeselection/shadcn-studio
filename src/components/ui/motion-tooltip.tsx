@@ -6,6 +6,8 @@ import { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
+import { cn } from '@/lib/utils'
+
 interface TooltipItem {
   image: string
   name: string
@@ -13,7 +15,7 @@ interface TooltipItem {
   designation: string
 }
 
-function AnimatedTooltip({ items }: { items: TooltipItem[] }) {
+function AnimatedTooltip({ items, className }: { items: TooltipItem[]; className?: string }) {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null)
   const springConfig = { stiffness: 100, damping: 5 }
 
@@ -37,7 +39,7 @@ function AnimatedTooltip({ items }: { items: TooltipItem[] }) {
     <>
       {items.map((item, index) => (
         <div
-          className='relative -me-2.5'
+          className={cn('relative -me-2.5', className)}
           key={item.name}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -62,10 +64,10 @@ function AnimatedTooltip({ items }: { items: TooltipItem[] }) {
                   rotate: rotate,
                   whiteSpace: 'nowrap'
                 }}
-                className='text-primary-foreground bg-primary absolute start-1/2 -top-2 z-50 flex -translate-x-1/2 -translate-y-full flex-col items-center justify-center rounded-md px-4 py-2 text-xs shadow-xl'
+                className='bg-foreground text-background absolute -top-2 left-1/2 z-50 flex -translate-x-1/2 -translate-y-full flex-col items-center justify-center rounded-md px-4 py-2 text-xs shadow-xl'
               >
                 <div className='relative z-1 text-base font-semibold'>{item.name}</div>
-                <div className='text-primary-foreground/80 text-xs'>{item.designation}</div>
+                <div className='text-background/80 text-xs'>{item.designation}</div>
               </motion.div>
             )}
           </AnimatePresence>

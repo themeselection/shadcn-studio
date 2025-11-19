@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "statistics-component-01",
+  "type": "registry:block",
+  "title": "Statistics 1",
+  "description": "Logistics and shipping statistics cards displaying Shipped Orders, Damaged Returns, Missed Delivery Slots, and Late Deliveries with percentage change indicators and \"than last week\" comparison periods",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "card",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/dashboard-and-application/statistics-component/statistics-component-01/page.tsx",
+      "content": "import { CalendarX2Icon, Clock8Icon, TriangleAlertIcon, TruckIcon } from 'lucide-react'\n\nimport StatisticsCard from '@/components/shadcn-studio/blocks/statistics-card-01'\n\n// Statistics card data\nconst StatisticsCardData = [\n  {\n    icon: <TruckIcon className='size-4' />,\n    value: '42',\n    title: 'Shipped Orders',\n    changePercentage: '+18.2%'\n  },\n  {\n    icon: <TriangleAlertIcon className='size-4' />,\n    value: '8',\n    title: 'Damaged Returns',\n    changePercentage: '-8.7%'\n  },\n  {\n    icon: <CalendarX2Icon className='size-4' />,\n    value: '27',\n    title: 'Missed Delivery Slots',\n    changePercentage: '+4.3%'\n  },\n  {\n    icon: <Clock8Icon className='size-4' />,\n    value: '13',\n    title: 'Late Deliveries',\n    changePercentage: '-2.5%'\n  }\n]\n\nconst StatisticsCardPreview = () => {\n  return (\n    <div className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8'>\n        {StatisticsCardData.map((card, index) => (\n          <StatisticsCard\n            key={index}\n            icon={card.icon}\n            title={card.title}\n            value={card.value}\n            changePercentage={card.changePercentage}\n          />\n        ))}\n      </div>\n    </div>\n  )\n}\n\nexport default StatisticsCardPreview\n",
+      "type": "registry:page",
+      "target": "app/statistics-component-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/statistics-card-01.tsx",
+      "content": "import type { ReactNode } from 'react'\n\nimport { Card, CardContent, CardHeader } from '@/components/ui/card'\n\nimport { cn } from '@/lib/utils'\n\n// Statistics card data type\ntype StatisticsCardProps = {\n  icon: ReactNode\n  value: string\n  title: string\n  changePercentage: string\n  className?: string\n}\n\nconst StatisticsCard = ({ icon, value, title, changePercentage, className }: StatisticsCardProps) => {\n  return (\n    <Card className={cn('gap-4', className)}>\n      <CardHeader className='flex items-center'>\n        <div className='bg-primary/10 text-primary flex size-8 shrink-0 items-center justify-center rounded-md'>\n          {icon}\n        </div>\n        <span className='text-2xl'>{value}</span>\n      </CardHeader>\n      <CardContent className='flex flex-col gap-2'>\n        <span className='font-semibold'>{title}</span>\n        <p className='space-x-2'>\n          <span className='text-sm'>{changePercentage}</span>\n          <span className='text-muted-foreground text-sm'>than last week</span>\n        </p>\n      </CardContent>\n    </Card>\n  )\n}\n\nexport default StatisticsCard\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/statistics-card-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "dashboard-and-application",
+    "section": "statistics-component"
+  }
+}

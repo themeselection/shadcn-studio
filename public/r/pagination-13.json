@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-13",
+  "type": "registry:component",
+  "title": "Pagination 13",
+  "description": "A compact mini pagination component with page count display and icon navigation",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-13.tsx",
+      "content": "import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'\n\nimport { Pagination, PaginationContent, PaginationItem, PaginationLink } from '@/components/ui/pagination'\n\nconst MiniPagination = () => {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationLink href='#' aria-label='Go to previous page' size='icon'>\n            <ChevronLeftIcon className='size-4' />\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <p className='text-muted-foreground text-sm' aria-live='polite'>\n            Page <span className='text-foreground'>2</span> of <span className='text-foreground'>5</span>\n          </p>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' aria-label='Go to next page' size='icon'>\n            <ChevronRightIcon className='size-4' />\n          </PaginationLink>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default MiniPagination\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-13.tsx"
+    }
+  ]
+}

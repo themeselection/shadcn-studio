@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-03",
+  "type": "registry:component",
+  "title": "Input 3",
+  "description": "A required email input field with a red asterisk indicator and validation",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-03.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputRequiredDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id} className='gap-1'>\n        Required input <span className='text-destructive'>*</span>\n      </Label>\n      <Input id={id} type='email' placeholder='Email address' required />\n    </div>\n  )\n}\n\nexport default InputRequiredDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-03.tsx"
+    }
+  ]
+}

@@ -99,7 +99,7 @@ const ComboboxOptionWithIIconDemo = () => {
                   if (selectedItem) {
                     const Icon = selectedItem.icon
 
-                    return <Icon className='text-muted-foreground size-4' />
+                    return <Icon className='text-muted-foreground' />
                   }
 
                   return null
@@ -109,7 +109,7 @@ const ComboboxOptionWithIIconDemo = () => {
             ) : (
               <span className='text-muted-foreground'>Select industry category</span>
             )}
-            <ChevronsUpDownIcon size={16} className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
+            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>

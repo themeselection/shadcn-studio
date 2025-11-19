@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-03",
+  "type": "registry:component",
+  "title": "Button Group 3",
+  "description": "Toolbar button group with tooltips for design tools and actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-03.tsx",
+      "content": "import { CopyIcon, CropIcon, EllipsisVerticalIcon, MousePointerIcon, SquareIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst ButtonGroupTooltipDemo = () => {\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none rounded-l-md shadow-none focus-visible:z-10' variant='outline'>\n            <MousePointerIcon />\n            <span className='sr-only'>Select</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Select</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none shadow-none focus-visible:z-10' variant='outline'>\n            <SquareIcon />\n            <span className='sr-only'>Shapes</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Shapes</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none shadow-none focus-visible:z-10' variant='outline'>\n            <CropIcon />\n            <span className='sr-only'>Crop</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Crop</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none shadow-none focus-visible:z-10' variant='outline'>\n            <CopyIcon />\n            <span className='sr-only'>Duplicate</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>Duplicate</TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button className='rounded-none rounded-r-md shadow-none focus-visible:z-10' variant='outline'>\n            <EllipsisVerticalIcon />\n            <span className='sr-only'>More</span>\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className='px-2 py-1 text-xs'>More</TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n\nexport default ButtonGroupTooltipDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-03.tsx"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ const ButtonGroupNumberDemo = () => {
     <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-md shadow-xs'>
       <Button
         size='icon'
-        className='rounded-none rounded-s-full shadow-none focus-visible:z-10'
+        className='rounded-none rounded-l-full focus-visible:z-10'
         onClick={() => {
           setValue(value - 1)
         }}
@@ -26,7 +26,7 @@ const ButtonGroupNumberDemo = () => {
       </span>
       <Button
         size='icon'
-        className='rounded-none rounded-e-full shadow-none focus-visible:z-10'
+        className='rounded-none rounded-r-full focus-visible:z-10'
         onClick={() => {
           setValue(value + 1)
         }}

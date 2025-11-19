@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-26",
+  "type": "registry:component",
+  "title": "Tabs 26",
+  "description": "Custom tabs with underline styling using bottom border and no background",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tabs/tabs-26.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise Me',\n    value: 'surprise',\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst TabsCustomUnderlineDemo = () => {\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs defaultValue='explore' className='gap-4'>\n        <TabsList className='bg-background rounded-none border-b p-0'>\n          {tabs.map(tab => (\n            <TabsTrigger\n              key={tab.value}\n              value={tab.value}\n              className='bg-background data-[state=active]:border-primary dark:data-[state=active]:border-primary data-[state=active]:text-foreground text-muted-foreground dark:text-muted-foreground hover:text-foreground dark:hover:text-foreground hover:border-muted-foreground/30 h-full rounded-none border-0 border-b-2 border-transparent data-[state=active]:shadow-none'\n            >\n              {tab.name}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default TabsCustomUnderlineDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tabs/tabs-26.tsx"
+    }
+  ]
+}

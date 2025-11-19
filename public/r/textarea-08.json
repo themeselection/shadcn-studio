@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-08",
+  "type": "registry:component",
+  "title": "Textarea 8",
+  "description": "A textarea with colored border (indigo) styling and focus ring effects",
+  "registryDependencies": [
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/textarea/textarea-08.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaWithColoredBorderDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Textarea with colored border and ring</Label>\n      <Textarea\n        placeholder='Type your feedback here'\n        id={id}\n        className='focus-visible:border-indigo-500 focus-visible:ring-indigo-500/20 dark:focus-visible:ring-indigo-500/40'\n      />\n    </div>\n  )\n}\n\nexport default TextareaWithColoredBorderDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/textarea/textarea-08.tsx"
+    }
+  ]
+}

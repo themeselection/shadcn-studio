@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-01",
+  "type": "registry:component",
+  "title": "Tooltip 1",
+  "description": "A basic tooltip with simple text content displayed on hover",
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-01.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Default\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent>\n        <p>This is a simple tooltip</p>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-01.tsx"
+    }
+  ]
+}

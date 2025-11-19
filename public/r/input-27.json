@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-27",
+  "type": "registry:component",
+  "title": "Input 27",
+  "description": "A file input field with custom styling for the file picker button",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-27.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputFileDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>File input</Label>\n      <Input\n        id={id}\n        type='file'\n        className='text-muted-foreground file:border-input file:text-foreground p-0 pr-3 italic file:mr-3 file:h-full file:border-0 file:border-r file:border-solid file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic'\n      />\n    </div>\n  )\n}\n\nexport default InputFileDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-27.tsx"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ const InputOverlappingLabelDemo = () => {
     <div className='group relative w-full max-w-xs'>
       <Label
         htmlFor={id}
-        className='bg-background text-foreground absolute start-2 top-0 z-1 block -translate-y-1/2 px-1 text-xs'
+        className='bg-background text-foreground absolute top-0 left-2 z-1 block -translate-y-1/2 px-1 text-xs'
       >
         Input with overlapping label
       </Label>

@@ -75,9 +75,7 @@ const DropdownMenuItemAvatarDemo = () => {
               {item.newMessages ? (
                 <div className='flex flex-col items-end gap-1'>
                   <span className='text-muted-foreground text-xs'>{item.time}</span>
-                  <Badge className='h-5 min-w-5 rounded-full bg-green-600 px-1 dark:bg-green-400'>
-                    {item.newMessages}
-                  </Badge>
+                  <Badge className='h-5 min-w-5 bg-green-600 px-1 dark:bg-green-400'>{item.newMessages}</Badge>
                 </div>
               ) : (
                 <span className='text-muted-foreground text-xs'>{item.time}</span>

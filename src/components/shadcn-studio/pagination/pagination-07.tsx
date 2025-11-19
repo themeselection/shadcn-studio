@@ -10,12 +10,12 @@ const PaginationWithFirstAndLastPageButtonNavigation = () => {
       <PaginationContent>
         <PaginationItem>
           <PaginationLink href='#' aria-label='Go to first page' size='icon' className='rounded-full'>
-            <ChevronFirstIcon className='h-4 w-4' />
+            <ChevronFirstIcon className='size-4' />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
           <PaginationLink href='#' aria-label='Go to previous page' size='icon' className='rounded-full'>
-            <ChevronLeftIcon className='h-4 w-4' />
+            <ChevronLeftIcon className='size-4' />
           </PaginationLink>
         </PaginationItem>
         {pages.map(page => (
@@ -27,12 +27,12 @@ const PaginationWithFirstAndLastPageButtonNavigation = () => {
         ))}
         <PaginationItem>
           <PaginationLink href='#' aria-label='Go to next page' size='icon' className='rounded-full'>
-            <ChevronRightIcon className='h-4 w-4' />
+            <ChevronRightIcon className='size-4' />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
           <PaginationLink href='#' aria-label='Go to last page' size='icon' className='rounded-full'>
-            <ChevronLastIcon className='h-4 w-4' />
+            <ChevronLastIcon className='size-4' />
           </PaginationLink>
         </PaginationItem>
       </PaginationContent>

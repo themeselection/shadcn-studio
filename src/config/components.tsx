@@ -1,6 +1,9 @@
 // React Imports
 import type { ComponentType, ReactNode, SVGProps } from 'react'
 
+// Next Imports
+import Link from 'next/link'
+
 // Third-party Imports
 import { CircleAlertIcon } from 'lucide-react'
 
@@ -8,36 +11,36 @@ import { CircleAlertIcon } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
 // SGV Imports
-import AccordionSVG from '@/assets/svg/Accordion'
-import AlertSVG from '@/assets/svg/Alert'
-import AvatarSVG from '@/assets/svg/Avatar'
-import BadgeSVG from '@/assets/svg/Badge'
-import BreadcrumbSVG from '@/assets/svg/Breadcrumb'
-import ButtonSVG from '@/assets/svg/Button'
-import ButtonGroupSVG from '@/assets/svg/ButtonGroup'
-import CalendarSVG from '@/assets/svg/Calendar'
-import CardSVG from '@/assets/svg/Card'
-import CheckboxSVG from '@/assets/svg/Checkbox'
-import CollapsibleSVG from '@/assets/svg/Collapsible'
-import ComboboxSVG from '@/assets/svg/Combobox'
-import DataTableSVG from '@/assets/svg/DataTable'
-import DatepickerSVG from '@/assets/svg/Datepicker'
-import DialogSVG from '@/assets/svg/Dialog'
-import DropdownSVG from '@/assets/svg/Dropdown'
-import FormSVG from '@/assets/svg/Form'
-import InputSVG from '@/assets/svg/Input'
-import InputOTPSVG from '@/assets/svg/InputOTP'
-import PaginationSVG from '@/assets/svg/Pagination'
-import PopoverSVG from '@/assets/svg/Popover'
-import RadioGroupSVG from '@/assets/svg/RadioGroup'
-import SelectSVG from '@/assets/svg/Select'
-import SonnerSVG from '@/assets/svg/Sonner'
-import SheetSVG from '@/assets/svg/Sheet'
-import SwitchSVG from '@/assets/svg/Switch'
-import TableSVG from '@/assets/svg/Table'
-import TabsSVG from '@/assets/svg/Tabs'
-import TextareaSVG from '@/assets/svg/Textarea'
-import TooltipSVG from '@/assets/svg/Tooltip'
+import AccordionSVG from '@/assets/svg/accordion'
+import AlertSVG from '@/assets/svg/alert'
+import AvatarSVG from '@/assets/svg/avatar'
+import BadgeSVG from '@/assets/svg/badge'
+import BreadcrumbSVG from '@/assets/svg/breadcrumb'
+import ButtonSVG from '@/assets/svg/button'
+import ButtonGroupSVG from '@/assets/svg/button-group'
+import CalendarSVG from '@/assets/svg/calendar'
+import CardSVG from '@/assets/svg/card'
+import CheckboxSVG from '@/assets/svg/checkbox'
+import CollapsibleSVG from '@/assets/svg/collapsible'
+import ComboboxSVG from '@/assets/svg/combobox'
+import DataTableSVG from '@/assets/svg/data-table'
+import DatepickerSVG from '@/assets/svg/datepicker'
+import DialogSVG from '@/assets/svg/dialog'
+import DropdownSVG from '@/assets/svg/dropdown'
+import FormSVG from '@/assets/svg/form'
+import InputSVG from '@/assets/svg/input'
+import InputOTPSVG from '@/assets/svg/input-otp'
+import PaginationSVG from '@/assets/svg/pagination'
+import PopoverSVG from '@/assets/svg/popover'
+import RadioGroupSVG from '@/assets/svg/radio-group'
+import SelectSVG from '@/assets/svg/select'
+import SonnerSVG from '@/assets/svg/sonner'
+import SheetSVG from '@/assets/svg/sheet'
+import SwitchSVG from '@/assets/svg/switch'
+import TableSVG from '@/assets/svg/table'
+import TabsSVG from '@/assets/svg/tabs'
+import TextareaSVG from '@/assets/svg/textarea'
+import TooltipSVG from '@/assets/svg/tooltip'
 
 export type ComponentCategory = {
   slug: string
@@ -55,6 +58,7 @@ export type ComponentCategory = {
       svg: ComponentType<SVGProps<SVGSVGElement>>
       badge?: string
       note?: ReactNode
+      tags?: string[]
       hasAnimation?: never | false
       animation?: never | undefined
       isComingSoon?: never | false
@@ -82,6 +86,7 @@ export type ComponentCategory = {
           xl?: number
         }
       }
+      tags?: string[]
       isComingSoon?: never | false
     }
   | {
@@ -90,6 +95,7 @@ export type ComponentCategory = {
       breakpoints?: never | undefined
       badge?: never | undefined
       note?: never | undefined
+      tags?: never | undefined
       hasAnimation?: never | undefined
       animation?: never | undefined
       isComingSoon: true
@@ -121,7 +127,8 @@ export const categories: ComponentCategory[] = [
       { name: 'accordion-14' },
       { name: 'accordion-15' },
       { name: 'accordion-16' }
-    ]
+    ],
+    tags: ['collapsible', 'multilevel', 'multi level', 'multi-level', 'list']
   },
   {
     slug: 'alert',
@@ -161,7 +168,8 @@ export const categories: ComponentCategory[] = [
       { name: 'alert-28' },
       { name: 'alert-29' },
       { name: 'alert-30' }
-    ]
+    ],
+    tags: ['alert', 'closable', 'notification', 'toast']
   },
   {
     slug: 'avatar',
@@ -193,7 +201,8 @@ export const categories: ComponentCategory[] = [
       { name: 'avatar-19' },
       { name: 'avatar-20' },
       { name: 'avatar-21' }
-    ]
+    ],
+    tags: ['avatar group', 'avatar-group', 'avatar icon', 'verified', 'badge', 'users']
   },
   {
     slug: 'badge',
@@ -228,7 +237,8 @@ export const categories: ComponentCategory[] = [
       { name: 'badge-22' },
       { name: 'badge-23' },
       { name: 'badge-24' }
-    ]
+    ],
+    tags: ['closable', 'label', 'avatar', 'notification', 'chip']
   },
   {
     slug: 'breadcrumb',
@@ -246,7 +256,8 @@ export const categories: ComponentCategory[] = [
       { name: 'breadcrumb-06' },
       { name: 'breadcrumb-07' },
       { name: 'breadcrumb-08' }
-    ]
+    ],
+    tags: ['navigation', 'nav']
   },
   {
     slug: 'button',
@@ -311,6 +322,28 @@ export const categories: ComponentCategory[] = [
       { name: 'button-45' },
       { name: 'button-46' },
       { name: 'button-47' }
+    ],
+    tags: [
+      'actions',
+      'gradient',
+      'outline dashed',
+      'loading',
+      'notification',
+      'click',
+      'copy',
+      'social',
+      'icon button',
+      'button icon',
+      'animated button',
+      'ripple effect',
+      'ring hover',
+      'sine hover',
+      'tap animation',
+      'shimmer button',
+      'bounce button',
+      'magnetic button',
+      'heartbeat effect',
+      'stitches button'
     ]
   },
   {
@@ -343,6 +376,20 @@ export const categories: ComponentCategory[] = [
       { name: 'button-group-14' },
       { name: 'button-group-15' },
       { name: 'button-group-16' }
+    ],
+    tags: [
+      'button-group',
+      'action group',
+      'join',
+      'zoom',
+      'number',
+      'dropdown button',
+      'animated button group',
+      'animated button-group',
+      'ripple effect',
+      'like dislike buttons',
+      'button group scale',
+      'shine hover'
     ]
   },
   {
@@ -378,6 +425,23 @@ export const categories: ComponentCategory[] = [
       { name: 'calendar-23' },
       { name: 'calendar-24' },
       { name: 'calendar-25' }
+    ],
+    tags: [
+      'date picker',
+      'date-picker',
+      'scheduler',
+      'events',
+      'meeting',
+      'multi month',
+      'range selection',
+      'minimum days',
+      'disabled dates',
+      'disabled days',
+      'localize',
+      'month and year dropdown',
+      'multi day',
+      'presets',
+      'appointment'
     ]
   },
   {
@@ -411,6 +475,22 @@ export const categories: ComponentCategory[] = [
       { name: 'card-15' },
       { name: 'card-16' },
       { name: 'card-17' }
+    ],
+    tags: [
+      'login card',
+      'meeting card',
+      'invite card',
+      'card with media',
+      'image card',
+      'twitter card',
+      'product card',
+      'review card',
+      'rating card',
+      'card group',
+      'animated card',
+      'glowing card',
+      'glow card',
+      '3d card'
     ]
   },
   {
@@ -448,6 +528,19 @@ export const categories: ComponentCategory[] = [
       { name: 'checkbox-17' },
       { name: 'checkbox-18' },
       { name: 'checkbox-19' }
+    ],
+    tags: [
+      'label',
+      'indeterminate',
+      'checkbox group',
+      'vertical group',
+      'badge',
+      'custom checkbox',
+      'list',
+      'checkbox tree',
+      'animated checkbox',
+      'particle effect',
+      'todo list'
     ]
   },
   {
@@ -474,6 +567,17 @@ export const categories: ComponentCategory[] = [
       { name: 'collapsible-08' },
       { name: 'collapsible-09' },
       { name: 'collapsible-10' }
+    ],
+    tags: [
+      'tree',
+      'collapsible list',
+      'faq',
+      'multi level',
+      'multi-level',
+      'collapsible dropdown',
+      'collapsible form',
+      'collapsible card',
+      'animated collapsible'
     ]
   },
   {
@@ -506,6 +610,18 @@ export const categories: ComponentCategory[] = [
       { name: 'combobox-12' },
       { name: 'combobox-13' },
       { name: 'combobox-14' }
+    ],
+    tags: [
+      'autocomplete',
+      'search',
+      'option group',
+      'multiple combobox',
+      'timezone',
+      'animated combobox',
+      'slide in',
+      'slide-in',
+      'zoom in',
+      'zoom-in'
     ]
   },
   {
@@ -529,24 +645,43 @@ export const categories: ComponentCategory[] = [
       { name: 'data-table-13' }
     ],
     note: (
-      <Alert className='border-none bg-sky-600/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400'>
+      <Alert className='mb-4 border-none bg-sky-600/10 text-sky-600 sm:mb-6 lg:mb-8 dark:bg-sky-400/10 dark:text-sky-400'>
         <CircleAlertIcon />
         <AlertDescription className='text-sky-600/80 dark:text-sky-400/80'>
           <span>
             Built using TanStack Table. For detailed instructions, please refer to this{' '}
-            <a
+            <Link
               href='https://tanstack.com/table/v8/docs/introduction'
               target='_blank'
               rel='noopener noreferrer'
               className='underline hover:text-sky-600 dark:hover:text-sky-400'
             >
               documentation
-            </a>
+            </Link>
             .
           </span>
         </AlertDescription>
       </Alert>
-    )
+    ),
+    tags: [
+      'datatable',
+      'data-table',
+      'tanstack table',
+      'row selection',
+      'column visibility',
+      'column filter',
+      'sortable columns',
+      'resizable columns',
+      'pinnable columns',
+      'draggable columns',
+      'table pagination',
+      'expandable rows',
+      'export',
+      'csv export',
+      'excel export',
+      'json export',
+      'editable cells'
+    ]
   },
   {
     slug: 'date-picker',
@@ -570,7 +705,8 @@ export const categories: ComponentCategory[] = [
       { name: 'date-picker-11' },
       { name: 'date-picker-12' },
       { name: 'date-picker-13' }
-    ]
+    ],
+    tags: ['date picker', 'date-picker', 'time picker', 'time-picker', 'chart filter']
   },
   {
     slug: 'dialog',
@@ -612,6 +748,33 @@ export const categories: ComponentCategory[] = [
       { name: 'dialog-24' },
       { name: 'dialog-25' },
       { name: 'dialog-26' }
+    ],
+    tags: [
+      'alert dialog',
+      'confirmation',
+      'modal',
+      'popup',
+      'scrollable dialog',
+      'sticky header',
+      'sticky footer',
+      'full screen dialog',
+      'refer & earn dialog',
+      'rating dialog',
+      'otp dialog',
+      'invite dialog',
+      'sign up dialog',
+      'sign-up dialog',
+      'sign in dialog',
+      'sign-in dialog',
+      'align dialog',
+      'animated dialog',
+      'slide to top',
+      'slide-top',
+      'slide-up',
+      'slide to right',
+      'slide-right',
+      'zoom in',
+      'zoom-in'
     ]
   },
   {
@@ -646,6 +809,20 @@ export const categories: ComponentCategory[] = [
       { name: 'dropdown-menu-14' },
       { name: 'dropdown-menu-15' },
       { name: 'dropdown-menu-16' }
+    ],
+    tags: [
+      'dropdown',
+      'menu',
+      'context menu',
+      'meeting schedule',
+      'dropdown with avatar',
+      'dropdown with checkbox',
+      'dropdown with radio',
+      'animated dropdown',
+      'slide left',
+      'slide-left',
+      'slide up',
+      'slide-up'
     ]
   },
   {
@@ -668,26 +845,40 @@ export const categories: ComponentCategory[] = [
       { name: 'form-10' }
     ],
     note: (
-      <Alert className='border-none bg-sky-600/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-400'>
+      <Alert className='mb-4 border-none bg-sky-600/10 text-sky-600 sm:mb-6 lg:mb-8 dark:bg-sky-400/10 dark:text-sky-400'>
         <CircleAlertIcon />
         <AlertDescription className='text-sky-600/80 dark:text-sky-400/80'>
           <span>
             To enable the toast notifications, you need to include the{' '}
             <code className='bg-muted-foreground/10 rounded px-1 py-0.25 font-mono'>&lt;Toaster /&gt;</code> component
             in your layout. For detailed instructions, please refer to this{' '}
-            <a
+            <Link
               href='https://ui.shadcn.com/docs/components/sonner#installation'
               target='_blank'
               rel='noopener noreferrer'
               className='underline hover:text-sky-600 dark:hover:text-sky-400'
             >
               documentation
-            </a>
+            </Link>
             .
           </span>
         </AlertDescription>
       </Alert>
-    )
+    ),
+    tags: [
+      'form validation',
+      'radio form',
+      'checkbox form',
+      'form layout',
+      'switch form',
+      'otp form',
+      'textarea form',
+      'input form',
+      'email form',
+      'select form',
+      'date picker form',
+      'report issue form'
+    ]
   },
   {
     slug: 'input',
@@ -743,9 +934,24 @@ export const categories: ComponentCategory[] = [
       { name: 'input-43' },
       { name: 'input-44' },
       { name: 'input-45' },
-      { name: 'input-46' },
-      { name: 'input-47' },
-      { name: 'input-48' }
+      { name: 'input-46' }
+    ],
+    tags: [
+      'label',
+      'email input',
+      'password input',
+      'search input',
+      'helper text',
+      'inset label',
+      'floating label',
+      'overlapping label',
+      'file input',
+      'clear button',
+      'character limit',
+      'character counter',
+      'loading input',
+      'password strength',
+      'number input'
     ]
   },
   {
@@ -762,7 +968,8 @@ export const categories: ComponentCategory[] = [
       { name: 'input-mask-04' },
       { name: 'input-mask-05' },
       { name: 'input-mask-06' }
-    ]
+    ],
+    tags: ['time input', 'debit card input', 'credit card input', 'pin input']
   },
   {
     slug: 'input-otp',
@@ -782,13 +989,13 @@ export const categories: ComponentCategory[] = [
       { name: 'input-otp-08' },
       { name: 'input-otp-09' },
       { name: 'input-otp-10' }
-    ]
+    ],
+    tags: ['resend timer', 'resend code', 'verification code', 'pin input']
   },
   {
     slug: 'pagination',
     name: 'Pagination',
     svg: PaginationSVG,
-    badge: 'New',
     breakpoints: {
       md: 2
     },
@@ -808,7 +1015,8 @@ export const categories: ComponentCategory[] = [
       { name: 'pagination-13' },
       { name: 'pagination-14' },
       { name: 'pagination-15' }
-    ]
+    ],
+    tags: ['ellipsis', 'rows per page', 'page size']
   },
   {
     slug: 'popover',
@@ -841,6 +1049,23 @@ export const categories: ComponentCategory[] = [
       { name: 'popover-13' },
       { name: 'popover-14' },
       { name: 'popover-15' }
+    ],
+    tags: [
+      'reviews',
+      'dimensions',
+      'pricing plan',
+      'volume control',
+      'download file',
+      'confirmation',
+      'filter',
+      'feedback',
+      'search users',
+      'notifications',
+      'animated popover',
+      'slide in',
+      'slide-in',
+      'zoom in',
+      'zoom-in'
     ]
   },
   {
@@ -872,7 +1097,8 @@ export const categories: ComponentCategory[] = [
       { name: 'radio-group-13' },
       { name: 'radio-group-14' },
       { name: 'radio-group-15' }
-    ]
+    ],
+    tags: ['animated radio', 'radio button', 'radio list']
   },
   {
     slug: 'select',
@@ -928,13 +1154,29 @@ export const categories: ComponentCategory[] = [
       { name: 'select-36' },
       { name: 'select-37' },
       { name: 'select-38' }
+    ],
+    tags: [
+      'native select',
+      'custom select',
+      'multi select',
+      'animated select',
+      'timezone',
+      'country select',
+      'overlapping label',
+      'inset label',
+      'option group',
+      'search select',
+      'animated select',
+      'slide in',
+      'slide-in',
+      'zoom in',
+      'zoom-in'
     ]
   },
   {
     slug: 'sheet',
     name: 'Sheet',
     svg: SheetSVG,
-    badge: 'New',
     breakpoints: {
       sm: 2,
       md: 3
@@ -948,12 +1190,12 @@ export const categories: ComponentCategory[] = [
       { name: 'sheet-05' },
       { name: 'sheet-06' },
       { name: 'sheet-07' }
-    ]
+    ],
+    tags: ['scrollable sheet', 'no overlay']
   },
   {
     slug: 'sonner',
     name: 'Sonner',
-    badge: 'New',
     svg: SonnerSVG,
     breakpoints: {
       md: 2,
@@ -980,7 +1222,8 @@ export const categories: ComponentCategory[] = [
       { name: 'sonner-18' },
       { name: 'sonner-19' },
       { name: 'sonner-20' }
-    ]
+    ],
+    tags: ['sonner', 'toast', 'closable', 'promise']
   },
   {
     slug: 'switch',
@@ -1018,6 +1261,16 @@ export const categories: ComponentCategory[] = [
       { name: 'switch-18' },
       { name: 'switch-19' },
       { name: 'switch-20' }
+    ],
+    tags: [
+      'label',
+      'square switch',
+      'dual label',
+      'icon switch',
+      'switch card',
+      'list group',
+      'vertical switch',
+      'animated switch'
     ]
   },
   {
@@ -1042,19 +1295,29 @@ export const categories: ComponentCategory[] = [
       { name: 'table-14' },
       { name: 'table-15' },
       { name: 'table-16' }
+    ],
+    tags: [
+      'bordered table',
+      'rounded table',
+      'tabs with vertical lines',
+      'without border',
+      'stripped rows',
+      'stripped columns',
+      'highlighted row',
+      'sticky header',
+      'table overflow',
+      'table with pagination'
     ]
   },
   {
     slug: 'tabs',
     name: 'Tabs',
     svg: TabsSVG,
-    badge: 'New',
     breakpoints: {
       xl: 2
     },
     hasAnimation: true,
     animation: {
-      badge: 'New',
       breakpoints: {
         xl: 2
       }
@@ -1089,6 +1352,19 @@ export const categories: ComponentCategory[] = [
       { name: 'tabs-27' },
       { name: 'tabs-28' },
       { name: 'tabs-29' }
+    ],
+    tags: [
+      'outline tabs',
+      'tabs with icon',
+      'tabs with badge',
+      'tabs vertical',
+      'tabs horizontal',
+      'tabs with tooltip',
+      'tooltip',
+      'soft pills tabs',
+      'underline tabs',
+      'lifted tabs',
+      'animated tabs'
     ]
   },
   {
@@ -1121,6 +1397,16 @@ export const categories: ComponentCategory[] = [
       { name: 'textarea-19' },
       { name: 'textarea-20' },
       { name: 'textarea-21' }
+    ],
+    tags: [
+      'label',
+      'character limit',
+      'character counter',
+      'auto resize',
+      'resizable',
+      'no resize',
+      'read only',
+      'help text'
     ]
   },
   {
@@ -1156,6 +1442,15 @@ export const categories: ComponentCategory[] = [
       { name: 'tooltip-15' },
       { name: 'tooltip-16' },
       { name: 'tooltip-17' }
+    ],
+    tags: [
+      'hover card',
+      'hover-card',
+      'global tooltip',
+      'arrow tooltip',
+      'icon tooltip',
+      'animated tooltip',
+      'motion tooltip'
     ]
   },
   {

@@ -15,7 +15,7 @@ const AlertWithAvatarDemo = () => {
         <AvatarFallback className='text-xs'>HR</AvatarFallback>
       </Avatar>
       <div className='flex-1 flex-col justify-center gap-1'>
-        <AlertTitle className='flex-1'>Sara has replied on the uploaded image.</AlertTitle>
+        <AlertTitle className='flex-1'>Sara has replied on the uploaded image.</AlertTitle>
         <AlertDescription>12 unread messages. Tap to see.</AlertDescription>
       </div>
       <CircleAlertIcon />

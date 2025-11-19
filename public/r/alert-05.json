@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-05",
+  "type": "registry:component",
+  "title": "Alert 5",
+  "description": "Attached icon alert with separated icon section and destructive warning styling.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-05.tsx",
+      "content": "import { FileWarningIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\n\nconst AlertAttachedIconDemo = () => {\n  return (\n    <Alert className='flex items-stretch p-0'>\n      <div className='bg-destructive/10 text-destructive flex items-center rounded-l-lg border-r p-2'>\n        <FileWarningIcon className='size-4' />\n      </div>\n      <AlertTitle className='p-3'>This file contains virus!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertAttachedIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-05.tsx"
+    }
+  ]
+}

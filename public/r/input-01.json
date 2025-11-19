@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-01",
+  "type": "registry:component",
+  "title": "Input 1",
+  "description": "A basic email input field with placeholder text",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-01.tsx",
+      "content": "import { Input } from '@/components/ui/input'\n\nconst InputDemo = () => {\n  return <Input type='email' placeholder='Email address' className='max-w-xs' />\n}\n\nexport default InputDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-01.tsx"
+    }
+  ]
+}

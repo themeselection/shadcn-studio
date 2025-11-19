@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-08",
+  "type": "registry:component",
+  "title": "Popover 8",
+  "description": "A feedback popover with textarea for user comments and send/cancel actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "popover",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-08.tsx",
+      "content": "import { MessageCircleIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst PopoverFeedbackDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <MessageCircleIcon />\n          <span className='sr-only'>Feedback</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-2'>\n          <div className='font-medium'>Feedback</div>\n          <Textarea placeholder='Type your message here.' className='max-h-56' />\n          <div className='grid w-full grid-cols-2 gap-2'>\n            <Button size='sm'>Send</Button>\n            <Button variant='secondary' size='sm'>\n              Cancel\n            </Button>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverFeedbackDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-08.tsx"
+    }
+  ]
+}

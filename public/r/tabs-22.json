@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-22",
+  "type": "registry:component",
+  "title": "Tabs 22",
+  "description": "Vertical tabs with icons for enhanced visual navigation",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tabs/tabs-22.tsx",
+      "content": "import { BookIcon, GiftIcon, HeartIcon } from 'lucide-react'\n\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    icon: BookIcon,\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    icon: HeartIcon,\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise Me',\n    value: 'surprise',\n    icon: GiftIcon,\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst TabsVerticalWithIconDemo = () => {\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs defaultValue='explore' className='flex-row'>\n        <TabsList className='h-full flex-col'>\n          {tabs.map(({ icon: Icon, name, value }) => (\n            <TabsTrigger\n              key={value}\n              value={value}\n              className='flex w-full items-center justify-start gap-1.5 px-2.5 sm:px-3'\n            >\n              <Icon />\n              {name}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default TabsVerticalWithIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tabs/tabs-22.tsx"
+    }
+  ]
+}

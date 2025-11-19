@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-17",
+  "type": "registry:component",
+  "title": "Input 17",
+  "description": "A domain input field with \".com\" text suffix positioned at the end",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-17.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputEndTextAddOnDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end text add-on</Label>\n      <div className='relative'>\n        <Input id={id} type='text' placeholder='shadcnstudio' className='peer pr-13' />\n        <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 text-sm peer-disabled:opacity-50'>\n          .com\n        </span>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndTextAddOnDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-17.tsx"
+    }
+  ]
+}

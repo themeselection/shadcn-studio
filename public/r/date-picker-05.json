@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-05",
+  "type": "registry:component",
+  "title": "Date Picker 5",
+  "description": "Natural language date picker supporting phrases like \"tomorrow\" or \"next week\"",
+  "dependencies": [
+    "chrono-node",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "input",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/date-picker/date-picker-05.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { parseDate } from 'chrono-node'\nimport { CalendarIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nfunction formatDate(date: Date | undefined) {\n  if (!date) {\n    return ''\n  }\n\n  return date.toLocaleDateString('en-US', {\n    day: '2-digit',\n    month: 'long',\n    year: 'numeric'\n  })\n}\n\nconst DatePickerWithNaturalLanguageDemo = () => {\n  const [open, setOpen] = useState(false)\n  const [value, setValue] = useState('In 2 days')\n  const [date, setDate] = useState<Date | undefined>(parseDate(value) || undefined)\n  const [month, setMonth] = useState<Date | undefined>(date)\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor='date' className='px-1'>\n        Date picker with natural language input\n      </Label>\n      <div className='relative flex gap-2'>\n        <Input\n          id='date'\n          value={value}\n          placeholder='Tomorrow or next week'\n          className='bg-background pr-10'\n          onChange={e => {\n            setValue(e.target.value)\n            const date = parseDate(e.target.value)\n\n            if (date) {\n              setDate(date)\n              setMonth(date)\n            }\n          }}\n          onKeyDown={e => {\n            if (e.key === 'ArrowDown') {\n              e.preventDefault()\n              setOpen(true)\n            }\n          }}\n        />\n        <Popover open={open} onOpenChange={setOpen}>\n          <PopoverTrigger asChild>\n            <Button id='date-picker' variant='ghost' className='absolute top-1/2 right-2 size-6 -translate-y-1/2'>\n              <CalendarIcon className='size-3.5' />\n              <span className='sr-only'>Pick a date</span>\n            </Button>\n          </PopoverTrigger>\n          <PopoverContent className='w-auto overflow-hidden p-0' align='end' alignOffset={-8} sideOffset={10}>\n            <Calendar\n              mode='single'\n              selected={date}\n              month={month}\n              onMonthChange={setMonth}\n              onSelect={date => {\n                setDate(date)\n                setValue(formatDate(date))\n                setOpen(false)\n              }}\n            />\n          </PopoverContent>\n        </Popover>\n      </div>\n      <div className='text-muted-foreground px-1 text-sm'>\n        Your post will be published on <span className='font-medium'>{formatDate(date)}</span>.\n      </div>\n    </div>\n  )\n}\n\nexport default DatePickerWithNaturalLanguageDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/date-picker/date-picker-05.tsx"
+    }
+  ]
+}

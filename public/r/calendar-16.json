@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-16",
+  "type": "registry:component",
+  "title": "Calendar 16",
+  "description": "Calendar with left-aligned navigation controls for alternative layout",
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-16.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarLeftYearMonthDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Calendar\n        mode='single'\n        selected={date}\n        defaultMonth={date}\n        onSelect={setDate}\n        className='rounded-md border'\n        classNames={{\n          month_caption: 'flex items-center h-8 justify-end',\n          nav: 'flex justify-start absolute w-full items-center'\n        }}\n      />\n      <p className='text-muted-foreground mt-4 text-center text-xs' role='region'>\n        Left side month year navigation calendar\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarLeftYearMonthDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-16.tsx"
+    }
+  ]
+}

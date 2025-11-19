@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-46",
+  "type": "registry:component",
+  "title": "Input 46",
+  "description": "Password input field with strength meter and requirements validation checker",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-46.tsx",
+      "content": "'use client'\n\nimport { useId, useMemo, useState } from 'react'\n\nimport { CheckIcon, EyeIcon, EyeOffIcon, XIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nimport { cn } from '@/lib/utils'\n\nconst requirements = [\n  { regex: /.{12,}/, text: 'At least 12 characters' },\n  { regex: /[a-z]/, text: 'At least 1 lowercase letter' },\n  { regex: /[A-Z]/, text: 'At least 1 uppercase letter' },\n  { regex: /[0-9]/, text: 'At least 1 number' },\n  {\n    regex: /[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>/?]/,\n    text: 'At least 1 special character'\n  }\n]\n\nconst InputPasswordStrengthDemo = () => {\n  const [password, setPassword] = useState('')\n  const [isVisible, setIsVisible] = useState(false)\n\n  const id = useId()\n\n  const toggleVisibility = () => setIsVisible(prevState => !prevState)\n\n  const strength = requirements.map(req => ({\n    met: req.regex.test(password),\n    text: req.text\n  }))\n\n  const strengthScore = useMemo(() => {\n    return strength.filter(req => req.met).length\n  }, [strength])\n\n  const getColor = (score: number) => {\n    if (score === 0) return 'bg-border'\n    if (score <= 1) return 'bg-destructive'\n    if (score <= 2) return 'bg-orange-500 '\n    if (score <= 3) return 'bg-amber-500'\n    if (score === 4) return 'bg-yellow-400'\n\n    return 'bg-green-500'\n  }\n\n  const getText = (score: number) => {\n    if (score === 0) return 'Enter a password'\n    if (score <= 2) return 'Weak password'\n    if (score <= 3) return 'Medium password'\n    if (score === 4) return 'Strong password'\n\n    return 'Very strong password'\n  }\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with password strength</Label>\n      <div className='relative mb-3'>\n        <Input\n          id={id}\n          type={isVisible ? 'text' : 'password'}\n          placeholder='Password'\n          value={password}\n          onChange={e => setPassword(e.target.value)}\n          className='pr-9'\n        />\n        <Button\n          variant='ghost'\n          size='icon'\n          onClick={toggleVisibility}\n          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'\n        >\n          {isVisible ? <EyeOffIcon /> : <EyeIcon />}\n          <span className='sr-only'>{isVisible ? 'Hide password' : 'Show password'}</span>\n        </Button>\n      </div>\n\n      <div className='mb-4 flex h-1 w-full gap-1'>\n        {Array.from({ length: 5 }).map((_, index) => (\n          <span\n            key={index}\n            className={cn(\n              'h-full flex-1 rounded-full transition-all duration-500 ease-out',\n              index < strengthScore ? getColor(strengthScore) : 'bg-border'\n            )}\n          />\n        ))}\n      </div>\n\n      <p className='text-foreground text-sm font-medium'>{getText(strengthScore)}. Must contain:</p>\n\n      <ul className='mb-4 space-y-1.5'>\n        {strength.map((req, index) => (\n          <li key={index} className='flex items-center gap-2'>\n            {req.met ? (\n              <CheckIcon className='size-4 text-green-600 dark:text-green-400' />\n            ) : (\n              <XIcon className='text-muted-foreground size-4' />\n            )}\n            <span className={cn('text-xs', req.met ? 'text-green-600 dark:text-green-400' : 'text-muted-foreground')}>\n              {req.text}\n              <span className='sr-only'>{req.met ? ' - Requirement met' : ' - Requirement not met'}</span>\n            </span>\n          </li>\n        ))}\n      </ul>\n\n      <p className='text-muted-foreground text-xs'>\n        Inspired by{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://flyonui.com/docs/advanced-forms/strong-password/#indicator-and-hints'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          FlyonUI\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default InputPasswordStrengthDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-46.tsx"
+    }
+  ]
+}

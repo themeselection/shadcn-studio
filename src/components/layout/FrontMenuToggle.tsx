@@ -35,6 +35,11 @@ const FrontMenuToggle = () => {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
+            <Link href='/blocks' className='cursor-pointer'>
+              Blocks
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
             <Link href='/components' className='cursor-pointer'>
               Components
             </Link>

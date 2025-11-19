@@ -50,7 +50,7 @@ const ComboboxOptionDisabledDemo = () => {
             ) : (
               <span className='text-muted-foreground'>Select item</span>
             )}
-            <ChevronsUpDownIcon size={16} className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
+            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>

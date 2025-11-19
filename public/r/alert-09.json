@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-09",
+  "type": "registry:component",
+  "title": "Alert 9",
+  "description": "Task progress alert with user avatar, progress indicator, and task completion tracking.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert",
+    "avatar",
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-09.tsx",
+      "content": "'use client'\n\nimport { useState, useEffect } from 'react'\n\nimport { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Progress } from '@/components/ui/progress'\n\nconst AlertTaskDemo = () => {\n  const [progress, setProgress] = useState(0)\n\n  useEffect(() => {\n    const timer = setTimeout(() => setProgress(50), 100)\n\n    return () => clearTimeout(timer)\n  }, [])\n\n  return (\n    <Alert className='flex gap-3'>\n      <Avatar className='rounded-sm'>\n        <AvatarImage\n          src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\n          alt='Hallie Richards'\n          className='rounded-sm'\n        />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <div className='flex flex-1 flex-col gap-2'>\n        <div className='flex-1 flex-col justify-center gap-1'>\n          <AlertTitle>@Rocky</AlertTitle>\n          <AlertDescription>this projects task is remaining, deadline is near.</AlertDescription>\n        </div>\n        <Progress\n          value={progress}\n          className='bg-amber-600/20 *:bg-amber-600 dark:bg-amber-400/20 dark:*:bg-amber-400'\n          aria-label='Task progress'\n        />\n      </div>\n    </Alert>\n  )\n}\n\nexport default AlertTaskDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-09.tsx"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ const TooltipContentDemo = () => {
             <InfoIcon className='size-4' />
             <p className='text-sm font-medium'>Accessibility First</p>
           </div>
-          <p className='text-primary-foreground/80'>
+          <p className='text-background/80'>
             Tooltips should supplement the UI, not hide critical information. Ensure all important content is visible
             without requiring tooltip interaction.
           </p>

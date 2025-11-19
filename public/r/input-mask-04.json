@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-mask-04",
+  "type": "registry:component",
+  "title": "Input Mask 4",
+  "description": "A credit card expiry date input with MM/YY formatting and validation",
+  "dependencies": [
+    "react-payment-inputs"
+  ],
+  "devDependencies": [
+    "@types/react-payment-inputs"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input-mask/input-mask-04.tsx",
+      "content": "'use client'\n\nimport { useId } from 'react'\n\nimport { usePaymentInputs } from 'react-payment-inputs'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputExpiryDateDemo = () => {\n  const id = useId()\n  const { getExpiryDateProps } = usePaymentInputs()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Expiry date</Label>\n      <Input {...getExpiryDateProps()} id={id} />\n      <p className='text-muted-foreground text-xs'>\n        Built with{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://github.com/medipass/react-payment-inputs'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          React Payment Inputs\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default InputExpiryDateDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input-mask/input-mask-04.tsx"
+    }
+  ]
+}

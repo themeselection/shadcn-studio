@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-19",
+  "type": "registry:component",
+  "title": "Input 19",
+  "description": "A URL input field with an external \"https://\" add-on box at the start",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-19.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputStartAddOnDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with start add-on</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <span className='border-input bg-background text-muted-foreground -z-1 inline-flex items-center rounded-l-md border px-3 text-sm'>\n          https://\n        </span>\n        <Input id={id} type='text' placeholder='shadcnstudio.com' className='-ms-px rounded-l-none shadow-none' />\n      </div>\n    </div>\n  )\n}\n\nexport default InputStartAddOnDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-19.tsx"
+    }
+  ]
+}

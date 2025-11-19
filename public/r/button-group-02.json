@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-02",
+  "type": "registry:component",
+  "title": "Button Group 2",
+  "description": "Interactive like button group with toggle state and dynamic count",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-02.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { HeartIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nimport { cn } from '@/lib/utils'\n\nconst ButtonGroupLikeDemo = () => {\n  const [isLiked, setIsLiked] = useState(true)\n\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <Button\n        variant='outline'\n        className='rounded-none rounded-l-md shadow-none focus-visible:z-10'\n        onClick={() => setIsLiked(!isLiked)}\n      >\n        <HeartIcon className={cn({ 'fill-destructive stroke-destructive': isLiked })} />\n        Like\n      </Button>\n      <span className='bg-background dark:border-input dark:bg-input/30 flex items-center rounded-r-md border px-3 text-sm font-medium'>\n        {isLiked ? 46 : 45}\n      </span>\n    </div>\n  )\n}\n\nexport default ButtonGroupLikeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-02.tsx"
+    }
+  ]
+}

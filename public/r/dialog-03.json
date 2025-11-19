@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-03",
+  "type": "registry:component",
+  "title": "Dialog 3",
+  "description": "Destructive alert dialog with warning icon and checkbox for permanent deletion",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert-dialog",
+    "button",
+    "checkbox",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dialog/dialog-03.tsx",
+      "content": "import { TriangleAlertIcon } from 'lucide-react'\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger\n} from '@/components/ui/alert-dialog'\nimport { Button } from '@/components/ui/button'\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst AlertDialogDestructiveDemo = () => {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant='outline'>Alert Dialog Destructive</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader className='items-center'>\n          <div className='bg-destructive/10 mx-auto mb-2 flex size-12 items-center justify-center rounded-full'>\n            <TriangleAlertIcon className='text-destructive size-6' />\n          </div>\n          <AlertDialogTitle>Are you absolutely sure you want to delete?</AlertDialogTitle>\n          <AlertDialogDescription className='text-center'>\n            This action cannot be undone. This will permanently delete your account and remove your data from our\n            servers.\n            <span className='mt-4 flex items-center justify-center gap-3'>\n              <Checkbox id='terms' />\n              <Label htmlFor='terms'>Don&apos;t ask next again</Label>\n            </span>\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction className='bg-destructive dark:bg-destructive/60 hover:bg-destructive focus-visible:ring-destructive text-white'>\n            Delete\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n\nexport default AlertDialogDestructiveDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dialog/dialog-03.tsx"
+    }
+  ]
+}

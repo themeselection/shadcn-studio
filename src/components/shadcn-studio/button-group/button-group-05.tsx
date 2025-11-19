@@ -7,7 +7,7 @@ const ButtonGroupSocialDemo = () => {
     <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>
       <Button
         variant='outline'
-        className='rounded-none rounded-s-md shadow-none hover:!bg-[#9146ff]/10 focus-visible:z-10'
+        className='rounded-none rounded-l-md shadow-none hover:!bg-[#9146ff]/10 focus-visible:z-10'
         asChild
       >
         <a href='#' target='_blank' rel='noopener noreferrer'>
@@ -29,7 +29,7 @@ const ButtonGroupSocialDemo = () => {
       </Button>
       <Button
         variant='outline'
-        className='rounded-none rounded-e-md shadow-none hover:!bg-[#0866ff]/10 focus-visible:z-10'
+        className='rounded-none rounded-r-md shadow-none hover:!bg-[#0866ff]/10 focus-visible:z-10'
         asChild
       >
         <a href='#' target='_blank' rel='noopener noreferrer'>

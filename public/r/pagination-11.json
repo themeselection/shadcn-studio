@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-11",
+  "type": "registry:component",
+  "title": "Pagination 11",
+  "description": "A minimal numberless pagination component with only previous and next controls",
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-11.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nconst NumberlessPaginationDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent className='w-full justify-between'>\n        <PaginationItem>\n          <PaginationPrevious href='#' className='border' />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href='#' className='border' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default NumberlessPaginationDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-11.tsx"
+    }
+  ]
+}

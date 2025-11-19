@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-05",
+  "type": "registry:component",
+  "title": "Popover 5",
+  "description": "An informational popover about Shadcn Studio with description and learn more link",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-05.tsx",
+      "content": "import { InfoIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst PopoverAboutDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <InfoIcon />\n          <span className='sr-only'>About Shadcn Studio</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-4'>\n          <div className='space-y-1.5 text-center'>\n            <div className='text-lg font-semibold'>About Shadcn Studio</div>\n            <p className='text-muted-foreground text-sm'>\n              Welcome to Shadcn Studio — your toolkit for building sleek, customizable UI components with ease!\n            </p>\n          </div>\n          <Button size='sm' asChild>\n            <a\n              href='https://shadcnstudio.com/docs/getting-started/introduction'\n              target='_blank'\n              rel='noopener noreferrer'\n            >\n              Learn More\n            </a>\n          </Button>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverAboutDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-05.tsx"
+    }
+  ]
+}

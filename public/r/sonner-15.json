@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-15",
+  "type": "registry:component",
+  "title": "Sonner 15",
+  "description": "An outline-styled warning toast notification with amber border theming for caution messages",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-15.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst OutlineWarningSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.warning('Warning: Please check the entered data.', {\n          style: {\n            '--normal-bg': 'var(--background)',\n            '--normal-text': 'light-dark(var(--color-amber-600), var(--color-amber-400))',\n            '--normal-border': 'light-dark(var(--color-amber-600), var(--color-amber-400))'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Outline Warning Toast\n    </Button>\n  )\n}\n\nexport default OutlineWarningSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-15.tsx"
+    }
+  ]
+}

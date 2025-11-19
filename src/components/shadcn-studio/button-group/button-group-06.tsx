@@ -26,7 +26,7 @@ const ButtonGroupZoomDemo = () => {
       <Button
         variant='outline'
         size='icon'
-        className='rounded-none rounded-s-md shadow-none focus-visible:z-10'
+        className='rounded-none rounded-l-md shadow-none focus-visible:z-10'
         onClick={handleZoomOut}
         disabled={zoom === 0}
       >
@@ -39,7 +39,7 @@ const ButtonGroupZoomDemo = () => {
       <Button
         variant='outline'
         size='icon'
-        className='rounded-none rounded-e-md shadow-none focus-visible:z-10'
+        className='rounded-none rounded-r-md shadow-none focus-visible:z-10'
         onClick={handleZoomIn}
         disabled={zoom === 100}
       >

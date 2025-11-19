@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-08",
+  "type": "registry:component",
+  "title": "Form 8",
+  "description": "Form with command popover for searchable command selection",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "command",
+    "form",
+    "popover",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-08.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { CheckCheckIcon, CheckIcon, ChevronsUpDownIcon } from 'lucide-react'\n\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nimport { cn } from '@/lib/utils'\n\nconst paymentMethod = [\n  { value: 'credit-card', label: 'Credit Card' },\n  { value: 'paypal', label: 'PayPal' },\n  { value: 'apple-pay', label: 'Apple Pay' },\n  { value: 'google-pay', label: 'Google Pay' },\n  { value: 'bank_transfer', label: 'Bank Transfer' },\n  { value: 'bitcoin', label: 'Bitcoin' },\n  { value: 'cash-on-delivery', label: 'Cash on Delivery' }\n]\n\nconst FormSchema = z.object({\n  method: z.string({ required_error: 'Payment method is required.' })\n})\n\nconst ComboboxFormDemo = () => {\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema)\n  })\n\n  const [open, setOpen] = useState(false)\n  const [value, setValue] = useState('')\n\n  function onSubmit() {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>You select &quot;{value}&quot; for payment</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-md space-y-6'>\n        <FormField\n          control={form.control}\n          name='method'\n          render={({ field }) => (\n            <FormItem>\n              <FormLabel>Select your payment method</FormLabel>\n              <Popover open={open} onOpenChange={setOpen}>\n                <FormControl>\n                  <PopoverTrigger asChild>\n                    <Button\n                      variant='outline'\n                      role='combobox'\n                      aria-expanded={open}\n                      className='w-full max-w-xs justify-between'\n                      aria-label='Payment method combobox'\n                    >\n                      {field.value ? (\n                        paymentMethod.find(method => method.value === field.value)?.label\n                      ) : (\n                        <span className='text-muted-foreground'>Select a payment method...</span>\n                      )}\n                      <ChevronsUpDownIcon className='opacity-50' />\n                    </Button>\n                  </PopoverTrigger>\n                </FormControl>\n                <PopoverContent className='w-(--radix-popper-anchor-width) p-0'>\n                  <Command>\n                    <CommandInput placeholder='Search payment method...' />\n                    <CommandList>\n                      <CommandEmpty>No payment method found.</CommandEmpty>\n                      <CommandGroup>\n                        {paymentMethod.map(method => (\n                          <CommandItem\n                            key={method.value}\n                            value={method.value}\n                            onSelect={() => {\n                              setValue(method.value)\n                              field.onChange(method.value)\n                              setOpen(false)\n                            }}\n                          >\n                            {method.label}\n                            <CheckIcon\n                              className={cn('ml-auto', value === method.value ? 'opacity-100' : 'opacity-0')}\n                            />\n                          </CommandItem>\n                        ))}\n                      </CommandGroup>\n                    </CommandList>\n                  </Command>\n                </PopoverContent>\n              </Popover>\n              <FormDescription>Select your preferred payment method.</FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n\n        <Button type='submit'>Continue</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default ComboboxFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-08.tsx"
+    }
+  ]
+}

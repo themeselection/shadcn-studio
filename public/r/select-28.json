@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-28",
+  "type": "registry:component",
+  "title": "Select 28",
+  "description": "A custom select dropdown with leading text before the selected value",
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-28.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectWithLeadingTextDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with leading text</Label>\n      <Select defaultValue='1'>\n        <SelectTrigger id={id} className='w-full'>\n          <span>\n            Favorite Movie: <SelectValue placeholder='Select a movie' />\n          </span>\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value='1'>Inception</SelectItem>\n          <SelectItem value='2'>Interstellar</SelectItem>\n          <SelectItem value='3'>The Dark Knight</SelectItem>\n          <SelectItem value='4'>Pulp Fiction</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectWithLeadingTextDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-28.tsx"
+    }
+  ]
+}

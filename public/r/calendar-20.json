@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-20",
+  "type": "registry:component",
+  "title": "Calendar 20",
+  "description": "Calendar with integrated time input for complete datetime selection",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "calendar",
+    "card",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-20.tsx",
+      "content": "'use client'\n\nimport { useId, useState } from 'react'\n\nimport { ClockIcon } from 'lucide-react'\n\nimport { Calendar } from '@/components/ui/calendar'\nimport { Card, CardContent, CardHeader } from '@/components/ui/card'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst CalendarWithTimeInput = () => {\n  const id = useId()\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Card className='gap-5 py-5'>\n        <CardHeader className='flex items-center border-b px-3 !pb-3'>\n          <Label htmlFor={id} className='text-xs'>\n            Enter time\n          </Label>\n          <div className='relative grow'>\n            <Input\n              id={id}\n              type='time'\n              step='1'\n              defaultValue='12:00:00'\n              className='peer appearance-none pl-9 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'\n            />\n            <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>\n              <ClockIcon size={16} aria-hidden='true' />\n            </div>\n          </div>\n        </CardHeader>\n        <CardContent className='px-5'>\n          <Calendar mode='single' selected={date} onSelect={setDate} className='bg-transparent p-0' />\n        </CardContent>\n      </Card>\n      <p className='text-muted-foreground mt-4 text-center text-xs' role='region'>\n        Calendar with time input\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarWithTimeInput\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-20.tsx"
+    }
+  ]
+}

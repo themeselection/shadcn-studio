@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-03",
+  "type": "registry:component",
+  "title": "Alert 3",
+  "description": "Closable alert with dismiss functionality using X icon and state management.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-03.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { CircleAlertIcon, XIcon } from 'lucide-react'\n\nimport { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'\n\nconst AlertClosableDemo = () => {\n  const [isActive, setIsActive] = useState(true)\n\n  if (!isActive) return null\n\n  return (\n    <Alert className='flex justify-between'>\n      <CircleAlertIcon />\n      <div className='flex-1 flex-col justify-center gap-1'>\n        <AlertTitle>New message!</AlertTitle>\n        <AlertDescription>12 unread messages. Tap to see.</AlertDescription>\n      </div>\n      <button className='cursor-pointer' onClick={() => setIsActive(false)}>\n        <XIcon className='size-5' />\n        <span className='sr-only'>Close</span>\n      </button>\n    </Alert>\n  )\n}\n\nexport default AlertClosableDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-03.tsx"
+    }
+  ]
+}

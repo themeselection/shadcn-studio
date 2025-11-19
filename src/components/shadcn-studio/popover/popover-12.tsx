@@ -32,7 +32,7 @@ const PopoverAboutHimalayasDemo = () => {
           <img
             src='https://lp-cms-production.imgix.net/2021-01/GettyRF_450207051.jpg?height=136'
             alt='the himalayas'
-            className='h-34 w-2/5 rounded-e-md object-cover'
+            className='h-34 w-2/5 rounded-r-md object-cover'
           />
         </div>
       </PopoverContent>

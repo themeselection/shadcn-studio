@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-39",
+  "type": "registry:component",
+  "title": "Input 39",
+  "description": "Search input field with loading indicator that shows during search operations",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-39.tsx",
+      "content": "'use client'\n\nimport { useEffect, useId, useState } from 'react'\n\nimport { LoaderCircleIcon, SearchIcon } from 'lucide-react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputSearchLoaderDemo = () => {\n  const [value, setValue] = useState('')\n  const [isLoading, setIsLoading] = useState(false)\n\n  const id = useId()\n\n  useEffect(() => {\n    if (value) {\n      setIsLoading(true)\n\n      const timer = setTimeout(() => {\n        setIsLoading(false)\n      }, 500)\n\n      return () => clearTimeout(timer)\n    }\n\n    setIsLoading(false)\n  }, [value])\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Search input with loader</Label>\n      <div className='relative'>\n        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>\n          <SearchIcon className='size-4' />\n          <span className='sr-only'>Search</span>\n        </div>\n        <Input\n          id={id}\n          type='search'\n          placeholder='Search...'\n          value={value}\n          onChange={e => setValue(e.target.value)}\n          className='peer px-9 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'\n        />\n        {isLoading && (\n          <div className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>\n            <LoaderCircleIcon className='size-4 animate-spin' />\n            <span className='sr-only'>Loading...</span>\n          </div>\n        )}\n      </div>\n    </div>\n  )\n}\n\nexport default InputSearchLoaderDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-39.tsx"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-32",
+  "type": "registry:component",
+  "title": "Input 32",
+  "description": "Input field with a right-aligned icon button, ideal for actions like downloading or submitting email addresses",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-32.tsx",
+      "content": "import { useId } from 'react'\n\nimport { DownloadIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputIconButtonDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with icon button</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Input\n          id={id}\n          type='email'\n          placeholder='Email address'\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\n        />\n        <Button variant='outline' size='icon' className='rounded-l-none'>\n          <DownloadIcon />\n          <span className='sr-only'>Download</span>\n        </Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputIconButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-32.tsx"
+    }
+  ]
+}

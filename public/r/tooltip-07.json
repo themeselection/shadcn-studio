@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-07",
+  "type": "registry:component",
+  "title": "Tooltip 7",
+  "description": "A rich content tooltip with accessibility information, icon and formatted text",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-07.tsx",
+      "content": "import { InfoIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipContentDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Content\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className='max-w-64 py-3 text-pretty'>\n        <div className='space-y-1'>\n          <div className='flex items-center gap-2'>\n            <InfoIcon className='size-4' />\n            <p className='text-sm font-medium'>Accessibility First</p>\n          </div>\n          <p className='text-background/80'>\n            Tooltips should supplement the UI, not hide critical information. Ensure all important content is visible\n            without requiring tooltip interaction.\n          </p>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipContentDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-07.tsx"
+    }
+  ]
+}

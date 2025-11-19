@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-24",
+  "type": "registry:component",
+  "title": "Select 24",
+  "description": "A custom select dropdown with overlapping label positioned over the border",
+  "registryDependencies": [
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-24.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectWithOverlappingLabelDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='group relative w-full max-w-xs'>\n      <label\n        htmlFor={id}\n        className='bg-background text-foreground absolute top-0 left-2 z-10 block -translate-y-1/2 px-1 text-xs font-medium group-has-disabled:opacity-50'\n      >\n        Select with overlapping label\n      </label>\n      <Select>\n        <SelectTrigger id={id} className='dark:!bg-background w-full'>\n          <SelectValue placeholder='Select city' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value='1'>New York</SelectItem>\n          <SelectItem value='2'>London</SelectItem>\n          <SelectItem value='3'>Tokyo</SelectItem>\n          <SelectItem value='4'>Paris</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectWithOverlappingLabelDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-24.tsx"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-37",
+  "type": "registry:component",
+  "title": "Input 37",
+  "description": "Search input field with keyboard shortcut indicator (⌘K) for enhanced UX",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-37.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputSearchDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Search input with &lt;kbd&gt;</Label>\n      <div className='relative'>\n        <Input\n          id={id}\n          type='search'\n          placeholder='Search...'\n          className='peer pr-11 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'\n        />\n        <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>\n          <kbd className='text-muted-foreground bg-accent inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium'>\n            ⌘k\n          </kbd>\n        </div>\n      </div>\n    </div>\n  )\n}\n\nexport default InputSearchDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-37.tsx"
+    }
+  ]
+}

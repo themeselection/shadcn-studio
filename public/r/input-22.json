@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-22",
+  "type": "registry:component",
+  "title": "Input 22",
+  "description": "An email input field with a filled muted background style and no border",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-22.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputFilledDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Filled input</Label>\n      <Input id={id} type='email' placeholder='Email address' className='bg-muted border-transparent shadow-none' />\n    </div>\n  )\n}\n\nexport default InputFilledDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-22.tsx"
+    }
+  ]
+}

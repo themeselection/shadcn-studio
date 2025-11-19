@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-12",
+  "type": "registry:component",
+  "title": "Card 12",
+  "description": "Product showcase card with gradient background, like button and pricing details",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "card",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/card/card-12.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { HeartIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\nimport { Card, CardHeader, CardDescription, CardTitle, CardFooter, CardContent } from '@/components/ui/card'\n\nimport { cn } from '@/lib/utils'\n\nconst CardProductDemo = () => {\n  const [liked, setLiked] = useState<boolean>(false)\n\n  return (\n    <div className='relative max-w-md rounded-xl bg-gradient-to-r from-neutral-600 to-violet-300 pt-0 shadow-lg'>\n      <div className='flex h-60 items-center justify-center'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-11.png?width=300&format=auto'\n          alt='Shoes'\n          className='w-75'\n        />\n      </div>\n      <Button\n        size='icon'\n        onClick={() => setLiked(!liked)}\n        className='bg-primary/10 hover:bg-primary/20 absolute top-4 right-4 rounded-full'\n      >\n        <HeartIcon className={cn(liked ? 'fill-destructive stroke-destructive' : 'stroke-white')} />\n        <span className='sr-only'>Like</span>\n      </Button>\n      <Card className='border-none'>\n        <CardHeader>\n          <CardTitle>Nike Jordan Air Rev</CardTitle>\n          <CardDescription className='flex items-center gap-2'>\n            <Badge variant='outline' className='rounded-sm'>\n              EU38\n            </Badge>\n            <Badge variant='outline' className='rounded-sm'>\n              Black and White\n            </Badge>\n          </CardDescription>\n        </CardHeader>\n        <CardContent>\n          <p>\n            Crossing hardwood comfort with off-court flair. &apos;80s-Inspired construction, bold details and\n            nothin&apos;-but-net style.\n          </p>\n        </CardContent>\n        <CardFooter className='justify-between gap-3 max-sm:flex-col max-sm:items-stretch'>\n          <div className='flex flex-col'>\n            <span className='text-sm font-medium uppercase'>Price</span>\n            <span className='text-xl font-semibold'>$69.99</span>\n          </div>\n          <Button size='lg'>Add to cart</Button>\n        </CardFooter>\n      </Card>\n    </div>\n  )\n}\n\nexport default CardProductDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/card/card-12.tsx"
+    }
+  ]
+}

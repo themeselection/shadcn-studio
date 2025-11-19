@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-31",
+  "type": "registry:component",
+  "title": "Select 31",
+  "description": "A user select dropdown with avatar images for each user option",
+  "registryDependencies": [
+    "avatar",
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/select/select-31.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst users = [\n  {\n    id: '1',\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png',\n    fallback: 'PG',\n    name: 'Phillip George'\n  },\n  {\n    id: '2',\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-2.png',\n    fallback: 'JD',\n    name: 'Jaylon Donin'\n  },\n  {\n    id: '3',\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'TC',\n    name: 'Tiana Curtis'\n  }\n]\n\nconst SelectWithAvatarsDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Options with avatar</Label>\n      <Select defaultValue='1'>\n        <SelectTrigger\n          id={id}\n          className='w-full pl-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0'\n        >\n          <SelectValue placeholder='Select framework' />\n        </SelectTrigger>\n        <SelectContent className='[&_*[role=option]]:pr-8 [&_*[role=option]]:pl-2 [&_*[role=option]>span]:right-2 [&_*[role=option]>span]:left-auto [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2'>\n          <SelectGroup>\n            <SelectLabel className='pl-2'>Impersonate user</SelectLabel>\n            {users.map(item => (\n              <SelectItem key={item.id} value={item.id}>\n                <Avatar className='size-5'>\n                  <AvatarImage src={item.src} alt={item.name} className='rounded-full' />\n                  <AvatarFallback className='text-xs'>{item.fallback}</AvatarFallback>\n                </Avatar>\n                <span className='truncate'>{item.name}</span>\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectWithAvatarsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/select/select-31.tsx"
+    }
+  ]
+}

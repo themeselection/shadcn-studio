@@ -53,7 +53,7 @@ const ComboboxTimezoneDemo = () => {
                 <span className='text-muted-foreground'>Select timezone</span>
               )}
             </span>
-            <ChevronsUpDownIcon size={16} className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
+            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='w-(--radix-popper-anchor-width) p-0'>

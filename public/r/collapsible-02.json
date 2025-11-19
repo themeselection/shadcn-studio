@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-02",
+  "type": "registry:component",
+  "title": "Collapsible 2",
+  "description": "File tree explorer with nested folders and expandable directory structure",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/collapsible/collapsible-02.tsx",
+      "content": "import { ChevronRightIcon, FileIcon, FolderIcon, FolderOpenIcon } from 'lucide-react'\n\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'\n\ntype FileTreeItem = {\n  name: string\n} & (\n  | {\n      type: 'file'\n      children?: never\n    }\n  | {\n      type: 'folder'\n      children: FileTreeItem[]\n    }\n)\n\nconst fileTree: FileTreeItem[] = [\n  {\n    name: 'components',\n    type: 'folder',\n    children: [\n      {\n        name: 'ui',\n        type: 'folder',\n        children: [\n          { name: 'button.tsx', type: 'file' },\n          { name: 'input.tsx', type: 'file' },\n          { name: 'sidebar.tsx', type: 'file' }\n        ]\n      },\n      { name: 'app-sidebar.tsx', type: 'file' }\n    ]\n  },\n  {\n    name: 'hooks',\n    type: 'folder',\n    children: [{ name: 'use-mobile.ts', type: 'file' }]\n  },\n  {\n    name: 'lib',\n    type: 'folder',\n    children: [{ name: 'utils.ts', type: 'file' }]\n  },\n  {\n    name: 'components.json',\n    type: 'file'\n  }\n]\n\nconst FileTree = ({ item, level }: { level: number; item: FileTreeItem }) => {\n  if (item.type === 'file') {\n    return (\n      <div\n        className='focus-visible:ring-ring/50 flex items-center gap-2 rounded-md p-1 outline-none focus-visible:ring-[3px]'\n        style={{ paddingLeft: `${level === 0 ? 1.75 : 3.25}rem` }}\n      >\n        <FileIcon className='size-4 shrink-0' />\n        <span className='text-muted-foreground text-sm'>{item.name}</span>\n      </div>\n    )\n  }\n\n  return (\n    <Collapsible className='flex flex-col gap-1.5' style={{ paddingLeft: `${level === 0 ? 0 : 1.5}rem` }}>\n      <CollapsibleTrigger className='focus-visible:ring-ring/50 flex items-center gap-2 rounded-md p-1 outline-none focus-visible:ring-[3px]'>\n        <ChevronRightIcon className='size-4 shrink-0 transition-transform [[data-state=\"open\"]>&]:rotate-90' />\n        <FolderIcon className='size-4 shrink-0 [[data-state=open]>&]:hidden' />\n        <FolderOpenIcon className='size-4 shrink-0 [[data-state=closed]>&]:hidden' />\n        <span className='text-sm'>{item.name}</span>\n      </CollapsibleTrigger>\n      <CollapsibleContent className='flex flex-col gap-1.5'>\n        {item.children.map(item => (\n          <FileTree key={item.name} item={item} level={level + 1} />\n        ))}\n      </CollapsibleContent>\n    </Collapsible>\n  )\n}\n\nconst CollapsibleTreeDemo = () => {\n  return (\n    <div className='flex w-full max-w-48 flex-col gap-2'>\n      {fileTree.map(item => (\n        <FileTree key={item.name} item={item} level={0} />\n      ))}\n    </div>\n  )\n}\n\nexport default CollapsibleTreeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/collapsible/collapsible-02.tsx"
+    }
+  ]
+}

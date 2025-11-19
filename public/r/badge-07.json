@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-07",
+  "type": "registry:component",
+  "title": "Badge 7",
+  "description": "Number badge with circular design for count and notification displays",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/badge/badge-07.tsx",
+      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeNumberDemo = () => {\n  return <Badge className='h-5 min-w-5 px-1 tabular-nums'>8</Badge>\n}\n\nexport default BadgeNumberDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-07.tsx"
+    }
+  ]
+}

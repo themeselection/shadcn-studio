@@ -2,7 +2,7 @@
   <img alt="shadcn/studio logo" width="800" src="https://cdn.shadcnstudio.com/ss-assets/smm/marketing/shadcn-studio-smm-banner.png">
 </a><br/><br/>
 
-[shadcn/studio](https://shadcnstudio.com) is an open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster. 🚀
+[shadcn/studio](https://shadcnstudio.com) is an open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator & AI Tools to craft, customize, and ship faster. 🚀
 
 <p>
     <a href="https://github.com/themeselection/shadcn-studio/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
@@ -49,7 +49,7 @@ Building on the solid foundation of the Shadcn components & blocks, we&apos;ve e
 
 ### Not a standard library, but a distribution of components
 
-Following the philosophy of Shadcn, shadcn/studio isn&apos;t a conventional “install-from-NPM” library. Rather, it&apos;s an open-source distribution of components designed for maximum adaptability. You can copy the code, modify styles, adjust logic, or integrate it with other tools—free from the limitations of typical libraries. This &quot;open code&quot; model empowers you to customize with confidence and creativity.
+Following the philosophy of Shadcn, shadcn/studio isn&apos;t a conventional &quot;install-from-NPM&quot; library. Rather, it&apos;s an open-source distribution of components designed for maximum adaptability. You can copy the code, modify styles, adjust logic, or integrate it with other tools—free from the limitations of typical libraries. This &quot;open code&quot; model empowers you to customize with confidence and creativity.
 
 ## Why should I use shadcn/studio? 💡
 
@@ -59,12 +59,23 @@ While this approach offers flexibility and control, it comes with some limitatio
 
 ## This is where shadcn/studio shines ✨
 
-An open-source collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster 🚀. It provides a robust toolkit for building stunning, interactive user interfaces with ease.
+An open-source & premium collection of copy-and-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster 🚀. It provides a robust toolkit for building stunning, interactive user interfaces with ease.
 
-- **Open-source:** Dive into a growing, community-driven collection of copy-and-paste components, blocks, and templates.
-- **Component & Blocks variants:** Access a diverse, collection of customizable shadcn component and block variants to quickly build and style your UI with ease.
+- **Open-source:** Dive into a growing, community-driven collection of copy-and-paste [shadcn/ui components]('https://shadcnstudio.com/components'), shadcn blocks, and templates.
+
+- **Component & Blocks variants:** Access a diverse, collection of customizable [shadcn blocks](https://shadcnstudio.com/blocks) and component variants to quickly build and style your UI with ease.
+
 - **Animated variants with Motion:** Add smooth, modern animations to your components, enhancing user experiences with minimal effort.
-- **Powerful theme generator:** Tailor your UI effortlessly with real-time previews, ensuring consistent, branded designs delivered faster.
+
+- **Landing pages & Dashboards:** Explore 20+ premium & free [Shadcn templates](https://shadcnstudio.com/templates) for dashboards, landing pages & more. Fully customizable & easy to use.
+
+- **shadcn/ui for Figma:** Speed up your workflow with [Shadcn Figma](https://shadcnstudio.com/figma) UI components, blocks & templates — a full design library inspired by shadcn/ui.
+
+- **Powerful theme generator:** Customize your UI instantly with [Shadcn Theme Generator](https://shadcnstudio.com/theme-generator). Preview changes in real time and create consistent, on-brand designs faster.
+
+- **shadcn/studio MCP:** Integrate [shadcn/studio MCP](https://shadcnstudio.com/mcp) Server directly into your favorite IDE and craft stunning shadcn/ui Components, Blocks and Pages inspired by shadcn/studio.
+
+- **Shadcn Figma To Code Plugin:** Convert your Figma designs into production-ready code instantly with the [Shadcn Figma Plugin](https://shadcnstudio.com/figma-plugin).
 
 ## Features ✨
 
@@ -110,7 +121,7 @@ shadcn/studio provides an open-source collection of copy-and-paste Shadcn Compon
   </tr>
 </table>
 
-[Explore all components](https://shadcnstudio.com/docs/components/avatar)
+[Explore all components](https://shadcnstudio.com/components)
 
 ## Community 🤝
 

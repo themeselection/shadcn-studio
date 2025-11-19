@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-15",
+  "type": "registry:component",
+  "title": "Input 15",
+  "description": "An email input field with a mail icon positioned at the end",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-15.tsx",
+      "content": "import { useId } from 'react'\n\nimport { MailIcon } from 'lucide-react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputEndIconDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end icon</Label>\n      <div className='relative'>\n        <Input id={id} type='email' placeholder='Email address' className='peer pr-9' />\n        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>\n          <MailIcon className='size-4' />\n          <span className='sr-only'>Email</span>\n        </div>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-15.tsx"
+    }
+  ]
+}

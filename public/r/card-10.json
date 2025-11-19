@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-10",
+  "type": "registry:component",
+  "title": "Card 10",
+  "description": "Tabbed card with integrated tabs component for organized content sections",
+  "registryDependencies": [
+    "card",
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/card/card-10.tsx",
+      "content": "import { Card, CardContent } from '@/components/ui/card'\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Home',\n    value: 'home',\n    content:\n      'Welcome to the Home tab! Here, you can explore the latest updates, news, and highlights. Stay informed about what&apos;s happening and never miss out on important announcements.'\n  },\n  {\n    name: 'Profile',\n    value: 'profile',\n    content:\n      'This is your Profile tab. Manage your personal information, update your account details, and customize your settings to make your experience unique.'\n  },\n  {\n    name: 'Messages',\n    value: 'messages',\n    content:\n      'Messages: Check your recent messages, start new conversations, and stay connected with your friends and contacts. Manage your chat history and keep the communication flowing.'\n  }\n]\n\nconst CardWithTabsDemo = () => {\n  return (\n    <Card className='w-max'>\n      <CardContent>\n        <Tabs defaultValue={tabs[0].value} className='w-full max-w-sm'>\n          <TabsList className='bg-background w-full justify-start rounded-none border-b p-0'>\n            {tabs.map(tab => (\n              <TabsTrigger\n                key={tab.value}\n                value={tab.value}\n                className='bg-background data-[state=active]:border-b-primary h-full rounded-none border-b-2 border-transparent data-[state=active]:shadow-none'\n              >\n                {tab.name}\n              </TabsTrigger>\n            ))}\n          </TabsList>\n          {tabs.map(tab => (\n            <TabsContent key={tab.value} value={tab.value}>\n              <p className='text-muted-foreground p-4 text-sm'>{tab.content}</p>\n            </TabsContent>\n          ))}\n        </Tabs>\n      </CardContent>\n    </Card>\n  )\n}\n\nexport default CardWithTabsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/card/card-10.tsx"
+    }
+  ]
+}

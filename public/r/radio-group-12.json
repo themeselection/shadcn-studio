@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-12",
+  "type": "registry:component",
+  "title": "Radio Group 12",
+  "description": "A border less card radio group with hidden radio buttons and label-based selection",
+  "registryDependencies": [
+    "label",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/radio-group/radio-group-12.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nconst RadioGroupCardRadioWithBorderDemo = () => {\n  const id = useId()\n\n  return (\n    <RadioGroup className='w-full max-w-96 gap-2' defaultValue='1'>\n      <div className='border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative w-full rounded-md border p-3 shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]'>\n        <RadioGroupItem\n          value='1'\n          id={`${id}-1`}\n          className='sr-only'\n          aria-label='plan-radio-basic'\n          aria-describedby={`${id}-1-description`}\n        />\n\n        <Label htmlFor={`${id}-1`} className='text-foreground flex flex-col items-start after:absolute after:inset-0'>\n          <div className='flex w-full items-center justify-between'>\n            <span>Basic</span>\n            <span className='text-muted-foreground text-xs leading-[inherit] font-normal'>Free</span>\n          </div>\n          <p id={`${id}-1-description`} className='text-muted-foreground text-xs'>\n            Get 1 project with 1 teams members.\n          </p>\n        </Label>\n      </div>\n\n      <div className='border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative w-full rounded-md border p-3 shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]'>\n        <RadioGroupItem\n          value='2'\n          id={`${id}-2`}\n          className='sr-only'\n          aria-label='plan-radio-premium'\n          aria-describedby={`${id}-2-description`}\n        />\n\n        <Label htmlFor={`${id}-2`} className='text-foreground flex flex-col items-start after:absolute after:inset-0'>\n          <div className='flex w-full items-center justify-between'>\n            <span>Premium</span>\n            <span className='text-muted-foreground text-xs leading-[inherit] font-normal'>$5.00</span>\n          </div>\n          <p id={`${id}-2-description`} className='text-muted-foreground text-xs'>\n            Get 5 projects with 5 team members.\n          </p>\n        </Label>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupCardRadioWithBorderDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/radio-group/radio-group-12.tsx"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-25",
+  "type": "registry:component",
+  "title": "Calendar 25",
+  "description": "Pricing calendar with dynamic price display for each date based on availability",
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-25.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Calendar, CalendarDayButton } from '@/components/ui/calendar'\n\nfunction getPriceForDate(date: Date) {\n  const seed = date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDate()\n\n  const val = (seed * 9301 + 49297) % 233280\n\n  return Math.floor(50 + (val / 233280) * 200)\n}\n\nconst CalendarPricingDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date())\n\n  return (\n    <div>\n      <Calendar\n        mode='single'\n        selected={date}\n        onSelect={setDate}\n        showOutsideDays={false}\n        className='rounded-lg border [--cell-size:--spacing(12)]'\n        components={{\n          DayButton: ({ children, modifiers, day, ...props }) => {\n            const price = getPriceForDate(day.date)\n            const isGreen = price < 100\n\n            return (\n              <CalendarDayButton day={day} modifiers={modifiers} {...props}>\n                {children}\n                {!modifiers.outside && (\n                  <span className={isGreen ? 'text-green-600 dark:text-green-400' : ''}>${price}</span>\n                )}\n              </CalendarDayButton>\n            )\n          }\n        }}\n        disabled={{ before: new Date() }}\n      />\n      <p className='text-muted-foreground mt-4 text-center text-xs' role='region'>\n        Calendar with pricing\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarPricingDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-25.tsx"
+    }
+  ]
+}

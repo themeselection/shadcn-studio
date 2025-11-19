@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-32",
+  "type": "registry:component",
+  "title": "Button 32",
+  "description": "Circular icon button with plus icon and tooltip for enhanced UX",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-32.tsx",
+      "content": "import { PlusIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst IconButtonTooltipDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='icon' className='rounded-full'>\n          <PlusIcon />\n          <span className='sr-only'>Add new item</span>\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className='px-2 py-1 text-xs'>Add new item</TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default IconButtonTooltipDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-32.tsx"
+    }
+  ]
+}

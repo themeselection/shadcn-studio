@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-19",
+  "type": "registry:component",
+  "title": "Button 19",
+  "description": "Publish button with circular icon badge and rounded outline styling",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-19.tsx",
+      "content": "import { ShareIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonPublishDemo = () => {\n  return (\n    <Button variant='outline' className='h-12 rounded-full px-2.5'>\n      <span className='bg-primary text-primary-foreground flex size-7 items-center justify-center rounded-full'>\n        <ShareIcon />\n      </span>\n      Publish\n    </Button>\n  )\n}\n\nexport default ButtonPublishDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-19.tsx"
+    }
+  ]
+}

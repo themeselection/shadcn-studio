@@ -99,9 +99,7 @@ const columns: ColumnDef<Item>[] = [
       }[availability]
 
       return (
-        <Badge className={(cn('rounded-full border-none focus-visible:outline-none'), styles)}>
-          {row.getValue('availability')}
-        </Badge>
+        <Badge className={(cn('border-none focus-visible:outline-none'), styles)}>{row.getValue('availability')}</Badge>
       )
     },
     enableSorting: false,
@@ -308,7 +306,7 @@ function Filter({ column }: { column: Column<any, unknown> }) {
         <div className='flex'>
           <Input
             id={`${id}-range-1`}
-            className='flex-1 rounded-e-none [-moz-appearance:_textfield] focus:z-10 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none'
+            className='flex-1 rounded-r-none [-moz-appearance:_textfield] focus:z-10 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none'
             value={(columnFilterValue as [number, number])?.[0] ?? ''}
             onChange={e =>
               column.setFilterValue((old: [number, number]) => [
@@ -322,7 +320,7 @@ function Filter({ column }: { column: Column<any, unknown> }) {
           />
           <Input
             id={`${id}-range-2`}
-            className='-ms-px flex-1 rounded-s-none [-moz-appearance:_textfield] focus:z-10 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none'
+            className='-ms-px flex-1 rounded-l-none [-moz-appearance:_textfield] focus:z-10 [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none'
             value={(columnFilterValue as [number, number])?.[1] ?? ''}
             onChange={e =>
               column.setFilterValue((old: [number, number]) => [
@@ -371,13 +369,13 @@ function Filter({ column }: { column: Column<any, unknown> }) {
       <div className='relative'>
         <Input
           id={`${id}-input`}
-          className='peer ps-9'
+          className='peer pl-9'
           value={(columnFilterValue ?? '') as string}
           onChange={e => column.setFilterValue(e.target.value)}
           placeholder={`Search ${columnHeader.toLowerCase()}`}
           type='text'
         />
-        <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50'>
+        <div className='text-muted-foreground/80 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>
           <SearchIcon size={16} />
         </div>
       </div>

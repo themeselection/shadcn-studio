@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-06",
+  "type": "registry:component",
+  "title": "Checkbox 6",
+  "description": "Badge-style checkboxes with hidden unchecked state for compact selection",
+  "registryDependencies": [
+    "badge",
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/checkbox/checkbox-06.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Checkbox } from '@/components/ui/checkbox'\n\nconst snacks = ['Burger', 'Pizza', 'Drinks']\n\nconst CheckboxBadgeDemo = () => {\n  const [selected, setSelected] = useState<string[]>(['Burger', 'Pizza'])\n\n  return (\n    <div className='flex items-center gap-2'>\n      {snacks.map(label => (\n        <Badge key={label} variant='secondary' className='relative gap-2 rounded-sm px-3 py-1.5'>\n          <Checkbox\n            id={label}\n            checked={selected.includes(label)}\n            onCheckedChange={checked =>\n              setSelected(checked ? [...selected, label] : selected.filter(item => item !== label))\n            }\n            className='data-[state=unchecked]:hidden'\n          />\n          <label htmlFor={label} className='cursor-pointer select-none after:absolute after:inset-0'>\n            {label}\n          </label>\n        </Badge>\n      ))}\n    </div>\n  )\n}\n\nexport default CheckboxBadgeDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/checkbox/checkbox-06.tsx"
+    }
+  ]
+}

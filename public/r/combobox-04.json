@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-04",
+  "type": "registry:component",
+  "title": "Combobox 4",
+  "description": "Industry selector combobox with icons for various business sectors",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "command",
+    "label",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/combobox/combobox-04.tsx",
+      "content": "'use client'\n\nimport { useId, useState } from 'react'\n\nimport {\n  ChevronsUpDownIcon,\n  DollarSignIcon,\n  FactoryIcon,\n  FilmIcon,\n  HospitalIcon,\n  HotelIcon,\n  MonitorIcon,\n  ScaleIcon,\n  SchoolIcon,\n  TractorIcon,\n  ZapIcon\n} from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst industries = [\n  {\n    value: 'information technology',\n    label: 'Information Technology',\n    icon: MonitorIcon\n  },\n  {\n    value: 'healthcare',\n    label: 'Healthcare',\n    icon: HospitalIcon\n  },\n  {\n    value: 'finance',\n    label: 'Finance',\n    icon: DollarSignIcon\n  },\n  {\n    value: 'education',\n    label: 'Education',\n    icon: SchoolIcon\n  },\n  {\n    value: 'entertainment',\n    label: 'Entertainment',\n    icon: FilmIcon\n  },\n  {\n    value: 'manufacturing',\n    label: 'Manufacturing',\n    icon: FactoryIcon\n  },\n  {\n    value: 'energy',\n    label: 'Energy',\n    icon: ZapIcon\n  },\n  {\n    value: 'hospitality',\n    label: 'Hospitality',\n    icon: HotelIcon\n  },\n  {\n    value: 'legal',\n    label: 'Legal',\n    icon: ScaleIcon\n  },\n  {\n    value: 'agriculture',\n    label: 'Agriculture',\n    icon: TractorIcon\n  }\n]\n\nconst ComboboxOptionWithIIconDemo = () => {\n  const id = useId()\n  const [open, setOpen] = useState<boolean>(false)\n  const [value, setValue] = useState<string>('')\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Combobox option with icon</Label>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger asChild>\n          <Button\n            id={id}\n            variant='outline'\n            role='combobox'\n            aria-expanded={open}\n            className='bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]'\n          >\n            {value ? (\n              <span className='flex min-w-0 items-center gap-2'>\n                {(() => {\n                  const selectedItem = industries.find(industry => industry.value === value)\n\n                  if (selectedItem) {\n                    const Icon = selectedItem.icon\n\n                    return <Icon className='text-muted-foreground' />\n                  }\n\n                  return null\n                })()}\n                <span className='truncate'>{industries.find(industry => industry.value === value)?.label}</span>\n              </span>\n            ) : (\n              <span className='text-muted-foreground'>Select industry category</span>\n            )}\n            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>\n          <Command>\n            <CommandInput placeholder='Search industries...' />\n            <CommandList>\n              <CommandEmpty>No industry found.</CommandEmpty>\n              <CommandGroup>\n                {industries.map(industry => (\n                  <CommandItem\n                    key={industry.value}\n                    value={industry.value}\n                    onSelect={currentValue => {\n                      setValue(currentValue === value ? '' : currentValue)\n                      setOpen(false)\n                    }}\n                    className='flex items-center justify-between'\n                  >\n                    <div className='flex items-center gap-2'>\n                      <industry.icon className='text-muted-foreground size-4' />\n                      {industry.label}\n                    </div>\n                  </CommandItem>\n                ))}\n              </CommandGroup>\n            </CommandList>\n          </Command>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default ComboboxOptionWithIIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/combobox/combobox-04.tsx"
+    }
+  ]
+}

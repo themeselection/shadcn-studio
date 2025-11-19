@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-09",
+  "type": "registry:component",
+  "title": "Date Picker 9",
+  "description": "Time input field with clock icon for enhanced visual identification",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/date-picker/date-picker-09.tsx",
+      "content": "import { Clock8Icon } from 'lucide-react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst TimePickerWithIconDemo = () => {\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor='timepicker'>Time input with start icon</Label>\n      <div className='relative'>\n        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>\n          <Clock8Icon className='size-4' />\n          <span className='sr-only'>User</span>\n        </div>\n        <Input\n          type='time'\n          id='time-picker'\n          step='1'\n          defaultValue='08:30:00'\n          className='peer bg-background appearance-none pl-9 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none'\n        />\n      </div>\n    </div>\n  )\n}\n\nexport default TimePickerWithIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/date-picker/date-picker-09.tsx"
+    }
+  ]
+}

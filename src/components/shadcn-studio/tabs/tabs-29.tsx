@@ -1,6 +1,6 @@
 'use client'
 
-import * as React from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 
 import { motion } from 'motion/react'
 
@@ -40,11 +40,11 @@ const tabs = [
 ]
 
 const AnimatedUnderlineTabsDemo = () => {
-  const [activeTab, setActiveTab] = React.useState('explore')
-  const tabRefs = React.useRef<(HTMLButtonElement | null)[]>([])
-  const [underlineStyle, setUnderlineStyle] = React.useState({ left: 0, width: 0 })
+  const [activeTab, setActiveTab] = useState('explore')
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     const activeIndex = tabs.findIndex(tab => tab.value === activeTab)
     const activeTabElement = tabRefs.current[activeIndex]
 

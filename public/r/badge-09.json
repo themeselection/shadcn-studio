@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-09",
+  "type": "registry:component",
+  "title": "Badge 9",
+  "description": "Small size badge with reduced padding for compact display areas",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/badge/badge-09.tsx",
+      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeSmallDemo = () => {\n  return <Badge className='px-1.5 py-px'>Small</Badge>\n}\n\nexport default BadgeSmallDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-09.tsx"
+    }
+  ]
+}

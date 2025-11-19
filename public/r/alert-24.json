@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-24",
+  "type": "registry:component",
+  "title": "Alert 24",
+  "description": "Soft warning alert with amber background and subtle styling for warnings.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/alert/alert-24.tsx",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSoftWarningDemo = () => {\n  return (\n    <Alert className='border-none bg-amber-600/10 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400'>\n      <CircleAlertIcon />\n      <AlertTitle>This file might be too large</AlertTitle>\n      <AlertDescription className='text-amber-600/80 dark:text-amber-400/80'>\n        Uploading large files may take longer or fail. Consider compressing it first.\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSoftWarningDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/alert/alert-24.tsx"
+    }
+  ]
+}

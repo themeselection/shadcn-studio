@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-07",
+  "type": "registry:component",
+  "title": "Card 7",
+  "description": "Overlay card with image background and overlaid text content",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/card/card-07.tsx",
+      "content": "import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'\n\nconst CardOverlayDemo = () => {\n  return (\n    <Card className='before:bg-primary/70 relative max-w-md py-0 before:absolute before:size-full before:rounded-xl'>\n      <CardContent className='px-0'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-8.png?widht=448&height=280&format=auto'\n          alt='Banner'\n          className='h-70 w-112 rounded-xl'\n        />\n      </CardContent>\n      <div className='absolute'>\n        <CardHeader className='text-primary-foreground w-full pt-6'>\n          <CardTitle>Creative Catalyst</CardTitle>\n        </CardHeader>\n        <CardContent className='text-primary-foreground/80'>\n          Step into a world where imagination takes the lead and every pixel tells a story. This is a space designed to\n          unleash your creative potential without boundaries or time constraints. Explore bold ideas, experiment with\n          vibrant concepts, and craft visuals that inspire and captivate.\n        </CardContent>\n      </div>\n    </Card>\n  )\n}\n\nexport default CardOverlayDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/card/card-07.tsx"
+    }
+  ]
+}

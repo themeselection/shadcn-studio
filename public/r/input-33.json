@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-33",
+  "type": "registry:component",
+  "title": "Input 33",
+  "description": "An email input field with an external subscribe button connected via styling",
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-33.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputEndButtonDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end button</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Input\n          id={id}\n          type='email'\n          placeholder='Email address'\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\n        />\n        <Button className='rounded-l-none'>Subscribe</Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-33.tsx"
+    }
+  ]
+}

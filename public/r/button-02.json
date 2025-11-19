@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-02",
+  "type": "registry:component",
+  "title": "Button 2",
+  "description": "A button component in disabled state",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-02.tsx",
+      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonDisabledDemo = () => {\n  return <Button disabled>Verify Email</Button>\n}\n\nexport default ButtonDisabledDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-02.tsx"
+    }
+  ]
+}

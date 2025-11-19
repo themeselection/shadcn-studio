@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-09",
+  "type": "registry:component",
+  "title": "Dropdown Menu 9",
+  "description": "Start-aligned dropdown menu with edit, share, and delete actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-09.tsx",
+      "content": "import { PencilLineIcon, UploadIcon, Trash2Icon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuSeparator,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst DropdownMenuAlignStartDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Align Start</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent align='start' className='w-34'>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <PencilLineIcon />\n            Edit\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <UploadIcon />\n            Share\n          </DropdownMenuItem>\n          <DropdownMenuSeparator />\n          <DropdownMenuItem variant='destructive'>\n            <Trash2Icon />\n            <span>Delete</span>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuAlignStartDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-09.tsx"
+    }
+  ]
+}

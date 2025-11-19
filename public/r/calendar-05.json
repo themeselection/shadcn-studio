@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-05",
+  "type": "registry:component",
+  "title": "Calendar 5",
+  "description": "Range selection calendar with minimum days constraint (5 days minimum)",
+  "dependencies": [
+    "react-day-picker"
+  ],
+  "registryDependencies": [
+    "calendar"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/calendar/calendar-05.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { type DateRange } from 'react-day-picker'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarRangeWithMinimumDaysDemo = () => {\n  const [dateRange, setDateRange] = useState<DateRange | undefined>({\n    from: new Date(2025, 5, 8),\n    to: new Date(2025, 5, 17)\n  })\n\n  return (\n    <div>\n      <Calendar\n        mode='range'\n        defaultMonth={dateRange?.from}\n        selected={dateRange}\n        onSelect={setDateRange}\n        numberOfMonths={1}\n        min={5}\n        className='rounded-lg border'\n      />\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\n        Minimum 5 days selection\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarRangeWithMinimumDaysDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/calendar/calendar-05.tsx"
+    }
+  ]
+}

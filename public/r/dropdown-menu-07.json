@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-07",
+  "type": "registry:component",
+  "title": "Dropdown Menu 7",
+  "description": "User account menu dropdown with avatar trigger and profile management options",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-07.tsx",
+      "content": "import { UserIcon, SettingsIcon, BellIcon, LogOutIcon, CreditCardIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst listItems = [\n  {\n    icon: UserIcon,\n    property: 'Profile'\n  },\n  {\n    icon: SettingsIcon,\n    property: 'Settings'\n  },\n  {\n    icon: CreditCardIcon,\n    property: 'Billing'\n  },\n  {\n    icon: BellIcon,\n    property: 'Notifications'\n  },\n  {\n    icon: LogOutIcon,\n    property: 'Sign Out'\n  }\n]\n\nconst DropdownMenuUserMenuDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='secondary' size='icon' className='overflow-hidden rounded-full'>\n          <img src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className='w-56'>\n        <DropdownMenuLabel>My Account</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          {listItems.map((item, index) => (\n            <DropdownMenuItem key={index}>\n              <item.icon />\n              <span className='text-popover-foreground'>{item.property}</span>\n            </DropdownMenuItem>\n          ))}\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuUserMenuDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-07.tsx"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { PencilLine, Upload, Trash2 } from 'lucide-react'
+import { PencilLineIcon, UploadIcon, Trash2Icon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -19,16 +19,16 @@ const DropdownMenuAlignStartDemo = () => {
       <DropdownMenuContent align='start' className='w-34'>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <PencilLine />
+            <PencilLineIcon />
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Upload />
+            <UploadIcon />
             Share
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem variant='destructive'>
-            <Trash2 />
+            <Trash2Icon />
             <span>Delete</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>

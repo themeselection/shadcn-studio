@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-14",
+  "type": "registry:component",
+  "title": "Input 14",
+  "description": "A username input field with a user icon positioned at the start",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-14.tsx",
+      "content": "import { useId } from 'react'\n\nimport { UserIcon } from 'lucide-react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputStartIconDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with start icon</Label>\n      <div className='relative'>\n        <div className='text-muted-foreground pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>\n          <UserIcon className='size-4' />\n          <span className='sr-only'>User</span>\n        </div>\n        <Input id={id} type='text' placeholder='Username' className='peer pl-9' />\n      </div>\n    </div>\n  )\n}\n\nexport default InputStartIconDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-14.tsx"
+    }
+  ]
+}

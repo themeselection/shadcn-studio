@@ -61,7 +61,7 @@ const PopoverSlideInLeftDemo = () => {
               </span>
               <span
                 className={cn(
-                  'absolute start-2.25 transition-all',
+                  'absolute left-2.25 transition-all',
                   copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
                 )}
               >

@@ -62,7 +62,7 @@ const ComboboxWithSearchAndButtonDemo = () => {
                 <span className='text-muted-foreground'>Select university</span>
               )}
             </span>
-            <ChevronsUpDownIcon size={16} className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
+            <ChevronsUpDownIcon className='text-muted-foreground/80 shrink-0' aria-hidden='true' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0' align='start'>
@@ -88,7 +88,7 @@ const ComboboxWithSearchAndButtonDemo = () => {
               <CommandSeparator />
               <CommandGroup>
                 <Button variant='ghost' className='w-full justify-start font-normal'>
-                  <PlusIcon size={16} className='-ms-2 opacity-60' aria-hidden='true' />
+                  <PlusIcon className='-ms-2 opacity-60' aria-hidden='true' />
                   New university
                 </Button>
               </CommandGroup>

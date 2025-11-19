@@ -8,7 +8,7 @@ const CardHorizontalDemo = () => {
         <img
           src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-3.png'
           alt='Banner'
-          className='size-full rounded-s-xl'
+          className='size-full rounded-l-xl'
         />
       </CardContent>
       <div className='sm:min-w-54'>

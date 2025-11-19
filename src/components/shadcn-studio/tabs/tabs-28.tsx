@@ -81,7 +81,7 @@ const ExpandableTabsDemo = () => {
                     exit={{ filter: 'blur(2px)' }}
                     transition={{ duration: 0.25, ease: 'easeOut' }}
                   >
-                    <Icon className='aspect-square size-4 flex-shrink-0' />
+                    <Icon className='aspect-square size-4 shrink-0' />
                     <AnimatePresence initial={false}>
                       {isActive && (
                         <motion.span

@@ -14,14 +14,14 @@ const InputWithEndButtonsRoundedDemo = () => {
         <Input className='selection:bg-primary selection:text-primary-foreground w-full grow px-3 py-2 text-center tabular-nums outline-none' />
         <Button
           slot='decrement'
-          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground me-1.5 flex aspect-square h-5 items-center justify-center rounded-sm border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
+          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground mr-1.5 flex aspect-square h-5 items-center justify-center rounded-sm border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
         >
           <MinusIcon className='size-3' />
           <span className='sr-only'>Decrement</span>
         </Button>
         <Button
           slot='increment'
-          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground me-2 flex aspect-square h-5 items-center justify-center rounded-sm border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
+          className='border-input bg-background text-muted-foreground hover:bg-accent hover:text-foreground mr-2 flex aspect-square h-5 items-center justify-center rounded-sm border text-sm transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
         >
           <PlusIcon className='size-3' />
           <span className='sr-only'>Increment</span>

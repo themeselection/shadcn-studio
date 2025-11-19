@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-06",
+  "type": "registry:component",
+  "title": "Popover 6",
+  "description": "A download progress popover with progress bar and pause/cancel/retry controls",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "popover",
+    "progress",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-06.tsx",
+      "content": "'use client'\n\nimport { useEffect, useState } from 'react'\n\nimport { DownloadIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Progress } from '@/components/ui/progress'\n\nimport { cn } from '@/lib/utils'\n\nconst PopoverDownloadDemo = () => {\n  const [isPaused, setIsPaused] = useState(false)\n  const [isCanceled, setIsCanceled] = useState(false)\n  const [value, setValue] = useState(0)\n  const [open, setOpen] = useState(false)\n  const [hasStarted, setHasStarted] = useState(false)\n\n  useEffect(() => {\n    if (open && !hasStarted && !isCanceled) {\n      setHasStarted(true)\n    }\n  }, [open, hasStarted, isCanceled])\n\n  useEffect(() => {\n    if (!hasStarted || isPaused || isCanceled) return\n\n    const timer = setInterval(() => {\n      setValue(prev => {\n        if (prev < 100) {\n          return Math.min(100, prev + Math.floor(Math.random() * 10) + 1)\n        } else {\n          clearInterval(timer)\n\n          return prev\n        }\n      })\n    }, 500)\n\n    return () => {\n      clearInterval(timer)\n    }\n  }, [open, isPaused, isCanceled, hasStarted])\n\n  const getText = () => {\n    if (isCanceled) return 'Download Canceled'\n    if (isPaused) return 'Download Paused'\n    if (value === 100) return 'Download Complete'\n\n    return 'Downloading File'\n  }\n\n  return (\n    <Popover onOpenChange={setOpen} open={open}>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <DownloadIcon />\n          <span className='sr-only'>Download File</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-4'>\n          <div className='flex items-center gap-2'>\n            <div className='relative flex size-6 items-center justify-center'>\n              <span\n                className={cn('border-primary absolute inset-0 rounded-full border border-dashed', {\n                  'animate-spin [animation-duration:3s]': value < 100 && !isPaused && !isCanceled\n                })}\n              />\n              <DownloadIcon className='z-1 size-3' />\n            </div>\n            <span className='flex-1 text-sm font-medium'>{getText()}</span>\n            {!isCanceled && <span className='text-sm font-semibold'>{`${value}%`}</span>}\n          </div>\n          <Progress value={value} className='w-full' />\n          <div className='grid grid-cols-2 gap-2'>\n            <Button size='sm' onClick={() => setIsPaused(!isPaused)} disabled={value === 100 || isCanceled}>\n              {isPaused ? 'Resume' : 'Pause'}\n            </Button>\n            <Button\n              variant='secondary'\n              size='sm'\n              onClick={() => {\n                if (value < 100) {\n                  setValue(0)\n                  setIsCanceled(true)\n                  setHasStarted(false)\n                }\n\n                setOpen(false)\n              }}\n            >\n              Cancel\n            </Button>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverDownloadDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-06.tsx"
+    }
+  ]
+}

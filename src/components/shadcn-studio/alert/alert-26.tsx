@@ -8,7 +8,7 @@ const AlertSolidDemo = () => {
       <CircleAlertIcon />
       <AlertTitle>Editing your profile</AlertTitle>
       <AlertDescription className='text-primary-foreground/80'>
-        Changes won&apos;t be saved until you click “Update.”
+        Changes won&apos;t be saved until you click &quot;Update.&quot;
       </AlertDescription>
     </Alert>
   )

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-09",
+  "type": "registry:component",
+  "title": "Pagination 9",
+  "description": "A pagination component with underline styling for the active page indicator",
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/pagination/pagination-09.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nconst PaginationUnderlineDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationPrevious href='#' className='rounded-none' />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink\n            href='#'\n            isActive\n            className='border-primary! rounded-none border-0 border-b-2 bg-transparent! !shadow-none'\n          >\n            1\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' className='rounded-none'>\n            2\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' className='rounded-none'>\n            3\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href='#' className='rounded-none' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default PaginationUnderlineDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/pagination/pagination-09.tsx"
+    }
+  ]
+}

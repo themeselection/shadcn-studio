@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-31",
+  "type": "registry:component",
+  "title": "Input 31",
+  "description": "An email input field with an inline send button positioned at the end",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-31.tsx",
+      "content": "import { useId } from 'react'\n\nimport { SendHorizonalIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputEndInlineButtonDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end inline button</Label>\n      <div className='relative'>\n        <Input id={id} type='email' placeholder='Email address' className='pr-9' />\n        <Button\n          variant='ghost'\n          size='icon'\n          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'\n        >\n          <SendHorizonalIcon />\n          <span className='sr-only'>Subscribe</span>\n        </Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndInlineButtonDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-31.tsx"
+    }
+  ]
+}

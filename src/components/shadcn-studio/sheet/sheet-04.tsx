@@ -91,7 +91,7 @@ const SheetWithScrollableContentDemo = () => {
 
             <h3>10. Disclaimers and Limitation of Liability</h3>
             <p>
-              We provide our services “as is” and make no warranties regarding the accuracy, reliability, or
+              We provide our services &quot;as is&quot; and make no warranties regarding the accuracy, reliability, or
               availability of the services. We are not responsible for any damages, losses, or expenses incurred by your
               use of our services.
             </p>

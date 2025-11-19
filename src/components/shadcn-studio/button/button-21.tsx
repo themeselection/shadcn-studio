@@ -8,7 +8,7 @@ const ButtonMessagesBadgeDemo = () => {
     <Button variant='outline'>
       <MailCheckIcon />
       Messages
-      <Badge variant='destructive' className='rounded-full px-1.5 py-px'>
+      <Badge variant='destructive' className='px-1.5 py-px'>
         99+
       </Badge>
     </Button>

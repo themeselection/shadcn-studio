@@ -4,6 +4,40 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0 (2025-11-19)
+
+### Added
+
+- Added blocks
+- Added registries for easier access to component variants, blocks and themes
+- Added navigation pagination inside component pages
+- Added functionality to show component variant name when hover inside a component variant section
+- Added tags to component variants for better categorization and filtering in search
+
+### Updated
+
+- Updated shadcn/ui components
+- Updated component variants to match the latest shadcn/ui components
+- Updated shadcn/ui color theme from zinc to neutral
+- Updated layouts including Sidebar, Header and Footer
+- Updated animated button variant with heartbeat effect so that you can change the animation color via CSS variable. You can update the color of the animation using the `--heartbeat-color` CSS variable or inline styles like `style={{ '--heartbeat-color': 'var(--primary)' }}`
+- Updated meta tags for the pages
+- Updated fonts by removing Gamja Flower font and adding Kalam font
+- Updated introduction docs
+- Updated SVGs (including SVG component and namings) and data assets
+- Updated hooks and utils
+
+### Removed
+
+- Removed unnecessary data assets
+- Removed copy prompt and v0 components
+- Removed `getMode` server utility function
+- Removed roadmap section from the theme generator page as we have moved it to [GitHub](https://github.com/orgs/themeselection/projects/42/views/2)
+
+### Fixed
+
+- Fixed default selected item in theme presets dropdown
+
 ## v1.0.0-beta.3 (2025-07-04)
 
 ### Added

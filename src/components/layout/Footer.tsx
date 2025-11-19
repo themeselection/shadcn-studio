@@ -2,13 +2,12 @@
 import Link from 'next/link'
 
 // Third-party Imports
-import { Youtube } from 'lucide-react'
+import { Github, Youtube } from 'lucide-react'
 
 // Component Imports
-import Logo from '@/components/layout/Logo'
+import Logo from '@/components/layout/logo'
 
 // SVG Imports
-import Github from '@/assets/svg/Github'
 import X from '@/assets/svg/X'
 import Discord from '@/assets/svg/Discord'
 import ThemeSelection from '@/assets/svg/ThemeSelection'
@@ -58,24 +57,32 @@ const Footer = () => {
               <div className='text-lg font-semibold'>Products</div>
               <ul className='space-y-3'>
                 <li>
+                  <Link href='/blocks'>Shadcn Blocks</Link>
+                </li>
+                <li>
                   <Link href='/theme-generator'>Shadcn Theme Generator</Link>
                 </li>
                 <li>
                   <Link href='/components'>Shadcn Components</Link>
                 </li>
                 <li>
-                  <Link href='#'>
-                    Shadcn Figma UI Kit <span className='text-muted-foreground font-normal'>(Soon)</span>
+                  <Link href='https://shadcnstudio.com/templates' target='_blank' rel='noopener noreferrer'>
+                    Shadcn Templates
                   </Link>
                 </li>
                 <li>
-                  <Link href='#'>
-                    Shadcn Blocks <span className='text-muted-foreground font-normal'>(Soon)</span>
+                  <Link href='https://shadcnstudio.com/figma' target='_blank' rel='noopener noreferrer'>
+                    Shadcn Figma UI Kit
                   </Link>
                 </li>
                 <li>
-                  <Link href='#'>
-                    Shadcn Templates <span className='text-muted-foreground font-normal'>(Soon)</span>
+                  <Link href='https://shadcnstudio.com/mcp' target='_blank' rel='noopener noreferrer'>
+                    Shadcn MCP Server
+                  </Link>
+                </li>
+                <li>
+                  <Link href='https://shadcnstudio.com/figma-plugin' target='_blank' rel='noopener noreferrer'>
+                    Shadcn Figma to Code
                   </Link>
                 </li>
               </ul>
@@ -84,15 +91,20 @@ const Footer = () => {
               <div className='text-lg font-semibold'>Resources</div>
               <ul className='space-y-3'>
                 <li>
-                  <Link href='/#roadmap'>Roadmap</Link>
+                  <Link href='/docs/getting-started/introduction'>Documentation</Link>
+                </li>
+                <li>
+                  <Link href='https://shadcnstudio.com/changelog' target='_blank' rel='noopener noreferrer'>
+                    Changelog
+                  </Link>
                 </li>
                 <li>
                   <Link
-                    href='https://github.com/themeselection/shadcn-studio/blob/main/CHANGELOG.md'
+                    href='https://github.com/orgs/themeselection/projects/42/views/2'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    Changelog
+                    Roadmap
                   </Link>
                 </li>
               </ul>
@@ -101,19 +113,19 @@ const Footer = () => {
               <div className='text-lg font-semibold'>Legal</div>
               <ul className='space-y-3'>
                 <li>
-                  <Link
-                    href='https://github.com/themeselection/shadcn-studio/blob/main/LICENSE.md'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
+                  <Link href='https://shadcnstudio.com/license' target='_blank' rel='noopener noreferrer'>
                     License
                   </Link>
                 </li>
                 <li>
-                  <Link href='#'>Privacy policy</Link>
+                  <Link href='https://shadcnstudio.com/privacy-policy' target='_blank' rel='noopener noreferrer'>
+                    Privacy policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href='#'>Terms & Condition</Link>
+                  <Link href='https://shadcnstudio.com/terms-and-condition' target='_blank' rel='noopener noreferrer'>
+                    Terms & Condition
+                  </Link>
                 </li>
               </ul>
             </div>

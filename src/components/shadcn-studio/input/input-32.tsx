@@ -17,9 +17,9 @@ const InputIconButtonDemo = () => {
           id={id}
           type='email'
           placeholder='Email address'
-          className='-me-px rounded-e-none shadow-none focus-visible:z-1'
+          className='-me-px rounded-r-none shadow-none focus-visible:z-1'
         />
-        <Button variant='outline' size='icon' className='rounded-s-none'>
+        <Button variant='outline' size='icon' className='rounded-l-none'>
           <DownloadIcon />
           <span className='sr-only'>Download</span>
         </Button>

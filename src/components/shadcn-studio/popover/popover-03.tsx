@@ -24,7 +24,7 @@ const PopoverPricingDemo = () => {
             advanced team collaboration tools.
           </p>
           <div className='flex items-center gap-2'>
-            <Badge variant='destructive' className='px-1.5 py-px text-xs'>
+            <Badge variant='destructive' className='rounded-sm px-1.5 py-px text-xs'>
               Limited Offer
             </Badge>
             <span className='text-muted-foreground text-xs'>20% discount on annual plan</span>

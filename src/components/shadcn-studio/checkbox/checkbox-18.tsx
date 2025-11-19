@@ -15,7 +15,7 @@ const CheckboxAnimatedTodoListDemo = () => {
       />
       <Label
         htmlFor={id}
-        className='after:bg-primary peer-data-[state=checked]:text-primary relative after:absolute after:start-0 after:top-1/2 after:h-px after:w-full after:origin-bottom after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out peer-data-[state=checked]:after:origin-bottom peer-data-[state=checked]:after:scale-x-100'
+        className='after:bg-primary peer-data-[state=checked]:text-primary relative after:absolute after:top-1/2 after:left-0 after:h-px after:w-full after:origin-bottom after:scale-x-0 after:transition-transform after:duration-500 after:ease-in-out peer-data-[state=checked]:after:origin-bottom peer-data-[state=checked]:after:scale-x-100'
       >
         Animated todo list item
       </Label>

@@ -27,7 +27,7 @@ import CopyButton from '@/components/CopyButton'
 import CodeBlock from '@/components/CodeBlock'
 
 type Props = {
-  files: ProcessedComponentsData['component']['files']
+  files: NonNullable<ProcessedComponentsData['component']['files']>
   tree: ProcessedComponentsData['tree']
 }
 

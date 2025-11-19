@@ -49,7 +49,6 @@ type SettingsContextProps = {
 
 type Props = {
   children: ReactNode
-  mode?: Mode
   settingsCookie?: ModeSettings
 }
 
@@ -71,11 +70,11 @@ export const SettingsContext = createContext<SettingsContextProps | null>(null)
 // Settings Provider
 export const SettingsProvider = (props: Props) => {
   // Props
-  const { children, mode } = props
+  const { children } = props
 
   const updatedInitialModeSettings = {
     ...initialModeSettings,
-    mode: mode ?? 'light'
+    mode: props.settingsCookie?.mode ?? 'light'
   }
 
   // Cookies for mode

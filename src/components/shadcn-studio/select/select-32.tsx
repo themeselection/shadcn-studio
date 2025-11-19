@@ -90,7 +90,7 @@ const MultipleSelectDemo = () => {
       <p className='text-muted-foreground text-xs' role='region' aria-live='polite'>
         Inspired by{' '}
         <a
-          href='hhttps://shadcnui-expansions.typeart.cc/docs/multiple-selector'
+          href='https://shadcnui-expansions.typeart.cc/docs/multiple-selector'
           className='hover:text-primary underline'
           target='_blank'
         >

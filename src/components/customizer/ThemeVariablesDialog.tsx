@@ -16,6 +16,7 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import ComponentCli from '@/components/ComponentCli'
 import CodeBlock from '@/components/CodeBlock'
 import CopyButton from '@/components/CopyButton'
 
@@ -57,20 +58,7 @@ const ThemeVariablesDialog = ({ lightTheme, darkTheme, trigger, activeTheme }: T
         </DialogHeader>
         <div className='flex min-w-0 flex-col gap-6'>
           {/* Theme Installation Command - Only show for preset themes */}
-          {activeTheme && isPresetTheme && (
-            <div className='overflow-hidden rounded-md border'>
-              <img
-                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-light.png'
-                alt='CLI Light'
-                className='dark:hidden'
-              />
-              <img
-                src='https://cdn.shadcnstudio.com/ss-assets/cli/cli-dark.png'
-                alt='CLI Dark'
-                className='hidden dark:block'
-              />
-            </div>
-          )}
+          {activeTheme && isPresetTheme && <ComponentCli name={activeTheme} toast='Installation command' />}
 
           <div className='bg-sidebar relative overflow-hidden rounded-md border'>
             <div className='sticky top-0 w-full p-2'>
@@ -87,7 +75,7 @@ const ThemeVariablesDialog = ({ lightTheme, darkTheme, trigger, activeTheme }: T
               </Select>
             </div>
             <CodeBlock code={themeCSS} lang='css' />
-            <CopyButton source={themeCSS} className='dark' toast='Theme variables' />
+            <CopyButton source={themeCSS} toast='Theme variables' />
           </div>
         </div>
       </DialogContent>

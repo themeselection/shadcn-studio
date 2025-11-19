@@ -25,33 +25,37 @@ import { cn } from '@/lib/utils'
 
 // Data Imports
 import { features } from '@/assets/data/features'
-import { roadmap } from '@/assets/data/roadmap'
 import { faqs } from '@/assets/data/faqs'
 
 export const metadata: Metadata = {
   title: 'Shadcn Theme Generator',
-  description: 'Preview your theme changes across different components and layouts.',
+  description:
+    'Create & customize themes with Shadcn Theme Generator easily. Customize styles, colors, fonts, & pre-built themes for light/dark modes in real-time.',
   openGraph: {
     title: 'Shadcn Theme Generator',
-    description: 'Preview your theme changes across different components and layouts.',
-    url: 'https://shadcnstudio.com/theme-generator',
+    description:
+      'Create & customize themes with Shadcn Theme Generator easily. Customize styles, colors, fonts, & pre-built themes for light/dark modes in real-time.',
+    type: 'website',
+    siteName: 'Shadcn Studio',
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/theme-generator`,
     images: [
       {
-        url: 'https://cdn.shadcnstudio.com/ss-assets/smm/marketing/shadcn-studio-smm-banner.png',
+        url: 'https://cdn.themeselection.com/ts-assets/shadcn-studio/theme-generator/marketing/shadcn-studio-smm-banner.png',
         type: 'image/png',
         width: 1200,
         height: 630,
-        alt: 'Shadcn Studio - Craft Stunning Shadcn UI, Lightning Fast'
+        alt: 'Shadcn Theme Generator - Shadcn Studio'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shadcn Theme Generator',
-    description: 'Preview your theme changes across different components and layouts.'
+    description:
+      'Create & customize themes with Shadcn Theme Generator easily. Customize styles, colors, fonts, & pre-built themes for light/dark modes in real-time.'
   },
   alternates: {
-    canonical: 'https://shadcnstudio.com/theme-generator'
+    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/theme-generator`
   }
 }
 
@@ -141,37 +145,7 @@ const ThemeGenerator = () => {
           ))}
         </div>
       </section>
-      <section id='roadmap' className='py-12 sm:py-20'>
-        <div className='mb-12 flex flex-col items-center justify-center gap-4'>
-          <Badge variant='outline' className='rounded-full px-3 py-1.5 text-sm shadow-md'>
-            <Sparkles className='size-4' />
-            Roadmap
-          </Badge>
-          <h2 className='text-center text-3xl font-bold tracking-tight sm:text-4xl'>What&apos;s Coming Next</h2>
-          <p className='text-muted-foreground max-w-[800px] text-center'>
-            Discover the latest updates and features we&apos;re working on to enhance your experience.
-          </p>
-        </div>
-        <div className='mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-          {roadmap.map((item, index) => (
-            <Card key={index} className='group gap-0'>
-              <CardContent className='relative'>
-                <div className='bg-muted mb-3 flex h-12 w-12 items-center justify-center rounded-full'>
-                  <item.icon className='size-6' aria-hidden />
-                </div>
-                <h3 className='mb-2 text-xl font-semibold'>{item.title}</h3>
-                <p className='text-muted-foreground text-sm'>{item.description}</p>
-                <Badge
-                  variant={item.status === 'In Progress' ? 'outline' : 'secondary'}
-                  className={cn('absolute end-6 top-0 shadow')}
-                >
-                  {item.status}
-                </Badge>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+
       <section className='py-12 sm:py-20'>
         <div className='mb-12 flex flex-col items-center justify-center gap-4'>
           <Badge variant='outline' className='rounded-full px-3 py-1.5 text-sm shadow-md'>

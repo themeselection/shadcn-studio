@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-09",
+  "type": "registry:component",
+  "title": "Popover 9",
+  "description": "A filter popover with checkbox options and price range slider controls",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "checkbox",
+    "label",
+    "popover",
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-09.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { FunnelPlusIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Slider } from '@/components/ui/slider'\n\nconst filters = ['Most liked', 'Highest reviewed', 'Newest', 'Most popular']\n\nconst PopoverFilterDemo = () => {\n  const [selected, setSelected] = useState(['Most liked', 'Newest'])\n  const [price, setPrice] = useState([450])\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <FunnelPlusIcon />\n          <span className='sr-only'>Filter</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent>\n        <div className='grid gap-4'>\n          <div className='flex items-center justify-between gap-2'>\n            <span className='font-medium'>Filter</span>\n            <Button\n              variant='secondary'\n              className='h-7 rounded-full px-2 py-1 text-xs'\n              onClick={() => {\n                setSelected(['Most liked', 'Newest'])\n                setPrice([450])\n              }}\n            >\n              Reset all\n            </Button>\n          </div>\n          <div className='flex flex-col gap-2'>\n            {filters.map((label, index) => (\n              <div key={index} className='flex items-center gap-2'>\n                <Checkbox\n                  id={`filter-${index + 1}`}\n                  checked={selected.includes(label)}\n                  onCheckedChange={checked =>\n                    setSelected(checked ? [...selected, label] : selected.filter(item => item !== label))\n                  }\n                />\n                <Label htmlFor={`filter-${index + 1}`}>{label}</Label>\n              </div>\n            ))}\n          </div>\n          <div className='grid gap-3'>\n            <Label>Price range</Label>\n            <div className='space-y-2'>\n              <Slider value={price} onValueChange={setPrice} step={50} max={1000} aria-label='Price range' />\n              <span className='text-muted-foreground flex w-full items-center justify-between gap-1 text-xs font-medium'>\n                <span>0</span>\n                <span>500</span>\n                <span>1000</span>\n              </span>\n            </div>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverFilterDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-09.tsx"
+    }
+  ]
+}

@@ -37,7 +37,7 @@ const tabs = [
     value: 'trending',
     content: (
       <>
-        Stay on top of what’s <span className='text-foreground font-semibold'>trending</span>. Discover what
+        Stay on top of what&apos;s <span className='text-foreground font-semibold'>trending</span>. Discover what
         everyone&apos;s talking about, from viral trends to the latest memes and conversations.
       </>
     )
@@ -48,7 +48,7 @@ const tabs = [
     content: (
       <>
         Check out upcoming <span className='text-foreground font-semibold'>events</span> happening near you. Whether
-        virtual or in-person, there’s always something to join and be a part of.
+        virtual or in-person, there&apos;s always something to join and be a part of.
       </>
     )
   },

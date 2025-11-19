@@ -14,8 +14,8 @@ const CollapsibleFilterDemo = () => {
         <div className='flex items-center justify-between gap-4 px-4'>
           <div className='text-sm font-semibold'>Price Range</div>
           <CollapsibleTrigger asChild className='group'>
-            <Button variant='ghost' size='icon' className='size-8'>
-              <ChevronDownIcon className='text-muted-foreground size-4 transition-transform group-data-[state=open]:rotate-180' />
+            <Button variant='ghost' size='icon-sm'>
+              <ChevronDownIcon className='text-muted-foreground transition-transform group-data-[state=open]:rotate-180' />
               <span className='sr-only'>Toggle</span>
             </Button>
           </CollapsibleTrigger>
@@ -40,8 +40,8 @@ const CollapsibleFilterDemo = () => {
         <div className='flex items-center justify-between gap-4 px-4'>
           <div className='text-sm font-semibold'>Customer Ratings</div>
           <CollapsibleTrigger asChild className='group'>
-            <Button variant='ghost' size='icon' className='size-8'>
-              <ChevronDownIcon className='text-muted-foreground size-4 transition-transform group-data-[state=open]:rotate-180' />
+            <Button variant='ghost' size='icon-sm'>
+              <ChevronDownIcon className='text-muted-foreground transition-transform group-data-[state=open]:rotate-180' />
               <span className='sr-only'>Toggle</span>
             </Button>
           </CollapsibleTrigger>
@@ -84,8 +84,8 @@ const CollapsibleFilterDemo = () => {
         <div className='flex items-center justify-between gap-4 px-4'>
           <div className='text-sm font-semibold'>Brand</div>
           <CollapsibleTrigger asChild className='group'>
-            <Button variant='ghost' size='icon' className='size-8'>
-              <ChevronDownIcon className='text-muted-foreground size-4 transition-transform group-data-[state=open]:rotate-180' />
+            <Button variant='ghost' size='icon-sm'>
+              <ChevronDownIcon className='text-muted-foreground transition-transform group-data-[state=open]:rotate-180' />
               <span className='sr-only'>Toggle</span>
             </Button>
           </CollapsibleTrigger>
@@ -128,8 +128,8 @@ const CollapsibleFilterDemo = () => {
         <div className='flex items-center justify-between gap-4 px-4'>
           <div className='text-sm font-semibold'>Battery</div>
           <CollapsibleTrigger asChild className='group'>
-            <Button variant='ghost' size='icon' className='size-8'>
-              <ChevronDownIcon className='text-muted-foreground size-4 transition-transform group-data-[state=open]:rotate-180' />
+            <Button variant='ghost' size='icon-sm'>
+              <ChevronDownIcon className='text-muted-foreground transition-transform group-data-[state=open]:rotate-180' />
               <span className='sr-only'>Toggle</span>
             </Button>
           </CollapsibleTrigger>

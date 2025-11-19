@@ -235,7 +235,7 @@ const DraggableTableHeader = ({ header }: { header: Header<Employee, unknown> })
   return (
     <TableHead
       ref={setNodeRef}
-      className='before:bg-border relative h-10 border-t before:absolute before:inset-y-0 before:start-0 before:w-px first:before:bg-transparent'
+      className='before:bg-border relative h-10 border-t before:absolute before:inset-y-0 before:left-0 before:w-px first:before:bg-transparent'
       style={style}
       aria-sort={
         header.column.getIsSorted() === 'asc'
@@ -249,12 +249,12 @@ const DraggableTableHeader = ({ header }: { header: Header<Employee, unknown> })
         <Button
           size='icon'
           variant='ghost'
-          className='-ml-2 size-7 shadow-none'
+          className='-ml-2 size-7'
           {...attributes}
           {...listeners}
           aria-label='Drag to reorder'
         >
-          <GripVerticalIcon className='opacity-60' size={16} aria-hidden='true' />
+          <GripVerticalIcon className='opacity-60' aria-hidden='true' />
         </Button>
         <span className='grow truncate'>
           {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
@@ -262,7 +262,7 @@ const DraggableTableHeader = ({ header }: { header: Header<Employee, unknown> })
         <Button
           size='icon'
           variant='ghost'
-          className='group -mr-1 size-7 shadow-none'
+          className='group -mr-1 size-7'
           onClick={header.column.getToggleSortingHandler()}
           onKeyDown={e => {
             if (header.column.getCanSort() && (e.key === 'Enter' || e.key === ' ')) {

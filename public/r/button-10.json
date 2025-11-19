@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-10",
+  "type": "registry:component",
+  "title": "Button 10",
+  "description": "A destructive button with gradient background for delete actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button/button-10.tsx",
+      "content": "import { TrashIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonDeleteDemo = () => {\n  return (\n    <Button className='from-destructive via-destructive/60 to-destructive focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 bg-transparent bg-gradient-to-r [background-size:200%_auto] text-white hover:bg-transparent hover:bg-[99%_center]'>\n      <TrashIcon />\n      Delete\n    </Button>\n  )\n}\n\nexport default ButtonDeleteDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button/button-10.tsx"
+    }
+  ]
+}

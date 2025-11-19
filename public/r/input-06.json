@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-06",
+  "type": "registry:component",
+  "title": "Input 6",
+  "description": "Text input fields showcasing different size variants (small, medium, large)",
+  "registryDependencies": [
+    "input"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-06.tsx",
+      "content": "import { Input } from '@/components/ui/input'\n\nconst InputSizesDemo = () => {\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Input type='text' placeholder='Small input' className='h-8' />\n      <Input type='text' placeholder='Medium input' />\n      <Input type='text' placeholder='Large input' className='h-10' />\n    </div>\n  )\n}\n\nexport default InputSizesDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-06.tsx"
+    }
+  ]
+}

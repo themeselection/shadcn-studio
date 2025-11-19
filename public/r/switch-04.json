@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-04",
+  "type": "registry:component",
+  "title": "Switch 4",
+  "description": "Color-themed switches with destructive, success, info, and warning variants",
+  "registryDependencies": [
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/switch/switch-04.tsx",
+      "content": "import { Switch } from '@/components/ui/switch'\n\nconst SwitchColorsDemo = () => {\n  return (\n    <div className='flex items-center gap-3'>\n      <Switch\n        className='focus-visible:border-destructive focus-visible:ring-destructive/20 data-[state=checked]:bg-destructive dark:focus-visible:ring-destructive/40'\n        aria-label='Destructive Switch'\n        defaultChecked\n      />\n      <Switch\n        className='focus-visible:border-ring-green-600 dark:focus-visible:border-ring-green-400 focus-visible:ring-green-600/20 data-[state=checked]:bg-green-600 dark:focus-visible:ring-green-400/40 dark:data-[state=checked]:bg-green-400'\n        aria-label='Success Switch'\n        defaultChecked\n      />\n      <Switch\n        className='focus-visible:border-ring-sky-600 dark:focus-visible:border-ring-sky-400 focus-visible:ring-sky-600/20 data-[state=checked]:bg-sky-600 dark:focus-visible:ring-sky-400/40 dark:data-[state=checked]:bg-sky-400'\n        aria-label='Info Switch'\n        defaultChecked\n      />\n      <Switch\n        className='focus-visible:border-ring-amber-600 dark:focus-visible:border-ring-amber-400 focus-visible:ring-amber-600/20 data-[state=checked]:bg-amber-600 dark:focus-visible:ring-amber-400/40 dark:data-[state=checked]:bg-amber-400'\n        aria-label='Warning Switch'\n        defaultChecked\n      />\n    </div>\n  )\n}\n\nexport default SwitchColorsDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/switch/switch-04.tsx"
+    }
+  ]
+}

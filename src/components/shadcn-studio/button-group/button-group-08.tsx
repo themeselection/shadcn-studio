@@ -5,13 +5,13 @@ import { Button } from '@/components/ui/button'
 const ButtonGroupPreviewDemo = () => {
   return (
     <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>
-      <Button variant='outline' className='rounded-none rounded-s-md shadow-none focus-visible:z-10' asChild>
+      <Button variant='outline' className='rounded-none rounded-l-md shadow-none focus-visible:z-10' asChild>
         <a href='#'>Live preview</a>
       </Button>
       <Button
         variant='outline'
         size='icon'
-        className='rounded-none rounded-e-md shadow-none focus-visible:z-10'
+        className='rounded-none rounded-r-md shadow-none focus-visible:z-10'
         asChild
       >
         <a href='#' target='_blank' rel='noopener noreferrer'>

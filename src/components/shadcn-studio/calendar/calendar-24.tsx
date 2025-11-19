@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { CircleCheck } from 'lucide-react'
+import { CircleCheckIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
@@ -73,7 +73,7 @@ const CalendarAppointmentBookingDemo = () => {
           <div className='flex items-center gap-2 text-sm'>
             {date && selectedTime ? (
               <>
-                <CircleCheck className='size-5 stroke-green-600 dark:stroke-green-400' />
+                <CircleCheckIcon className='size-5 stroke-green-600 dark:stroke-green-400' />
                 <span>
                   Your meeting is booked for{' '}
                   <span className='font-medium'>

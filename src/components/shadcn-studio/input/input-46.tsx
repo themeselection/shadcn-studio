@@ -67,13 +67,13 @@ const InputPasswordStrengthDemo = () => {
           placeholder='Password'
           value={password}
           onChange={e => setPassword(e.target.value)}
-          className='pe-9'
+          className='pr-9'
         />
         <Button
           variant='ghost'
           size='icon'
           onClick={toggleVisibility}
-          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 end-0 rounded-s-none hover:bg-transparent'
+          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'
         >
           {isVisible ? <EyeOffIcon /> : <EyeIcon />}
           <span className='sr-only'>{isVisible ? 'Hide password' : 'Show password'}</span>

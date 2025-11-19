@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "about-us-page-01",
+  "type": "registry:block",
+  "title": "About Us 1",
+  "description": "Centered header with video/image section and overlapping stats grid card displaying icons, values, and descriptions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/about-us-page/about-us-page-01/page.tsx",
+      "content": "import { MedalIcon, SparklesIcon, StarIcon, TargetIcon } from 'lucide-react'\n\nimport AboutUs from '@/components/shadcn-studio/blocks/about-us-page-01/about-us-page-01'\n\nconst stats = [\n  {\n    icon: SparklesIcon,\n    value: '20+',\n    description: 'Years of Experience'\n  },\n  {\n    icon: TargetIcon,\n    value: '70+',\n    description: 'Successful Projects'\n  },\n  {\n    icon: StarIcon,\n    value: '550+',\n    description: 'Customer Reviews'\n  },\n  {\n    icon: MedalIcon,\n    value: '25',\n    description: 'Achieve Awards'\n  }\n]\n\nconst AboutUsPage = () => {\n  return <AboutUs stats={stats} />\n}\n\nexport default AboutUsPage\n",
+      "type": "registry:page",
+      "target": "app/about-us-page-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/about-us-page-01/about-us-page-01.tsx",
+      "content": "import type { ComponentType } from 'react'\n\nimport { ArrowRightIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\ntype StatItem = {\n  icon: ComponentType\n  value: string\n  description: string\n}[]\n\nconst AboutUs = ({ stats }: { stats: StatItem }) => {\n  return (\n    <section className='bg-muted py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* Header */}\n        <div className='mb-12 space-y-4 text-center md:mb-16 lg:mb-24'>\n          <h2 className='text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl'>About Us</h2>\n          <p className='text-muted-foreground text-xl'>\n            Our achievement story stands as a powerful testament to teamwork and perseverance. United, we have faced\n            challenges, celebrated victories, and woven a narrative of growth and success.\n          </p>\n          <Button size='lg' asChild className='group rounded-lg text-base has-[>svg]:px-6'>\n            <a href='#'>\n              Read more\n              <ArrowRightIcon className='transition-transform duration-200 group-hover:translate-x-0.5' />\n            </a>\n          </Button>\n        </div>\n\n        {/* Video player and stats */}\n        <div className='relative mb-8 h-full w-full max-lg:space-y-6 sm:mb-16 lg:mb-24'>\n          <div className='aspect-video w-full overflow-hidden rounded-xl lg:h-[644px]'>\n            <iframe\n              width='100%'\n              height='100%'\n              src='https://www.youtube.com/embed/RQYZXwLBY8A?si=MvvPX6xaOdzySLfb'\n              title='YouTube video player'\n              frameBorder='0'\n              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'\n              referrerPolicy='strict-origin-when-cross-origin'\n              allowFullScreen\n            ></iframe>\n          </div>\n\n          {/* Stats card overlapping the video section */}\n          <div className='bg-background grid gap-10 rounded-md border p-8 sm:max-lg:grid-cols-2 lg:absolute lg:-bottom-25 lg:left-1/2 lg:w-3/4 lg:-translate-x-1/2 lg:grid-cols-4 lg:px-10 xl:w-max'>\n            {stats.map((stat, index) => (\n              <div key={index} className='flex flex-col items-center justify-center gap-2.5 text-center'>\n                <div className='flex size-7 items-center justify-center [&>svg]:size-7'>\n                  <stat.icon />\n                </div>\n                <span className='text-2xl font-semibold'>{stat.value}</span>\n                <p className='text-muted-foreground text-lg'>{stat.description}</p>\n              </div>\n            ))}\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default AboutUs\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/about-us-page-01/about-us-page-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "about-us-page"
+  }
+}

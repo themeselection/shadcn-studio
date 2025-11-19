@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group-01",
+  "type": "registry:component",
+  "title": "Button Group 1",
+  "description": "Download button group with action button and download count display",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/button-group/button-group-01.tsx",
+      "content": "import { DownloadIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonGroupDownloadDemo = () => {\n  return (\n    <div className='inline-flex w-fit -space-x-px rounded-md shadow-xs rtl:space-x-reverse'>\n      <Button variant='outline' className='rounded-none rounded-l-md shadow-none focus-visible:z-10'>\n        <DownloadIcon />\n        Download\n      </Button>\n      <span className='bg-background dark:border-input dark:bg-input/30 flex items-center rounded-r-md border px-3 text-sm font-medium'>\n        15k\n      </span>\n    </div>\n  )\n}\n\nexport default ButtonGroupDownloadDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/button-group/button-group-01.tsx"
+    }
+  ]
+}

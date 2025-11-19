@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-03",
+  "type": "registry:component",
+  "title": "Form 3",
+  "description": "Form with switch toggle controls for settings and preferences",
+  "dependencies": [
+    "lucide-react",
+    "sonner"
+  ],
+  "registryDependencies": [
+    "alert",
+    "button",
+    "form",
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/form/form-03.tsx",
+      "content": "'use client'\n\nimport { CheckCheckIcon } from 'lucide-react'\n\nimport { zodResolver } from '@hookform/resolvers/zod'\nimport { useForm } from 'react-hook-form'\nimport { toast } from 'sonner'\nimport { z } from 'zod'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\nimport { Button } from '@/components/ui/button'\nimport { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'\nimport { Switch } from '@/components/ui/switch'\n\nconst SwitchFormDemo = () => {\n  const FormSchema = z.object({\n    stepTracker: z.boolean().refine(val => val === true, {\n      message: 'You must enable step tracker to proceed.'\n    })\n  })\n\n  const form = useForm<z.infer<typeof FormSchema>>({\n    resolver: zodResolver(FormSchema),\n    defaultValues: { stepTracker: false }\n  })\n\n  function onSubmit(data: z.infer<typeof FormSchema>) {\n    toast.custom(() => (\n      <Alert className='border-green-600 text-green-600 dark:border-green-400 dark:text-green-400'>\n        <CheckCheckIcon />\n        <AlertTitle>Step tracker is {data.stepTracker ? 'enabled' : 'disabled'} &quot;Go! Run&quot;.</AlertTitle>\n      </Alert>\n    ))\n  }\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className='w-full max-w-xs space-y-6'>\n        <FormField\n          control={form.control}\n          name='stepTracker'\n          render={({ field }) => (\n            <FormItem>\n              <div className='flex items-center space-x-2'>\n                <FormControl>\n                  <Switch checked={field.value} onCheckedChange={field.onChange} />\n                </FormControl>\n                <FormLabel>Enable Daily Step Tracker</FormLabel>\n              </div>\n              <FormDescription>Track your daily steps to help you reach your fitness goals.</FormDescription>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n\n        <Button type='submit'>Activate</Button>\n      </form>\n    </Form>\n  )\n}\n\nexport default SwitchFormDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/form/form-03.tsx"
+    }
+  ]
+}

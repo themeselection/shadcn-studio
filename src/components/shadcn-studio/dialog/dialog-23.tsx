@@ -19,7 +19,7 @@ const DialogBottomRightAlignDemo = () => {
         <DialogTrigger asChild>
           <Button variant='outline'>Bottom right align</Button>
         </DialogTrigger>
-        <DialogContent className='sm:end-0 sm:top-auto sm:bottom-0 sm:left-auto sm:m-6 sm:max-w-[425px] sm:translate-x-0 sm:translate-y-0'>
+        <DialogContent className='sm:top-auto sm:right-0 sm:bottom-0 sm:left-auto sm:m-6 sm:max-w-[425px] sm:translate-x-0 sm:translate-y-0'>
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>Make changes to your profile here. Click save when you&apos;re done.</DialogDescription>

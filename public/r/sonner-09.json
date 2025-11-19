@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-09",
+  "type": "registry:component",
+  "title": "Sonner 9",
+  "description": "A soft-styled info toast notification with color-mixed background for subtle messaging",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-09.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SoftInfoSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.info('This is for your information, please note.', {\n          style: {\n            '--normal-bg':\n              'color-mix(in oklab, light-dark(var(--color-sky-600), var(--color-sky-400)) 10%, var(--background))',\n            '--normal-text': 'light-dark(var(--color-sky-600), var(--color-sky-400))',\n            '--normal-border': 'light-dark(var(--color-sky-600), var(--color-sky-400))'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Soft Info Toast\n    </Button>\n  )\n}\n\nexport default SoftInfoSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-09.tsx"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-dialog-01",
+  "type": "registry:block",
+  "title": "Dashboard Dialog 1",
+  "description": "A subscription plan selection dialog with pricing options, features comparison, and radio button selection for choosing between different tiers.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "dialog",
+    "label",
+    "radio-group",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/dashboard-and-application/dashboard-dialog/dashboard-dialog-01/page.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport PlanDialog from '@/components/shadcn-studio/blocks/dashboard-dialog-01/dialog-plan'\n\nconst plansData = [\n  {\n    id: '1',\n    title: 'Basic plan',\n    price: 10,\n    description: 'Includes 20GB individual data.',\n    features: ['32+ integrations', 'Basic reporting', '20GB individual data', 'Basic support']\n  },\n  {\n    id: '2',\n    title: 'Starter Package',\n    price: 12,\n    description: 'Comes with 512GB personal data.',\n    features: [\n      '35+ integrations',\n      'Essential reporting features',\n      '512GB personal data included',\n      'Standard support services'\n    ]\n  }\n]\n\nconst DialogPage = () => {\n  return (\n    <div className='flex h-dvh items-start justify-center p-8'>\n      <PlanDialog\n        defaultOpen\n        trigger={\n          <Button variant='outline'>\n            <span>Select Plan</span>\n          </Button>\n        }\n        data={plansData}\n      />\n    </div>\n  )\n}\n\nexport default DialogPage\n",
+      "type": "registry:page",
+      "target": "app/dashboard-dialog-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/dashboard-dialog-01/dialog-plan.tsx",
+      "content": "'use client'\n\nimport { useState, type ReactNode } from 'react'\n\nimport { CircleCheckIcon, DollarSignIcon, MessageSquareTextIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger\n} from '@/components/ui/dialog'\nimport { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nimport { cn } from '@/lib/utils'\n\ntype Props = {\n  trigger: ReactNode\n  defaultOpen?: boolean\n  className?: string\n  data: {\n    id: string\n    title: string\n    price: number\n    description: string\n    features: string[]\n  }[]\n}\n\nconst PlanDialog = ({ defaultOpen = false, trigger, data, className }: Props) => {\n  const [open, setOpen] = useState(defaultOpen)\n  const [plan, setPlan] = useState('1')\n\n  return (\n    <Dialog open={open} onOpenChange={setOpen}>\n      <DialogTrigger asChild onClick={() => setOpen(true)}>\n        {trigger}\n      </DialogTrigger>\n      <DialogContent className={cn('sm:max-w-155 [&>[data-slot=dialog-close]>svg]:size-5', className)}>\n        <DialogHeader className='flex-row items-center gap-4'>\n          <Avatar className='size-11 rounded-md'>\n            <AvatarFallback className='shrink-0 rounded-md border bg-transparent'>\n              <DollarSignIcon className='size-6' />\n            </AvatarFallback>\n          </Avatar>\n          <div className='space-y-1'>\n            <DialogTitle className='m-0 text-lg'>Select Plan</DialogTitle>\n            <DialogDescription>Simple and flexible per-user pricing</DialogDescription>\n          </div>\n        </DialogHeader>\n\n        {/* Plan selection */}\n        <RadioGroup className='w-full gap-6 sm:grid-cols-2' defaultValue={plan} onValueChange={setPlan}>\n          {data.map(planData => (\n            <div\n              key={planData.id}\n              className='border-input has-data-[state=checked]:border-primary relative flex w-full flex-col gap-4 rounded-md border px-5 py-6 outline-none'\n            >\n              <div className='flex flex-col gap-1'>\n                <div className='flex items-center justify-between gap-2'>\n                  <Label htmlFor={planData.id} className='text-base'>\n                    {planData.title}\n                  </Label>\n                  <RadioGroupItem\n                    value={planData.id}\n                    id={planData.id}\n                    className='size-5 after:absolute after:inset-0 [&_svg]:size-3'\n                    aria-label={`plan-radio-${planData.title.toLowerCase().replace(/\\s+/g, '-')}`}\n                  />\n                </div>\n                <p>\n                  <span className='text-2xl font-medium'>${planData.price}</span>\n                  <span className='text-muted-foreground text-xl'>/user</span>\n                </p>\n                <p className='text-muted-foreground text-sm'>{planData.description}</p>\n              </div>\n\n              <div className='flex flex-col gap-2.5'>\n                {planData.features.map((feature, index) => (\n                  <div key={index} className='flex items-center gap-2'>\n                    <CircleCheckIcon className='size-5 shrink-0' />\n                    <span className='text-sm'>{feature}</span>\n                  </div>\n                ))}\n              </div>\n            </div>\n          ))}\n        </RadioGroup>\n\n        <DialogFooter className='gap-4 max-sm:flex-col sm:justify-between'>\n          <Button size='lg' className='bg-primary/10 text-primary hover:bg-primary/20'>\n            <MessageSquareTextIcon />\n            Chat with us\n          </Button>\n          <div className='flex justify-between gap-4'>\n            <DialogClose asChild>\n              <Button variant='outline' size='lg'>\n                Cancel\n              </Button>\n            </DialogClose>\n            <Button size='lg'>Purchase now</Button>\n          </div>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  )\n}\n\nexport default PlanDialog\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/dashboard-dialog-01/dialog-plan.tsx"
+    }
+  ],
+  "meta": {
+    "category": "dashboard-and-application",
+    "section": "dashboard-dialog"
+  }
+}

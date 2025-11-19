@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronsDown, ChevronUp, ChevronsUp, Equal } from 'lucide-react'
+import { ChevronDownIcon, ChevronUpIcon, ChevronsUpIcon, EqualIcon, ChevronsDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -12,27 +12,27 @@ import {
 
 const listItems = [
   {
-    icon: ChevronsUp,
+    icon: ChevronsUpIcon,
     color: 'text-destructive',
     priority: 'Highest'
   },
   {
-    icon: ChevronUp,
+    icon: ChevronUpIcon,
     color: 'text-destructive/60',
     priority: 'High'
   },
   {
-    icon: Equal,
+    icon: EqualIcon,
     color: 'text-amber-600 dark:text-amber-400',
     priority: 'Medium'
   },
   {
-    icon: ChevronDown,
+    icon: ChevronDownIcon,
     color: 'text-green-600/60 dark:text-green-400/60',
     priority: 'Low'
   },
   {
-    icon: ChevronsDown,
+    icon: ChevronsDownIcon,
     color: 'text-green-600 dark:text-green-400',
     priority: 'Lowest'
   }

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-36",
+  "type": "registry:component",
+  "title": "Input 36",
+  "description": "Input field with clear button to instantly reset the field value",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-36.tsx",
+      "content": "'use client'\n\nimport { useId, useRef, useState } from 'react'\n\nimport { CircleXIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputClearDemo = () => {\n  const [value, setValue] = useState('Click to clear')\n\n  const inputRef = useRef<HTMLInputElement>(null)\n\n  const id = useId()\n\n  const handleClearInput = () => {\n    setValue('')\n\n    if (inputRef.current) {\n      inputRef.current.focus()\n    }\n  }\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with clear button</Label>\n      <div className='relative'>\n        <Input\n          ref={inputRef}\n          id={id}\n          type='text'\n          placeholder='Type something...'\n          value={value}\n          onChange={e => setValue(e.target.value)}\n          className='pr-9'\n        />\n        {value && (\n          <Button\n            variant='ghost'\n            size='icon'\n            onClick={handleClearInput}\n            className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'\n          >\n            <CircleXIcon />\n            <span className='sr-only'>Clear input</span>\n          </Button>\n        )}\n      </div>\n    </div>\n  )\n}\n\nexport default InputClearDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-36.tsx"
+    }
+  ]
+}

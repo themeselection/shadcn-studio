@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-03",
+  "type": "registry:component",
+  "title": "Popover 3",
+  "description": "A pricing popover displaying plan details with features and pricing information",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/popover/popover-03.tsx",
+      "content": "import { DollarSignIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst PopoverPricingDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <DollarSignIcon />\n          <span className='sr-only'>Pricing details</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-2.5'>\n          <div className='flex items-center justify-between'>\n            <span className='text-lg font-semibold'>Enterprise Plan</span>\n            <span className='text-sm font-medium'>$49.99/month</span>\n          </div>\n          <p className='text-sm'>\n            Get unlimited access to all features including AI-powered analytics, custom branding, priority support, and\n            advanced team collaboration tools.\n          </p>\n          <div className='flex items-center gap-2'>\n            <Badge variant='destructive' className='rounded-sm px-1.5 py-px text-xs'>\n              Limited Offer\n            </Badge>\n            <span className='text-muted-foreground text-xs'>20% discount on annual plan</span>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverPricingDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/popover/popover-03.tsx"
+    }
+  ]
+}

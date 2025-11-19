@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-12",
+  "type": "registry:component",
+  "title": "Sonner 12",
+  "description": "A soft-styled destructive error toast notification with subtle red theming for error messages",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/sonner/sonner-12.tsx",
+      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SoftDestructiveSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.error('Oops, there was an error processing your request.', {\n          style: {\n            '--normal-bg': 'color-mix(in oklab, var(--destructive) 10%, var(--background))',\n            '--normal-text': 'var(--destructive)',\n            '--normal-border': 'var(--destructive)'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Soft Destructive Toast\n    </Button>\n  )\n}\n\nexport default SoftDestructiveSonnerDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/sonner/sonner-12.tsx"
+    }
+  ]
+}

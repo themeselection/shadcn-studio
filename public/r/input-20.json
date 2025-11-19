@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-20",
+  "type": "registry:component",
+  "title": "Input 20",
+  "description": "A domain input field with an external \".com\" add-on box at the end",
+  "registryDependencies": [
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/input/input-20.tsx",
+      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputEndAddOnDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end add-on</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Input id={id} type='text' placeholder='shadcnstudio' className='-me-px rounded-r-none shadow-none' />\n        <span className='border-input bg-background text-muted-foreground -z-1 inline-flex items-center rounded-r-md border px-3 text-sm'>\n          .com\n        </span>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndAddOnDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/input/input-20.tsx"
+    }
+  ]
+}

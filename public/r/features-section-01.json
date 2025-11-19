@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "features-section-01",
+  "type": "registry:block",
+  "title": "Features 1",
+  "description": "Three-column grid features section with header, description, \"See all features\" button, and feature cards containing avatar icons, titles, and descriptions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "card",
+    "button",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/app/(blank)/preview/marketing-ui/features-section/features-section-01/page.tsx",
+      "content": "import { SwatchBookIcon, SearchIcon, StarIcon, SmartphoneIcon, LockKeyholeIcon, ShieldBanIcon } from 'lucide-react'\n\nimport Features from '@/components/shadcn-studio/blocks/features-section-01/features-section-01'\n\nconst featuresList = [\n  {\n    icon: SwatchBookIcon,\n    title: 'User-Friendly Interface',\n    description:\n      \"Navigate effortlessly with our intuitive design, optimised for all devices. Enjoy a seamless experience whether you're on a computer or mobile.\",\n    cardBorderColor: 'border-primary/40 hover:border-primary',\n    avatarTextColor: 'text-primary',\n    avatarBgColor: 'bg-primary/10'\n  },\n  {\n    icon: ShieldBanIcon,\n    title: 'Secure Checkout',\n    description:\n      'Enjoy a safe shopping experience with multiple payment options and SSL encryption. Your personal and financial information is always protected.',\n    cardBorderColor: 'border-green-600/40 hover:border-green-600 dark:border-green-400/40 dark:hover:border-green-400',\n    avatarTextColor: 'text-green-600 dark:text-green-400',\n    avatarBgColor: 'bg-green-600/10 dark:bg-green-400/10'\n  },\n  {\n    icon: SearchIcon,\n    title: 'Advanced Search',\n    description:\n      'Find products quickly with advanced filters, sorting options, and suggestion. Save time and effortlessly locate exactly what you need with ease.',\n    cardBorderColor: 'border-amber-600/40 hover:border-amber-600 dark:border-amber-400/40 dark:hover:border-amber-400',\n    avatarTextColor: 'text-amber-600 dark:text-amber-400',\n    avatarBgColor: 'bg-amber-600/10 dark:bg-amber-400/10'\n  },\n  {\n    icon: StarIcon,\n    title: 'Customer Reviews and Ratings',\n    description:\n      'Make informed decisions with detailed product reviews and ratings from other buyers. Trust the experiences of fellow shoppers to guide choices.',\n    cardBorderColor: 'border-destructive/40 hover:border-destructive',\n    avatarTextColor: 'text-destructive',\n    avatarBgColor: 'bg-destructive/10'\n  },\n  {\n    icon: SmartphoneIcon,\n    title: 'Mobile App Integration',\n    description:\n      'Enhance your shopping experience with our mobile app and push notifications. Stay updated on arrivals and exclusive offers directly on phone.',\n    cardBorderColor: 'border-sky-600/40 hover:border-sky-600 dark:border-sky-400/40 dark:hover:border-sky-400',\n    avatarTextColor: 'text-sky-600 dark:text-sky-400',\n    avatarBgColor: 'bg-sky-600/10 dark:bg-sky-400/10'\n  },\n  {\n    icon: LockKeyholeIcon,\n    title: 'Security Features',\n    description:\n      'Protect your data with fraud detection and two-factor authentication. Ensure a secure environment for all transactions and account activities.',\n    cardBorderColor: 'border-primary/40 hover:border-primary',\n    avatarTextColor: 'text-primary',\n    avatarBgColor: 'bg-primary/10'\n  }\n]\n\nconst FeaturesPage = () => {\n  return <Features featuresList={featuresList} />\n}\n\nexport default FeaturesPage\n",
+      "type": "registry:page",
+      "target": "app/features-section-01/page.tsx"
+    },
+    {
+      "path": "src/components/shadcn-studio/blocks/features-section-01/features-section-01.tsx",
+      "content": "import type { ComponentType } from 'react'\n\nimport { ArrowRightIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { Card, CardContent } from '@/components/ui/card'\n\nimport { cn } from '@/lib/utils'\n\ntype Features = {\n  icon: ComponentType\n  title: string\n  description: string\n  cardBorderColor: string\n  avatarTextColor: string\n  avatarBgColor: string\n}[]\n\nconst Features = ({ featuresList }: { featuresList: Features }) => {\n  return (\n    <section className='py-8 sm:py-16 lg:py-24'>\n      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>\n        {/* Header */}\n        <div className='mb-12 space-y-4 sm:mb-16 lg:mb-24'>\n          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Discover the Exclusive Perks Today</h2>\n          <p className='text-muted-foreground text-xl'>\n            Explore key features designed to enhance your shopping experience with intuitive navigation, robust\n            security, and seamless functionality.\n          </p>\n          <Button variant='outline' className='rounded-lg text-base shadow-none has-[>svg]:px-6' size='lg' asChild>\n            <a href='#'>\n              See all features\n              <ArrowRightIcon />\n            </a>\n          </Button>\n        </div>\n\n        <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>\n          {featuresList.map((features, index) => (\n            <Card key={index} className={cn('shadow-none transition-colors duration-300', features.cardBorderColor)}>\n              <CardContent>\n                <Avatar className={cn('mb-6 size-10 rounded-md', features.avatarTextColor)}>\n                  <AvatarFallback className={cn('rounded-md [&>svg]:size-6', features.avatarBgColor)}>\n                    <features.icon />\n                  </AvatarFallback>\n                </Avatar>\n                <h6 className='mb-2 text-lg font-semibold'>{features.title}</h6>\n                <p className='text-muted-foreground'>{features.description}</p>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n\nexport default Features\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/blocks/features-section-01/features-section-01.tsx"
+    }
+  ],
+  "meta": {
+    "category": "marketing-ui",
+    "section": "features-section"
+  }
+}

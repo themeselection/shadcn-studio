@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-12",
+  "type": "registry:component",
+  "title": "Badge 12",
+  "description": "Closable badge with X button for dismissible notifications",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/badge/badge-12.tsx",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { XIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\n\nconst BadgeClosableDemo = () => {\n  const [isActive, setIsActive] = useState(true)\n\n  if (!isActive) return null\n\n  return (\n    <Badge>\n      Closable\n      <button\n        className='focus-visible:border-ring focus-visible:ring-ring/50 text-primary-foreground/60 hover:text-primary-foreground -my-px -ms-px -me-1.5 inline-flex size-4 shrink-0 cursor-pointer items-center justify-center rounded-[inherit] p-0 transition-[color,box-shadow] outline-none focus-visible:ring-[3px]'\n        aria-label='Close'\n        onClick={() => setIsActive(false)}\n      >\n        <XIcon className='size-3' aria-hidden='true' />\n      </button>\n    </Badge>\n  )\n}\n\nexport default BadgeClosableDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/badge/badge-12.tsx"
+    }
+  ]
+}

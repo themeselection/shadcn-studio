@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-03",
+  "type": "registry:component",
+  "title": "Tooltip 3",
+  "description": "A tooltip without the arrow indicator for clean minimal appearance",
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/shadcn-studio/tooltip/tooltip-03.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipNoArrowDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          No arrow\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className='[&_svg]:invisible'>\n        <p>This tooltip don&apos;t have arrow</p>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipNoArrowDemo\n",
+      "type": "registry:component",
+      "target": "components/shadcn-studio/tooltip/tooltip-03.tsx"
+    }
+  ]
+}
