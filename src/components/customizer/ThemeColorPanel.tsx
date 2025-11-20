@@ -35,13 +35,15 @@ const DebouncedInput = ({ value: initialValue, onChange, debounce = 300, ...prop
   }, [initialValue])
 
   useEffect(() => {
+    if (value === initialValue) return
+
     const timeout = setTimeout(() => {
       onChange(value)
     }, debounce)
 
     return () => clearTimeout(timeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value])
+  }, [value, initialValue])
 
   return <input {...props} type='color' value={value} onChange={e => setValue(e.target.value)} />
 }
